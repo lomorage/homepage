@@ -1,0 +1,4 @@
+weight: 5
+name: "Disaster Recovery"
+icon: "fas fa-clone"
+description: "Replicate your valuable assets to different hard drivers locally and remotely to compliment your disaster recovery plan."

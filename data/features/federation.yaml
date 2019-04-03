@@ -1,0 +1,4 @@
+weight: 6
+name: "federation"
+icon: "fab fa-connectdevelop"
+description: "You and your friends can run different instances of services, but they don't need to be isolate islands, they can still share photos and videos with each other regardless of where their account is."
