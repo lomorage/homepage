@@ -24,7 +24,7 @@ You can download the Apps on your smart phone, currently only iOS is supported, 
 
   - [Service Raspberry Pi image](https://github.com/lomorage/pi-gen/releases/download/lomorage-v0.3/image_2019-03-23-lomorage-lite.zip)
 
-  - Service OSX version (Available soon)
+  - [Service OSX version](https://github.com/lomorage/LomoAgentOSX/releases/tag/v0.1)
 
   - Service Windows version (Work in progress)
   
