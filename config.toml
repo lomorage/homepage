@@ -1,4 +1,4 @@
-baseurl = "https://lomorage.github.io/"
+baseurl = "https://lomorage.com/"
 title = "Lomorage"
 theme = "hugo-universal-theme"
 #themesDir = "../.."
