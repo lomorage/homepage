@@ -55,7 +55,7 @@ paginate = 10
 [[menu.topbar]]
     weight = 3
     name = "Email"
-    url = "mailto:lomorage@gmail.com"
+    url = "mailto:support@lomorage.com"
     pre = "<i class='fa fa-2x fa-envelope'></i>"
 
 [params]
@@ -119,7 +119,7 @@ paginate = 10
 # Enable or disable top bar with social icons
 [params.topbar]
     enable = true
-    text = """<p class="hidden-sm hidden-xs">Contact us on lomorage@gmail.com.</p>
+    text = """<p class="hidden-sm hidden-xs">Contact us on support@lomorage.com.</p>
       <p class="hidden-md hidden-lg"><a href="#" data-animate-hover="pulse"><i class="fa fa-phone"></i></a>
       <a href="#" data-animate-hover="pulse"><i class="fa fa-envelope"></i></a>
       </p>
