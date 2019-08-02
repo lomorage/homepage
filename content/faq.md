@@ -22,13 +22,13 @@ You can download the Apps on your smart phone, currently only iOS is supported, 
 
 ## 4. Where can I download the application?
 
-  - [Service Raspberry Pi image](https://github.com/lomorage/pi-gen/releases/download/lomorage-v0.4/image_2019-05-25-lomorage-lite.zip)
+  - [Service Raspberry Pi image](https://github.com/lomorage/pi-gen/releases/download/lomorage-v0.5/image_2019-08-01-lomorage-lite.zip)
 
-  - [Service OSX version](https://github.com/lomorage/LomoAgentOSX/releases/download/v0.2/LomoAgent.dmg)
+  - [Service OSX version](https://github.com/lomorage/LomoAgentOSX/releases/download/2019_08_01.20_59_55.0.79b4818/LomoAgent.dmg)
 
-  - Service Windows version (Work in progress)
+  - Service Windows version (Coming soon)
   
-  - [lomorage on iOS](https://github.com/lomorage/lomo-ios/releases/download/v0.42/lomo.ipa)
+  - lomorage on iOS is currently in beta testing, [request](mailto:support@lomorage.com) for testflight access.
 
   - lomorage on Android (Work in progress)
 
@@ -37,6 +37,8 @@ You can download the Apps on your smart phone, currently only iOS is supported, 
 We prefer to keep the photos and videos in our own storage rather than uploading them to the cloud, and we'd also like to share them with our family and friends. NAS is a little bit heavy weight for this purpose, it's expensive, hard to install and maintain for non technical users, and require formatting of hard drive and install system on it.
 
 Buy a cheap Raspberry Pi with only 35$, install the prebuild lomorage image, connect your own hard drive, download the app, we just need a simple and efficient solution for photo and video backup, management and share.
+
+See more [here](/lomorage.pdf)
 
 ---
 
