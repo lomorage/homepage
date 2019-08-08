@@ -26,7 +26,7 @@ You can download the Apps on your smart phone, currently only iOS is supported, 
 
   - [Service OSX version](https://github.com/lomorage/LomoAgentOSX/releases/download/2019_08_06.22_40_22.0.79b4818/LomoAgent.dmg)
 
-  - Service Windows version (Coming soon)
+  - [Service Windows version](https://github.com/lomorage/LomoAgentWin/releases/download/lomoagent-2019_08_08.08_39_09.0.364163e/lomoagent-2019_08_08.08_39_09.0.364163e.zip)
   
   - lomorage on iOS is currently in beta testing, [request](mailto:support@lomorage.com) for testflight access.
 
