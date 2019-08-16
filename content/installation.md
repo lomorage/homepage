@@ -105,17 +105,12 @@ After lauching Lomorage, it should be able to discover the Lomorage service runn
 Then you can create user, choose the place you want to store your photos on the lomorage service, after login, it will take a few minutes to import all your photos on phone, and then you can drop down to start uploading the photos to the place you choose to store your backup, if the photo uploads successfully, there will be a green check on the bottom right. The remote tab will show you those photos stored remotely but not exists locally, so if you delete your local photo that already backup successfully, it will show up in the remote tab view.
 
 <div align="center">
-<p style="background-color:#EAF0FB; padding: 25px; width: 90%; text-align: center;">
+<p class="screenshoot">
   <img width="30%" src="/img/installation/ios-mdns-discover.png">
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
   <img width="30%" src="/img/installation/ios-createuser.png">
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
   <img width="30%" src="/img/installation/ios-uploading.png">
-  <br/><br/>
   <img width="30%" src="/img/installation/ios-backup.png">
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
   <img width="30%" src="/img/installation/ios-settings.png">
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
   <img width="30%" src="/img/installation/ios-share.png">
 </p>
 </div>
