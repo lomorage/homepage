@@ -1,4 +1,4 @@
 weight: 5
-name: "Disaster Recovery"
+name: replicateName
 icon: "fas fa-clone"
-description: "Replicate your valuable assets to different hard drivers locally and remotely to compliment your disaster recovery plan."
+description: replicateDesc

@@ -13,60 +13,132 @@ googleAnalytics = "UA-138235951-1"
 # Define the number of posts per page
 paginate = 10
 
-[menu]
+[languages]
+    [languages.en]
 
-# Main menu
+    [languages.en.menu]
 
-[[menu.main]]
-    name = "Home"
-    url  = "/"
-    weight = 1
+    # Main menu
 
-#[[menu.main]]
-#    name = "Blog"
-#    url  = "/blog/"
-#    weight = 2
+    [[languages.en.menu.main]]
+        name = "Home"
+        url  = "/"
+        weight = 1
 
-[[menu.main]]
-    name = "Features"
-    url  = "/features/"
-    weight = 2
+    #[[languages.en.menu.main]]
+    #    name = "Blog"
+    #    url  = "/blog/"
+    #    weight = 2
 
-[[menu.main]]
-    name = "Installation"
-    url  = "/installation/"
-    weight = 3
+    [[languages.en.menu.main]]
+        name = "Features"
+        url  = "/features/"
+        weight = 2
 
-[[menu.main]]
-    name = "FAQ"
-    identifier = "faq"
-    url  = "/faq/"
-    weight = 4
+    [[languages.en.menu.main]]
+        name = "Installation"
+        url  = "/installation/"
+        weight = 3
 
-[[menu.main]]
-    name = "Contact"
-    url  = "/contact/"
-    weight = 5
+    [[languages.en.menu.main]]
+        name = "FAQ"
+        identifier = "faq"
+        url  = "/faq/"
+        weight = 4
 
-# Top bar social links menu
+    [[languages.en.menu.main]]
+        name = "Contact"
+        url  = "/contact/"
+        weight = 5
 
-#[[menu.topbar]]
-#    weight = 1
-#    name = "GitHub"
-#    url = "https://github.com/lomorage"
-#    pre = "<i class='fab fa-2x fa-github'></i>"
+    # Top bar social links menu
 
-[[menu.topbar]]
-    weight = 2
-    name = "Mastodon"
-    url = "https://mastodon.social/@lomorage"
-    pre = "<i class='fab fa-2x fa-mastodon'></i>"
+    #[[languages.en.menu.topbar]]
+    #    weight = 1
+    #    name = "GitHub"
+    #    url = "https://github.com/lomorage"
+    #    pre = "<i class='fab fa-2x fa-github'></i>"
 
-[[menu.topbar]]
-    weight = 3
-    name = "Email"
-    url = "mailto:support@lomorage.com"
-    pre = "<i class='fa fa-2x fa-envelope'></i>"
+    [[languages.en.menu.topbar]]
+        weight = 2
+        name = "Mastodon"
+        url = "https://mastodon.social/@lomorage"
+        pre = "<i class='fab fa-2x fa-mastodon'></i>"
+
+    [[languages.en.menu.topbar]]
+        weight = 3
+        name = "Email"
+        url = "mailto:support@lomorage.com"
+        pre = "<i class='fa fa-2x fa-envelope'></i>"
+
+    [languages.es]
+    [languages.zh]
+        [languages.zh.menu]
+
+        # Main menu
+
+        [[languages.zh.menu.main]]
+            name = "主页"
+            url  = "/zh"
+            weight = 1
+
+        #[[languages.zh.menu.main]]
+        #    name = "Blog"
+        #    url  = "/blog/"
+        #    weight = 2
+
+        [[languages.zh.menu.main]]
+            name = "特性"
+            url  = "/zh/features/"
+            weight = 2
+
+        [[languages.zh.menu.main]]
+            name = "安装"
+            url  = "/zh/installation/"
+            weight = 3
+
+        [[languages.zh.menu.main]]
+            name = "常见问题"
+            identifier = "faq"
+            url  = "/zh/faq/"
+            weight = 4
+
+        [[languages.zh.menu.main]]
+            name = "联系"
+            url  = "/zh/contact/"
+            weight = 5
+
+        # Top bar social links menu
+
+        #[[languages.zh.menu.topbar]]
+        #    weight = 1
+        #    name = "GitHub"
+        #    url = "https://github.com/lomorage"
+        #    pre = "<i class='fab fa-2x fa-github'></i>"
+
+        [[languages.zh.menu.topbar]]
+            weight = 2
+            name = "Mastodon"
+            url = "https://mastodon.sdf.org/@lomorage"
+            pre = "<i class='fab fa-2x fa-mastodon'></i>"
+
+        [[languages.zh.menu.topbar]]
+            weight = 3
+            name = "电子邮件"
+            url = "mailto:support@lomorage.com"
+            pre = "<i class='fa fa-2x fa-envelope'></i>"
+
+        [languages.zh.params]
+            about_us = """<p>我们相信分布式互联网是未来的发展方向，专注构建基于DWeb技术的照片私有云。
+                    </p>"""
+
+        [languages.zh.params.topbar]
+            enable = true
+            text = """<p class="hidden-sm hidden-xs">联系我们: support@lomorage.com.</p>"""
+
+        [languages.zh.params.carousel]
+            enable = true
+
 
 [params]
     viewMorePostLink = "/blog/"

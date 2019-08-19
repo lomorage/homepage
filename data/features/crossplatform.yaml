@@ -1,4 +1,4 @@
 weight: 4
-name: "Cross Platform"
+name: crossplatformName
 icon: "fab fa-raspberry-pi"
-description: "Our backend service is cross platform, you can easily set it up on Single Board Computer like Raspberry Pi with our customized image, and keep it running 7x24 with extremly low power consumption."
+description: crossplatformDesc

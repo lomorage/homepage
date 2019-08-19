@@ -1,4 +1,4 @@
 weight: 1
-name: "Privacy"
+name: privacyName
 icon: "fa fa-user-lock"
-description: "Your photo will store locally on your own device with the service running locally, nobody can access your assets without your permission."
+description: privacyDesc

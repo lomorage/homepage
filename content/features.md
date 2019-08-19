@@ -17,7 +17,7 @@ We only support iOS client now, the Android version and Web version are on our b
 
 ## Easy Setup
 
-We are not building another NAS system, so if you want to backup and manage your photos, but get scared by the complicate setup process of NAS, just forget about the jargons and take easy. Lomorage setup is guaranteed to be within minutes. Check [here](https://www.lomorage.com/setup) for the installation guide.
+We are not building another NAS system, so if you want to backup and manage your photos, but get scared by the complicate setup process of NAS, just forget about the jargons and take easy. Lomorage setup is guaranteed to be within minutes. Check [here](/installation) for the installation guide.
 
 ## Keep original size
 
@@ -28,7 +28,7 @@ The photo and video are stored as original size on your disk, it will be exactly
 
 Unlike some cloud based file storage which split the file into smaller segaments, Lomorage will store the photo file as it's on the file system, we are not using any proprietary format.
 
-Unlike some NAS system which require user to format the disk before using it as backup storage, with Lomorage, you can just plugin a spare disk with [popular file system](https://www.lomorage.com/setup#filesystem), it just works, you won't be locked to use specific file system, you can just use the file system you normally use, like FAT32/NTFS in Windows, thus you don't need 3rd party software to access the backup file.
+Unlike some NAS system which require user to format the disk before using it as backup storage, with Lomorage, you can just plugin a spare disk with [popular file system](/faq/#4-what-file-systems-supported), it just works, you won't be locked to use specific file system, you can just use the file system you normally use, like FAT32/NTFS in Windows, thus you don't need 3rd party software to access the backup file.
 
 ## Near-zero Maintenance
 
@@ -44,9 +44,9 @@ Cloud service hides the complexity of the system, since Lomorage is a service de
 
 ## Flexible backup options
 
-Since most people will offline the phone storage, so having those backup once is not enough, Lomorage will provide several backup options:
+Since most people will offload the phone storage, so having those backup once is not enough, Lomorage will provide several backup options:
 
-  - Local redandency backup: you can backup multiple copies locally, just plugin in more disks and [setup the backup](https://www.lomorage.com/setup#redandency-backup) on your phone.
+  - Local redandency backup: you can backup multiple copies locally, just plugin in more disks and [setup the backup](/faq/#3-how-to-setup-redandency-backup) on your phone.
 
   - remote backup: you can backup to other Lomorage services setup by other family members or friends, with encryption. This is on the backlog, and plan to support this year.
 

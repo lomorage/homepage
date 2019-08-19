@@ -19,7 +19,7 @@ To use Lomorage, you need run the lomorage service in your local network, either
 
 ### Lomorage Service
 
-You can choose which version of Lomorage to download based on your perference. Running lomorage service on Windows or OSX give you better performance compared with on Raspberry Pi, the uploading and accessing the backup will be faster, but running Windows or OSX is not energy efficient as using Raspberry Pi.
+You can choose which version of Lomorage to download based on your perference. Running lomorage service on Windows or OSX give you better performance compared with on Raspberry Pi, the uploading and accessing the backup will be faster, but running Windows or OSX is not energy efficient as using Raspberry Pi. If using Raspberry Pi, you don't need worry about the electricity bill, it is only [about 5$ a year](https://raspberrypi.stackexchange.com/questions/5033/how-much-energy-does-the-raspberry-pi-consume-in-a-day)
 
 <p align="center">
 
@@ -94,7 +94,7 @@ After you insert the MicroSD to your desktop or laptop, just select the image yo
   <img width="50%" src="/img/installation/balenaEtcher.png">
 </p>
 
-After flushing the image, insert the microSD into Raspberry Pi board, connect USB hard drive with Raspberry Pi, plug in a network cable, plug in the power supply, turn on the power and wait a few seconds for the system boot.
+After flushing the image, insert the microSD into Raspberry Pi board, connect USB hard drive with Raspberry Pi, plug in a network cable, plug in the power supply, turn on the power and wait a few minutes for system boot.
 
 ### iOS
 

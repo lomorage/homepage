@@ -1,4 +1,4 @@
 weight: 2
-name: "Backup"
+name: backupName
 icon: "fa fa-sync"
-description: "Backup your photos and videos on the phone to your private storage while keeping the original resolution, supporting all formats including live photo, with no monthly fees."
+description: backupDesc
