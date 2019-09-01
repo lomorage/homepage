@@ -8,6 +8,7 @@ keywords = ["FAQ","How do I","questions","what if"]
 * [2. Why another photo backup service?](#2-why-another-photo-backup-service)
 * [3. How to setup redandency backup?](#3-how-to-setup-redandency-backup)
 * [4. What file systems supported?](#4-what-file-systems-supported)
+* [5. Why the date time seems not correct?](#5-why-the-date-time-seems-not-correct)
 
 ## 1. How comes the name "Lomorage"?
 
@@ -32,6 +33,10 @@ If you are running Lomorage service on Raspberry Pi, you can plugin in a new dis
 If you are on Windows or macOS, then you can use whatever file system supported by Windows or macOS.
 
 If you are on Raspberry Pi, it supports "vfat exfat ext2 ext3 ext4 hfsplus ntfs fuseblk".
+
+## 5. Why the date time seems not correct?
+
+The date time used to store on the system is in [UTC](https://en.wikipedia.org/wiki/Coordinated_Universal_Time), not the time of local timezone, the reason is that the photo can be taken in different timezones, and the user may travel or relocate to different timezones, to simplify the processing, we use UTC timestamp, and it can easily convert to different timezones on the APP.
 
 ---
 
