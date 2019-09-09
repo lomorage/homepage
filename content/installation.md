@@ -40,7 +40,7 @@ You can choose which version of Lomorage to download based on your perference. R
 
  &nbsp;
  
-<a href="https://github.com/lomorage/LomoAgentOSX/releases/download/2019_08_06.22_40_22.0.79b4818/LomoAgent.dmg" title="Install Lomorage for macOS" class="badge">macOS</a>
+<a href="https://github.com/lomorage/LomoAgentOSX/releases/download/2019_09_08.17_42_30.0.c0beee3/LomoAgent.dmg" title="Install Lomorage for macOS" class="badge">macOS</a>
 
  &nbsp;
  
