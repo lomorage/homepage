@@ -26,21 +26,21 @@
 
 ## 1. Overview
 
-To use Lomorage, you need run the lomorage service in your local network, either on Windows, OSX or Raspberry Pi. And then you need download the client APP at app store.
+To use Lomorage, you need to run the Lomorage service in your local network, either on Windows, OSX or Raspberry Pi. And then you need to download the client APP at the APP store.
 
 ## 2. Download
 
 ### Lomorage Service
 
-You can choose which version of Lomorage to download based on your perference. Running lomorage service on Windows or OSX give you better performance compared with on Raspberry Pi, the uploading and accessing the backup will be faster, but running Windows or OSX is not energy efficient as using Raspberry Pi. If using Raspberry Pi, you don't need worry about the electricity bill, it is only [about 5$ a year](https://raspberrypi.stackexchange.com/questions/5033/how-much-energy-does-the-raspberry-pi-consume-in-a-day)
+You can choose which version of Lomorage to download based on your preference. Running Lomorage service on Windows or OSX gives you better performance compared with on Raspberry Pi, the uploading and accessing the backup will be faster, but running Windows or OSX is not energy efficient as using Raspberry Pi. If using Raspberry Pi, you don't need to worry about the electricity bill, it is only [about 5$ a year](https://raspberrypi.stackexchange.com/questions/5033/how-much-energy-does-the-raspberry-pi-consume-in-a-day)
 
 <p align="center">
 
-<a href="https://github.com/lomorage/LomoAgentWin/releases/download/lomoagent-2019_08_08.08_39_09.0.364163e/lomoagent.msi" title="Install Lomorage for Windows" class="badge windows">Windows</a>
+<a href="https://github.com/lomorage/LomoAgentWin/releases/download/2019_09_10.21_41_44.0.7a70c3b/lomoagent.msi" title="Install Lomorage for Windows" class="badge windows">Windows</a>
 
  &nbsp;
  
-<a href="https://github.com/lomorage/LomoAgentOSX/releases/download/2019_09_08.17_42_30.0.c0beee3/LomoAgent.dmg" title="Install Lomorage for macOS" class="badge">macOS</a>
+<a href="https://github.com/lomorage/LomoAgentOSX/releases/download/2019_09_11.23_30_31.0.bb65c8a/LomoAgent.dmg" title="Install Lomorage for macOS" class="badge">macOS</a>
 
  &nbsp;
  
@@ -49,7 +49,7 @@ You can choose which version of Lomorage to download based on your perference. R
 
 ### Lomorage client
 
-Currently only iOS is supported, you can install the app on iPhone or iPad. The app is currently in beta testing, [request](mailto:support@lomorage.com) for testflight access.
+Currently, only iOS is supported, you can install the app on iPhone or iPad. The app is currently in beta testing, [request](mailto:support@lomorage.com) for testflight access.
 
 <p align="center">
 <a href="mailto:support@lomorage.com" title="Request testflight access" class="badge testflight">TestFlight</a>
@@ -65,7 +65,7 @@ Currently only iOS is supported, you can install the app on iPhone or iPad. The 
 
 ## 3. Setup
 
-The first step is to setup the Lomorage service.
+The first step is to set up the Lomorage service.
 
 ### Windows
 
@@ -77,7 +77,7 @@ On Windows, after launch the Lomorage application, you need to set the data dire
 
 ### macOS
 
-on macOs, after launch the Lomorage application, you need to set the home directory which is used for storing your photos. You can also setup a backup directory which served as redandency backup.
+on macOS, after launch the Lomorage application, you need to set the home directory which is used for storing your photos. You can also set up a backup directory which served as redundancy backup.
 
 <p align="center">
   <img width="50%" src="/img/installation/osx-lomo-agent.png">
@@ -111,11 +111,11 @@ After flushing the image, insert the microSD into Raspberry Pi board, connect US
 
 ### iOS
 
-You can install the application on either iPad or iPhone, the minimum iOS version required in 10.3. Since it's currently in beta testing using testflight, user need to download [testflight](https://apps.apple.com/us/app/testflight/id899247664) first, and then install Lomorage in testflight. Drop us an email to [request](mailto:support@lomorage.com) testflight access.
+You can install the application on either iPad or iPhone, the minimum iOS version required in 10.3. Since it's currently in beta testing using testflight, user needs to download [testflight](https://apps.apple.com/us/app/testflight/id899247664) first, and then install Lomorage in testflight. Drop us an email to [request](mailto:support@lomorage.com) testflight access.
 
-After lauching Lomorage, it should be able to discover the Lomorage service running in the same network. If you have multiple Lomorage service instances running, those will listed and you can choose one to use.
+After launching Lomorage, it should be able to discover the Lomorage service running in the same network. If you have multiple Lomorage service instances running, those will be listed and you can choose one to use.
 
-Then you can create user, choose the place you want to store your photos on the lomorage service, after login, it will take a few minutes to import all your photos on phone, and then you can drop down to start uploading the photos to the place you choose to store your backup, if the photo uploads successfully, there will be a green check on the bottom right. The remote tab will show you those photos stored remotely but not exists locally, so if you delete your local photo that already backup successfully, it will show up in the remote tab view.
+Then you can create user, choose the place you want to store your photos on the Lomorage service, after login, it will take a few minutes to import all your photos on phone, and then you can drop down to start uploading the photos to the place you choose to store your backup, if the photo uploads successfully, there will be a green check on the bottom right. The remote tab will show you those photos stored remotely but not exists locally, so if you delete your local photo that already backup successfully, it will show up in the remote tab view.
 
 <div align="center">
 <p class="screenshoot">
@@ -130,9 +130,9 @@ Then you can create user, choose the place you want to store your photos on the 
 
 ## 4. External Access
 
-Currently external access need some manual setup and some technical background, we will make the process more user friendly later.
+Currently, external access need some manual setup and some technical background, we will make the process more user-friendly later.
 
-There are a few tunnel services available for free use, most tunnel service require a client application running on your device, and setup a connection to the service running by the service provider, and it will give a subdomain name for you to use, if you access the url with that subdomain, the tunnel service will forward the traffic/request to the client application.
+There are a few tunnel services available for free use, most tunnel services require a client application running on your device, and set up a connection to the service running by the service provider, and it will give a subdomain name for you to use, if you access the URL with that subdomain, the tunnel service will forward the traffic/request to the client application.
 
 You can use [localtunnel](https://localtunnel.me) or [ngrok](https://ngrok.com), both are free tunnel services. localtunnel doesn't require registration, and it can customize the subdomain, so it's pre-installed in Lomorage Raspberry Pi image, while ngrok need register before use, and need pay to customize subdomain, but it's more stable and zero dependencies.
 
@@ -140,7 +140,7 @@ You can use [localtunnel](https://localtunnel.me) or [ngrok](https://ngrok.com),
 
 ### localtunnel
 
-If you are using Windows or macOS, you need install [nodejs](https://nodejs.org/) first and then install localtunnel. If you are using Lomorage Raspberry Pi image, then localtunnel is already installed and you can skip step 1 an step2.
+If you are using Windows or macOS, you need to install [nodejs](https://nodejs.org/) first and then install localtunnel. If you are using Lomorage Raspberry Pi image, then localtunnel is already installed and you can skip step 1 an step2.
 
 #### 1. Install nodejs
 
@@ -170,7 +170,7 @@ And if you see the output without any error message, and print out something lik
 your url is: https://allice.localtunnel.me
 ```
 
-Then you can start open that url in your browser, and if you see requests log printing in localtunnel output, then the tunnel is setup successfully.
+Then you can start open that URL in your browser, and if you see requests log printing in localtunnel output, then the tunnel is set up successfully.
 
 ```
 Sat Aug 31 2019 11:38:00 GMT-0700 (PDT) GET /
@@ -233,3 +233,4 @@ Open Lomorage APP on the phone, and in the settings tab, fill the tunnel service
 
 <br/><br/><br/><br/><br/><br/><br/><br/><br/>
 <div>Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/"             title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/"             title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
+

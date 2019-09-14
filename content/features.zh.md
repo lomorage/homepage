@@ -44,8 +44,6 @@ Lomorage服务可以运行在多种平台，您可以选择备份您的照片到
 
   - 本地容易备份: 您可以在本地备份多份数据，您只需要多接上一块硬盘，并在[设置备份路径](/zh/faq/#3-如何设置冗余备份)。
 
-Since most people will offline the phone storage, so having those backup once is not enough, Lomorage will provide several backup options:
-
   - 远程备份: 您可以选择加密备份到朋友或亲戚加的闲置硬盘空间。我们计划在今年内支持这个功能。
 <!--  - cloud backup: cloud backup on popular vendors is a good complementary. This is on the backlog, and plan to support this year.-->
 
