@@ -1,0 +1,18 @@
+{
+    "darwin":  {
+                   "Version":  "2019_09_11.23_30_31.0.bb65c8a",
+                   "OS":  "mac",
+                   "SHA256":  "43e5005cac557e4adbecb8e3709a3fcbdf1e81506aad3ec3ac904ab3f00e3d58",
+                   "URL":  "https://github.com/lomorage/LomoAgentOSX/releases/download/2019_09_11.23_30_31.0.bb65c8a/LomoAgent.zip",
+                   "LomoUpgVer":  "2019_09_08.17_36_36.0.5c3ad0f",
+                   "LomoUpdateURL":  "https://github.com/lomorage/lomoUpdate/releases/download/2019_09_08.17_36_36.0.5c3ad0f/LomoUpdateOSX.zip"
+               },
+    "windows":  {
+                    "Version":  "20190910",
+                    "OS":  "windows",
+                    "SHA256":  "61B9E4647FFB94E7E12EF4AEAE8642659A0EC6AA24F75A48D026B5077279F2C7",
+                    "URL":  "https://github.com/lomorage/LomoAgentWin/releases/download/2019_09_10.21_41_44.0.7a70c3b/lomoagent.msi",
+                    "LomoUpgVer":  "20190902",
+                    "LomoUpdateURL":  "http://lomorage.github.io/lomoupdate-2019_09_03.21_50_50.0.0bab270.zip"
+                }
+}

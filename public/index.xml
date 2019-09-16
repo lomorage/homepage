@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Lomorage</title>
+    <link>https://lomorage.com/</link>
+    <description>Recent content on Lomorage</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	<atom:link href="https://lomorage.com/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title></title>
+      <link>https://lomorage.com/features/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://lomorage.com/features/</guid>
+      <description>Feature Highlight Privacy Matters Lomorage is a private cloud service which runs on your private network, which gives you the convenience of cloud-based photo backup service, but without the concern of leaking privacy. We are not, and will never collect ANY user privacy data.
+You can also set up multiple Lomorage services in your private network, for different family members, which are completely isolated with each other.
+Cross-Platform There is no OS limitation for running the Lomorage service, you can backup your photos on MAC, Windows and Raspberry Pi, and we will add other OS support upon user&amp;rsquo;s request.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://lomorage.com/installation/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://lomorage.com/installation/</guid>
+      <description>Installation Guide  1. Overview 2. Download  Lomorage Service Lomorage client  3. Setup  Windows macOS Raspberry Pi iOS  4. External Access  localtunnel  1. Install nodejs 2. Install localtunnel 3. Run localtunnel 4. Config tunnel service on Lomorage APP  ngrok  1. Register 2. Download 3. Installation 4. Connect your account 5. Run ngrok 6. Config tunnel service on Lomorage APP     Installation Guide 1.</description>
+    </item>
+    
+    <item>
+      <title>Contact</title>
+      <link>https://lomorage.com/contact/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://lomorage.com/contact/</guid>
+      <description>We are here to help you Report problems, having new requirements? we are glad to hear from you, that will help us to polish the products.</description>
+    </item>
+    
+    <item>
+      <title>FAQ</title>
+      <link>https://lomorage.com/faq/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://lomorage.com/faq/</guid>
+      <description>1. How comes the name &amp;ldquo;Lomorage&amp;rdquo;? 2. Why another photo backup service? 3. How to setup redandency backup? 4. What file systems supported? 5. Why the date time seems not correct?  1. How comes the name &amp;ldquo;Lomorage&amp;rdquo;? If you know what Lomography is, then &amp;ldquo;Lomorage&amp;rdquo; is just a combination of &amp;ldquo;Lomography&amp;rdquo; and &amp;ldquo;Storage&amp;rdquo;.
+2. Why another photo backup service? We prefer to keep the photos and videos in our own storage rather than uploading them to the cloud, and we&amp;rsquo;d also like to share them with our family and friends.</description>
+    </item>
+    
+  </channel>
+</rss>
