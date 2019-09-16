@@ -65,23 +65,66 @@
 
 ## 3. 安装
 
-第一步: 安装Lomorage服务。
+首先需要安装Lomorage服务。
 
 ### Windows
 
-在Windows上双击运行Lomorage应用程序后，您需要设置数据目录，用来存储您的手机照片备份。
+<span>1.</span> 双击"lomoagent.msi"开始安装。如果有Windows Defender提示未知应用，请参考如下步骤允许安装程序运行。
 
-<p align="center">
+<div align="center">
+<p class="screenshoot">
+  <img width="50%" src="/img/installation/windows-defender-1.png">
+  <img width="50%" src="/img/installation/windows-defender-2.png">
+</p>
+</div>
+
+<span>2.</span> 勾选"最终用户许可协议"后，一路完成安装步骤。
+
+<div align="center">
+<p class="screenshoot">
+  <img width="50%" src="/img/installation/windows-install-1.png">
+  <img width="50%" src="/img/installation/windows-install-2.png">
+  <img width="50%" src="/img/installation/windows-install-3.png">
+</p>
+</div>
+
+<span>3.</span> 双击桌面的LomoAgent图标，启动应用程序，如果有防火墙提示，请允许LomoAgent访问私有网络。
+
+<div align="center">
+<p class="screenshoot">
+  <img width="50%" src="/img/installation/windows-firewall.png">
+</p>
+</div>
+
+<span>4.</span> 程序启动后，**您需要设置数据目录才能正常使用**，数据目录用来存储您的手机上传的照片视频。
+
+<div align="center">
+<p class="screenshoot">
   <img width="50%" src="/img/installation/windows-lomo-agent.png">
 </p>
+</div>
 
 ### macOS
 
-在macOs上双击运行Lomorage应用程序后，您需要设置数据目录，用来存储您的手机照片备份。除此之前您也可以再多选择一个冗余备份目录，系统会每天定时进行冗余备。
+<span>1.</span> 双击"LomoAgent.dmg"开始安装，参考下面步骤完成安装。
 
-<p align="center">
+<div align="center">
+<p class="screenshoot">
+  <img width="50%" src="/img/installation/osx-install-1.png">
+  <img width="50%" src="/img/installation/osx-install-2.png">
+  <img width="50%" src="/img/installation/osx-install-3.png">
+</p>
+</div>
+
+<span>2.</span> 运行应用程序LomoAgent，如果有防火墙提示，请允许LomoAgent访问网络。
+
+<span>3.</span> 程序启动后，**您需要设置数据目录才能正常使用**，数据目录用来存储您的手机上传的照片视频。除此之前您也可以再多选择一个冗余备份目录，系统会每天定时进行冗余备。
+
+<div align="center">
+<p class="screenshoot">
   <img width="50%" src="/img/installation/osx-lomo-agent.png">
 </p>
+</div>
 
 ### 树莓派
 
@@ -101,9 +144,11 @@
 
 将MicroSD卡插入到台式电脑或笔记本的读卡器后，选择下载的系统镜像，选择MicroSD卡，点击“Flash“按钮，几分钟后就会安装完成。
 
-<p align="center">
+<div align="center">
+<p class="screenshoot">
   <img width="50%" src="/img/installation/balenaEtcher.png">
 </p>
+</div>
 
 安装完后，将MicroSD卡插入到树莓派，接上USB移动硬盘，插入网线，接通电源，等待几分钟系统启动。
 
@@ -111,7 +156,7 @@
 
 您可以在iPad或iPhone上安装Lomorage客户端应用，最低支持的iOS系统版本是10.3。当前还处于beta测试阶段，您需要下载[testflight](https://apps.apple.com/us/app/testflight/id899247664)，然后在testflight中安装。testflight访问权限[申请](mailto:support@lomorage.com)。
 
-安装完Lomorage客户端，启动就可以自动发现同一网络中运行的Lomorage服务，如果您有多台Lomorage服务运行，那些会列举出来供选择。
+安装完Lomorage客户端，启动就可以自动发现同一网络中运行的Lomorage服务，如果您有多台Lomorage服务运行，那些会列举出来供选择。如果未能自动发现服务，您可以选择扫码的方式登陆（Lomorage服务运行在Windows或者MacOS下，打开LomoAgent设置），或者手动输入IP地址和端口。
 
 然后您可以创建用户，选择存储目录，登陆后，会花上几分钟来导入您相册的照片和视频，然后您可以选择需要上传的文件进行备份，如果已经备份成功，图片或视频下会显示一个绿色的小勾。在远程的选项卡里，显示的是远程备份过但本地没有的文件，所以如果您删除掉本地成功备份的文件，它们会显示在远程备份里面。
 

@@ -69,19 +69,62 @@ The first step is to set up the Lomorage service.
 
 ### Windows
 
-On Windows, after launch the Lomorage application, you need to set the data directory which is used for storing your photos.
+<span>1.</span> double click "lomoagent.msi" to start installation。If Windows Defender shows "lomoagent.msi" as unknown application, please follow the steps below to allow it to run。
 
-<p align="center">
+<div align="center">
+<p class="screenshoot">
+  <img width="50%" src="/img/installation/windows-defender-1.png">
+  <img width="50%" src="/img/installation/windows-defender-2.png">
+</p>
+</div>
+
+<span>2.</span> Follow the wizzard to finish the installation, in the End-User License Agreement, please checked the box as below。
+
+<div align="center">
+<p class="screenshoot">
+  <img width="50%" src="/img/installation/windows-install-1.png">
+  <img width="50%" src="/img/installation/windows-install-2.png">
+  <img width="50%" src="/img/installation/windows-install-3.png">
+</p>
+</div>
+
+<span>3.</span> Now you should see the lomoagent icon on your desktop, you can double click to start the lomoagent. If you meet below dialog popuped up by the Windows os, please select "Private networks ..." one and click the Allow access.
+
+<div align="center">
+<p class="screenshoot">
+  <img width="50%" src="/img/installation/windows-firewall.png">
+</p>
+</div>
+
+<span>4.</span> You will see below picture while you start the lomoagent, **You need to config the "Data directory" before using it**，"Data directory" is used to save the photos and videos uploading from your phone。
+
+<div align="center">
+<p class="screenshoot">
   <img width="50%" src="/img/installation/windows-lomo-agent.png">
 </p>
+</div>
 
 ### macOS
 
-on macOS, after launch the Lomorage application, you need to set the home directory which is used for storing your photos. You can also set up a backup directory which served as redundancy backup.
+<span>1.</span> Double click "LomoAgent.dmg" to start installation, and follow the steps below to finish the installation。
 
-<p align="center">
+<div align="center">
+<p class="screenshoot">
+  <img width="50%" src="/img/installation/osx-install-1.png">
+  <img width="50%" src="/img/installation/osx-install-2.png">
+  <img width="50%" src="/img/installation/osx-install-3.png">
+</p>
+</div>
+
+<span>2.</span> Run LomoAgent Application，please allow network access for LomoAgent if firewall is triggered。
+
+<span>3.</span> After launch the Lomorage application，**You need to set the "Home directory" before using Lomorage**，"Home directory" is used to save the photos and videos uploading from your phone。You can also set up a backup directory which served as redundancy backup.
+
+<div align="center">
+<p class="screenshoot">
   <img width="50%" src="/img/installation/osx-lomo-agent.png">
 </p>
+</div>
 
 ### Raspberry Pi
 
@@ -113,7 +156,7 @@ After flushing the image, insert the microSD into Raspberry Pi board, connect US
 
 You can install the application on either iPad or iPhone, the minimum iOS version required in 10.3. Since it's currently in beta testing using testflight, user needs to download [testflight](https://apps.apple.com/us/app/testflight/id899247664) first, and then install Lomorage in testflight. Drop us an email to [request](mailto:support@lomorage.com) testflight access.
 
-After launching Lomorage, it should be able to discover the Lomorage service running in the same network. If you have multiple Lomorage service instances running, those will be listed and you can choose one to use.
+After launching Lomorage, it should be able to discover the Lomorage service running in the same network. If you have multiple Lomorage service instances running, those will be listed and you can choose one to use. If Lomorage service can't be discovered automatically, you can discover the service via QRCode Scanning when using Windows or MacOS LomoAgent (open settings in LomoAgent to show the QRCode), or you can input the IP address and port manually.
 
 Then you can create user, choose the place you want to store your photos on the Lomorage service, after login, it will take a few minutes to import all your photos on phone, and then you can drop down to start uploading the photos to the place you choose to store your backup, if the photo uploads successfully, there will be a green check on the bottom right. The remote tab will show you those photos stored remotely but not exists locally, so if you delete your local photo that already backup successfully, it will show up in the remote tab view.
 
