@@ -36,7 +36,7 @@
 
 <p align="center">
 
-<a href="https://github.com/lomorage/LomoAgentWin/releases/download/2019_09_18.21_30_47.0.10a3afd/lomoagent.msi" title="Install Lomorage for Windows" class="badge windows">Windows</a>
+<a href="https://github.com/lomorage/LomoAgentWin/releases/download/2019_09_19.21_24_06.0.b5e1243/lomoagent.msi" title="Install Lomorage for Windows" class="badge windows">Windows</a>
 
  &nbsp;
  
