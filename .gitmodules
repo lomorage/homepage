@@ -1,0 +1,8 @@
+[submodule "public"]
+	path = public
+	url = git@github.com:lomorage/lomorage.github.io.git
+	branch = master
+[submodule "hugo-universal-theme"]
+	path = themes/hugo-universal-theme.git
+	url = git@github.com:lomorage/hugo-universal-theme.git
+	branch = master
