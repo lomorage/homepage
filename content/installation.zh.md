@@ -36,7 +36,7 @@
 
 <p align="center">
 
-<a href="https://github.com/lomorage/LomoAgentWin/releases/download/2019_09_10.21_41_44.0.7a70c3b/lomoagent.msi" title="Install Lomorage for Windows" class="badge windows">Windows</a>
+<a href="https://github.com/lomorage/LomoAgentWin/releases/download/2019_09_18.21_30_47.0.10a3afd/lomoagent.msi" title="Install Lomorage for Windows" class="badge windows">Windows</a>
 
  &nbsp;
  
@@ -44,24 +44,21 @@
 
  &nbsp;
  
-<a href="https://github.com/lomorage/pi-gen/releases/download/lomorage-v0.5/image_2019-08-01-lomorage-lite.zip" title="Install Lomorage for Raspberry Pi" class="badge raspberrypi">Raspberry Pi</a>
+<a href="https://github.com/lomorage/pi-gen/releases/download/lomorage-v0.6/image_2019-09-16-lomorage-lite.zip" title="Install Lomorage for Raspberry Pi" class="badge raspberrypi">Raspberry Pi</a>
 </p>
 
 ### Lomorage客户端
 
-现在支持者iOS，您可以在iPhone或者iPad上安装。现在还在beta测试阶段，点击[这里](mailto:support@lomorage.com)申请testflight访问权限。
+当前支持iPhone或者iPad上。
 
 <p align="center">
-<a href="mailto:support@lomorage.com" title="Request testflight access" class="badge testflight">TestFlight</a>
-</p>
-
-<!--<p align="center">
-<a href=""><img alt="Download on the App Store" src="/img/installation/app-store-ios.svg" width="220"></a>
-
+<a href="https://apps.apple.com/us/app/lomorage/id1451516091"><img alt="Download on the App Store" src="/img/installation/app-store-ios.svg" width="220"></a>
+<!--
  &nbsp;
  
 <a href=""><img alt="Get it on Google Play" src="/img/installation/app-store-google.svg" width="220"></a>
-</p>-->
+-->
+</p>
 
 ## 3. 安装
 
@@ -118,7 +115,7 @@
 
 <span>2.</span> 运行应用程序LomoAgent，如果有防火墙提示，请允许LomoAgent访问网络。
 
-<span>3.</span> 程序启动后，**您需要设置数据目录才能正常使用**，数据目录用来存储您的手机上传的照片视频。除此之前您也可以再多选择一个冗余备份目录，系统会每天定时进行冗余备。
+<span>3.</span> 程序启动后，**您需要设置数据目录才能正常使用**，数据目录用来存储您的手机上传的照片视频。除此之前您也可以再多选择一个冗余备份目录，系统会每天定时进行冗余备份。
 
 <div align="center">
 <p class="screenshoot">

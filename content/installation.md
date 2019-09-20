@@ -36,7 +36,7 @@ You can choose which version of Lomorage to download based on your preference. R
 
 <p align="center">
 
-<a href="https://github.com/lomorage/LomoAgentWin/releases/download/2019_09_10.21_41_44.0.7a70c3b/lomoagent.msi" title="Install Lomorage for Windows" class="badge windows">Windows</a>
+<a href="https://github.com/lomorage/LomoAgentWin/releases/download/2019_09_18.21_30_47.0.10a3afd/lomoagent.msi" title="Install Lomorage for Windows" class="badge windows">Windows</a>
 
  &nbsp;
  
@@ -44,24 +44,21 @@ You can choose which version of Lomorage to download based on your preference. R
 
  &nbsp;
  
-<a href="https://github.com/lomorage/pi-gen/releases/download/lomorage-v0.5/image_2019-08-01-lomorage-lite.zip" title="Install Lomorage for Raspberry Pi" class="badge raspberrypi">Raspberry Pi</a>
+<a href="https://github.com/lomorage/pi-gen/releases/download/lomorage-v0.6/image_2019-09-16-lomorage-lite.zip" title="Install Lomorage for Raspberry Pi" class="badge raspberrypi">Raspberry Pi</a>
 </p>
 
 ### Lomorage client
 
-Currently, only iOS is supported, you can install the app on iPhone or iPad. The app is currently in beta testing, [request](mailto:support@lomorage.com) for testflight access.
+Curently support iPhone and iPad。
 
 <p align="center">
-<a href="mailto:support@lomorage.com" title="Request testflight access" class="badge testflight">TestFlight</a>
-</p>
-
-<!--<p align="center">
-<a href=""><img alt="Download on the App Store" src="/img/installation/app-store-ios.svg" width="220"></a>
-
+<a href="https://apps.apple.com/us/app/lomorage/id1451516091"><img alt="Download on the App Store" src="/img/installation/app-store-ios.svg" width="220"></a>
+<!--
  &nbsp;
  
 <a href=""><img alt="Get it on Google Play" src="/img/installation/app-store-google.svg" width="220"></a>
-</p>-->
+-->
+</p>
 
 ## 3. Setup
 
