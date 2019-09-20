@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Lomorage</title>
+    <link>https://lomorage.com/zh/</link>
+    <description>Recent content on Lomorage</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	<atom:link href="https://lomorage.com/zh/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title></title>
+      <link>https://lomorage.com/zh/features/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://lomorage.com/zh/features/</guid>
+      <description>特色功能 保护隐私 Lomorage是运行在您网络的私有云服务，为您提供便捷的照片备份和管理服务，而无需担心隐私泄漏。我们没有，并永远不会收集任何用户隐私信息。
+您也可以在家中为不同的家庭成员运行多个完全隔离的Lomorage服务。
+跨平台 Lomorage服务可以运行在多种平台，您可以选择备份您的照片到Windows, macOS，甚至Raspberry Pi上，根据用户需求，我们会加上其他平台的支持。
+客户端我们现在只支持iOS，我们计划在今年内支持Android和Web。
+安装简单 我们并不是在构建另一个NAS系统，如果您的需求仅仅是备份和管理您的照片和视频，但是被NAS复杂的安装过程吓到，忘掉那些专业术语，放轻松。我们保证Lomorage的安装过程只需要短短几分钟。点击这里查看安装步骤。
+存储原始大小 照片和视频会按照完整尺寸备份到您的硬盘，文件和您的手机上完全一样。支持所有常见的图片和视频格式，甚至动态照片也能支持。
+零迁移成本 我们不会像一些云存储系统对文件进行切片分块存储，您的照片视频文件会以原始的文件格式存储备份到您的硬盘，我们不用任何私有的存储格式。要使用Lomorage，您也无需格式化硬盘，可以使用任何闲置的硬盘，并且我们的Raspberry Pi版本支持所有常见的文件系统格式，无需使用特定的文件系统，比如对于Windows用户，您可以使用FAT或者NTFS文件格式的硬盘，这样就无需第三方软件，存储的文件就能在Windows上访问。
+零维护成本 云服务之所以得到广泛使用的一个原因就是它在为用户提供了便利性的同时隐藏了系统的复杂性，因为Lomorage是一个在用户环境中部署的私用云，我们致力于提供云服务一样的用户体验，减少用户的干预和维护。
+ 自动升级: 有新版本可用的时候Lomorage服务会自动升级到最新版本。
+ 自动迁移: 升级新系统的同时，会根据需要自动的进行数据迁移，保证版本兼容。
+ 一致性检查: 系统会定期进行一致性检查，来保证数据的完整性和一致性，并自动修复。
+  多重备份 大多数用户在手机空间不够的时候，会将已经备份的照片视频删除，仅仅只有一份备份是不够的，Lomorage提供了多种备份方案:
+ 本地容易备份: 您可以在本地备份多份数据，您只需要多接上一块硬盘，并在设置备份路径。
+ 远程备份: 您可以选择加密备份到朋友或亲戚加的闲置硬盘空间。我们计划在今年内支持这个功能。   分享瞬间 您可以和自己家人分享照片和视频，并可自定义多个群组，分享不会占用额外的存储空间，而无需担心自己的手机空间不够。</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://lomorage.com/zh/installation/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://lomorage.com/zh/installation/</guid>
+      <description>安装说明  1. 简介 2. 下载  Lomorage服务 Lomorage客户端  3. 安装  Windows macOS 树莓派 iOS  4. 外网访问  localtunnel  1. 安装nodejs 2. 安装localtunnel 3. 运行localtunnel 4. 在Lomorage手机应用中配置隧道服务  ngrok  1. 注册 2. 下载 3. 安装 4. 连接您的账号 5. 运行ngrok 6. 在Lomorage手机应用中配置隧道服务     安装说明 1. 简介 要使用Lomorage，您需要在本地网络运行Lomorage服务，您可以选择在Windows，macOS或者树莓派上运行。然后您需要下载手机客户端应用。
+2. 下载 Lomorage服务 您可以根据自己的喜好和需求来选择不同的平台安装Lomorage服务。Windows或macOS上运行Lomorage服务可以提供比树莓派上更好的性能，上传和下载的速度会更快，但没树莓派节约能源，7x24小时运行，一年下来电费不会超过30元。
+Windows &amp;nbsp; macOS &amp;nbsp; Raspberry Pi Lomorage客户端 当前支持iPhone或者iPad上。
+  -- 3.</description>
+    </item>
+    
+    <item>
+      <title>常见问题</title>
+      <link>https://lomorage.com/zh/faq/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://lomorage.com/zh/faq/</guid>
+      <description>  1. 怎么想到&amp;rdquo;Lomorage&amp;rdquo;这个名字? 2. 这是在重新发明轮子吗? 3. 如何设置冗余备份? 4. 支持那些文件系统? 5. 为什么时间看起来不对?  1. 怎么想到&amp;rdquo;Lomorage&amp;rdquo;这个名字? &amp;ldquo;lomorage&amp;rdquo;结合了&amp;rdquo;Lomography&amp;rdquo;和&amp;rdquo;Storage&amp;rdquo;两个单词.
+2. 这是在重新发明轮子吗? 我们希望把照片视频备份在私有的存储设备，并且方便和家人分享，而不是将其备份到云端。NAS对于我们的需求有点杀鸡用牛刀的感觉，而且NAS非常昂贵，安装操作复杂，对于普通非技术背景用户并不容易，不能利用闲置硬盘，而且需要格式化已有的数据。Lomorage想做的就是一个安装简单，使用方便，功能不多不少刚刚好的一个照片备份和管理的私有云服务。
+更多信息
+3. 如何设置冗余备份? 如果您是在macOS上运行Lomorage服务（Windows暂时还没有支持），您可以打开LomoAgent应用程序的设置窗口，设置冗余备份。
+如果您是在树莓派上运行Lomorage服务，插入新的硬盘后，打开iOS手机客户端，在设置选项卡里可以设置冗余备份。
+4. 支持那些文件系统? 如果您在macOS或者Windows上运行Lomorage服务，您可以使用任何Windows或者macOS操作系统原生支持的文件系统。
+如果您是在树莓派上运行Lomorage服务，你可以使用更多的文件系统，包括:&amp;ldquo;vfat exfat ext2 ext3 ext4 hfsplus ntfs fuseblk&amp;rdquo;。
+5. 为什么时间看起来不对? 在系统中使用UTC时间来存储而不是本地时间，原因是照片可能拍摄于不同的时区，用户也会离开原先的住处搬迁到另外的时区，使用UTC时间戳能简化处理，而且可以很容易的在客户端应用程序转化为本地时间。
+ 如果您有更多的问题没有在这里找到答案，请联系我们
+ </description>
+    </item>
+    
+    <item>
+      <title>联系我们</title>
+      <link>https://lomorage.com/zh/contact/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://lomorage.com/zh/contact/</guid>
+      <description>客户服务 如果您有任何的问题，建议，新需求，请联系我们，我们洗耳恭听。</description>
+    </item>
+    
+  </channel>
+</rss>
