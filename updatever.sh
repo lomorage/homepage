@@ -13,10 +13,10 @@ $(basename $0) -p [osx|win|pi] [options...]
     -U lomoUpg zip download url
     -I Raspberry pi image url
 "
-
-RELEASE_JSON_PATH="static/release.json"
-INSTALLATION_EN_PATH="content/installation.md"
-INSTALLATION_ZH_PATH="content/installation.zh.md"
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+RELEASE_JSON_PATH="$DIR/static/release.json"
+INSTALLATION_EN_PATH="$DIR/content/installation.md"
+INSTALLATION_ZH_PATH="$DIR/content/installation.zh.md"
 
 PLATFORM=
 AGENT_VERSION=
@@ -103,7 +103,7 @@ while true; do
 done
 
 update_release() {
-    echo -e "\ntry update static/release.json for $1..."
+    echo -e "\n=====> update $RELEASE_JSON_PATH for $1..."
     changed=0
     if [ ! -z "$AGENT_VERSION" ]; then
         echo "update agent version: $AGENT_VERSION"
@@ -135,33 +135,44 @@ update_release() {
         changed=1
     fi
 
-    echo -e "\n=====> Done!\n"
-    if [ changed == 1 ]; then
+    if [ $changed == 1 ]; then
         cat $RELEASE_JSON_PATH
+    else
+        echo "no changes to $RELEASE_JSON_PATH"
     fi
+    echo -e "=====> Done!"
 }
 
 update_page_win() {
     if [ ! -z "$AGENT_PKG_URL" ]; then
+        echo -e "\n=====> update windows msi package on installation page"
         sed -i -E "s#https://github.com/lomorage/LomoAgentWin/releases/download/[[:digit:]]{4}_[[:digit:]]{2}_[[:digit:]]{2}\.[[:digit:]]{2}_[[:digit:]]{2}_[[:digit:]]{2}\.0\.[a-zA-Z0-9]{7}\/lomoagent\.msi#$AGENT_PKG_URL#g" $INSTALLATION_EN_PATH
         sed -i -E "s#https://github.com/lomorage/LomoAgentWin/releases/download/[[:digit:]]{4}_[[:digit:]]{2}_[[:digit:]]{2}\.[[:digit:]]{2}_[[:digit:]]{2}_[[:digit:]]{2}\.0\.[a-zA-Z0-9]{7}\/lomoagent\.msi#$AGENT_PKG_URL#g" $INSTALLATION_ZH_PATH
-        echo "updated windows msi package on installation page"
+        grep -H "https://github.com/lomorage/LomoAgentWin/releases/download/" $INSTALLATION_EN_PATH
+        grep -H "https://github.com/lomorage/LomoAgentWin/releases/download/" $INSTALLATION_ZH_PATH
+        echo -e "=====> Done!"
     fi
 }
 
 update_page_osx() {
     if [ ! -z "$AGENT_PKG_URL" ]; then
+        echo -e "\n=====> updated osx dmg package on installation page"
         sed -i -E "s#https://github.com/lomorage/LomoAgentOSX/releases/download/[[:digit:]]{4}_[[:digit:]]{2}_[[:digit:]]{2}\.[[:digit:]]{2}_[[:digit:]]{2}_[[:digit:]]{2}\.0\.[a-zA-Z0-9]{7}\/LomoAgent\.dmg#$AGENT_PKG_URL#g" $INSTALLATION_EN_PATH
         sed -i -E "s#https://github.com/lomorage/LomoAgentOSX/releases/download/[[:digit:]]{4}_[[:digit:]]{2}_[[:digit:]]{2}\.[[:digit:]]{2}_[[:digit:]]{2}_[[:digit:]]{2}\.0\.[a-zA-Z0-9]{7}\/LomoAgent\.dmg#$AGENT_PKG_URL#g" $INSTALLATION_ZH_PATH
-        echo "updated osx dmg package on installation page"
+        grep -H "https://github.com/lomorage/LomoAgentOSX/releases/download/" $INSTALLATION_EN_PATH
+        grep -H "https://github.com/lomorage/LomoAgentOSX/releases/download/" $INSTALLATION_ZH_PATH
+        echo -e "=====> Done!"
     fi
 }
 
 update_page_pi() {
     if [ ! -z "$PI_IMAGE_URL" ]; then
+        echo -e "\n=====> updated Raspberry Pi image on installation page"
         sed -i -E "s#https://github.com/lomorage/pi-gen/releases/download/lomorage-v[[:digit:]]+\.[[:digit:]]+/image_[[:digit:]]{4}-[[:digit:]]{2}-[[:digit:]]{2}-lomorage-lite\.zip#$PI_IMAGE_URL#g" $INSTALLATION_EN_PATH
         sed -i -E "s#https://github.com/lomorage/pi-gen/releases/download/lomorage-v[[:digit:]]+\.[[:digit:]]+/image_[[:digit:]]{4}-[[:digit:]]{2}-[[:digit:]]{2}-lomorage-lite\.zip#$PI_IMAGE_URL#g" $INSTALLATION_ZH_PATH
-        echo "updated Raspberry Pi image on installation page"
+        grep -H "https://github.com/lomorage/pi-gen/releases/download/" $INSTALLATION_EN_PATH
+        grep -H "https://github.com/lomorage/pi-gen/releases/download/" $INSTALLATION_ZH_PATH
+        echo -e "=====> Done!"
     fi
 }
 
