@@ -66,7 +66,7 @@ while true; do
             echo "lomoagent installation package url: $AGENT_PKG_URL"
             shift 2
             ;;
-        -v)
+        -s)
             AGENT_ZIP_HASH=$2
             echo "lomoagent zip sha256 hash: $AGENT_ZIP_HASH"
             shift 2
