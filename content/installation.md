@@ -127,6 +127,7 @@ The first step is to set up the Lomorage service.
 
 To run on Raspberry Pi, you need to order a [Raspberry Pi](https://www.raspberrypi.org/), we have tested the image the following models:
 
+- [Raspberry Pi 4 Model B](https://www.raspberrypi.org/products/raspberry-pi-4-model-b/)
 - [Raspberry Pi 3 Model B+](https://www.raspberrypi.org/products/raspberry-pi-3-model-b-plus/)
 - [Raspberry Pi Zero W](https://www.raspberrypi.org/products/raspberry-pi-zero-w/)
 - [Raspberry Pi 2 Model B](https://www.raspberrypi.org/products/raspberry-pi-2-model-b/)
@@ -148,6 +149,10 @@ After you insert the MicroSD to your desktop or laptop, just select the image yo
 </p>
 
 After flushing the image, insert the microSD into Raspberry Pi board, connect USB hard drive with Raspberry Pi, plug in a network cable, plug in the power supply, turn on the power and wait a few minutes for system boot.
+
+We strongely suggest use cable to provide better performance, but if you prefer to use WiFi, you can login Raspberry Pi and use the command `wifi_switch client [wifi-ssid] [wifi-password]`, replace "[wifi-ssid]" and "[wifi-password]" with those of your wifi network.
+
+*The login username is "pi" and password is "raspberry"*
 
 ### iOS
 
@@ -180,7 +185,7 @@ You can use [localtunnel](https://localtunnel.me) or [ngrok](https://ngrok.com),
 
 ### localtunnel
 
-If you are using Windows or macOS, you need to install [nodejs](https://nodejs.org/) first and then install localtunnel. If you are using Lomorage Raspberry Pi image, then localtunnel is already installed and you can skip step 1 an step2.
+If you are using Windows or macOS, you need to install [nodejs](https://nodejs.org/) first and then install localtunnel. If you are using Lomorage Raspberry Pi image, then you can run command `sudo localtunnel_install.sh` to install localtunnel, and you can skip step 1 an step2.
 
 #### 1. Install nodejs
 

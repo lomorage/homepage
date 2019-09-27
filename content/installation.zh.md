@@ -127,6 +127,7 @@
 
 要在树莓派上运行，您需要先购买一个[树莓派](https://www.raspberrypi.org/)，Lomorage可以运行在以下型号的机器上:
 
+- [Raspberry Pi 4 Model B](https://www.raspberrypi.org/products/raspberry-pi-4-model-b/)
 - [Raspberry Pi 3 Model B+](https://www.raspberrypi.org/products/raspberry-pi-3-model-b-plus/)
 - [Raspberry Pi Zero W](https://www.raspberrypi.org/products/raspberry-pi-zero-w/)
 - [Raspberry Pi 2 Model B](https://www.raspberrypi.org/products/raspberry-pi-2-model-b/)
@@ -148,6 +149,10 @@
 </div>
 
 安装完后，将MicroSD卡插入到树莓派，接上USB移动硬盘，插入网线，接通电源，等待几分钟系统启动。
+
+为了更好的性能，我们强烈建议使用有线网络连接，但如果您想使用WiFi, 您可以登陆树莓派，并使用下面的命令来启用无线连接`wifi_switch client [wifi-ssid] [wifi-password]`，将 "[wifi-ssid]"和"[wifi-password]"替换为您的无线网络名和密码。
+
+*登陆的用户名是"pi"，密码是"raspberry"*
 
 ### iOS
 
@@ -174,13 +179,13 @@
 
 外网访问依赖于隧道连接服务来实现内网穿透，现有一些服务提供商提供免费的服务，大多数隧道服务都需要下载客户端，运行在您的设备上，同公网的隧道服务器建立连接，并分配子域名，当通过子域名进行访问时，隧道服务就会将请求转发到您的应用程序。
 
-您可以使用[localtunnel](https://localtunnel.me)或者[ngrok](https://ngrok.com)，这两个都是免费的隧道服务. localtunnel无需注册，并且支持自定义子域名，因此在Lomorage的树莓派镜像中已经预安装了localtunnel; ngrok需要注册，使用自定义子域名需要付费，但更加稳定，并没有额外的依赖。
+您可以使用[localtunnel](https://localtunnel.me)或者[ngrok](https://ngrok.com)，这两个都是免费的隧道服务. localtunnel无需注册，并且支持自定义子域名; ngrok需要注册，使用自定义子域名需要付费，但更加稳定，并没有额外的依赖。
 
 *如果您使用Lomorage的树莓派镜像, 登陆的用户名是"pi"，密码是"raspberry"*
 
 ### localtunnel
 
-如果您使用Windows或者macOS，您需要先先安装[nodejs](https://nodejs.org/)，再安装localtunnel。如果您使用Lomorage的树莓派镜像，localtunnel已经预装了，您可以跳过下面的步骤1和步骤2。
+如果您使用Windows或者macOS，您需要先先安装[nodejs](https://nodejs.org/)，再安装localtunnel。如果您使用Lomorage的树莓派镜像，您可以直接运行`sudo localtunnel_install.sh`来安装localtunnel，您可以跳过下面的步骤1和步骤2。
 
 #### 1. 安装nodejs
 
