@@ -40,7 +40,7 @@ You can choose which version of Lomorage to download based on your preference. R
 
 <p align="center">
 
-<a href="https://github.com/lomorage/LomoAgentWin/releases/download/2019_09_27.20_50_42.0.a0f75cb/lomoagent.msi" title="Install Lomorage for Windows" class="badge windows">Windows</a>
+<a href="https://github.com/lomorage/LomoAgentWin/releases/download/2019_09_28.11_56_35.0.a0f75cb/lomoagent.msi" title="Install Lomorage for Windows" class="badge windows">Windows</a>
 
  &nbsp;
  
