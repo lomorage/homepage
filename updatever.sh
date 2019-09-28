@@ -27,6 +27,11 @@ UPG_VERSION=
 UPG_ZIP_URL=
 PI_IMAGE_URL=
 
+SED_INPLACE_OPTION=
+if [[ "$OSTYPE" == "darwin"* ]]; then
+    SED_INPLACE_OPTION=""
+fi
+
 OPTIONS=hp:v:u:i:s:V:U:I:
 PARSED=$(getopt $OPTIONS $*)
 if [ $? -ne 0 ]; then
@@ -146,8 +151,8 @@ update_release() {
 update_page_win() {
     if [ ! -z "$AGENT_PKG_URL" ]; then
         echo -e "\n=====> update windows msi package on installation page"
-        sed -i '' -E "s#https://github.com/lomorage/LomoAgentWin/releases/download/[[:digit:]]{4}_[[:digit:]]{2}_[[:digit:]]{2}\.[[:digit:]]{2}_[[:digit:]]{2}_[[:digit:]]{2}\.0\.[a-zA-Z0-9]{7}\/lomoagent\.msi#$AGENT_PKG_URL#g" $INSTALLATION_EN_PATH
-        sed -i '' -E "s#https://github.com/lomorage/LomoAgentWin/releases/download/[[:digit:]]{4}_[[:digit:]]{2}_[[:digit:]]{2}\.[[:digit:]]{2}_[[:digit:]]{2}_[[:digit:]]{2}\.0\.[a-zA-Z0-9]{7}\/lomoagent\.msi#$AGENT_PKG_URL#g" $INSTALLATION_ZH_PATH
+        sed -i $SED_INPLACE_OPTION -E "s#https://github.com/lomorage/LomoAgentWin/releases/download/[[:digit:]]{4}_[[:digit:]]{2}_[[:digit:]]{2}\.[[:digit:]]{2}_[[:digit:]]{2}_[[:digit:]]{2}\.0\.[a-zA-Z0-9]{7}\/lomoagent\.msi#$AGENT_PKG_URL#g" $INSTALLATION_EN_PATH
+        sed -i $SED_INPLACE_OPTION -E "s#https://github.com/lomorage/LomoAgentWin/releases/download/[[:digit:]]{4}_[[:digit:]]{2}_[[:digit:]]{2}\.[[:digit:]]{2}_[[:digit:]]{2}_[[:digit:]]{2}\.0\.[a-zA-Z0-9]{7}\/lomoagent\.msi#$AGENT_PKG_URL#g" $INSTALLATION_ZH_PATH
         grep -H "https://github.com/lomorage/LomoAgentWin/releases/download/" $INSTALLATION_EN_PATH
         grep -H "https://github.com/lomorage/LomoAgentWin/releases/download/" $INSTALLATION_ZH_PATH
         echo -e "=====> Done!"
@@ -157,8 +162,8 @@ update_page_win() {
 update_page_osx() {
     if [ ! -z "$AGENT_PKG_URL" ]; then
         echo -e "\n=====> updated osx dmg package on installation page"
-        sed -i '' -E "s#https://github.com/lomorage/LomoAgentOSX/releases/download/[[:digit:]]{4}_[[:digit:]]{2}_[[:digit:]]{2}\.[[:digit:]]{2}_[[:digit:]]{2}_[[:digit:]]{2}\.0\.[a-zA-Z0-9]{7}\/LomoAgent\.dmg#$AGENT_PKG_URL#g" $INSTALLATION_EN_PATH
-        sed -i '' -E "s#https://github.com/lomorage/LomoAgentOSX/releases/download/[[:digit:]]{4}_[[:digit:]]{2}_[[:digit:]]{2}\.[[:digit:]]{2}_[[:digit:]]{2}_[[:digit:]]{2}\.0\.[a-zA-Z0-9]{7}\/LomoAgent\.dmg#$AGENT_PKG_URL#g" $INSTALLATION_ZH_PATH
+        sed -i $SED_INPLACE_OPTION -E "s#https://github.com/lomorage/LomoAgentOSX/releases/download/[[:digit:]]{4}_[[:digit:]]{2}_[[:digit:]]{2}\.[[:digit:]]{2}_[[:digit:]]{2}_[[:digit:]]{2}\.0\.[a-zA-Z0-9]{7}\/LomoAgent\.dmg#$AGENT_PKG_URL#g" $INSTALLATION_EN_PATH
+        sed -i $SED_INPLACE_OPTION -E "s#https://github.com/lomorage/LomoAgentOSX/releases/download/[[:digit:]]{4}_[[:digit:]]{2}_[[:digit:]]{2}\.[[:digit:]]{2}_[[:digit:]]{2}_[[:digit:]]{2}\.0\.[a-zA-Z0-9]{7}\/LomoAgent\.dmg#$AGENT_PKG_URL#g" $INSTALLATION_ZH_PATH
         grep -H "https://github.com/lomorage/LomoAgentOSX/releases/download/" $INSTALLATION_EN_PATH
         grep -H "https://github.com/lomorage/LomoAgentOSX/releases/download/" $INSTALLATION_ZH_PATH
         echo -e "=====> Done!"
@@ -168,8 +173,8 @@ update_page_osx() {
 update_page_pi() {
     if [ ! -z "$PI_IMAGE_URL" ]; then
         echo -e "\n=====> updated Raspberry Pi image on installation page"
-        sed -i '' -E "s#https://github.com/lomorage/pi-gen/releases/download/[[:digit:]]{4}_[[:digit:]]{2}_[[:digit:]]{2}\.[[:digit:]]{2}_[[:digit:]]{2}_[[:digit:]]{2}\.0\.[a-zA-Z0-9]{7}\/image_[[:digit:]]{4}-[[:digit:]]{2}-[[:digit:]]{2}-lomorage-lite\.zip#$PI_IMAGE_URL#g" $INSTALLATION_EN_PATH
-        sed -i '' -E "s#https://github.com/lomorage/pi-gen/releases/download/[[:digit:]]{4}_[[:digit:]]{2}_[[:digit:]]{2}\.[[:digit:]]{2}_[[:digit:]]{2}_[[:digit:]]{2}\.0\.[a-zA-Z0-9]{7}\/image_[[:digit:]]{4}-[[:digit:]]{2}-[[:digit:]]{2}-lomorage-lite\.zip#$PI_IMAGE_URL#g" $INSTALLATION_ZH_PATH
+        sed -i $SED_INPLACE_OPTION -E "s#https://github.com/lomorage/pi-gen/releases/download/[[:digit:]]{4}_[[:digit:]]{2}_[[:digit:]]{2}\.[[:digit:]]{2}_[[:digit:]]{2}_[[:digit:]]{2}\.0\.[a-zA-Z0-9]{7}\/image_[[:digit:]]{4}-[[:digit:]]{2}-[[:digit:]]{2}-lomorage-lite\.zip#$PI_IMAGE_URL#g" $INSTALLATION_EN_PATH
+        sed -i $SED_INPLACE_OPTION -E "s#https://github.com/lomorage/pi-gen/releases/download/[[:digit:]]{4}_[[:digit:]]{2}_[[:digit:]]{2}\.[[:digit:]]{2}_[[:digit:]]{2}_[[:digit:]]{2}\.0\.[a-zA-Z0-9]{7}\/image_[[:digit:]]{4}-[[:digit:]]{2}-[[:digit:]]{2}-lomorage-lite\.zip#$PI_IMAGE_URL#g" $INSTALLATION_ZH_PATH
         grep -H "https://github.com/lomorage/pi-gen/releases/download/" $INSTALLATION_EN_PATH
         grep -H "https://github.com/lomorage/pi-gen/releases/download/" $INSTALLATION_ZH_PATH
         echo -e "=====> Done!"
