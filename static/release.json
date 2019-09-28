@@ -1,18 +1,18 @@
 {
-    "darwin":  {
-                   "Version":  "2019_09_11.23_30_31.0.bb65c8a",
-                   "OS":  "mac",
-                   "SHA256":  "43e5005cac557e4adbecb8e3709a3fcbdf1e81506aad3ec3ac904ab3f00e3d58",
-                   "URL":  "https://github.com/lomorage/LomoAgentOSX/releases/download/2019_09_11.23_30_31.0.bb65c8a/LomoAgent.zip",
-                   "LomoUpgVer":  "2019_09_08.17_36_36.0.5c3ad0f",
-                   "LomoUpdateURL":  "https://github.com/lomorage/lomoUpdate/releases/download/2019_09_08.17_36_36.0.5c3ad0f/LomoUpdateOSX.zip"
-               },
-    "windows":  {
-                    "Version":  "2019_09_18.21_30_47.0.10a3afd",
-                    "OS":  "windows",
-                    "SHA256":  "a246e896a291c9faa13ba6f4601227706770dbd7fb3ebd39c9d437a2c43b5537",
-                    "URL":  "https://github.com/lomorage/LomoAgentWin/releases/download/2019_09_19.21_24_06.0.b5e1243/lomoagent-2019_09_19.21_24_06.0.b5e1243.zip",
-                    "LomoUpgVer":  "20190919",
-                    "LomoUpdateURL":  "https://github.com/lomorage/LomoAgentWin/releases/download/2019_09_19.21_24_06.0.b5e1243/lomoupdate-2019_09_19.21_24_06.0.b5e1243.zip"
-                }
+  "darwin": {
+    "Version": "2019_09_11.23_30_31.0.bb65c8a",
+    "OS": "mac",
+    "SHA256": "43e5005cac557e4adbecb8e3709a3fcbdf1e81506aad3ec3ac904ab3f00e3d58",
+    "URL": "https://github.com/lomorage/LomoAgentOSX/releases/download/2019_09_11.23_30_31.0.bb65c8a/LomoAgent.zip",
+    "LomoUpgVer": "2019_09_08.17_36_36.0.5c3ad0f",
+    "LomoUpdateURL": "https://github.com/lomorage/lomoUpdate/releases/download/2019_09_08.17_36_36.0.5c3ad0f/LomoUpdateOSX.zip"
+  },
+  "windows": {
+    "Version": "2019_09_27.19_49_53.0.a0f75cb",
+    "OS": "windows",
+    "SHA256": "C93ED07F93801C4CA71F9B24C6F2566DC812424CC6710977B11CA3DCBAF7F378",
+    "URL": "https://github.com/lomorage/LomoAgentWin/releases/download/2019_09_27.19_49_53.0.a0f75cb/lomoagent-2019_09_27.19_49_53.0.a0f75cb.zip",
+    "LomoUpgVer": "2019_09_27.19_49_53.0.a0f75cb",
+    "LomoUpdateURL": "https://github.com/lomorage/LomoAgentWin/releases/download/2019_09_27.19_49_53.0.a0f75cb/lomoupdate-2019_09_27.19_49_53.0.a0f75cb.zip"
+  }
 }
