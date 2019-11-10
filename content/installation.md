@@ -11,6 +11,8 @@ title = "Installation Guide"
          * [Windows](#windows)
          * [macOS](#macos)
          * [Raspberry Pi](#raspberry-pi)
+            * [Install with prebuild OS image](#install-with-prebuild-os-image)
+            * [Install on existing Raspbian](#install-on-existing-raspbian)
          * [iOS](#ios)
       * [4. External Access](#4-external-access)
          * [localtunnel](#localtunnel)
@@ -43,11 +45,11 @@ You can choose which version of Lomorage to download based on your preference. R
 <a href="https://github.com/lomorage/LomoAgentWin/releases/download/2019_09_28.11_56_35.0.a0f75cb/lomoagent.msi" title="Install Lomorage for Windows" class="badge windows">Windows</a>
 
  &nbsp;
- 
+
 <a href="https://github.com/lomorage/LomoAgentOSX/releases/download/2019_09_11.23_30_31.0.bb65c8a/LomoAgent.dmg" title="Install Lomorage for macOS" class="badge">macOS</a>
 
  &nbsp;
- 
+
 <a href="https://github.com/lomorage/pi-gen/releases/download/2019_09_26.21_07_53.0.0cbe0a8/image_2019-09-26-lomorage-lite.zip" title="Install Lomorage for Raspberry Pi" class="badge raspberrypi">Raspberry Pi</a>
 </p>
 
@@ -59,7 +61,7 @@ Curently support iPhone and iPad。
 <a href="https://apps.apple.com/us/app/lomorage/id1451516091"><img alt="Download on the App Store" src="/img/installation/app-store-ios.svg" width="220"></a>
 <!--
  &nbsp;
- 
+
 <a href=""><img alt="Get it on Google Play" src="/img/installation/app-store-google.svg" width="220"></a>
 -->
 </p>
@@ -144,6 +146,10 @@ If you don't have one yet, we would recommend the newer version, which gives bet
 
 A [Raspberry Pi 3 B+ (PLUS) Starter Kit](https://www.pishop.us/product/raspberry-pi-3-b-plus-starter-kit/) is good enough for the setup.
 
+There are two options to install Lomorage service on Raspberry Pi, one is using the prebuild OS image which has all the dependencies installed, another one is manaully installation if you already have Raspberry Pi setup and running for other purpose.
+
+#### Install with prebuild OS image
+
 After you download the customized [OS image](https://github.com/lomorage/pi-gen/releases/download/2019_09_26.21_07_53.0.0cbe0a8/image_2019-09-26-lomorage-lite.zip), you can install the image to MicroSD card using [balenaEtcher](https://www.balena.io/etcher/), which is available on both Windows and macOS.
 
 After you insert the MicroSD to your desktop or laptop, just select the image you download, choose the MicroSD drive, and click "Flash", it will be done in a few minutes.
@@ -157,6 +163,67 @@ After flushing the image, insert the microSD into Raspberry Pi board, connect US
 We strongely suggest use cable to provide better performance, but if you prefer to use WiFi, you can login Raspberry Pi and use the command `wifi_switch client [wifi-ssid] [wifi-password]`, replace "[wifi-ssid]" and "[wifi-password]" with those of your wifi network.
 
 *The login username is "pi" and password is "raspberry"*
+
+#### Install on existing Raspbian
+
+**step 1. Add lomoware source.**
+
+```
+wget -qO - https://raw.githubusercontent.com/lomoware/lomoware.github.io/master/debian/gpg.key | sudo apt-key add -
+```
+
+If you are using jessie:
+
+```
+echo "deb https://lomoware.github.io/debian jessie main" | sudo tee /etc/apt/sources.list.d/lomoware.list
+```
+
+If you are using buster:
+
+```
+echo "deb https://lomoware.github.io/debian/buster buster main" | sudo tee /etc/apt/sources.list.d/lomoware.list
+```
+
+then run:
+
+```
+sudo apt update
+```
+
+**step 2. Install ffmpeg and rsync.**
+
+```
+sudo apt install ffmpeg rsync -y
+```
+
+**step 3. Install file systems support.**
+
+```
+sudo apt install exfat-fuse ntfs-3g hfsplus hfsutils hfsprogs -y
+```
+
+**step 4. Install usbmount.**
+
+You can skip this if you are using desktop image which has PCManFM installed that can auto mount the USB drive. If you are using the Lite image, and you can use usbmount to auto mount the USB drive.
+
+The usbmount we are using is a modified version which mounts a specfic USB drive to a fixed mount point in "/media" directory, which means the order you plugin the drives doesn't matter, the mount point is always the same.
+
+```
+sudo apt install lockfile-progs -y
+sudo mkdir /etc/usbmount
+sudo mkdir /usr/share/usbmount
+sudo wget -qO /etc/usbmount/usbmount.conf https://raw.githubusercontent.com/lomorage/pi-gen/lomorage/stage2/01-sys-tweaks/files/usbmount.conf
+sudo wget -qO /usr/share/usbmount/usbmount https://raw.githubusercontent.com/lomorage/pi-gen/lomorage/stage2/01-sys-tweaks/files/usbmount
+sudo chmod +x /usr/share/usbmount/usbmount
+sudo wget -qO /etc/udev/rules.d/usbmount.rules https://raw.githubusercontent.com/lomorage/pi-gen/lomorage/stage2/01-sys-tweaks/files/usbmount.rules
+sudo wget -qO /etc/systemd/system/usbmount@.service https://raw.githubusercontent.com/lomorage/pi-gen/lomorage/stage2/01-sys-tweaks/files/usbmount%40.service
+```
+
+**step 5. Install Lomorage service**
+
+```
+sudo apt install lomo-vips lomo-backend -y
+```
 
 ### iOS
 
@@ -226,7 +293,6 @@ Sat Aug 31 2019 11:38:00 GMT-0700 (PDT) GET /
 ```
 
 <script id="asciicast-265358" src="https://asciinema.org/a/265358.js" async></script>
-
 #### 4. Config tunnel service on Lomorage APP
 
 Open Lomorage APP on the phone, and in the settings tab, fill the tunnel service host and port, the host is like "allice.localtunnel.me", and the port is "443".
@@ -279,7 +345,5 @@ Open Lomorage APP on the phone, and in the settings tab, fill the tunnel service
 
 
 <script id="asciicast-265359" src="https://asciinema.org/a/265359.js" async></script>
-
 <br/><br/><br/><br/><br/><br/><br/><br/><br/>
 <div>Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/"             title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/"             title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
-
