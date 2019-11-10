@@ -166,7 +166,7 @@ We strongely suggest use cable to provide better performance, but if you prefer 
 
 #### Install on existing Raspbian
 
-**step 1. Add lomoware source.**
+**step 1. Add lomoware source**
 
 ```
 wget -qO - https://raw.githubusercontent.com/lomoware/lomoware.github.io/master/debian/gpg.key | sudo apt-key add -
@@ -190,19 +190,19 @@ then run:
 sudo apt update
 ```
 
-**step 2. Install ffmpeg and rsync.**
+**step 2. Install ffmpeg and rsync**
 
 ```
 sudo apt install ffmpeg rsync -y
 ```
 
-**step 3. Install file systems support.**
+**step 3. Install file systems support**
 
 ```
 sudo apt install exfat-fuse ntfs-3g hfsplus hfsutils hfsprogs -y
 ```
 
-**step 4. Install usbmount.**
+**step 4. Install usbmount**
 
 You can skip this if you are using desktop image which has PCManFM installed that can auto mount the USB drive. If you are using the Lite image, and you can use usbmount to auto mount the USB drive.
 
@@ -223,6 +223,22 @@ sudo wget -qO /etc/systemd/system/usbmount@.service https://raw.githubuserconten
 
 ```
 sudo apt install lomo-vips lomo-backend -y
+```
+
+**step 6. Change mount directory if needed**
+
+If you are not using the usbmount in step 4, you may need to specify the mount directory if the USB drive is not mounted in "/media" directory, for example if you are using PCManFM, then the mount directory will be "/media/pi".
+
+To specify the mount directory to be "/media/pi", modify `ExecStart` in "lib/systemd/system/lomod.service", and add paramter "--mount-dir" as below
+
+```
+ExecStart=/opt/lomorage/bin/lomod -b /opt/lomorage/var --mount-dir /media/pi  --max-upload 1 --max-fetch-preview 3
+```
+
+Then restart Lomorage service:
+
+```
+sudo systemctl restart lomod
 ```
 
 ### iOS
