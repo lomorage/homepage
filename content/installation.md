@@ -190,16 +190,16 @@ then run:
 sudo apt update
 ```
 
-**step 2. Install ffmpeg and rsync**
+**step 2. Install 3rd party tools**
 
 ```
-sudo apt install ffmpeg rsync -y
+sudo apt install ffmpeg rsync jq libimage-exiftool-perl -y
 ```
 
 **step 3. Install file systems support**
 
 ```
-sudo apt install exfat-fuse ntfs-3g hfsplus hfsutils hfsprogs -y
+sudo apt install nfs-common exfat-fuse ntfs-3g hfsplus hfsutils hfsprogs -y
 sudo ln -nsf /bin/ntfsfix /sbin/fsck.ntfs
 sudo ln -nsf /bin/ntfsfix /sbin/fsck.ntfs-3g
 ```

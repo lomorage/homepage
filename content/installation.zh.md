@@ -190,16 +190,16 @@ echo "deb https://lomoware.github.io/debian/buster buster main" | sudo tee /etc/
 sudo apt update
 ```
 
-**步骤2. 安装ffmpeg和rsync**
+**步骤2. 安装第三方工具**
 
 ```
-sudo apt install ffmpeg rsync -y
+sudo apt install ffmpeg rsync jq libimage-exiftool-perl -y
 ```
 
 **步骤3. 安装文件系统支持**
 
 ```
-sudo apt install exfat-fuse ntfs-3g hfsplus hfsutils hfsprogs -y
+sudo apt install nfs-common exfat-fuse ntfs-3g hfsplus hfsutils hfsprogs -y
 sudo ln -nsf /bin/ntfsfix /sbin/fsck.ntfs
 sudo ln -nsf /bin/ntfsfix /sbin/fsck.ntfs-3g
 ```
@@ -361,6 +361,5 @@ Lomorage服务默认运行在8000端口，ngrok的免费账号不能自定义子
 
 
 <script id="asciicast-265359" src="https://asciinema.org/a/265359.js" async></script>
-
 <br/><br/><br/><br/><br/><br/><br/><br/><br/>
 <div>Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/"             title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/"             title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
