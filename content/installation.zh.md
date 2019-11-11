@@ -11,6 +11,8 @@ title = "安装说明"
          * [Windows](#windows)
          * [macOS](#macos)
          * [树莓派](#树莓派)
+            * [安装系统镜像](#安装系统镜像)
+            * [安装在已有的Raspbian系统上](#安装在已有的raspbian系统上)
          * [iOS](#ios)
       * [4. 外网访问](#4-外网访问)
          * [localtunnel](#localtunnel)
@@ -43,11 +45,11 @@ title = "安装说明"
 <a href="https://github.com/lomorage/LomoAgentWin/releases/download/2019_09_28.11_56_35.0.a0f75cb/lomoagent.msi" title="Install Lomorage for Windows" class="badge windows">Windows</a>
 
  &nbsp;
- 
+
 <a href="https://github.com/lomorage/LomoAgentOSX/releases/download/2019_09_11.23_30_31.0.bb65c8a/LomoAgent.dmg" title="Install Lomorage for macOS" class="badge">macOS</a>
 
  &nbsp;
- 
+
 <a href="https://github.com/lomorage/pi-gen/releases/download/2019_09_26.21_07_53.0.0cbe0a8/image_2019-09-26-lomorage-lite.zip" title="Install Lomorage for Raspberry Pi" class="badge raspberrypi">Raspberry Pi</a>
 </p>
 
@@ -59,7 +61,7 @@ title = "安装说明"
 <a href="https://apps.apple.com/us/app/lomorage/id1451516091"><img alt="Download on the App Store" src="/img/installation/app-store-ios.svg" width="220"></a>
 <!--
  &nbsp;
- 
+
 <a href=""><img alt="Get it on Google Play" src="/img/installation/app-store-google.svg" width="220"></a>
 -->
 </p>
@@ -136,11 +138,15 @@ title = "安装说明"
 - [Raspberry Pi Zero W](https://www.raspberrypi.org/products/raspberry-pi-zero-w/)
 - [Raspberry Pi 2 Model B](https://www.raspberrypi.org/products/raspberry-pi-2-model-b/)
 
-如果您还没有树莓派，我们建议购买新款的树莓派，会有更好的性能，我们很快会提供支持树莓派4的系统镜像。下面是您需要的最小配置:
+如果您还没有树莓派，我们建议购买新款的树莓派，会有更好的性能。下面是您需要的最小配置:
 
 - 树莓派主板
 - 配套电源
 - 16GB MicroSD卡
+
+有两种方式来在Raspberry Pi上安装Lomorage服务程序，一种是安装预编译好的系统镜像，该镜像已经安装了所有Lomorage服务程序依赖的库和第三方工具，简单快捷，推荐使用；另一种方式相对繁琐一点，但如果您已经有Raspberry Pi在运行其他的服务程序，您可以选择这种安装方式。
+
+#### 安装系统镜像
 
 下载了[系统镜像](https://github.com/lomorage/pi-gen/releases/download/2019_09_26.21_07_53.0.0cbe0a8/image_2019-09-26-lomorage-lite.zip)后, 你可以使用[balenaEtcher](https://www.balena.io/etcher/)将其安装到MicroSD卡, balenaEtcher提供Windows和macOS版本。
 
@@ -157,6 +163,85 @@ title = "安装说明"
 为了更好的性能，我们强烈建议使用有线网络连接，但如果您想使用WiFi, 您可以登陆树莓派，并使用下面的命令来启用无线连接`wifi_switch client [wifi-ssid] [wifi-password]`，将 "[wifi-ssid]"和"[wifi-password]"替换为您的无线网络名和密码。
 
 *登陆的用户名是"pi"，密码是"raspberry"*
+
+#### 安装在已有的Raspbian系统上
+
+**步骤1. 添加lomoware源**
+
+```
+wget -qO - https://raw.githubusercontent.com/lomoware/lomoware.github.io/master/debian/gpg.key | sudo apt-key add -
+```
+
+如果您使用 jessie:
+
+```
+echo "deb https://lomoware.github.io/debian jessie main" | sudo tee /etc/apt/sources.list.d/lomoware.list
+```
+
+如果您使用buster:
+
+```
+echo "deb https://lomoware.github.io/debian/buster buster main" | sudo tee /etc/apt/sources.list.d/lomoware.list
+```
+
+然后运行:
+
+```
+sudo apt update
+```
+
+**步骤2. 安装ffmpeg和rsync**
+
+```
+sudo apt install ffmpeg rsync -y
+```
+
+**步骤3. 安装文件系统支持**
+
+```
+sudo apt install exfat-fuse ntfs-3g hfsplus hfsutils hfsprogs -y
+sudo ln -nsf /bin/ntfsfix /sbin/fsck.ntfs
+sudo ln -nsf /bin/ntfsfix /sbin/fsck.ntfs-3g
+```
+
+**步骤4. 安装usbmount**
+
+如果您在使用桌面系统，因为已经有PCManFM可以自动加载USB磁盘，您可以跳过这一步。如果您使用的是Lite系统镜像，您可以使用usbmount来自动加载USB磁盘。
+
+我们使用的usbmount是一个修改过的版本，保证特定的磁盘设备加载到"/media"路径下面特定的子目录下，不会因为设备接入顺序不同而加载到不同的目录。
+
+```
+sudo apt install lockfile-progs -y
+sudo mkdir /etc/usbmount
+sudo mkdir /usr/share/usbmount
+sudo wget -qO /etc/usbmount/usbmount.conf https://raw.githubusercontent.com/lomorage/pi-gen/lomorage/stage2/01-sys-tweaks/files/usbmount.conf
+sudo wget -qO /usr/share/usbmount/usbmount https://raw.githubusercontent.com/lomorage/pi-gen/lomorage/stage2/01-sys-tweaks/files/usbmount
+sudo chmod +x /usr/share/usbmount/usbmount
+sudo wget -qO /etc/udev/rules.d/usbmount.rules https://raw.githubusercontent.com/lomorage/pi-gen/lomorage/stage2/01-sys-tweaks/files/usbmount.rules
+sudo wget -qO /etc/systemd/system/usbmount@.service https://raw.githubusercontent.com/lomorage/pi-gen/lomorage/stage2/01-sys-tweaks/files/usbmount%40.service
+```
+
+**步骤5. 安装Lomorage服务应用**
+
+```
+sudo apt install lomo-vips lomo-backend -y
+```
+
+**步骤6. 按需修改加载目录**
+
+如果您不是使用步骤4的usbmount来自动加载磁盘（没有加载到"/media"路径下的子目录），您需要添加Lomorage服务程序运行参数来指定加载目录。比如如果您使用PCManFM，那么加载的路径会是"/media/pi"。
+
+要指定加载目录"/media/pi", 修改"lib/systemd/system/lomod.service" `ExecStart`字段，加上  "--mount-dir"参数:
+
+```
+ExecStart=/opt/lomorage/bin/lomod -b /opt/lomorage/var --mount-dir /media/pi  --max-upload 1 --max-fetch-preview 3
+```
+
+重启Lomorage服务程序:
+
+```
+sudo systemctl restart lomod
+```
 
 ### iOS
 
@@ -226,7 +311,6 @@ Sat Aug 31 2019 11:38:00 GMT-0700 (PDT) GET /
 ```
 
 <script id="asciicast-265358" src="https://asciinema.org/a/265358.js" async></script>
-
 #### 4. 在Lomorage手机应用中配置隧道服务
 
 打开Lomorage手机应用，在配置选项页里找到"外网服务"，设置地址为localtunnel输出的url，比如类似"allice.localtunnel.me"，端口为"443"。
@@ -277,7 +361,6 @@ Lomorage服务默认运行在8000端口，ngrok的免费账号不能自定义子
 
 
 <script id="asciicast-265359" src="https://asciinema.org/a/265359.js" async></script>
-
 
 <br/><br/><br/><br/><br/><br/><br/><br/><br/>
 <div>Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/"             title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/"             title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>

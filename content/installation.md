@@ -138,7 +138,7 @@ To run on Raspberry Pi, you need to order a [Raspberry Pi](https://www.raspberry
 - [Raspberry Pi Zero W](https://www.raspberrypi.org/products/raspberry-pi-zero-w/)
 - [Raspberry Pi 2 Model B](https://www.raspberrypi.org/products/raspberry-pi-2-model-b/)
 
-If you don't have one yet, we would recommend the newer version, which gives better performance, and we will support Raspberry Pi 4 soon. The minimum set you need includes:
+If you don't have one yet, we would recommend the newer version, which gives better performance. The minimum set you need includes:
 
 - Raspberry Pi board
 - Power supply
@@ -200,6 +200,8 @@ sudo apt install ffmpeg rsync -y
 
 ```
 sudo apt install exfat-fuse ntfs-3g hfsplus hfsutils hfsprogs -y
+sudo ln -nsf /bin/ntfsfix /sbin/fsck.ntfs
+sudo ln -nsf /bin/ntfsfix /sbin/fsck.ntfs-3g
 ```
 
 **step 4. Install usbmount**
