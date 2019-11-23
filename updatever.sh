@@ -27,9 +27,9 @@ UPG_VERSION=
 UPG_ZIP_URL=
 PI_IMAGE_URL=
 
-SED_INPLACE_OPTION=
+SED_INPLACE_OPTION=()
 if [[ "$OSTYPE" == "darwin"* ]]; then
-    SED_INPLACE_OPTION=""
+    SED_INPLACE_OPTION=("")
 fi
 
 OPTIONS=hp:v:u:i:s:V:U:I:
@@ -162,8 +162,8 @@ update_page_win() {
 update_page_osx() {
     if [ ! -z "$AGENT_PKG_URL" ]; then
         echo -e "\n=====> updated osx dmg package on installation page"
-        sed -i $SED_INPLACE_OPTION -E "s#https://github.com/lomorage/LomoAgentOSX/releases/download/[[:digit:]]{4}_[[:digit:]]{2}_[[:digit:]]{2}\.[[:digit:]]{2}_[[:digit:]]{2}_[[:digit:]]{2}\.0\.[a-zA-Z0-9]{7}\/LomoAgent\.dmg#$AGENT_PKG_URL#g" $INSTALLATION_EN_PATH
-        sed -i $SED_INPLACE_OPTION -E "s#https://github.com/lomorage/LomoAgentOSX/releases/download/[[:digit:]]{4}_[[:digit:]]{2}_[[:digit:]]{2}\.[[:digit:]]{2}_[[:digit:]]{2}_[[:digit:]]{2}\.0\.[a-zA-Z0-9]{7}\/LomoAgent\.dmg#$AGENT_PKG_URL#g" $INSTALLATION_ZH_PATH
+        sed -i "${SED_INPLACE_OPTION[@]}" -E "s#https://github.com/lomorage/LomoAgentOSX/releases/download/[[:digit:]]{4}_[[:digit:]]{2}_[[:digit:]]{2}\.[[:digit:]]{2}_[[:digit:]]{2}_[[:digit:]]{2}\.0\.[a-zA-Z0-9]{7}\/LomoAgent\.dmg#$AGENT_PKG_URL#g" $INSTALLATION_EN_PATH
+        sed -i "${SED_INPLACE_OPTION[@]}" -E "s#https://github.com/lomorage/LomoAgentOSX/releases/download/[[:digit:]]{4}_[[:digit:]]{2}_[[:digit:]]{2}\.[[:digit:]]{2}_[[:digit:]]{2}_[[:digit:]]{2}\.0\.[a-zA-Z0-9]{7}\/LomoAgent\.dmg#$AGENT_PKG_URL#g" $INSTALLATION_ZH_PATH
         grep -H "https://github.com/lomorage/LomoAgentOSX/releases/download/" $INSTALLATION_EN_PATH
         grep -H "https://github.com/lomorage/LomoAgentOSX/releases/download/" $INSTALLATION_ZH_PATH
         echo -e "=====> Done!"
