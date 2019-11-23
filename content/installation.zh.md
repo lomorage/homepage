@@ -46,7 +46,7 @@ title = "安装说明"
 
  &nbsp;
 
-<a href="https://github.com/lomorage/LomoAgentOSX/releases/download/2019_09_11.23_30_31.0.bb65c8a/LomoAgent.dmg" title="Install Lomorage for macOS" class="badge">macOS</a>
+<a href="https://github.com/lomorage/LomoAgentOSX/releases/download/2019_11_22.15_40_29.0.fc77a7f/LomoAgent.dmg" title="Install Lomorage for macOS" class="badge">macOS</a>
 
  &nbsp;
 
