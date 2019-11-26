@@ -3,35 +3,41 @@ title = "特色功能"
 keywords = ["隐私","私有云","照片备份","安全"]
 +++
 
-# 特色功能
+<!--
+<iframe width="560" height="315" src="https://www.youtube.com/embed/BLgH_3HHkO4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+-->
 
-## 保护隐私
+<video width="560" height="315" poster="/poster.png" controls>
+  <source src="/lomorage.mp4" type="video/mp4">
+</video>
+
+# <i class="fas fa-user-secret"></i>&nbsp;&nbsp;保护隐私
 
 Lomorage是运行在您网络的私有云服务，为您提供便捷的照片备份和管理服务，而无需担心隐私泄漏。我们没有，并永远不会收集任何用户隐私信息。
 
 您也可以在家中为不同的家庭成员运行多个完全隔离的Lomorage服务。
 
 
-## 跨平台
+# <i class="fas fa-server"></i>&nbsp;&nbsp;&nbsp;跨平台
 
 Lomorage服务可以运行在多种平台，您可以选择备份您的照片到Windows, macOS，甚至Raspberry Pi上，根据用户需求，我们会加上其他平台的支持。
 
 客户端我们现在只支持iOS，我们计划在今年内支持Android和Web。
 
-## 安装简单
+# <i class="fas fa-tools"></i>&nbsp;&nbsp;&nbsp;安装简单
 
 我们并不是在构建另一个NAS系统，如果您的需求仅仅是备份和管理您的照片和视频，但是被NAS复杂的安装过程吓到，忘掉那些专业术语，放轻松。我们保证Lomorage的安装过程只需要短短几分钟。点击[这里](/installation)查看安装步骤。
 
-## 存储原始大小
+# <i class="fas fa-copy"></i>&nbsp;&nbsp;&nbsp;存储原始大小
 
 照片和视频会按照完整尺寸备份到您的硬盘，文件和您的手机上完全一样。支持所有常见的图片和视频格式，甚至动态照片也能支持。
 
 
-## 零迁移成本
+# <i class="fas fa-people-carry"></i>&nbsp;&nbsp;零迁移成本
 
 我们不会像一些云存储系统对文件进行切片分块存储，您的照片视频文件会以原始的文件格式存储备份到您的硬盘，我们不用任何私有的存储格式。要使用Lomorage，您也无需格式化硬盘，可以使用任何闲置的硬盘，并且我们的Raspberry Pi版本支持所有常见的[文件系统格式](/zh/faq/#4-支持那些文件系统)，无需使用特定的文件系统，比如对于Windows用户，您可以使用FAT或者NTFS文件格式的硬盘，这样就无需第三方软件，存储的文件就能在Windows上访问。
 
-## 零维护成本
+# <i class="fas fa-cogs"></i>&nbsp;&nbsp;零维护成本
 
 云服务之所以得到广泛使用的一个原因就是它在为用户提供了便利性的同时隐藏了系统的复杂性，因为Lomorage是一个在用户环境中部署的私用云，我们致力于提供云服务一样的用户体验，减少用户的干预和维护。
 
@@ -43,7 +49,7 @@ Lomorage服务可以运行在多种平台，您可以选择备份您的照片到
 
 <!--  - expandable storage: we provide several [options](https://www.lomorage.com/expand-stroage) to expand the storage which disk is out-of-space.-->
 
-## 多重备份
+# <i class="fas fa-clone"></i>&nbsp;&nbsp;多重备份
 
 大多数用户在手机空间不够的时候，会将已经备份的照片视频删除，仅仅只有一份备份是不够的，Lomorage提供了多种备份方案:
 
@@ -52,6 +58,6 @@ Lomorage服务可以运行在多种平台，您可以选择备份您的照片到
   - 远程备份: 您可以选择加密备份到朋友或亲戚加的闲置硬盘空间。我们计划在今年内支持这个功能。
 <!--  - cloud backup: cloud backup on popular vendors is a good complementary. This is on the backlog, and plan to support this year.-->
 
-## 分享瞬间
+# <i class="fas fa-share-alt-square"></i>&nbsp;&nbsp;分享瞬间
 
 您可以和自己家人分享照片和视频，并可自定义多个群组，分享不会占用额外的存储空间，而无需担心自己的手机空间不够。

@@ -3,9 +3,15 @@ title = "Feature Highlight"
 keywords = ["Private","Privacy","Photo Backup","security"]
 +++
 
-# Feature Highlight
+<!--
+<iframe width="560" height="315" src="https://www.youtube.com/embed/BLgH_3HHkO4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+-->
 
-## Privacy Matters
+<video width="560" height="315" poster="/poster.png" controls>
+  <source src="/lomorage.mp4" type="video/mp4">
+</video>
+
+# <i class="fas fa-user-secret"></i>&nbsp;&nbsp;&nbsp;Privacy Matters
 
 Lomorage is a private cloud service which runs on your private network, which gives you the convenience of cloud-based photo backup service, but without the concern of leaking privacy. We are not, and will never collect ANY user privacy data.
 
@@ -14,28 +20,28 @@ You can also set up multiple Lomorage services in your private network, for diff
 <!--
 You can also use either [DES]() to encrypt your photos, or use any [encrypted file system]() supported by the operating system.-->
 
-## Cross-Platform
+# <i class="fas fa-server"></i>&nbsp;&nbsp;&nbsp;Cross-Platform
 
 There is no OS limitation for running the Lomorage service, you can backup your photos on MAC, Windows and Raspberry Pi, and we will add other OS support upon user's request.
 
 We only support iOS client now, the Android version and Web version are on our backlog, we are planning to release this year.
 
-## Easy Setup
+# <i class="fas fa-tools"></i>&nbsp;&nbsp;&nbsp;Easy Setup
 
 We are not building another NAS system, so if you want to backup and manage your photos, but get scared by the complicated setup process of NAS, just forget about the jargons and take easy. Lomorage setup is guaranteed to be within minutes. Check [here](/installation) for the installation guide.
 
-## Keep original size
+# <i class="fas fa-copy"></i>&nbsp;&nbsp;&nbsp;Keep Original Size
 
 The photo and video are stored as the original size on your disk, it will be exactly the same with the one taken on your phone. Live photo is also supported, and the image and video clips are stored together as a zip file.
 
 
-## No Lockdown
+# <i class="fas fa-people-carry"></i>&nbsp;&nbsp;No Lockdown
 
 Unlike some cloud-based file storage which split the file into smaller segments, Lomorage will store the photo file as it's on the file system, we are not using any proprietary format.
 
 Unlike some NAS system which requires user to format the disk before using it as backup storage, with Lomorage, you can just plug in a spare disk with [popular file system](/faq/#4-what-file-systems-supported), it just works, you won't be locked to use specific file system, you can just use the file system you normally use, like FAT32/NTFS in Windows, thus you don't need 3rd party software to access the backup file.
 
-## Near-zero Maintenance
+# <i class="fas fa-cogs"></i>&nbsp;&nbsp;Near-zero Maintenance
 
 Cloud service hides the complexity of the system since Lomorage is a service deployed at the user's network, we aim to provide the same user experience with the cloud service, to minimize user intervention and maintenance.
 
@@ -47,7 +53,7 @@ Cloud service hides the complexity of the system since Lomorage is a service dep
 
 <!--  - expandable storage: we provide several [options](https://www.lomorage.com/expand-stroage) to expand the storage which disk is out-of-space.-->
 
-## Flexible backup options
+# <i class="fas fa-clone"></i>&nbsp;&nbsp;Flexible Backup Options
 
 Since most people will offload the phone storage, so having those backup once is not enough, Lomorage will provide several backup options:
 
@@ -57,7 +63,6 @@ Since most people will offload the phone storage, so having those backup once is
 
 <!--  - cloud backup: cloud backup on popular vendors is a good complimentary. This is on the backlog, and plan to support this year.-->
 
-## Share your moments
+# <i class="fas fa-share-alt-square"></i>&nbsp;&nbsp;Share Your Moments
 
 You can share moments with your family members, and create groups to share with multiple members at one time. It won't occupy your disk space so you don't need to worry about the disk usage on your phone.
-
