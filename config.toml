@@ -119,7 +119,7 @@ paginate = 10
         [[languages.zh.menu.topbar]]
             weight = 2
             name = "Mastodon"
-            url = "https://mastodon.sdf.org/@lomorage"
+            url = "https://mastodon.social/@lomorage"
             pre = "<i class='fab fa-2x fa-mastodon'></i>"
 
         [[languages.zh.menu.topbar]]

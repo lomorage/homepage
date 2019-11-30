@@ -32,8 +32,7 @@ We are not building another NAS system, so if you want to backup and manage your
 
 # <i class="fas fa-copy"></i>&nbsp;&nbsp;&nbsp;Keep Original Size
 
-The photo and video are stored as the original size on your disk, it will be exactly the same with the one taken on your phone. Live photo is also supported, and the image and video clips are stored together as a zip file.
-
+The photo and video are stored as the original size on your disk, it will be exactly the same with the one taken on your phone, EXIF meta data (like location, date time) is preserved. Live photo is also supported, and the image and video clips are stored together as a zip file.
 
 # <i class="fas fa-people-carry"></i>&nbsp;&nbsp;No Lockdown
 
