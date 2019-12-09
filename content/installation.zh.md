@@ -26,7 +26,7 @@ title = "安装说明"
 
 ## 4. 外网访问 (可选)
 
-Lomorage可以运行在您的私有网络中，无需互联网连接，如果您需要通过外网访问，您需要启用外网访问，当前Lomorage支持第三方隧道服务方式进行外网连接，点击[这里](zh/external-access)查看具体配置。
+Lomorage可以运行在您的私有网络中，无需互联网连接，如果您需要通过外网访问，您需要启用外网访问，当前Lomorage支持第三方隧道服务方式进行外网连接，点击[这里](/zh/external-access)查看具体配置。
 
 <br/><br/><br/><br/><br/><br/><br/><br/><br/>
 <div>Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/"             title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/"             title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
