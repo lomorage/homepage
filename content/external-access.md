@@ -94,8 +94,8 @@ Lomorage service is using "8000" by default, and ngrok can't customize subdomain
 ./ngrok http 8000
 ```
 
+<script id="asciicast-265359" src="https://asciinema.org/a/265359.js" async></script>
+
 ### 6. Config tunnel service on Lomorage APP
 
 Open Lomorage APP on the phone, and in the settings tab, fill the tunnel service host, the host is like "2e30eea5.ngrok.io".
-
-<script id="asciicast-265359" src="https://asciinema.org/a/265359.js" async></script>

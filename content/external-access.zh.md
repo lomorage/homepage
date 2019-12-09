@@ -92,8 +92,8 @@ Lomorage服务默认运行在8000端口，ngrok的免费账号不能自定义子
 ./ngrok http 8000
 ```
 
+<script id="asciicast-265359" src="https://asciinema.org/a/265359.js" async></script>
+
 ### 6. 在Lomorage手机应用中配置隧道服务
 
 打开Lomorage手机应用，在配置选项页里找到"外网服务"，设置服务器地址为ngrok输出的url，比如类似"2e30eea5.ngrok.io"。
-
-<script id="asciicast-265359" src="https://asciinema.org/a/265359.js" async></script>
