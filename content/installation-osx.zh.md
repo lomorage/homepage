@@ -3,7 +3,7 @@
 <span>1.</span> 点击下面的链接安装Lomorage服务程序。
 
 <p align="center">
-<a href="https://github.com/lomorage/LomoAgentOSX/releases/download/2019_11_22.15_40_29.0.fc77a7f/LomoAgent.dmg" title="Install Lomorage for macOS" class="badge">macOS</a>
+<a href="https://github.com/lomorage/LomoAgentOSX/releases/download/2019_12_09.23_47_33.0.3a17901/LomoAgent.dmg" title="Install Lomorage for macOS" class="badge">macOS</a>
 </p>
 
 <span>2.</span> 双击"LomoAgent.dmg"开始安装，参考下面步骤完成安装。

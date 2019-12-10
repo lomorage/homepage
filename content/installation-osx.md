@@ -3,7 +3,7 @@
 <span>1.</span> Click the link below to downlink Lomorage Service Application.
 
 <p align="center">
-<a href="https://github.com/lomorage/LomoAgentOSX/releases/download/2019_11_22.15_40_29.0.fc77a7f/LomoAgent.dmg" title="Install Lomorage for macOS" class="badge">macOS</a>
+<a href="https://github.com/lomorage/LomoAgentOSX/releases/download/2019_12_09.23_47_33.0.3a17901/LomoAgent.dmg" title="Install Lomorage for macOS" class="badge">macOS</a>
 </p>
 
 <span>2.</span> Double click "LomoAgent.dmg" to start installation, and follow the steps below to finish the installation.
