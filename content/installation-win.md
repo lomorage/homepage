@@ -3,7 +3,7 @@
 <span>1.</span> Click the link below to downlink Lomorage Service Application.
 
 <p align="center">
-<a href="https://github.com/lomorage/LomoAgentWin/releases/download/2019_09_28.11_56_35.0.a0f75cb/lomoagent.msi" title="Install Lomorage for Windows" class="badge windows">Windows</a>
+<a href="https://github.com/lomorage/LomoAgentWin/releases/download/2019_12_11.19_55_05.0.3e6d12d/lomoagent.msi" title="Install Lomorage for Windows" class="badge windows">Windows</a>
 </p>
 
 <span>2.</span> double click "lomoagent.msi" to start installation. If Windows Defender shows "lomoagent.msi" as unknown application, please follow the steps below to allow it to run.
