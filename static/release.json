@@ -1,9 +1,9 @@
 {
   "darwin": {
-    "Version": "2019_12_13.15_49_30.0.83ef61e",
+    "Version": "2019_12_15.22_03_01.0.076f21a",
     "OS": "mac",
-    "SHA256": "173bb0b850f1d89ac794a9e97ac4d9685037ec30cfe67f980596243bb00557df",
-    "URL": "https://github.com/lomorage/LomoAgentOSX/releases/download/2019_12_13.15_49_30.0.83ef61e/LomoAgent.zip",
+    "SHA256": "a1dcb3dee4792388821d6c61d6f8a1452642cee9996dd7bc652dec1fe03107f2",
+    "URL": "https://github.com/lomorage/LomoAgentOSX/releases/download/2019_12_15.22_03_01.0.076f21a/LomoAgent.zip",
     "LomoUpgVer": "2019_12_09.23_41_36.0.b28a902",
     "LomoUpdateURL": "https://github.com/lomorage/lomoUpdate/releases/download/2019_12_09.23_41_36.0.b28a902/LomoUpdateOSX.zip"
   },
