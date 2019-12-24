@@ -1,6 +1,6 @@
 # Install Lomorage Service on Windows
 
-<span>1.</span> Click the link below to downlink Lomorage Service Application.
+<span>1.</span> Click the link below to download Lomorage Service Application.
 
 <p align="center">
 <a href="https://github.com/lomorage/LomoAgentWin/releases/download/2019_12_14.19_55_51.0.2a832d3/lomoagent.msi" title="Install Lomorage for Windows" class="badge windows">Windows</a>

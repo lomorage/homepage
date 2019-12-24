@@ -12,17 +12,19 @@ title = "安装说明"
 
 您可以根据自己的喜好和需求来选择不同的平台安装Lomorage服务程序。Windows或macOS上运行Lomorage服务程序可以提供比树莓派上更好的性能，上传和下载的速度会更快，但没树莓派节约能源，7x24小时运行，一年下来电费不会超过30元。
 
-### [Windows下安装Lomorage服务程序](/zh/installation-win)
-
-### [MacOS下安装Lomorage服务程序](/zh/installation-osx)
-
-### [树莓派下安装Lomorage服务程序](/zh/installation-pi)
+<p align="center">
+<a href="/zh/installation-win" title="Windows下安装Lomorage服务程序" class="badge windows">Windows</a>
+&nbsp;
+<a href="/zh/installation-osx" title="MacOS下安装Lomorage服务程序" class="badge">macOS</a>
+&nbsp;
+<a href="/zh/installation-pi" title="树莓派下安装Lomorage服务程序" class="badge raspberrypi">Raspberry Pi</a>
+</p>
 
 ## 3. 安装Lomorage客户端
 
 在运行了Lomorage服务程序后，您可以下载手机客户端，当前支持iPhone或者iPad。
 
-### [Lomorage苹果手机客户端](/zh/installation-ios)
+<a href="/zh/installation-ios"><img alt="Lomorage苹果手机客户端" src="/img/installation/app-store-ios.svg" width="220"></a>
 
 ## 4. 外网访问 (可选)
 

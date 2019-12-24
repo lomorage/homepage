@@ -14,17 +14,19 @@ The first step is to set up the Lomorage service.
 
 **You can choose which version of Lomorage Service to download based on your preference**. Running Lomorage service on Windows or OSX gives you better performance compared with on Raspberry Pi, the uploading and accessing the backup will be faster, but running Windows or OSX is not energy efficient as using Raspberry Pi. If using Raspberry Pi, you don't need to worry about the electricity bill, it is only [about 5$ a year](https://raspberrypi.stackexchange.com/questions/5033/how-much-energy-does-the-raspberry-pi-consume-in-a-day)
 
-### [Lomorage Service on Windows](/installation-win)
-
-### [Lomorage Service on MacOS](/installation-osx)
-
-### [Lomorage Service on Raspberry Pi](/installation-pi)
+<p align="center">
+<a href="/installation-win" title="Install Lomorage for Windows" class="badge windows">Windows</a>
+&nbsp;
+<a href="/installation-osx" title="Install Lomorage for macOS" class="badge">macOS</a>
+&nbsp;
+<a href="/installation-pi" title="Install Lomorage for Raspberry Pi" class="badge raspberrypi">Raspberry Pi</a>
+</p>
 
 ## 3. Install Lomorage Client
 
 After running Lomorage Service, you can then install Lomorage client on smart phone.
 
-### [Lomorage iOS client](/installation-ios)
+<a href="/installation-ios"><img alt="Lomorage iOS client" src="/img/installation/app-store-ios.svg" width="220"></a>
 
 ## 4. External Access (optional)
 
