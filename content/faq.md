@@ -38,6 +38,10 @@ If you are on Raspberry Pi, it supports "vfat exfat ext2 ext3 ext4 hfsplus ntfs 
 
 The date time used to store on the system is in [UTC](https://en.wikipedia.org/wiki/Coordinated_Universal_Time), not the time of local timezone, the reason is that the photo can be taken in different timezones, and the user may travel or relocate to different timezones, to simplify the processing, we use UTC timestamp, and it can easily convert to different timezones on the APP.
 
+## 6. How to set a secondary backup?
+
+There are several options to setup a secondary backup, check this [blog](/blog/2019/12/24/raspberrypi-hd/) for more details.
+
 ---
 
 > In case you haven't found the answer to your question please feel free to [contact us](/contact), we will be happy to help you.

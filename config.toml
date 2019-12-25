@@ -25,10 +25,10 @@ paginate = 10
         url  = "/"
         weight = 1
 
-    #[[languages.en.menu.main]]
-    #    name = "Blog"
-    #    url  = "/blog/"
-    #    weight = 2
+    [[languages.en.menu.main]]
+        name = "Blog"
+        url  = "/blog/"
+        weight = 6
 
     [[languages.en.menu.main]]
         name = "Features"
@@ -88,10 +88,10 @@ paginate = 10
             url  = "/zh"
             weight = 1
 
-        #[[languages.zh.menu.main]]
-        #    name = "Blog"
-        #    url  = "/blog/"
-        #    weight = 2
+        [[languages.zh.menu.main]]
+            name = "博客"
+            url  = "/zh/blog/"
+            weight = 6
 
         [[languages.zh.menu.main]]
             name = "特性"
