@@ -50,7 +50,7 @@ wget -qO - https://raw.githubusercontent.com/lomoware/lomoware.github.io/master/
 如果您使用 jessie:
 
 ```
-echo "deb https://lomoware.github.io/debian jessie main" | sudo tee /etc/apt/sources.list.d/lomoware.list
+echo "deb https://lomoware.github.io/debian/jessie jessie main" | sudo tee /etc/apt/sources.list.d/lomoware.list
 ```
 
 如果您使用buster:
