@@ -6,9 +6,11 @@ keywords = ["FAQ","How do I","questions","what if"]
 
 * [1. How comes the name "Lomorage"?](#1-how-comes-the-name-lomorage)
 * [2. Why another photo backup service?](#2-why-another-photo-backup-service)
-* [3. How to setup redandency backup?](#3-how-to-setup-redundency-backup)
+* [3. How to setup redundancy backup?](#3-how-to-setup-redundancy-backup)
 * [4. What file systems supported?](#4-what-file-systems-supported)
 * [5. Why the date time seems not correct?](#5-why-the-date-time-seems-not-correct)
+* [6. How to set a secondary backup?](#6-how-to-set-a-secondary-backup)
+* [7. Does Lomorage support backup edited file?](#7-does-lomorage-support-backup-edited-file)
 
 ## 1. How comes the name "Lomorage"?
 
@@ -41,6 +43,14 @@ The date time used to store on the system is in [UTC](https://en.wikipedia.org/w
 ## 6. How to set a secondary backup?
 
 There are several options to setup a secondary backup, check this [blog](/blog/2019/12/24/raspberrypi-hd/) for more details.
+
+## 7. Does Lomorage support backup edited file?
+
+On iOS, if photo is edited, system will store the original photo, the edited one, as well as the editing operations, **Lomorage will store ONLY the edited photo**. For edited video, system will store the video before last editing, the editing operations as well as the edited one, and **Lomorage will ONLY store the editied video**.
+
+If you would like to store the file before editing, make sure you have backup the edited one first, and then you can revert the editing in Apple's "Photos APP", and then upload those files before editing.
+
+Notice: The old iOS client (<0.6.10) doesn't support edited files, so if you have error when uploading the edited files, please delete old client and reinstall the new one, instead of upgrading to new version, to make sure the old problematic database is removed.
 
 ---
 
