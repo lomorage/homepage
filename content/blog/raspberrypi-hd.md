@@ -49,13 +49,13 @@ mkdir /media/WD_90C27F73C27F5C82
 
 # user pass is the username password on 2nd Pi, that is the default.
 # uid 1000 and gid 1000 is for mount it as user Pi on 1st Pi
-sudo mount.cifs //192.168.1.155/WD_90C27F73C27F5C82 /media/WD_90C27F73C27F5C82 -o user=pi,pass=raspberry,uid=1000,gid=1000
+sudo mount.cifs //192.168.1.155/media/WD_90C27F73C27F5C82 /media/WD_90C27F73C27F5C82 -o user=pi,pass=raspberry,uid=1000,gid=1000
 ```
 
 You can also add the entry in "/etc/fstab", so that it can mount when system start:
 
 ```
-//192.168.1.155/WD_90C27F73C27F5C82  /media/WD_90C27F73C27F5C82  cifs  user=pi,pass=raspberry,uid=1000,gid=1000
+//192.168.1.155/media/WD_90C27F73C27F5C82  /media/WD_90C27F73C27F5C82  cifs  user=pi,pass=raspberry,uid=1000,gid=1000
 ```
 
 You can use the following command to umount and mount all entries in fstab to validate the configuration:
