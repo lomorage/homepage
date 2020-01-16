@@ -24,7 +24,13 @@ title = "安装说明"
 
 在运行了Lomorage服务程序后，您可以下载手机客户端，当前支持iPhone或者iPad。
 
-<a href="/zh/installation-ios"><img alt="Lomorage苹果手机客户端" src="/img/installation/app-store-ios.svg" width="220"></a>
+您也可以使用Web版本来上传电脑中已有的照片和视频，也可以在电脑上浏览已经备份的照片和视频。
+
+<p align="center">
+<a href="/zh/installation-ios"><img alt="Lomorage iOS客户端" src="/img/installation/app-store-ios.svg" width="220"></a>
+&nbsp;
+<a href="/zh/installation-web"><img alt="Lomorage web客户端" src="/img/installation/browser.png" width="220"></a>
+</p>
 
 ## 4. 外网访问 (可选)
 

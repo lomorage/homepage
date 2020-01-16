@@ -26,7 +26,13 @@ The first step is to set up the Lomorage service.
 
 After running Lomorage Service, you can then install Lomorage client on smart phone.
 
+You can also use the web client to upload assets on your desktop/latop, or use it to browser the photo/video gallery.
+
+<p align="center">
 <a href="/installation-ios"><img alt="Lomorage iOS client" src="/img/installation/app-store-ios.svg" width="220"></a>
+&nbsp;
+<a href="/installation-web"><img alt="Lomorage web client" src="/img/installation/browser.png" width="220"></a>
+</p>
 
 ## 4. External Access (optional)
 

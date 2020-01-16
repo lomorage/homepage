@@ -1,5 +1,5 @@
 
-# Install iOS Lomorage client
+# Install Lomorage iOS client
 
 You can install the application on either iPad or iPhone, the minimum iOS version required in 10.3. 
 
