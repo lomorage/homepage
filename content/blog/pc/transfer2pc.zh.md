@@ -11,7 +11,7 @@ banner = "img/banners/pc-qr-code.jpg"
 <!--more--> 
 
 之前我有一个老的iPhone，里面有很多照片和视频，习惯于在Windows工作的我，花了好久都没找到一个简单好用的软件可以帮我把照片和视频传到Windows上，并且帮我按年月日自动分好类。
-近期经朋友推荐，发现了 https://www.Lomorage.com这个软件，立马试用了一下，觉得简直是为我量身定制的。
+近期经朋友推荐，发现了 [lomorage](https://www.Lomorage.com) 这个软件，立马试用了一下，觉得简直是为我量身定制的。
 今天，就让我们来看看lomorage是怎么轻松做到的。
 
 ## 1. 下载安装Lomorage 在windows上的服务程序
