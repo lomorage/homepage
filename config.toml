@@ -262,3 +262,6 @@ paginate = 10
     enable = false
     title = "From our blog"
     subtitle = "Learn latest updates on our product"
+
+[markup.goldmark.renderer]
+unsafe= true
