@@ -163,7 +163,7 @@ Say if directory with name "/media/WD_90C27F73C27F5C82" store media assets mount
 
 ```
 sudo mkdir /media/WD_90C27F73C27F5C82
-echo "sudo mount.cifs //192.168.1.155/media/WD_90C27F73C27F5C82 /media/WD_90C27F73C27F5C82 -o user=pi,pass=raspberry,uid=1000,gid=1000" | sudo tee -a /etc/fstab
+echo "//192.168.1.124/media/WD_90C27F73C27F5C82  /media/WD_90C27F73C27F5C82  cifs  user=pi,pass=raspberry,uid=1000,gid=1000" | sudo tee -a /etc/fstab
 sudo mount -a
 ```
 
