@@ -22,7 +22,7 @@ A [Raspberry Pi 3 B+ (PLUS) Starter Kit](https://www.pishop.us/product/raspberry
 Click the link below to download the prebuild OS image.
 
 <p align="center">
-<a href="https://github.com/lomorage/pi-gen/releases/download/2019_09_26.21_07_53.0.0cbe0a8/image_2019-09-26-lomorage-lite.zip" title="Install Lomorage for Raspberry Pi" class="badge raspberrypi">Raspberry Pi</a>
+<a href="https://github.com/lomorage/pi-gen/releases/download/2020_03_13.10_54_31.0.60425d1/image_2020-03-13-lomorage-lite.zip" title="Install Lomorage for Raspberry Pi" class="badge raspberrypi">Raspberry Pi</a>
 </p>
 
 After you download the customized OS image, you can install the image to MicroSD card using [balenaEtcher](https://www.balena.io/etcher/), which is available on both Windows and macOS.
@@ -102,15 +102,17 @@ sudo wget -qO /etc/systemd/system/usbmount@.service https://raw.githubuserconten
 sudo apt install lomo-vips lomo-backend -y
 ```
 
-**step 6. Change mount directory if needed**
+**step 6. Change mount directory and username if needed**
 
-If you are not using the usbmount in step 4, you may need to specify the mount directory if the USB drive is not mounted in "/media" directory, for example if you are using PCManFM, then the mount directory will be "/media/pi".
+If you are not using the usbmount in step 4, you may need to specify the mount directory if the USB drive is not mounted in "/media" directory. 
 
-To specify the mount directory to be "/media/pi", modify `ExecStart` in "lib/systemd/system/lomod.service", and add paramter "--mount-dir" as below
+For example if you are using PCManFM, then the mount directory will be "/media/pi". To specify the mount directory to be "/media/pi", modify `ExecStart` in "lib/systemd/system/lomod.service", and add paramter "--mount-dir" as below
 
 ```
 ExecStart=/opt/lomorage/bin/lomod -b /opt/lomorage/var --mount-dir /media/pi  --max-upload 1 --max-fetch-preview 3
 ```
+
+If your username is not "pi", you need to change "User=pi" in "lib/systemd/system/lomod.service", and use your username.
 
 Then restart Lomorage service:
 
