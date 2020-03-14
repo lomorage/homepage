@@ -180,8 +180,8 @@ update_page_osx() {
 update_page_pi() {
     if [ ! -z "$PI_IMAGE_URL" ]; then
         echo -e "\n=====> updated Raspberry Pi image on installation page"
-        sed -i $SED_INPLACE_OPTION -E "s#https://github.com/lomorage/pi-gen/releases/download/[[:digit:]]{4}_[[:digit:]]{2}_[[:digit:]]{2}\.[[:digit:]]{2}_[[:digit:]]{2}_[[:digit:]]{2}\.0\.[a-zA-Z0-9]{7}\/image_[[:digit:]]{4}-[[:digit:]]{2}-[[:digit:]]{2}-lomorage-lite\.zip#$PI_IMAGE_URL#g" $INSTALLATION_PI_EN_PATH
-        sed -i $SED_INPLACE_OPTION -E "s#https://github.com/lomorage/pi-gen/releases/download/[[:digit:]]{4}_[[:digit:]]{2}_[[:digit:]]{2}\.[[:digit:]]{2}_[[:digit:]]{2}_[[:digit:]]{2}\.0\.[a-zA-Z0-9]{7}\/image_[[:digit:]]{4}-[[:digit:]]{2}-[[:digit:]]{2}-lomorage-lite\.zip#$PI_IMAGE_URL#g" $INSTALLATION_PI_ZH_PATH
+        sed -i "${SED_INPLACE_OPTION[@]}" -E "s#https://github.com/lomorage/pi-gen/releases/download/[[:digit:]]{4}_[[:digit:]]{2}_[[:digit:]]{2}\.[[:digit:]]{2}_[[:digit:]]{2}_[[:digit:]]{2}\.0\.[a-zA-Z0-9]{7}\/image_[[:digit:]]{4}-[[:digit:]]{2}-[[:digit:]]{2}-lomorage-lite\.zip#$PI_IMAGE_URL#g" $INSTALLATION_PI_EN_PATH
+        sed -i "${SED_INPLACE_OPTION[@]}" -E "s#https://github.com/lomorage/pi-gen/releases/download/[[:digit:]]{4}_[[:digit:]]{2}_[[:digit:]]{2}\.[[:digit:]]{2}_[[:digit:]]{2}_[[:digit:]]{2}\.0\.[a-zA-Z0-9]{7}\/image_[[:digit:]]{4}-[[:digit:]]{2}-[[:digit:]]{2}-lomorage-lite\.zip#$PI_IMAGE_URL#g" $INSTALLATION_PI_ZH_PATH
         grep -H "https://github.com/lomorage/pi-gen/releases/download/" $INSTALLATION_PI_EN_PATH
         grep -H "https://github.com/lomorage/pi-gen/releases/download/" $INSTALLATION_PI_ZH_PATH
         echo -e "=====> Done!"
