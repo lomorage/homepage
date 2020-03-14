@@ -2,7 +2,7 @@ Table of Contents
 =================
 
    * [Install lomo-frame](#install-lomo-frame)
-   * [Setup](#setup)
+   * [Setup lomo-frame](#setup-lomo-frame)
       * [Quickstart](#quickstart)
       * [Turn Frame ON/OFF](#turn-frame-onoff)
       * [Stop/Start lomo-frame Service](#stop-or-start-lomo-frame-service)
@@ -24,24 +24,24 @@ Table of Contents
 **If you install the latest Lomorage Raspberry Pi OS image, you should already have the lomo-frame application installed in that image.**
 
 Otherwise, if your OS image is before 2020-03-13 ("image_2020-03-13-lomorage-lite.zip
-"), or you don't use Lomorage Raspberry Pi OS image, you can run the following command to install it (assuming you have installed lomod so that you have already added "gpg.key", if not you can check [here](/installation-pi)).
+"), or you don't use Lomorage Raspberry Pi OS image, you can run the following command to install it (assuming you have installed Lomorage Service Application so that you have already added "gpg.key", if not you can check [here](/installation-pi)).
 
 ```
 sudo apt update
 sudo apt install lomo-frame
 ```
 
-# Setup
+# Setup lomo-frame
 
 **Lomorage Digital Frame is still in beta, and setup MAY need you connect keyboard to Raspberry Pi, or you can use ssh to access Raspberry Pi, sorry, we promise that you will be able to control and setup via phone APP later.**
 
 ## Quickstart
 
-If you have installed Lomorage Raspberry Pi image, and have lomo-frame installed, lomo-frame will launch on boot.
+If you have lomo-frame installed, it will launch on boot.
 
 At first launch, it will scan all the digital assets in "/media" directories, which means all users photo and video will be scanned, and will generate playlist in "/opt/lomorage/var/lomo-playlist.txt". 
 
-**The rescan is schedule to run automatically on weekly basis**, so that the playlist can be updated with newly added or deleted assets. You can manually trigger the rescan in two ways:
+**The rescan is schedule to run automatically on weekly basis (00:00 on Sunday)**, so that the playlist can be updated with newly added or deleted assets. You can manually trigger the rescan in two ways:
 
 1. If you have keyboard connected with Raspberry Pi, press key "r" to rescan.
 
@@ -57,15 +57,13 @@ If you just want to quit lomo-frame service, while keep the monitor on, you can 
 
  - press "esc" on the keyboard if Raspberry Pi connected with keyboard.
 
- - `sudo service supervisor stop` if you use ssh to access Raspberry Pi
+ - `sudo service supervisor stop` if you use ssh to access Raspberry Pi.
 
 You can use `sudo service supervisor start` to start the lomo-frame serivce.
 
 ## Schedule Frame ON/OFF time
 
 **The default turn on time is "08:00 am", and turn off time is "21:00 pm".**
-
-You can schedule when to turn on/off the digital frame(turn off monitor and lomo-frame service), if your monitor supports to turn off. 
 
 You can change that use the following command, which changes the on time to "10:00 am" and off time to "18:00":
 
@@ -141,7 +139,7 @@ This setup need some expertise, sorry, will make it easier in the future using p
 
 If you already have one Raspberry Pi (Primary Raspberry Pi) setup for running lomorage service, and having all the hard drivers connected with that device, you probably keep it in the storage room connected to the router with wired network, and want to setup the digital frame in bedroom or living room.
 
-You can use a low cost Raspberry Pi zero w to setup the digital frame and access your digital asssets via WiFi, it works pretty well.
+You can use a low cost Raspberry Pi zero w to setup the digital frame and access your digital asssets via WiFi, it works pretty well, the video playback is very smooth.
 
 ### 1. Install lomo-frame
 
@@ -149,7 +147,7 @@ You can follow the instructions on the top of the page.
 
 ### 2. Setup WiFi connection
 
-Connect keyboard with Raspberry Pi zero W, login Raspberry Pi zero and use the command `wifi_switch client [wifi-ssid] [wifi-password]`, replace "[wifi-ssid]" and "[wifi-password]" with those of your wifi network.
+Connect keyboard with Raspberry Pi zero W and login, if you installed Lomorage Raspberry Pi OS image, you can use the command `wifi_switch client [wifi-ssid] [wifi-password]`, replace "[wifi-ssid]" and "[wifi-password]" with those of your wifi network; otherwise, you can refer to other docs online to set the WiFi connection.
 
 ### 3. Check IP address of primary Raspberry Pi
 
@@ -163,10 +161,10 @@ You can mount the "media" directory on primary Raspberry Pi onto your desktop/la
 
 Say if directory with name "/media/WD_90C27F73C27F5C82" store media assets mounted on primary Raspberry Pi (with IP 192.168.1.155), you can mount it on your Raspberry Pi zero w, login to Raspberry Pi zero and then:
 
-
 ```
-mkdir /media/WD_90C27F73C27F5C82
+sudo mkdir /media/WD_90C27F73C27F5C82
 echo "sudo mount.cifs //192.168.1.155/media/WD_90C27F73C27F5C82 /media/WD_90C27F73C27F5C82 -o user=pi,pass=raspberry,uid=1000,gid=1000" | sudo tee -a /etc/fstab
+sudo mount -a
 ```
 
 ### 6. Reboot
