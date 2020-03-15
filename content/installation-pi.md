@@ -22,7 +22,7 @@ A [Raspberry Pi 3 B+ (PLUS) Starter Kit](https://www.pishop.us/product/raspberry
 Click the link below to download the prebuild OS image.
 
 <p align="center">
-<a href="https://github.com/lomorage/pi-gen/releases/download/2020_03_13.10_54_31.0.60425d1/image_2020-03-13-lomorage-lite.zip" title="Install Lomorage for Raspberry Pi" class="badge raspberrypi">Raspberry Pi</a>
+<a href="https://github.com/lomorage/pi-gen/releases/download/2020_03_15.10_59_55.0.60425d1/image_2020-03-15-lomorage-lite.zip" title="Install Lomorage for Raspberry Pi" class="badge raspberrypi">Raspberry Pi</a>
 </p>
 
 After you download the customized OS image, you can install the image to MicroSD card using [balenaEtcher](https://www.balena.io/etcher/), which is available on both Windows and macOS.
