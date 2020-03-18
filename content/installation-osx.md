@@ -1,6 +1,6 @@
 # Install Lomorage Service on MacOS
 
-<span>1.</span> Click the link below to downlink Lomorage Service Application.
+<span>1.</span> Click the link below to download Lomorage Service Application.
 
 <p align="center">
 <a href="https://github.com/lomorage/LomoAgentOSX/releases/download/2020_01_15.22_53_40.0.16488b0/LomoAgent.dmg" title="Install Lomorage for macOS" class="badge">macOS</a>
