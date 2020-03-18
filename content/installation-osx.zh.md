@@ -6,6 +6,11 @@
 <a href="https://github.com/lomorage/LomoAgentOSX/releases/download/2020_01_15.22_53_40.0.16488b0/LomoAgent.dmg" title="Install Lomorage for macOS" class="badge">macOS</a>
 </p>
 
+如果上面链接无法访问，也可以从百度网盘下载:
+
+链接: [https://pan.baidu.com/s/1DLqQNPSJ1t_GUJNy8raeAA](https://pan.baidu.com/s/1DLqQNPSJ1t_GUJNy8raeAA)
+提取码: b9r3
+
 <span>2.</span> 双击"LomoAgent.dmg"开始安装，参考下面步骤完成安装。
 
 <div align="center">
