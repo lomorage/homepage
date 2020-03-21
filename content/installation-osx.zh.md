@@ -7,9 +7,8 @@
 </p>
 
 如果上面链接无法访问，也可以从百度网盘下载:
-
-链接: [https://pan.baidu.com/s/1DLqQNPSJ1t_GUJNy8raeAA](https://pan.baidu.com/s/1DLqQNPSJ1t_GUJNy8raeAA)
-提取码: b9r3
+链接: [https://pan.baidu.com/s/1SkCo-zzvgAC_GzugVaZVbw](https://pan.baidu.com/s/1SkCo-zzvgAC_GzugVaZVbw)
+提取码: wj35
 
 <span>2.</span> 双击"LomoAgent.dmg"开始安装，参考下面步骤完成安装。
 
