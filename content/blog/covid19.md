@@ -10,7 +10,7 @@ It's hard time for everyone, covid-19 is spreading the world, even though you ca
 
 <div align="center">
 <p class="screenshoot">
-  <img width="100%" src="https://raw.githubusercontent.com/fuji246/MMM-COVID19/master/.github/dashboard.png">
+  <img width="100%" src="/img/blog/covid19/dashboard-en.png">
 </p>
 </div>
 
