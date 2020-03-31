@@ -8,6 +8,8 @@ banner = "img/blog/covid19/covid19.jpg"
 
 It's hard time for everyone, covid-19 is spreading the world, even though you can easily getting the news on your finger tips, it still helpful to setup a dedicated dashboard to show the statistics and relating news of covid-19. The following gives step by step guide to customize your covid-19 dashboard using Raspberry Pi.
 
+<!--more--> 
+
 <div align="center">
 <p class="screenshoot">
   <img width="100%" src="/img/blog/covid19/dashboard-en.png">
@@ -105,7 +107,7 @@ $ cd modules
 $ git clone https://github.com/bibaldo/MMM-COVID19
 ```
 
-Then config the module in "config/config.js", register aacout at [https://rapidapi.com/](https://rapidapi.com/) and replace the "get-your-api-key" below with your own API key. After registered, go to [https://rapidapi.com/astsiatsko/api/coronavirus-monitor](https://rapidapi.com/astsiatsko/api/coronavirus-monitor) and you can find the API key with name "X-RapidAPI-Key".
+Then config the module in "config/config.js", register accout at [https://rapidapi.com/](https://rapidapi.com/) and replace the "get-your-api-key" below with your own API key. After registered, go to [https://rapidapi.com/astsiatsko/api/coronavirus-monitor](https://rapidapi.com/astsiatsko/api/coronavirus-monitor) and you can find the API key with name "X-RapidAPI-Key".
 
 ```
   {
