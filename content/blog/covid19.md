@@ -84,7 +84,7 @@ $ cp config/config.js.sample config/config.js
 $ npm run
 ```
 
-You can try play with the options provided by the modules in "config.js", for example, you can add more RSS feed to the "News Feed" module:
+You can try play with the options provided by the modules in "config.js", for example, you can add more [RSS feed](https://docs.rsshub.app/) to the "News Feed" module:
 
 ```
 {

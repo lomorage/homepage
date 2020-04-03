@@ -85,7 +85,7 @@ $ cp config/config.js.sample config/config.js
 $ npm run
 ```
 
-您可以尝试去修改"config.js"中模块的选项，比如，您可以给"News Feed"模块添加更多的RSS源:
+您可以尝试去修改"config.js"中模块的选项，比如，您可以给"News Feed"模块添加更多的[RSS源](https://docs.rsshub.app/):
 
 ```
 {

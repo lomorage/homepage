@@ -1,3 +1,18 @@
+Table of Contents
+=================
+
+   * [Install Lomorage Service on Raspberry Pi](#install-lomorage-service-on-raspberry-pi)
+      * [Install with prebuild OS image](#install-with-prebuild-os-image)
+      * [Docker installation](#docker-installation)
+         * [1. Install Docker on Raspberry Pi](#1-install-docker-on-raspberry-pi)
+         * [2. Get Docker image](#2-get-docker-image)
+         * [3. Run](#3-run)
+      * [Apt installation](#apt-installation)
+         * [1. Add lomoware source](#1-add-lomoware-source)
+         * [2. Install Lomorage](#2-install-lomorage)
+         * [3. Change mount directory and username if needed](#3-change-mount-directory-and-username-if-needed)
+         * [4. Run](#4-run)
+
 # Install Lomorage Service on Raspberry Pi
 
 To run on Raspberry Pi, you need to order a [Raspberry Pi](https://www.raspberrypi.org/), we have tested the image the following models:
@@ -15,14 +30,24 @@ If you don't have one yet, we would recommend the newer version, which gives bet
 
 A [Raspberry Pi 3 B+ (PLUS) Starter Kit](https://www.pishop.us/product/raspberry-pi-3-b-plus-starter-kit/) is good enough for the setup.
 
-**There are two options to install Lomorage service on Raspberry Pi**, one is using the prebuild OS image which has all the dependencies installed, another one is manaully installation if you already have Raspberry Pi setup and running for other purpose.
+**There are 3 options to install Lomorage service on Raspberry Pi**, one is using the prebuild OS image which has all the dependencies installed, or you can run docker image on your existing running Raspberry Pi, or if you can just use APT install.
 
 ## Install with prebuild OS image
+
+The prebuild image includes all Lomorage packages, including:
+
+- lomo-backend: Lomorage service backend
+
+- lomo-web: Lomorage web application
+
+- lomo-base: network configure tool, button control, hard drive mount tool (usbmount modification), bluetooth console
+
+- lomo-frame: the digital frame application
 
 Click the link below to download the prebuild OS image.
 
 <p align="center">
-<a href="https://github.com/lomorage/pi-gen/releases/download/2020_03_15.10_59_55.0.60425d1/image_2020-03-15-lomorage-lite.zip" title="Install Lomorage for Raspberry Pi" class="badge raspberrypi">Raspberry Pi</a>
+<a href="https://github.com/lomorage/pi-gen/releases/download/2020_04_03.13_32_34.0.3450823/image_2020-04-03-lomorage-lite.zip" title="Install Lomorage for Raspberry Pi" class="badge raspberrypi">Raspberry Pi</a>
 </p>
 
 After you download the customized OS image, you can install the image to MicroSD card using [balenaEtcher](https://www.balena.io/etcher/), which is available on both Windows and macOS.
@@ -35,15 +60,76 @@ After you insert the MicroSD to your desktop or laptop, just select the image yo
 
 After flushing the image, insert the microSD into Raspberry Pi board, connect USB hard drive with Raspberry Pi, plug in a network cable, plug in the power supply, turn on the power and wait a few minutes for system boot.
 
-We strongely suggest use cable to provide better performance, but if you prefer to use WiFi, you can login Raspberry Pi and use the command `wifi_switch client [wifi-ssid] [wifi-password]`, replace "[wifi-ssid]" and "[wifi-password]" with those of your wifi network.
+If you have HDMI connected, after system boot successfully, it wil show up a screen that no able to find any assets. You can upload photos using Lomorage Phone app, and then press "r" to rescan. If you want to quit to terminal to do some configuration, just press "ESC" and then "Ctrl+Alt+F2", after you made any changes and want to start lomo-frame, use command `sudo service supervisor restart`.
 
-*The login username is "pi" and password is "raspberry"*
+*The default login username is "pi" and password is "raspberry"*
 
-## Install on existing Raspbian
+We suggest use cable to provide better performance, but if you prefer to use WiFi, you can login Raspberry Pi and use the command `wifi_switch client "[wifi-ssid]" [wifi-password]`, replace "[wifi-ssid]" and "[wifi-password]" with those of your wifi network. *Make sure you have quotation mark around "[wifi-ssid]" if you have space or unicode character in it, for example `wifi_switch client "Lomorage's 2.4G" mypassword`.*
 
-**step 1. Add lomoware source**
+## Docker installation
+
+Docker installation is convinient way if you don't want to mess thing on existing system. It doesn't support Raspberry Pi 0 and 1 now.
+
+**MDNS won't work in this case, so the service won't be discovered automaically on Lomorage Phone APP, you have to enter the service IP addresss and Port manually**
+
+Docker image includes:
+
+- lomo-backend: Lomorage service backend
+
+- lomo-web: Lomorage web application
+
+### 1. Install Docker on Raspberry Pi
+
+*note: If you are using OMSC, you need to change "id=osmc" in “/etc/os-release” to "id=raspbain"*
 
 ```
+sudo apt install -y ca-certificates
+sudo update-ca-certificates --fresh
+curl -fSLs https://get.docker.com | sudo sh
+sudo usermod -aG docker $USER
+sudo systemctl start docker
+```
+
+### 2. Get Docker image
+
+Pull from docker hub.
+
+```
+sudo docker pull lomorage/raspberrypi-lomorage:latest
+```
+
+### 3. Run
+
+You can specify the media home directory and lomo directory, otherwise it will use the default, you MUST specify the host.
+
+```
+run.sh [-m {media-dir} -b {lomo-dir} -d -p {lomod-port} -P {lomow-port}] -h host-ip -i image-name
+
+Command line options:
+    -m  DIR         Absolute path of media directory used for media assets, default to $HOME_MEDIA_DIR, optional
+    -b  DIR         Absolute path of lomo directory used for db and log files, default to $HOME_LOMO_DIR, optional
+    -h  HOST        IP address or hostname of the host machine, required
+    -p  LOMOD_PORT  lomo-backend service port exposed on host machine, default to $LOMOD_HOST_PORT, optional
+    -P  LOMOW_PORT  lomo-web service port exposed on host machine, default to $LOMOW_HOST_PORT, optional
+    -i  IMAGE_NAME  docker image name, for example "lomorage/raspberrypi-lomorage:[tag]", required
+    -d              Debug mode to run in foreground, default to $DEBUG, optional
+
+Examples:
+    # assmuing your hard drive mounted in /media, like /media/usb0, /media/usb1.
+    ./run.sh -m /media -b /home/pi/lomorage -h 192.168.1.232
+```
+
+You can add the command in "/etc/rc.local" before "exit 0" to make it run automatically after system boot.
+
+## Apt installation
+
+If you have the offical Raspbian image installed already, APT installation would be the quickest way to install.
+
+### 1. Add lomoware source
+
+```
+sudo apt install -y ca-certificates python-certifi python3-certifi
+sudo update-ca-certificates --fresh
 wget -qO - https://raw.githubusercontent.com/lomoware/lomoware.github.io/master/debian/gpg.key | sudo apt-key add -
 ```
 
@@ -65,57 +151,47 @@ then run:
 sudo apt update
 ```
 
-**step 2. Install 3rd party tools**
+### 2. Install Lomorage
+
+You need at least lomo-vips and lomo-backend installed.
+
+- lomo-backend: mandatory, Lomorage service backend
+
+- lomo-web: optional, Lomorage web application
+
+- lomo-base: optional, network configure tool, button control, hard drive mount tool, bluetooth console
+
+- lomo-vips: mandatory, lomorage vips clone. (A fast image processing library with low memory needs), used by lomo-backend
+
+- lomo-frame: optional, the digital frame application
 
 ```
-sudo apt install ffmpeg rsync jq libimage-exiftool-perl -y
+sudo apt install lomo-base lomo-vips lomo-backend lomo-web lomo-frame -y
 ```
 
-**step 3. Install file systems support**
+### 3. Change mount directory and username if needed
 
-```
-sudo apt install nfs-common exfat-fuse ntfs-3g hfsplus hfsutils hfsprogs -y
-sudo ln -nsf /bin/ntfsfix /sbin/fsck.ntfs
-sudo ln -nsf /bin/ntfsfix /sbin/fsck.ntfs-3g
-```
+You may need to specify the mount directory if the USB drive is not mounted in "/media" directory. 
 
-**step 4. Install usbmount**
-
-You can skip this if you are using desktop image which has PCManFM installed that can auto mount the USB drive. If you are using the Lite image, and you can use usbmount to auto mount the USB drive.
-
-The usbmount we are using is a modified version which mounts a specfic USB drive to a fixed mount point in "/media" directory, which means the order you plugin the drives doesn't matter, the mount point is always the same.
-
-```
-sudo apt install lockfile-progs -y
-sudo mkdir /etc/usbmount
-sudo mkdir /usr/share/usbmount
-sudo wget -qO /etc/usbmount/usbmount.conf https://raw.githubusercontent.com/lomorage/pi-gen/lomorage/stage2/01-sys-tweaks/files/usbmount.conf
-sudo wget -qO /usr/share/usbmount/usbmount https://raw.githubusercontent.com/lomorage/pi-gen/lomorage/stage2/01-sys-tweaks/files/usbmount
-sudo chmod +x /usr/share/usbmount/usbmount
-sudo wget -qO /etc/udev/rules.d/usbmount.rules https://raw.githubusercontent.com/lomorage/pi-gen/lomorage/stage2/01-sys-tweaks/files/usbmount.rules
-sudo wget -qO /etc/systemd/system/usbmount@.service https://raw.githubusercontent.com/lomorage/pi-gen/lomorage/stage2/01-sys-tweaks/files/usbmount%40.service
-```
-
-**step 5. Install Lomorage service**
-
-```
-sudo apt install lomo-vips lomo-backend -y
-```
-
-**step 6. Change mount directory and username if needed**
-
-If you are not using the usbmount in step 4, you may need to specify the mount directory if the USB drive is not mounted in "/media" directory. 
-
-For example if you are using PCManFM, then the mount directory will be "/media/pi". To specify the mount directory to be "/media/pi", modify `ExecStart` in "lib/systemd/system/lomod.service", and add paramter "--mount-dir" as below
+For example if you are using PCManFM, then the mount directory will be "/media/pi". To specify the mount directory to be "/media/pi", modify `ExecStart` in "/lib/systemd/system/lomod.service", and add paramter "--mount-dir" as below
 
 ```
 ExecStart=/opt/lomorage/bin/lomod -b /opt/lomorage/var --mount-dir /media/pi  --max-upload 1 --max-fetch-preview 3
 ```
 
-If your username is not "pi", you need to change "User=pi" in "lib/systemd/system/lomod.service", and use your username.
+If your username is not "pi", you need to change "User=pi" in "/lib/systemd/system/lomod.service", and use your username.
 
-Then restart Lomorage service:
+### 4. Run
+
+Restart Lomorage service:
 
 ```
+# restart lomo-backend
 sudo systemctl restart lomod
+
+# restart lomo-web
+sudo systemctl restart lomow
+
+# restart lomo-frame
+sudo service supervisor restart
 ```
