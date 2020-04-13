@@ -27,6 +27,7 @@ title = "安装说明"
 您也可以使用Web版本来上传电脑中已有的照片和视频，也可以在电脑上浏览已经备份的照片和视频。
 
 <p align="center">
+<a href="/zh/installation-android"><img alt="Lomorage 安卓客户端" src="/img/installation/app-store-google-beta.svg" width="220"></a>
 <a href="/zh/installation-ios"><img alt="Lomorage iOS客户端" src="/img/installation/app-store-ios.svg" width="220"></a>
 &nbsp;
 <a href="/zh/installation-web"><img alt="Lomorage web客户端" src="/img/installation/browser.png" width="220"></a>
