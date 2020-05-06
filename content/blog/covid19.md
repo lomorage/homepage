@@ -180,3 +180,33 @@ Add the following lines in "/var/spool/cron/crontabs/pi" which start MagicMirror
 00 08 * * * vcgencmd display_power 1;pm2 start mm
 00 21 * * * vcgencmd display_power 0;pm2 stop mm
 ```
+
+## 4. Increase swap size
+
+If you add more plugins, you can use [MMM-pages](https://github.com/edward-shen/MMM-pages) to put them in several pages, and most likely MagicMirror may consume a lot of memory, which will cause system unresponsive. Increase swap size helps.
+
+1. Stop the swap
+
+```
+sudo dphys-swapfile swapoff
+```
+
+2. Modify the size, edit the file /etc/dphys-swapfile and modify the variable CONF_SWAPSIZE to 1024, then create and initialize the file
+
+```
+dphys-swapfile setup
+```
+
+3. Start the swap
+
+```
+sudo dphys-swapfile swapon
+```
+
+## 5. Setup Plex
+
+```
+curl https://downloads.plex.tv/plex-keys/PlexSign.key | sudo apt-key add -
+sudo apt update
+sudo apt install plexmediaserver
+```

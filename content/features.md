@@ -22,9 +22,7 @@ You can also use either [DES]() to encrypt your photos, or use any [encrypted fi
 
 # <i class="fas fa-server"></i>&nbsp;&nbsp;&nbsp;Cross-Platform
 
-There is no OS limitation for running the Lomorage service, you can backup your photos on MAC, Windows and Raspberry Pi, and we will add other OS support upon user's request.
-
-We only support iOS client now, the Android version and Web version are on our backlog, we are planning to release this year.
+There is no OS limitation for running the Lomorage service, you can backup your photos on MAC, Windows and Raspberry Pi, and we will add other OS support upon user's request. We have iOS, Android and Web clients.
 
 # <i class="fas fa-tools"></i>&nbsp;&nbsp;&nbsp;Easy Setup
 

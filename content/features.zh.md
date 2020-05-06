@@ -20,9 +20,7 @@ Lomorage是运行在您网络的私有云服务，为您提供便捷的照片备
 
 # <i class="fas fa-server"></i>&nbsp;&nbsp;&nbsp;跨平台
 
-Lomorage服务可以运行在多种平台，您可以选择备份您的照片到Windows, macOS，甚至Raspberry Pi上，根据用户需求，我们会加上其他平台的支持。
-
-客户端我们现在只支持iOS，我们计划在今年内支持Android和Web。
+Lomorage服务可以运行在多种平台，您可以选择备份您的照片到Windows, macOS，甚至Raspberry Pi上，根据用户需求，我们会加上其他平台的支持。客户端支持iOS, Android和浏览器。
 
 # <i class="fas fa-tools"></i>&nbsp;&nbsp;&nbsp;安装简单
 
@@ -31,7 +29,6 @@ Lomorage服务可以运行在多种平台，您可以选择备份您的照片到
 # <i class="fas fa-copy"></i>&nbsp;&nbsp;&nbsp;存储原始文件
 
 照片和视频会按照完整尺寸备份到您的硬盘，文件和您的手机上完全一样，EXIF元数据信息也不会丢失。支持所有常见的图片和视频格式，支持HEIC和动态照片。
-
 
 # <i class="fas fa-people-carry"></i>&nbsp;&nbsp;零迁移成本
 
