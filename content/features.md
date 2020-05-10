@@ -63,3 +63,7 @@ Since most people will offload the phone storage, so having those backup once is
 # <i class="fas fa-share-alt-square"></i>&nbsp;&nbsp;Share Your Moments
 
 You can share moments with your family members, and create groups to share with multiple members at one time. It won't occupy your disk space so you don't need to worry about the disk usage on your phone.
+
+# <i class="fas fa-images"></i>&nbsp;&nbsp;Enjoy Your Memories
+
+You can connect monitor with Raspberry Pi and use that as digital photo frame, and you can setup multiple digital photo frames using Raspberry Pi zero w and access your digital assets wirelessly. No need to worries about the storage of digital frame, no need file transfer any more.
