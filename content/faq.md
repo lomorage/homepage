@@ -88,11 +88,11 @@ At this moment, we are making no money.
 
 This is a side project starts with 3 fathers seeking a better solution for the digital assets for the family and we are doing that in spare time, we have been doing this for two years. We started this with love and build it with love, and we use it in our daily life, we do spend a lot of time on that, but we know we probably will do this even nobody is paying us, because that is what we need, and the way we do this doesn’t cost us much, the only thing we paid for now it’s the apple developer account and a domain name, we don’t host the storage, we don’t offer the device, we host website and software download at github for free, so the answer why it’s free it’s because we can.
 
-Nothing is free, and need to make money to make it sustainable, we wish we can do that full time to get the features delivered faster, but we just can't at this stage. We will be happy if people find the product useful and willing to spend money on that, for now the product is at early stage with basic features like backup and share, and we provide that as Freemium. We don’t have to make user part of the products, and we care the privacy since day one because we are ourself the user. 
+Nothing is free, and need to make money to make it sustainable, we wish we can do that full time to get the features delivered faster, but we just can't at this stage. We will be happy if people find the product useful and willing to spend money on that, for now the product is at early stage with basic features like backup and share, and we provide that as freeware. We don’t have to make user part of the products, and we care the privacy since day one because we are ourself the user. 
 
-Peter Thiel said: "To build a successful startup, you have to be **10 times better** than second best.” , and we  also believe: to make money out of something, we need to build something that is valuable first.
+Peter Thiel said: "To build a successful startup, you have to be **10 times better** than second best.”, and we also believe: to make money out of something, we need to build something that is valuable first.
 
-We are planning to release more advanced features (like advanced search, remote backup, digital frame etc), and will probably think about monetize some of them. And the digtial photo frame as a dominate screen in the room, there is also possibilities to monetize.
+We are planning to release more advanced features (like advanced search, remote backup, digital frame etc), and will probably think about monetize some of them. And the digtial photo frame as a dominate screen in the room, there can be multiple ones, for example, a big screen in living room and some smaller ones put on desks in bedroom or study room, there is also possibilities to monetize.
 
 ## 8. How to setup redundancy backup?
 

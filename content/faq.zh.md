@@ -91,25 +91,25 @@ keywords = ["FAQ","疑问","反馈","用户"]
 
 Lomorage是一个经济实用，更加灵活的解决方案，软件免费，如果您使用Windows或Mac电脑，也就无需另外购置额外的硬件，但如果想更好但利用改系统，将其作为一个7x24小时的私有云，您可以选择树莓派。即便是购买树莓派，也比市面上的方案更加经济实用。软件方面有些高级功能现在还在开发中，但基本的存储备份功能安全稳定，没有任何隐形费用，没有任何用户锁定，不泄漏隐私，为什么不试试呢？
 
-查看[这里](/zh/compare)查看和云服务, NAS，还有其他方案的对吧。
+查看[这里](/zh/compare)查看和云服务, NAS，还有其他方案的对比。
 
 ## 6. 怎么想到"Lomorage"这个名字?
 
 "lomorage"结合了"Lomography"和"Storage"两个单词.
 
-## 7. What is the business model?
+## 7. 你们的商业模式是什么?
 
-It's hard.
+这个很难，当前我们没有盈利。
 
-At this moment, we are making no money.
+这个是一个业余的项目，做这个项目最开始的出发点是想为自己家庭的照片存储管理寻找一个更好的解决方案，家里有了小孩之后照片和视频的量爆涨，在使用过一些现有的产品后，我们想要有更好的方案，更加简单易用，更加稳定，经济实用，涵盖照片视频的备份，管理，分享和展示的一套完整方案。这一切的出发点是我们对家庭的热爱，使得我们对这个事情的投入也充满热情，我们已经业余时间做了快两年了，即便是现在没有人付钱，我们也会坚持做下去。
 
-This is a side project starts with 3 fathers seeking a better solution for the digital assets for the family and we are doing that in spare time, we have been doing this for two years. We started this with love and build it with love, and we use it in our daily life, we do spend a lot of time on that, but we know we probably will do this even nobody is paying us, because that is what we need, and the way we do this doesn’t cost us much, the only thing we paid for now it’s the apple developer account and a domain name, we don’t host the storage, we don’t offer the device, we host website and software download at github for free, so the answer why it’s free it’s because we can.
+当前我们的投入除了时间成本外，其他的资金投入并不多，主要是apple开发者账号，域名，我们不用提供存储空间，不用提供设备，使用github来免费托管主页和提供下载链接，所以将这套系统免费提供使用对我们而言并没有太大的经济负担。
 
-Nothing is free, and need to make money to make it sustainable, we wish we can do that full time to get the features delivered faster, but we just can't at this stage. We will be happy if people find the product useful and willing to spend money on that, for now the product is at early stage with basic features like backup and share, and we provide that as Freemium. We don’t have to make user part of the products, and we care the privacy since day one because we are ourself the user. 
+但终究所有的投入都是有成本的，需要资金的投入来让其可持续下去。我们很希望能够全职来做这个事情，更快的能开交付新功能，但当前我们还不能做到这点。如果人们觉得这个产品对他们有用，并且愿意付费，那我们会很开心，但当前的产品还是在早期阶段，只有基本的备份和分享功能，更好的方式是将其作为一个免费软件来提供大家使用。我们也不会走互联网软件的模式，将用户作为产品的一部分，我们从一开始就关心用户隐私，因为我们自己也是用户。
 
-Peter Thiel said: "To build a successful startup, you have to be **10 times better** than second best.” , and we  also believe: to make money out of something, we need to build something that is valuable first.
+Peter Thiel说过: "要创建一家成功的初创公司，你的产品需要比同类产品好10倍” ，我们也相信：如果要用户买单，必须先提供有足够价值的东西。
 
-We are planning to release more advanced features (like advanced search, remote backup, digital frame etc), and will probably think about monetize some of them. And the digtial photo frame as a dominate screen in the room, there is also possibilities to monetize.
+我们计划推出更多高级的功能（比如智能搜索，远程备份，数码相框等），看看是否能提供一些用户愿意付费高级功能。数码相框本质上是一个家用屏幕，可以有放在客厅的大尺寸画屏，也可以有放在桌上的摆台，现有的数码相框没多少人用，是因为不好用，而不是因为不需要，这里面也存在很多的可能性探索出些商业模式。
 
 ## 3. 如何设置冗余备份?
 
