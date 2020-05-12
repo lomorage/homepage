@@ -1,0 +1,63 @@
++++
+title = "Use Dynamic DNS to remote access Lomorage"
+tags = ["Raspberry Pi", "ddns", "openwrt"]
+categories = ["remote access"]
+date = "2020-04-17T22:17:40"
+banner = "img/blog/covid19/covid19.jpg"
++++
+
+# How ddns works
+
+You register a subdomain at ddns service provider, for example "lomorage.duckdns.org", "lomorage" is the sub domain, then the ddns service provider will allocate a token for you, and you start at ddns client with that token to validate your are the subdomain owner, and ddns service provide will know your public IP address. Then when someone access the subdomain, ddns service provider will tell them the your public IP address and access your service directly.
+
+You will need to setup port mapping on your router to provide service if your server is running internally in your network, and for HTTP service, you'd better secure it with https.
+
+# Setup ddns
+
+Go to https://www.duckdns.org/ and register an accout, then you can register your own subdomain, once you get the domain, you can go to https://www.duckdns.org/install.jsp, and choose the platform you want to install, you can either install it on Windows, MacOS, or Raspberry Pi, even on the router like openwrt.
+
+# Enable https for openwrt
+
+Self-assigned certificate doesn't work well and will give warnining, use "Let's Encrypted" instead. SSH login into openwrt, and install acmesh client which automate the certificate management for you.
+
+Make sure to change "my.router.net" below with your own subdomain, for example: "lomorage.duckdns.org"
+
+```
+curl https://raw.githubusercontent.com/Neilpang/acme.sh/master/acme.sh > acme.sh
+chmod a+x "acme.sh"
+./acme.sh --install
+cd /root/.acme.sh
+DOMAIN=my.router.net ## this domain must actually point to your router
+iptables -I input_rule -p tcp --dport 80 -j ACCEPT -m comment --comment ACME
+./acme.sh --issue -d $DOMAIN -w /www
+iptables -D input_rule -p tcp --dport 80 -j ACCEPT -m comment --comment ACME
+```
+
+Then activate https for your LuCi admin web GUI.
+
+```
+opkg update
+opkg install luci-ssl
+/etc/init.d/uhttpd restart
+```
+
+And you need to use "Let's Encrypted" key and cert.
+
+```
+uci set uhttpd.main.key="$(pwd)/$DOMAIN/$DOMAIN.key"
+uci set uhttpd.main.cert="$(pwd)/$DOMAIN/$DOMAIN.cer"
+uci commit uhttpd
+/etc/init.d/uhttpd restart
+```
+
+If you want to enable ONLY https, redirect http:
+
+```
+uci set uhttpd.main.redirect_https=1
+uci commit
+/etc/init.d/uhttpd restart
+```
+
+Notes: You can refer to https://github.com/stephank/openwrt/blob/master/package/uhttpd/files/uhttpd.config about the settings in "/etc/config/uhttpd"
+
+Finally you can try use the subdomain set above to access your router: https://yoursubdomain.duckdns.org

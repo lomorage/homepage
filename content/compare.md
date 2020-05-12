@@ -8,7 +8,7 @@ keywords = ["Price","Compare","Google Photo","iCloud", "Amazon Photo", "NAS", "S
 
 **The following comparison only considered the biggest selling point for each category, and assuming the main purpose is photo backup and photo management, so if you need more than that, just go with NAS, or get Raspberry Pi 4 or other single board computer to DIY yourself if you are expert.**
 
-for example, the cloud service has different price by storage size, there are other features but it actually makes no difference with different storage sizes; And for the self hosting devices, the price differs by the hardware configurations, there are other features but it actually makes no difference with different configurations. Among all the features, backup is the fundamental requirements, and all other fancy features is built on that.
+For example, the cloud service has different price by storage size, there are other features but it actually makes no difference with different storage sizes; And for the self hosting devices, the price differs by the hardware configurations, there are other features but it actually makes no difference with different configurations. Among all the features, backup is the fundamental requirements, and all other fancy features is built on that.
 
 Lomorage is more cost efficient and more flexible compared with existing solutions, the software cost you nothing, and even get the hardware setup using Raspberry Pi 4 is cheaper.  If you use the Windows or Mac application, it's $0. There are some features currently missing but they are planned, and the basic backup feature is solid and stable for almost 2 years, no hidden fees, no lock down, no privacy concern, why not give it a try?
 
@@ -16,10 +16,10 @@ Lomorage is more cost efficient and more flexible compared with existing solutio
 
 The following are **yearly fees**,  those cells leave blank are not available, for example, Apple iCloud only provides 5 GB, 50 GB, 200 GB and 2 TB options, for Lomorage, it would be hard to get new hard drive smaller than 500 GB nowadays.
 
-Lomorage software is 100% free for the the essential functions, thus here will only take device cost into account, and  yearly cost is calculated as [depreciation expense](https://www.profitbooks.net/what-is-depreciation/). See below for more details.
+Lomorage software is 100% free for the the essential functions, thus here will only take device and energy cost into account, and yearly cost is calculated as [depreciation expense](https://www.profitbooks.net/what-is-depreciation/). See below for more details.
 
 {{<table "table table-striped table-bordered">}}
-|        | Lomorage | Apple iCloud | **Google Photo** | Amazon Photo | OneDrive |
+|        | Lomorage | Apple iCloud |   Google Photo   | Amazon Photo | OneDrive |
 | -----: | -------- | ------------ | ---------------- | ------------ | --------- |
 |   5 GB |          | Free         |                  | Free         | Free      |
 |  15 GB |          |              | Free             |              |           |
@@ -55,7 +55,7 @@ USB hub with power supply:
 - [USB 2.0 Powered Hub - 7 Ports with 5V 2A Power Supply](https://www.adafruit.com/product/961)
 
 {{<table "table table-striped table-bordered">}}
-|        | Hard drive  | Raspberry Pi 4 Starter Kit | USB hub | Yearly Fee | Total devices expense |
+| storage/drive (2 drives) | Hard drive  | Raspberry Pi 4 Starter Kit | USB hub | Yearly Fee | Total devices expense |
 | ------ | ----------- | -------------------------- | ------- | ---------- | --------------------- |
 | 500 GB | $ 36.99     | $ 64.80                    | $ 21.95 | $ 45.18    | $ 160.73              |
 | 1 TB   | $ 55.72     | $ 64.80                    | $ 21.95 | $ 54.55    | $ 198.19              |

@@ -4,8 +4,13 @@ description = "常见问题"
 keywords = ["FAQ","疑问","反馈","用户"]
 +++
 
-* [1. 怎么想到"Lomorage"这个名字?](#1-怎么想到lomorage这个名字)
-* [2. 这是在重新发明轮子吗?](#2-这是在重新发明轮子吗)
+* [1. 为什么不用云服务?](#1-为什么不用云服务)
+* [2. NAS怎么样?](#2-nas怎么样)
+* [3. 其他选择呢?](#3-其他选择呢)
+* [4. 为什么要做Lomorage?](#4-为什么要做lomorage)
+* [5. 价格](#5-价格)
+* [6. 怎么想到"Lomorage"这个名字?](#6-怎么想到lomorage这个名字)
+* [7. What is the business model?](#7-what-is-the-business-model)
 * [3. 如何设置冗余备份?](#3-如何设置冗余备份)
 * [4. 支持那些文件系统?](#4-支持那些文件系统)
 * [5. 为什么时间看起来不对?](#5-为什么时间看起来不对)
@@ -13,15 +18,98 @@ keywords = ["FAQ","疑问","反馈","用户"]
 * [7. 编辑后的照片视频支持吗?](#7-编辑后的照片视频支持吗)
 * [8. 什么是后台备份?](#8-什么是后台备份)
 
-## 1. 怎么想到"Lomorage"这个名字?
+## 1. 为什么不用云服务?
+
+我们认为数字资产的管理需要保存在本地，在本地做好备份，而云端的存储只是本地存储的一个补充，现有的云存储成本过高，国内的云存储厂商相继[停止运营](https://www.ifanr.com/app/654706):
+
+ - 115 网盘：2016 年 3 月 4 日下线「我聊」中的「文件发送」功能，后续一直在调整。
+ - 新浪微盘：2016 年 6 月 30 日开始关闭免费个人用户的存储服务。
+ - 华为网盘：2016 年 6 月 30 日开始关闭。
+ - 迅雷 / 金山快盘：停止快盘个人用户的存储服务，数据保留到 2016 年 6 月 30 日。
+ - 360 云盘：2016 年 11 月起停止个人云盘服务，2017 年 2 月 1 日起关闭所有云盘账号并清空数据。
+ - UC 云盘：2016 年 4 月 15 日开始终止网盘的存储服务，停止上传服务 / 离线资源存至网盘功能 / 视频转码服务。
+
+ 国内外的照片存储服务也相继关停:
+
+ - [网易相册突然关停清空数据 网友照片丢失愤怒投诉：还我回忆](https://new.qq.com/omn/20190601/20190601A0N2RQ.html)
+ - [Dropbox关闭备份照片应用 尝试吸引新用户失败](http://www.fromgeek.com/news/33101.html)
+ - [佳能关闭Irista平台](https://camerajabber.com/canon-irista-closing-date-january-2020/)
+ - [佳能公司将正式停止irista服务](https://chinese.aljazeera.net/technology/2019/11/20/free-cloud-storage-services-involve-risk-data-loss)
+ 
+ 云存储的运营成本之高，Flickr母公司SmugMug在[公开信](https://www.ifanr.com/1293604)中提到Flicker一直都在亏损，希望用户能够接受价格上涨。
+
+ 云存储的优势是使用方便，无需购买硬件，有专人来负责维护，7x24小时服务都可以用，也无需担心电费。但科技在进步，SBC单板计算机变得越来越便宜，性能越来越强大，能耗也越来越低，存储空间也越来越便宜，容量越来越大，软件也越来越智能，人们也开始更多的关心隐私了，是时候可以在自己家里运行“私有云服务”了。
+
+## 2. NAS怎么样?
+
+如果您之前没有听说过NAS，那NAS不太会成为您最合适的选择。[NAS](https://baike.baidu.com/item/NAS/3465615)是一种通用的存储，您可以通过网络存储任何资料，包括照片和视频。尽管NAS试图将其操作界面做的更加简单，但其面向专业的特性导致很难将其简化，想想给您父母购买一台NAS，让他们自己安装配置试试？看看操作易用性最好的群晖NAS的[说明书](https://global.download.synology.com/download/Document/Software/UserGuide/Firmware/DSM/3.1/chs/Syno_UsersGuide_NAServer_chs.pdf)，您就知道，NAS对于照片视频的存储管理备份是杀鸡用牛刀，[简单的NAS不简单](https://sspai.com/post/55785)。
+
+## 3. 其他选择呢?
+
+也有将NAS功能简化，侧重做照片视频垂直领域的，这块国外市场的产品选择多点，国内的猫盘也算吧。
+
+  - [猫盘](http://www.maopan.io/)
+  - [ibi](https://www.amazon.com/ibi-Organize-Privately-Smartphones-Accounts/dp/B07Y9CH817/ref=cm_cr_arp_d_product_top?ie=UTF8)
+  - [Monument](https://www.amazon.com/Monument-Photo-Management-Device-Automatically/dp/B01M8I40A6/ref=sr_1_3?dchild=1&keywords=ibi&qid=1588828193&sr=8-3)
+  - [Kwilt3](https://www.amazon.com/Kwilt3-Personal-External-Storage-Wireless/dp/B07KQHVMJX/ref=psdc_13436301_t3_B01M8I40A6?th=1)
+
+## 4. 为什么要做Lomorage?
+
+我们对现有的解决方案不满意。
+
+1. 云端存储应该作为本地备份的补充，本地需要至少一个主备和从备。
+   - 我们当前支持本地冗余备份。
+   - 我们机会支持远程备份（比如使用你父母家里的Lomorage存储，来远程备份）和专业的云端存储备份，比如[backblaze](https://www.backblaze.com/)。
+
+2. 安装简单，易于使用，自动升级，零成本维护。
+   - 只需要几分钟就能在树莓派上安装定制的系统镜像。
+   - 支持Windows和MacOS系统。
+   - 系统自动升级。
+
+3. 软件很重要，备份管理这些珍贵的照片视频，需要非常稳定可靠的系统。
+   - 我们开发者自己就是用户。
+   - 我们产品的发布是按质量，而不是按时间。
+
+4. 系统必须开放，不要对用户做任何形式的绑定，即便后续停止开发，不要给用户太多的迁移成本，用户的硬件也不至于变成电子垃圾。
+   - 媒体文件按原始格式，原始尺寸存储在您的磁盘上，不丢失任何信息。
+   - 无需格式化硬盘，任何闲置硬盘即插即用，支持所有常见的文件系统。
+   - 媒体文件按照"YYYY/MM/DD"的日期文件格式存储在您的磁盘上，您可以很方便的将其导入到其他的系统中。
+   - 如果使用树莓派，即便您不用Lomorage，它还是一个单板计算机，您可以用它做其他的[用途](https://projects.raspberrypi.org/zh-CN/projects)。
+
+5. 除了照片的备份和管理之外，和家人一起分享美好回忆。
+   - 有多少次你打开手机翻看老照片？
+   - 家里堆了很多相框，找不到地方摆放？
+   - 闲置在家的数码相框不想用，上传太麻烦，空间有限制？
+   - 想拥有一个大的画屏放客厅，显示日期时间，艺术作品和照片？想在卧室或者书房有个小数码相框摆在桌上？无需上传，突破空间限制，WiFi连接Lomorage存储。
+   - 重新利用任何空闲的屏幕，连接树莓派，搭建数码相框，通过手机来定制要显示的内容。
+   - 远程将照片或视频推送到数码相框，和爷爷奶奶一起分享小孩的成长历程。
+
+6. 独立系统并能互联互通。
+   - 您可以在自己家里安装一套Lomorage系统，同时也能在父母家安装一套，两个相互独立，但也能够互相通信，互相共享存储，加密备份。
+
+## 5. 价格
+
+Lomorage是一个经济实用，更加灵活的解决方案，软件免费，如果您使用Windows或Mac电脑，也就无需另外购置额外的硬件，但如果想更好但利用改系统，将其作为一个7x24小时的私有云，您可以选择树莓派。即便是购买树莓派，也比市面上的方案更加经济实用。软件方面有些高级功能现在还在开发中，但基本的存储备份功能安全稳定，没有任何隐形费用，没有任何用户锁定，不泄漏隐私，为什么不试试呢？
+
+查看[这里](/zh/compare)查看和云服务, NAS，还有其他方案的对吧。
+
+## 6. 怎么想到"Lomorage"这个名字?
 
 "lomorage"结合了"Lomography"和"Storage"两个单词.
 
-## 2. 这是在重新发明轮子吗?
+## 7. What is the business model?
 
-我们希望把照片视频备份在私有的存储设备，并且方便和家人分享，而不是将其备份到云端。NAS对于我们的需求有点杀鸡用牛刀的感觉，而且NAS非常昂贵，安装操作复杂，对于普通非技术背景用户并不容易，不能利用闲置硬盘，而且需要格式化已有的数据。Lomorage想做的就是一个安装简单，使用方便，功能不多不少刚刚好的一个照片备份和管理的私有云服务。
+It's hard.
 
-[更多信息](/lomorage.zh.pdf)
+At this moment, we are making no money.
+
+This is a side project starts with 3 fathers seeking a better solution for the digital assets for the family and we are doing that in spare time, we have been doing this for two years. We started this with love and build it with love, and we use it in our daily life, we do spend a lot of time on that, but we know we probably will do this even nobody is paying us, because that is what we need, and the way we do this doesn’t cost us much, the only thing we paid for now it’s the apple developer account and a domain name, we don’t host the storage, we don’t offer the device, we host website and software download at github for free, so the answer why it’s free it’s because we can.
+
+Nothing is free, and need to make money to make it sustainable, we wish we can do that full time to get the features delivered faster, but we just can't at this stage. We will be happy if people find the product useful and willing to spend money on that, for now the product is at early stage with basic features like backup and share, and we provide that as Freemium. We don’t have to make user part of the products, and we care the privacy since day one because we are ourself the user. 
+
+Peter Thiel said: "To build a successful startup, you have to be **10 times better** than second best.” , and we  also believe: to make money out of something, we need to build something that is valuable first.
+
+We are planning to release more advanced features (like advanced search, remote backup, digital frame etc), and will probably think about monetize some of them. And the digtial photo frame as a dominate screen in the room, there is also possibilities to monetize.
 
 ## 3. 如何设置冗余备份?
 

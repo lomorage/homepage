@@ -58,3 +58,7 @@ Lomorage服务可以运行在多种平台，您可以选择备份您的照片到
 # <i class="fas fa-share-alt-square"></i>&nbsp;&nbsp;分享瞬间
 
 您可以和自己家人分享照片和视频，并可自定义多个群组，分享不会占用额外的存储空间，而无需担心自己的手机空间不够。
+
+# <i class="fas fa-images"></i>&nbsp;&nbsp;Enjoy Your Memories
+
+您可以将树莓派和显示屏连接作为数码相框，您可以通过低成本的树莓派zero w来搭建多个数码相框，并通过无线进行访问您的Lomorage存储备份，而无需担心数码相框的存储空间不够，也不需要手动将文件拷贝到数码相框。
