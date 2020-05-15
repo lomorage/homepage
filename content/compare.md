@@ -55,7 +55,7 @@ USB hub with power supply:
 - [USB 2.0 Powered Hub - 7 Ports with 5V 2A Power Supply](https://www.adafruit.com/product/961)
 
 {{<table "table table-striped table-bordered">}}
-| storage/drive (2 drives) | Hard drive  | Raspberry Pi 4 Starter Kit | USB hub | Yearly Fee | Total devices expense |
+| storage/drive | Hard drive  (1 drives) | Raspberry Pi 4 Starter Kit | USB hub | Yearly Fee | Total devices expense (2 drives) |
 | ------ | ----------- | -------------------------- | ------- | ---------- | --------------------- |
 | 500 GB | $ 36.99     | $ 64.80                    | $ 21.95 | $ 45.18    | $ 160.73              |
 | 1 TB   | $ 55.72     | $ 64.80                    | $ 21.95 | $ 54.55    | $ 198.19              |

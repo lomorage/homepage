@@ -24,7 +24,7 @@ We believe the digital assets should be taken care by ourselves, store locally, 
 
 ## 2. How about NAS?
 
-If you haven't heard of NAS before, then NAS will not be your best option. [NAS](https://en.wikipedia.org/wiki/Network-attached_storage) is a general storage that can store everything, it also comes with application that can backup and management your photos and videos. Even though some NAS tried to make it easy to use, and make the operating system looks like Windows, but still it's too complicate for non-technical users when they tried to understand what is, think about buy a NAS for your parents and let them setup it up. Take a look at the [user guide](https://global.download.synology.com/download/Document/Software/UserGuide/Firmware/DSM/3.1/enu/Syno_UsersGuide_NAServer_enu.pdf) it's just way too much for a photo back and management.
+If you haven't heard of NAS before, then NAS probably won't be your best option. [NAS](https://en.wikipedia.org/wiki/Network-attached_storage) is a general storage that can store everything, it also comes with application that can backup and management your photos and videos. Even though some NAS tried to make it easy to use, and make the operating system looks like Windows, but still it's too complicate for non-technical users when they tried to understand what is. Take a look at the [user guide](https://global.download.synology.com/download/Document/Software/UserGuide/Firmware/DSM/3.1/enu/Syno_UsersGuide_NAServer_enu.pdf) it's just way too much for a photo back and management.
 
 ## 3. Any other similiar solutions?
 
@@ -81,10 +81,6 @@ See [here](/compare) for comparison with cloud service, NAS and other solutions.
 If you know what Lomography is, then "Lomorage" is just a combination of "Lomography" and "Storage".
 
 ## 7. What is the business model?
-
-It's hard.
-
-At this moment, we are making no money.
 
 This is a side project starts with 3 fathers seeking a better solution for the digital assets for the family and we are doing that in spare time, we have been doing this for two years. We started this with love and build it with love, and we use it in our daily life, we do spend a lot of time on that, but we know we probably will do this even nobody is paying us, because that is what we need, and the way we do this doesn’t cost us much, the only thing we paid for now it’s the apple developer account and a domain name, we don’t host the storage, we don’t offer the device, we host website and software download at github for free, so the answer why it’s free it’s because we can.
 

@@ -42,7 +42,7 @@ keywords = ["FAQ","疑问","反馈","用户"]
 
 ## 2. NAS怎么样?
 
-如果您之前没有听说过NAS，那NAS不太会成为您最合适的选择。[NAS](https://baike.baidu.com/item/NAS/3465615)是一种通用的存储，您可以通过网络存储任何资料，包括照片和视频。尽管NAS试图将其操作界面做的更加简单，但其面向专业的特性导致很难将其简化，想想给您父母购买一台NAS，让他们自己安装配置试试？看看操作易用性最好的群晖NAS的[说明书](https://global.download.synology.com/download/Document/Software/UserGuide/Firmware/DSM/3.1/chs/Syno_UsersGuide_NAServer_chs.pdf)，您就知道，NAS对于照片视频的存储管理备份是杀鸡用牛刀，[简单的NAS不简单](https://sspai.com/post/55785)。
+[NAS](https://baike.baidu.com/item/NAS/3465615)是一种通用的存储，您可以通过网络存储任何资料，包括照片和视频。尽管NAS试图将其操作界面做的更加简单，但其面向专业的特性导致很难将其简化。看看操作易用性最好的群晖NAS的[说明书](https://global.download.synology.com/download/Document/Software/UserGuide/Firmware/DSM/3.1/chs/Syno_UsersGuide_NAServer_chs.pdf)，您就知道，NAS对于照片视频的存储管理备份是杀鸡用牛刀，[简单的NAS不简单](https://sspai.com/post/55785)。
 
 ## 3. 其他选择呢?
 
@@ -98,8 +98,6 @@ Lomorage是一个经济实用，更加灵活的解决方案，软件免费，如
 "lomorage"结合了"Lomography"和"Storage"两个单词.
 
 ## 7. 你们的商业模式是什么?
-
-这个很难，当前我们没有盈利。
 
 这个是一个业余的项目，做这个项目最开始的出发点是想为自己家庭的照片存储管理寻找一个更好的解决方案，家里有了小孩之后照片和视频的量爆涨，在使用过一些现有的产品后，我们想要有更好的方案，更加简单易用，更加稳定，经济实用，涵盖照片视频的备份，管理，分享和展示的一套完整方案。这一切的出发点是我们对家庭的热爱，使得我们对这个事情的投入也充满热情，我们已经业余时间做了快两年了，即便是现在没有人付钱，我们也会坚持做下去。
 
