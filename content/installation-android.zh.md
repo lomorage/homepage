@@ -1,6 +1,6 @@
 # 安装Lomorage安卓手机App
 
-！ **中文版发布了，请下载试用**
+！ **中文版发布了，请下载试用, 下面的截图还未更新，请稍后**
 
 您可以在安卓手机上安卓Lomorage App，目前的Lomorage App是开发预览版，最低支持的安卓系统版本是7.1，正式版会很快发布，欢迎关注Lomorage公众号。
 
@@ -26,7 +26,7 @@ Lomorage 是一款个人私有照片和视频备份工具，它方便的把您�
 <p class="screenshoot">
   App会导入您的照片和视频，并且提示您需要登录
   <p />
-  <img width="30%" src="/img/installation/android/cde38df7-c75d-421a-92aa-50d67884b400.jpg">
+  <img width="30%" src="/img/installation/android/zh/cde38df7-c75d-421a-92aa-50d67884b400.jpg">
 </p>
 </div>
 
