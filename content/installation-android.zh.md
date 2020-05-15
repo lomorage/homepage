@@ -1,13 +1,14 @@
 # 安装Lomorage安卓手机App
 
+！ **中文版发布了，请下载试用**
 
 您可以在安卓手机上安卓Lomorage App，目前的Lomorage App是开发预览版，最低支持的安卓系统版本是7.1，正式版会很快发布，欢迎关注Lomorage公众号。
 
 
-**欢迎提供反馈，我们会不断更新我们的软件， 点击下面的图标下载开发预览版**
+**欢迎提供反馈，我们会不断更新我们的软件， 点击下面的图标下载最新中文版**
 
 <p align="center">
-<a href="https://github.com/lomorage/lomo-android-apk-release/releases/download/2020-04-12_17-10-19/com.lomoware.lomorage-v1.0.1.-release2020-04-12_17-10-19.apk"><img alt="Download" src="/img/installation/app-store-google-beta.svg" width="220"></a>
+<a href="https://github.com/lomorage/lomo-android-apk-release/releases/download/2020-05-14_15-42-22/com.lomoware.lomorage-v1.0.1.-release2020-05-14_15-42-22.apk"><img alt="Download" src="/img/installation/app-store-google-beta.svg" width="220"></a>
 <!--
  &nbsp;
 <a href=""><img alt="Get it on Google Play" src="/img/installation/app-store-google.svg" width="220"></a>
