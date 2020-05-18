@@ -26,7 +26,7 @@ banner = "/img/blog/import_my_cloud/banner_mycloud_lomo.png"
       * [3. 查看MyCloud文件](#3-查看MyCloud文件)
    * [开始导入MyCloud到Lomorage](#开始导入MyCloud到Lomorage)
       * [1. 扫描文件信息 ](#1-扫描文件信息 )
-      * [2. 准备工作](#2-准备工作)
+      * [2. 安装tmux](#2-安装tmux)
       * [3. 开始导入到Lomorage](#3-开始导入到Lomorage)
 
 
@@ -72,6 +72,15 @@ banner = "/img/blog/import_my_cloud/banner_mycloud_lomo.png"
 然后黏贴如下的一行：
 
 > /nfs/Public 192.168.0.1/24(rw,subtree_check,secure)
+
+如下图：
+
+<div align="center">
+<p class="screenshoot">
+  <img width="100%" src="/img/blog/import_my_cloud/ad38c19b-10b1-4b82-92ec-68b6f2481601-1.png">
+</p>
+</div>
+
 
 其中 **192.168.0.1** 是你的路由器的地址, **请做相应的改动！**
 
@@ -162,7 +171,7 @@ drwxr-xr-x  2 pi pi 4096 May 17 16:42 来自：iPhone
 pi@raspberrypi-lomorage:~/.lomo/links/unclassfied/Shared Pictures $
 ~~~
 
-## 2. 准备工作
+## 2. 安装tmux
 这一个步骤对于熟练使用Linux的人，可以忽略。
 
 因为SSH登录linux，运行某个命令，如果你关闭了SSH 客户端，那个命令就退出了。
