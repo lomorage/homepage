@@ -8,7 +8,7 @@
 **欢迎提供反馈，我们会不断更新我们的软件， 点击下面的图标下载最新中文版**
 
 <p align="center">
-<a href="https://github.com/lomorage/lomo-android-apk-release/releases/download/2020-05-14_15-42-22/com.lomoware.lomorage-v1.0.1.-release2020-05-14_15-42-22.apk"><img alt="Download" src="/img/installation/app-store-google-beta.svg" width="220"></a>
+<a href="https://github.com/lomorage/lomo-android-apk-release/releases/download/2020-05-14_21-50-00/com.lomoware.lomorage-v1.0.1.-release2020-05-14_21-50-00.apk"><img alt="Download" src="/img/installation/app-store-google-beta.svg" width="220"></a>
 <!--
  &nbsp;
 <a href=""><img alt="Get it on Google Play" src="/img/installation/app-store-google.svg" width="220"></a>
@@ -26,7 +26,7 @@ Lomorage 是一款个人私有照片和视频备份工具，它方便的把您�
 <p class="screenshoot">
   App会导入您的照片和视频，并且提示您需要登录
   <p />
-  <img width="30%" src="/img/installation/android/cde38df7-c75d-421a-92aa-50d67884b400.jpg">
+  <img width="30%" src="/img/installation/android/zh/cde38df7-c75d-421a-92aa-50d67884b400.jpg">
 </p>
 </div>
 
