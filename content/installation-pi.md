@@ -64,7 +64,7 @@ If you have HDMI connected, after system boot successfully, it wil show up a scr
 
 *The default login username is "pi" and password is "raspberry"*
 
-We suggest use cable to provide better performance, but if you prefer to use WiFi, you can login Raspberry Pi and use the command `wifi_switch client "[wifi-ssid]" [wifi-password]`, replace "[wifi-ssid]" and "[wifi-password]" with those of your wifi network. *Make sure you have quotation mark around "[wifi-ssid]" if you have space or unicode character in it, for example `wifi_switch client "Lomorage's 2.4G" mypassword`.*
+We suggest use cable to provide better performance, but if you prefer to use WiFi, you can login Raspberry Pi and use the command `wifi_switch.sh client "wifi-ssid" wifi-password`, replace "wifi-ssid" and "wifi-password" with those of your wifi network. *Make sure you have quotation mark around "wifi-ssid" if you have space or unicode character in it, for example `wifi_switch.sh client "Lomorage's 2.4G" mypassword`.*
 
 ## Docker installation
 
