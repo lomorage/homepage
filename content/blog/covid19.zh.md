@@ -55,6 +55,20 @@ MagicMirror定义的如下的布局，您可以选择把模块放置的看板特
 
 # 安装
 
+如果您使用的是lite的系统镜像，您需要先安装桌面系统。
+
+```
+sudo apt-get update 
+sudo apt-get -y dist-upgrade
+sudo apt-get install raspberrypi-ui-mods -y
+sudo apt-get install libgdk-pixbuf2.0-dev -y
+sudo ln -s /usr/lib/*/gdk-pixbuf-2.0/gdk-pixbuf-query-loaders /usr/local/bin/gdk-pixbuf-query-loaders
+sudo gdk-pixbuf-query-loaders --update-cache -y
+sudo apt install ca-certificates python-certifi python3-certifi -y
+sudo apt-get install -y --reinstall ca-certificates
+sudo update-ca-certificates --fresh
+```
+
 ## 1. 安装最新版本的NodeJS
 
 [NodeJs-Raspberry-Pi](https://github.com/audstanley/NodeJs-Raspberry-Pi)能非常方便的一行命令安装NodeJS:

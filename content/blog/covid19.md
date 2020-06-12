@@ -54,6 +54,20 @@ That is it!
 
 # Installation
 
+If you are using lite image, you need install desktop first to run MagicMirror.
+
+```
+sudo apt-get update 
+sudo apt-get -y dist-upgrade
+sudo apt-get install raspberrypi-ui-mods -y
+sudo apt-get install libgdk-pixbuf2.0-dev -y
+sudo ln -s /usr/lib/*/gdk-pixbuf-2.0/gdk-pixbuf-query-loaders /usr/local/bin/gdk-pixbuf-query-loaders
+sudo gdk-pixbuf-query-loaders --update-cache -y
+sudo apt install ca-certificates python-certifi python3-certifi -y
+sudo apt-get install -y --reinstall ca-certificates
+sudo update-ca-certificates --fresh
+```
+
 ## 1. Install latest NodeJS
 
 [NodeJs-Raspberry-Pi](https://github.com/audstanley/NodeJs-Raspberry-Pi) is very convinient to setup latest NodeJS with one command:
