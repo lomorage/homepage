@@ -8,7 +8,7 @@
 **欢迎提供反馈，我们会不断更新我们的软件， 点击下面的图标下载最新中文版**
 
 <p align="center">
-<a href="https://github.com/lomorage/lomo-android-apk-release/releases/download/2020-05-14_21-50-00/com.lomoware.lomorage-v1.0.1.-release2020-05-14_21-50-00.apk"><img alt="Download" src="/img/installation/app-store-google-beta.svg" width="220"></a>
+<a href="https://github.com/lomorage/lomo-android-apk-release/releases/download/2020-07-19_20-25-00/com.lomoware.lomorage-v1.0.1.-release2020-07-19_20-25-00.apk"><img alt="Download" src="/img/installation/app-store-google-beta.svg" width="220"></a>
 <!--
  &nbsp;
 <a href=""><img alt="Get it on Google Play" src="/img/installation/app-store-google.svg" width="220"></a>
