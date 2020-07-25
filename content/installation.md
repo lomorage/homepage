@@ -32,7 +32,7 @@ You can also use the web client to upload assets on your desktop/latop, or use i
 
 
 <p align="center">
-<a href="/installation-android"><img alt="Downlad beta version" src="/img/installation/app-store-google-beta.svg" width="220"></a>
+<a href="/installation-android"><img alt="Downlad beta version" src="/img/installation/app-store-google.svg" width="220"></a>
 
 <a href="/installation-ios"><img alt="Lomorage iOS client" src="/img/installation/app-store-ios.svg" width="220"></a>
 &nbsp;

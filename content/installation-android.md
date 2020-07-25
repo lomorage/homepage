@@ -10,7 +10,7 @@ Currently you can install the app on **Android** phone, the minimual version is 
 **Click below icon to download.**
 
 <p align="center">
-<a href="https://github.com/lomorage/lomo-android-apk-release/releases/download/2020-07-19_20-25-00/com.lomoware.lomorage-v1.0.1.-release2020-07-19_20-25-00.apk"><img alt="Download" src="/img/installation/app-store-google-beta.svg" width="220"></a>
+<a href="https://play.google.com/store/apps/details?id=com.lomoware.lomorage"><img alt="Download" src="/img/installation/app-store-google.svg" width="220"></a>
 
 
 After launching Lomorage, it will take a few minutes to import all your photos and videos on phone in the first time.
