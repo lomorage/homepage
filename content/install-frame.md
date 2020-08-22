@@ -137,9 +137,9 @@ If you have keyboard connect with Raspberry Pi, you can press the following key 
 
 This setup need some expertise, sorry, will make it easier in the future using phone APP.
 
-If you already have one Raspberry Pi (Primary Raspberry Pi) setup for running lomorage service, and having all the hard drivers connected with that device, you probably keep it in the storage room connected to the router with wired network, and want to setup the digital frame in bedroom or living room.
+If you already have one Raspberry Pi (Primary Raspberry Pi) setup for running Lomorage service, and having all the hard drivers connected with that device, you probably keep it in the storage room connected to the router with wired network, and want to setup the digital frame in bedroom or living room.
 
-You can use a low cost Raspberry Pi zero w to setup the digital frame and access your digital asssets via WiFi, it works pretty well, the video playback is very smooth.
+You can use a low cost Raspberry Pi zero w to setup the digital frame and access your digital assets via WiFi, it works pretty well, the video playback is very smooth.
 
 ### 1. Install lomo-frame
 

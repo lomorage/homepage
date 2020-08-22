@@ -1,7 +1,7 @@
 
 # Install Lomorage App in Android phone
 
-Currently you can install the app on **Android** phone, the minimual version is **7.1**.
+Currently you can install the app on **Android** phone, the minimal version is **7.1**.
 
 
 **Currently it is dev-beta version, will publish to Google Play Store soon**
@@ -17,7 +17,7 @@ After launching Lomorage, it will take a few minutes to import all your photos a
 
 Then you can click the right up more menu to **Manage account**.
 
-At there, the app will automatically find the lomorage service if you installed on Mac/Windows or Raspberry pi.
+At there, the app will automatically find the Lomorage service if you installed on Mac/Windows or Raspberry pi.
 
 
 <div align="center">
@@ -33,7 +33,7 @@ At there, the app will automatically find the lomorage service if you installed 
 Click right up menu to enter into account management page. <p />
 At there, App will find the Lomorage service automatically. <p />
 Then you can create account and login. <p />
-Or you can use sacn QR code to get Lomorage service address. <p />
+Or you can use scan QR code to get Lomorage service address. <p />
 <b>（If you run Lomorage service in Windows PC or Mac) </b> <p />
 <p class="screenshoot" />
 <img width="30%" src="/img/installation/android/f2b432d0-d092-4427-b29f-b3504d3a6221.jpg">
@@ -53,7 +53,7 @@ Or you can use sacn QR code to get Lomorage service address. <p />
 </div>
 
 <div align="center">
-  You can long touch to select mult-assets to share your families. <p />
+  You can long touch to select multiple assets to share your families. <p />
   <p class="screenshoot" />
   <img width="30%" src="/img/installation/android/69921b45-14a0-4db3-82d6-034ae16acaf3.jpg">
   <img width="30%" src="/img/installation/android/7a328ad2-2a4e-4e51-8912-4ba9df3a5864.jpg">

@@ -107,7 +107,7 @@ You can try play with the options provided by the modules in "config.js", for ex
 },
 ```
 
-Or you can change the position refering to the layout mentioned above.
+Or you can change the position referring to the layout mentioned above.
 
 You can also change the language by changing "language" in "config.js", check [https://github.com/MichMich/MagicMirror/tree/master/translations](https://github.com/MichMich/MagicMirror/tree/master/translations) for languages available.
 
@@ -121,7 +121,7 @@ $ cd modules
 $ git clone https://github.com/bibaldo/MMM-COVID19
 ```
 
-Then config the module in "config/config.js", register accout at [https://rapidapi.com/](https://rapidapi.com/) and replace the "get-your-api-key" below with your own API key. After registered, go to [https://rapidapi.com/astsiatsko/api/coronavirus-monitor](https://rapidapi.com/astsiatsko/api/coronavirus-monitor) and you can find the API key with name "X-RapidAPI-Key".
+Then config the module in "config/config.js", register account at [https://rapidapi.com/](https://rapidapi.com/) and replace the "get-your-api-key" below with your own API key. After registered, go to [https://rapidapi.com/astsiatsko/api/coronavirus-monitor](https://rapidapi.com/astsiatsko/api/coronavirus-monitor) and you can find the API key with name "X-RapidAPI-Key".
 
 ```
   {
@@ -149,7 +149,7 @@ Here is the [changes](https://github.com/fuji246/MMM-COVID19/commit/42356ae5f922
 
 The data source used for USA counties is from [https://github.com/ExpDev07/coronavirus-tracker-api](https://github.com/ExpDev07/coronavirus-tracker-api), no API key required.
 
-Another options people using in other projects is [https://github.com/pomber/covid19](https://github.com/pomber/covid19), there are some other source availble on internet for your country with more details and you can just search with google, and make changes to the code.
+Another options people using in other projects is [https://github.com/pomber/covid19](https://github.com/pomber/covid19), there are some other source available on internet for your country with more details and you can just search with google, and make changes to the code.
 
 ## 6. Get more modules
 

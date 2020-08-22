@@ -115,7 +115,7 @@ Command line options:
     -d              Debug mode to run in foreground, default to $DEBUG, optional
 
 Examples:
-    # assmuing your hard drive mounted in /media, like /media/usb0, /media/usb1.
+    # assuming your hard drive mounted in /media, like /media/usb0, /media/usb1.
     ./run.sh -m /media -b /home/pi/lomorage -h 192.168.1.232
 ```
 

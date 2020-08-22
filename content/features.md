@@ -66,4 +66,4 @@ You can share moments with your family members, and create groups to share with 
 
 # <i class="fas fa-images"></i>&nbsp;&nbsp;Enjoy Your Memories
 
-You can connect monitor with Raspberry Pi and use that as digital photo frame, and you can setup multiple digital photo frames using Raspberry Pi zero w and access your digital assets wirelessly. No need to worries about the storage of digital frame, no need file transfer any more.
+You can connect monitor with Raspberry Pi and use that as digital photo frame, and you can setup multiple digital photo frames using Raspberry Pi zero w and access your digital assets via WiFi. No need to worries about the storage of digital frame, no need file transfer any more.

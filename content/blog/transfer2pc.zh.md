@@ -11,16 +11,16 @@ banner = "/img/blog/transfer_pc/transfer-photos.jpg"
 <!--more--> 
 
 之前我有一个老的iPhone，里面有很多照片和视频，习惯于在Windows工作的我，花了好久都没找到一个简单好用的软件可以帮我把照片和视频传到Windows上，并且帮我按年月日自动分好类。
-近期经朋友推荐，发现了 [lomorage](https://www.Lomorage.com) 这个软件，立马试用了一下，觉得简直是为我量身定制的。
+近期经朋友推荐，发现了 [Lomorage](https://www.Lomorage.com) 这个软件，立马试用了一下，觉得简直是为我量身定制的。
 今天，就让我们来看看lomorage是怎么轻松做到的。
 
 ## 1. 下载安装Lomorage 在windows上的服务程序
    
-从lomorage的官网 https://lomorage.com/zh/installation-win/ 下载Windows的程序，按照网页的说明完成安装，然后运行Lomoagent程序，如下图：
+从Lomorage的官网 https://lomorage.com/zh/installation-win/ 下载Windows的程序，按照网页的说明完成安装，然后运行Lomoagent程序，如下图：
 
 ![](/img/blog/transfer_pc/a8f7743d-2770-4537-9b44-f79a698d7243.png)
 
-：）： 目前只有英文版，我立马给lomorage 发送了反馈，被告知他们会很快推出中文版本和其他语言版本。期待！
+：）： 目前只有英文版，我立马给Lomorage 发送了反馈，被告知他们会很快推出中文版本和其他语言版本。期待！
 
 【本步骤可选】您可以设置您想把从手机传过来的照片存放在哪里，如下图， 点击 **Set** 按钮选择您想要的目录
 

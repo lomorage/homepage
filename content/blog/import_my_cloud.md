@@ -35,7 +35,7 @@ Table of Contents
 
 ## 1. Turn on SSH on MyCloud admin page
 
-Open MyCloud admin web page, on settings, turn on SSH and set the pasword as tips. Like below picture:
+Open MyCloud admin web page, on settings, turn on SSH and set the password as tips. Like below picture:
 
 <div align="center">
 <p class="screenshoot">
@@ -90,7 +90,7 @@ The default password for pi is: **raspberry**.
 
 ## 2. Mount MyCloud folder
 
-Create new foler under home/pi like below:
+Create new folder under home/pi like below:
 
 > cd /home/pi 
 > 
@@ -138,7 +138,7 @@ If the scanning finished, run below command to check the files.
 
 > ~/.lomo 
 
-Some assets will be categoried if the EXIF info there. Like below:
+Some assets will be categorized if the EXIF info there. Like below:
 
 ~~~
 pi@raspberrypi-lomorage:~/.lomo/links/unclassfied $ ls -l
@@ -198,7 +198,7 @@ success upload /home/pi/.lomo/links/classfied/2010/10/25/Click, Clack, Moo Cows 
 
 # BTW
   
-  **Lomorage will provde the new API soon for this importing, next time you do this step with your Lomorage phone APP**
+  **Lomorage will provide the new API soon for this importing, next time you do this step with your Lomorage phone APP**
 
 Thanks for your reading and enjoy the Lomorage. Welcome comments and feedbacks.
 

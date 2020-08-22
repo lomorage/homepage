@@ -95,7 +95,7 @@ Lomorage是一个经济实用，更加灵活的解决方案，软件免费，如
 
 ## 6. 怎么想到"Lomorage"这个名字?
 
-"lomorage"结合了"Lomography"和"Storage"两个单词.
+"Lomorage"结合了"Lomography"和"Storage"两个单词.
 
 ## 7. 你们的商业模式是什么?
 

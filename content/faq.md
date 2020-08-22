@@ -26,9 +26,9 @@ We believe the digital assets should be taken care by ourselves, store locally, 
 
 If you haven't heard of NAS before, then NAS probably won't be your best option. [NAS](https://en.wikipedia.org/wiki/Network-attached_storage) is a general storage that can store everything, it also comes with application that can backup and management your photos and videos. Even though some NAS tried to make it easy to use, and make the operating system looks like Windows, but still it's too complicate for non-technical users when they tried to understand what is. Take a look at the [user guide](https://global.download.synology.com/download/Document/Software/UserGuide/Firmware/DSM/3.1/enu/Syno_UsersGuide_NAServer_enu.pdf) it's just way too much for a photo back and management.
 
-## 3. Any other similiar solutions?
+## 3. Any other similar solutions?
 
-Yes, there are other products which focuses on the vertical market, let user hosts the Photo service locally but simplies the setup and use.
+Yes, there are other products which focuses on the vertical market, let user hosts the Photo service locally but simplify the setup and use.
 
   - [ibi - The Smart Photo Manager](https://www.amazon.com/ibi-Organize-Privately-Smartphones-Accounts/dp/B07Y9CH817/ref=cm_cr_arp_d_product_top?ie=UTF8) with 1TB storage (**$119.99**)
   - [Monument Photo Management Device](https://www.amazon.com/Monument-Photo-Management-Device-Automatically/dp/B01M8I40A6/ref=sr_1_3?dchild=1&keywords=ibi&qid=1588828193&sr=8-3) NO hard drive (**$169.94**)
@@ -40,14 +40,14 @@ Yes, there are other products which focuses on the vertical market, let user hos
 Simple, we are not satisfied with existing solutions.
 
 1. Cloud can be the tertiary complementary backup, not the primary, nor the secondary.
-   - We currently support redandency backup locally
+   - We currently support redundancy backup locally
    - We plan to support remote backup (like backup to your parents' Lomorage setup) and cloud backup like [backblaze](https://www.backblaze.com/).
 
 2. Easy to setup, easy to use, easy to upgrade, zero maintenance.
    - It only takes a few minutes to install the prebuild OS image on Raspberry Pi.
    - We support backup to Windows and MacOS as well with one single application.
    - software upgrade automatically.
-   - System migrate automatically to gurantee compatibility.
+   - System migrate automatically to guarantee compatibility.
 
 3. Software matters, it need to be solid to take care of those invaluable assets.
    - We are the user, we eat our own dog food.
@@ -55,20 +55,20 @@ Simple, we are not satisfied with existing solutions.
 
 4. It should be open, avoid any kind of lock down, the user should easily migrate to other systems, and should not get a electronic waste if the product is out of service.
    - Media files are stored as it's on your disk, original format, original resolution, exactly the same.
-   - You don't need format your hard drive to use it,  and it supports all porpular file systems.
-   - Media files are organized in folders by "YYYY/MM/DD" struture on disk, you can easily import them to other systems/tools.
+   - You don't need format your hard drive to use it,  and it supports all popular file systems.
+   - Media files are organized in folders by "YYYY/MM/DD" structure on disk, you can easily import them to other systems/tools.
    - The setup use Raspberry Pi, even if you don't use Lomorage, it's still a single board computer you can use in [tons of projects](https://projects.raspberrypi.org/en).
 
 5. More than backup and management, enjoy the memories with your families.
    - How many times you open photo APP and take a look the old photos?
-   - Have dozons of photo frames but hard to find enough space for them?
+   - Have dozens of photo frames but hard to find enough space for them?
    - Have idle digital photo frame which requires copy/paste files, limited in storage?
-   - Think about having a large screen digital signage in your living room which shows weather, news, digital arts and selected photos, and several other smaller digital photo frames in your bedroom or study room which shows your personal photos and videos. No more copy/paste, break the storage limit and use WiFi to retreive photos from Lomorage.
+   - Think about having a large screen digital signage in your living room which shows weather, news, digital arts and selected photos, and several other smaller digital photo frames in your bedroom or study room which shows your personal photos and videos. No more copy/paste, break the storage limit and use WiFi to retrieve photos from Lomorage.
    - Reuse any idle screens to build digital frames with wireless connection using Raspberry Pi, customize the content on your Phone.
-   - share your kids photo to their grandparents' digtal frame.
+   - share your kids photo to their grandparents' digital frame.
 
-6. Stay connected while independant.
-   - You can have Lomorage setup at your home, and your parents or your friends can have their own setup. They are operating indendantly, but can talk to each other when necessary, and they can as backup for each other.
+6. Stay connected while independent.
+   - You can have Lomorage setup at your home, and your parents or your friends can have their own setup. They are operating independently, but can talk to each other when necessary, and they can as backup for each other.
 
 ## 5. What is the cost?
 
@@ -88,7 +88,7 @@ Nothing is free, and need to make money to make it sustainable, we wish we can d
 
 Peter Thiel said: "To build a successful startup, you have to be **10 times better** than second best.”, and we also believe: to make money out of something, we need to build something that is valuable first.
 
-We are planning to release more advanced features (like advanced search, remote backup, digital frame etc), and will probably think about monetize some of them. And the digtial photo frame as a dominate screen in the room, there can be multiple ones, for example, a big screen in living room and some smaller ones put on desks in bedroom or study room, there is also possibilities to monetize.
+We are planning to release more advanced features (like advanced search, remote backup, digital frame etc), and will probably think about monetize some of them. And the digital photo frame as a dominate screen in the room, there can be multiple ones, for example, a big screen in living room and some smaller ones put on desks in bedroom or study room, there is also possibilities to monetize.
 
 ## 8. How to setup redundancy backup?
 
@@ -112,7 +112,7 @@ There are several options to setup a secondary backup, check this [blog](/blog/2
 
 ## 12. Does Lomorage support backup edited file?
 
-On iOS, if photo is edited, system will store the original photo, the edited one, as well as the editing operations, **Lomorage will store ONLY the edited photo**. For edited video, system will store the video before last editing, the editing operations as well as the edited one, and **Lomorage will ONLY store the editied video**.
+On iOS, if photo is edited, system will store the original photo, the edited one, as well as the editing operations, **Lomorage will store ONLY the edited photo**. For edited video, system will store the video before last editing, the editing operations as well as the edited one, and **Lomorage will ONLY store the edited video**.
 
 If you would like to store the file before editing, make sure you have backup the edited one first, and then you can revert the editing in Apple's "Photos APP", and then upload those files before editing.
 

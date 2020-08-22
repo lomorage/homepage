@@ -15,7 +15,7 @@
 </p>
 </div>
 
-<span>3.</span> Follow the wizzard to finish the installation, in the End-User License Agreement, please checked the box as below.
+<span>3.</span> Follow the wizard to finish the installation, in the End-User License Agreement, please checked the box as below.
 
 <div align="center">
 <p class="screenshoot">

@@ -6,7 +6,7 @@ date = "2019-12-24T13:43:40"
 banner = "img/banners/power-hub-adafruit.jpg"
 +++
 
-Photos and video are valuable assets, having a single backup is not enough, we at least should have secondary backup besides the primary backup, and ideally one more remote backup. Lomorage currenlty provide the option to setup a secondary backup. There are several options to do this.
+Photos and video are valuable assets, having a single backup is not enough, we at least should have secondary backup besides the primary backup, and ideally one more remote backup. Lomorage currently provide the option to setup a secondary backup. There are several options to do this.
 
 <!--more--> 
 
@@ -26,7 +26,7 @@ You can choose the option suits your need.
 
 ## Option 1 (1 USB hard drive, 1 USB flash drive on same Raspberry Pi)
 
-Raspberry Pi should have no problem to power one USB hard drive, you can even add one more USB flash drive. Since nomrally, a hard drive is expected to have [a much longer lifespan](https://www.datanumen.com/blogs/usb-flash-drive-vs-external-hard-drive-better-storing-data/), and USB flash drive has [limited number of write/erase cycles](https://www.flashbay.com/blog/usb-life-expectancy), it's better to use hard drive as the primary storage and USB hard drive.
+Raspberry Pi should have no problem to power one USB hard drive, you can even add one more USB flash drive. Since normally, a hard drive is expected to have [a much longer lifespan](https://www.datanumen.com/blogs/usb-flash-drive-vs-external-hard-drive-better-storing-data/), and USB flash drive has [limited number of write/erase cycles](https://www.flashbay.com/blog/usb-life-expectancy), it's better to use hard drive as the primary storage and USB hard drive.
 
 ## Option 2 (2 USB hard drive on same Raspberry Pi)
 
@@ -65,11 +65,11 @@ sudo mount -a
 sudo umount -a
 ```
 
-**Notice: Don't use the secondary Lomorage service even though it can be found, since we are using the primary one and set redancency backup to the directory mounted via Samba. Currently we don't have GUI to set the backup this way, you have to do that manually in commandline, will add GUI later**
+**Notice: Don't use the secondary Lomorage service even though it can be found, since we are using the primary one and set redundancy backup to the directory mounted via Samba. Currently we don't have GUI to set the backup this way, you have to do that manually in commandline, will add GUI later**
 
 ## Option 4 (1 USB drive one Raspberry Pi, NAS)
 
-You can also reuse your NAS and follow the similiar steps above in Option 3 to mount the NAS storage via Samba.
+You can also reuse your NAS and follow the similar steps above in Option 3 to mount the NAS storage via Samba.
 
 The parameters needed are:
 

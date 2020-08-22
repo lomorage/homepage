@@ -68,7 +68,7 @@ USB hub with power supply:
 
 ## Compare with self hosting
 
-It's unfair to compare a NAS with tons of features with dedecated device design for photo, but if you want just the feature related to Photo, why bother NAS if the dedecated device can do better?
+It's unfair to compare a NAS with tons of features with dedicated device design for photo, but if you want just the feature related to Photo, why bother NAS if the dedicated device can do better?
 
 {{<table "table table-striped table-bordered">}}
 |                                       | Two-bay Disk Free | Two-bay 4 TB | One-bay 1TB |

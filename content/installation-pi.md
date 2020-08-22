@@ -60,7 +60,7 @@ After you insert the MicroSD to your desktop or laptop, just select the image yo
 
 After flushing the image, insert the microSD into Raspberry Pi board, connect USB hard drive with Raspberry Pi, plug in a network cable, plug in the power supply, turn on the power and wait a few minutes for system boot.
 
-If you have HDMI connected, after system boot successfully, it wil show up a screen that no able to find any assets. You can upload photos using Lomorage Phone app, and then press "r" to rescan. If you want to quit to terminal to do some configuration, just press "ESC" and then "Ctrl+Alt+F2", after you made any changes and want to start lomo-frame, use command `sudo service supervisor restart`.
+If you have HDMI connected, after system boot successfully, it will show up a screen that no able to find any assets. You can upload photos using Lomorage Phone app, and then press "r" to rescan. If you want to quit to terminal to do some configuration, just press "ESC" and then "Ctrl+Alt+F2", after you made any changes and want to start lomo-frame, use command `sudo service supervisor restart`.
 
 *The default login username is "pi" and password is "raspberry"*
 
@@ -68,9 +68,9 @@ We suggest use cable to provide better performance, but if you prefer to use WiF
 
 ## Docker installation
 
-Docker installation is convinient way if you don't want to mess thing on existing system. It doesn't support Raspberry Pi 0 and 1 now.
+Docker installation is convenient way if you don't want to mess thing on existing system. It doesn't support Raspberry Pi 0 and 1 now.
 
-**MDNS won't work in this case, so the service won't be discovered automaically on Lomorage Phone APP, you have to enter the service IP addresss and Port manually**
+**MDNS won't work in this case, so the service won't be discovered automatically on Lomorage Phone APP, you have to enter the service IP address and Port manually**
 
 Docker image includes:
 
@@ -115,7 +115,7 @@ Command line options:
     -d              Debug mode to run in foreground, default to $DEBUG, optional
 
 Examples:
-    # assmuing your hard drive mounted in /media, like /media/usb0, /media/usb1.
+    # assuming your hard drive mounted in /media, like /media/usb0, /media/usb1.
     ./run.sh -m /media -b /home/pi/lomorage -h 192.168.1.232
 ```
 
@@ -123,7 +123,7 @@ You can add the command in "/etc/rc.local" before "exit 0" to make it run automa
 
 ## Apt installation
 
-If you have the offical Raspbian image installed already, APT installation would be the quickest way to install.
+If you have the official Raspbian image installed already, APT installation would be the quickest way to install.
 
 ### 1. Add lomoware source
 
@@ -173,7 +173,7 @@ sudo apt install lomo-base lomo-vips lomo-backend lomo-web lomo-frame -y
 
 You may need to specify the mount directory if the USB drive is not mounted in "/media" directory. 
 
-For example if you are using PCManFM, then the mount directory will be "/media/pi". To specify the mount directory to be "/media/pi", modify `ExecStart` in "/lib/systemd/system/lomod.service", and add paramter "--mount-dir" as below
+For example if you are using PCManFM, then the mount directory will be "/media/pi". To specify the mount directory to be "/media/pi", modify `ExecStart` in "/lib/systemd/system/lomod.service", and add parameter "--mount-dir" as below
 
 ```
 ExecStart=/opt/lomorage/bin/lomod -b /opt/lomorage/var --mount-dir /media/pi  --max-upload 1 --max-fetch-preview 3
