@@ -32,7 +32,7 @@ You can also use the web client to upload assets on your desktop/laptop, or use 
 
 
 <p align="center">
-<a href="/installation-android"><img alt="Downlad beta version" src="/img/installation/app-store-google.svg" width="220"></a>
+<a href="/installation-android"><img alt="Download Android client" src="/img/installation/app-store-google.svg" width="220"></a>
 
 <a href="/installation-ios"><img alt="Lomorage iOS client" src="/img/installation/app-store-ios.svg" width="220"></a>
 &nbsp;
@@ -43,7 +43,7 @@ You can also use the web client to upload assets on your desktop/laptop, or use 
 
 Lomorage can run within your private network with no Internet access, but if you want to access Lomorage from outside, then you can enable the external access, currently it support free 3rd party tunnel services. Check the [configuration](/external-access) for external access.
 
-## 5. Setup Digital Frame (Beta)
+## 5. Setup Digital Frame (optional)
 
 You can connect monitor with Raspberry Pi and use that as digital photo frame, and you can setup multiple digital photo frames using Raspberry Pi zero w and access your digital assets via WiFi. Check [here](/install-frame) for digital frame setup instructions. 
 
