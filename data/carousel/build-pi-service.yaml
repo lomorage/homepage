@@ -1,6 +1,6 @@
 weight: 1
 title: carouselBuildPiServiceTitle
 description: carouselBuildPiServiceDesc
-vwidth: 560
-vheight: 315
+vwidth: 100%
+vheight: 100%
 videosrc: carouselVideoTutorial
