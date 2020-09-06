@@ -1,5 +1,5 @@
 +++
-title = "Setup Covid-19 dashbaord using Raspberry Pi"
+title = "Setup Covid-19 dashboard using Raspberry Pi"
 tags = ["Raspberry Pi", "dashboard", "Covid-19"]
 categories = ["Dashboard"]
 date = "2020-03-29T22:43:40"

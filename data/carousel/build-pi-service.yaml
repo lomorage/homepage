@@ -1,4 +1,6 @@
 weight: 1
 title: carouselBuildPiServiceTitle
 description: carouselBuildPiServiceDesc
-image: "/img/carousel/lomo-with-pi.png"
+vwidth: 100%
+vheight: 100%
+videosrc: carouselVideoTutorial

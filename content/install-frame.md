@@ -1,8 +1,8 @@
 Table of Contents
 =================
 
-   * [Install lomo-frame](#install-lomo-frame)
-   * [Setup lomo-frame](#setup-lomo-frame)
+   * [Install Lomo-frame](#install-lomo-frame)
+   * [Setup Lomo-frame](#setup-lomo-frame)
       * [Quickstart](#quickstart)
       * [Turn Frame ON/OFF](#turn-frame-onoff)
       * [Stop/Start lomo-frame Service](#stop-or-start-lomo-frame-service)
@@ -12,16 +12,18 @@ Table of Contents
       * [Playback Media Type](#playback-media-type)
       * [Keyboard control](#keyboard-control)
       * [Setup multiple digital frame](#setup-multiple-digital-frame)
-         * [1. Install lomo-frame](#1-install-lomo-frame)
+         * [1. Install Lomo-frame](#1-install-lomo-frame)
          * [2. Setup WiFi connection](#2-setup-wifi-connection)
          * [3. Check IP address of primary Raspberry Pi](#3-check-ip-address-of-primary-raspberry-pi)
          * [4. Find the mount directory on primary Raspberry Pi](#4-find-the-mount-directory-on-primary-raspberry-pi)
          * [5. Mount on Raspberry Pi zero w](#5-mount-on-raspberry-pi-zero-w)
          * [6. Reboot](#6-reboot)
 
-# Install lomo-frame
+# Install Lomo-frame
 
-**If you install the latest Lomorage Raspberry Pi OS image, you should already have the lomo-frame application installed in that image.**
+**Lomo-frame only supports on Raspberry Pi, Windows/Mac or the docker version is not supported**
+
+**If you install the latest Lomorage Raspberry Pi OS image, you should already have the Lomo-frame application installed in that image.**
 
 Otherwise, if your OS image is before 2020-03-13 ("image_2020-03-13-lomorage-lite.zip
 "), or you don't use Lomorage Raspberry Pi OS image, you can run the following command to install it (assuming you have installed Lomorage Service Application so that you have already added "gpg.key", if not you can check [here](/installation-pi)).
@@ -31,35 +33,46 @@ sudo apt update
 sudo apt install lomo-frame
 ```
 
-# Setup lomo-frame
+# Setup Lomo-frame
 
-**Lomorage Digital Frame is still in beta, and setup MAY need you connect keyboard to Raspberry Pi, or you can use ssh to access Raspberry Pi, sorry, we promise that you will be able to control and setup via phone APP later.**
+You have several options:
+
+1. Run Lomorage service and Lomo-frame on the same Raspberry Pi.
+
+2. Run Lomorage service on one Raspberry Pi, and run Lomo-frame on other Raspberry Pis. For example, you can run Lomo-frame on the cheap Raspberry Pi zero, and run Lomorage service on more powerful Raspberry Pi 4.
+
+Once you have Lomo-frame running, it will show a QRCode on the screen, and you can use iOS APP to register the frame in settings, once success, you can share photos with the digital frame just like share with other contacts in Lomorage APP. **Currently, only iOS APP support register/unregister Lomorage digital frame, once registered, you can share to the digital frame on Android APP as well**
 
 ## Quickstart
 
-If you have lomo-frame installed, it will launch on boot.
+If you have Lomo-frame installed, it will launch on boot.
 
-At first launch, it will scan all the digital assets in "/media" directories, which means all users photo and video will be scanned, and will generate playlist in "/opt/lomorage/var/lomo-playlist.txt". 
+If the Raspberry Pi is not connected to the network, you need to connect it first, if you prefer to use WiFi, connect HDMI and keyboard with Raspberry Pi and reboot, follow the instruction on screen to enter in terminal and login Raspberry Pi, then you can use the command `wifi_switch client [wifi-ssid] [wifi-password]`, replace "[wifi-ssid]" and "[wifi-password]" with those of your wifi network.
 
-**The rescan is schedule to run automatically on weekly basis (00:00 on Sunday)**, so that the playlist can be updated with newly added or deleted assets. You can manually trigger the rescan in two ways:
+Once setup network, reboot and it will show a QRCode, you can go to "Settings" Tab in Lomorage iOS APP to register the frame, then you can use either Lomorage iOS APP or Lomorage Android APP to share photos with the digital frame.
 
-1. If you have keyboard connected with Raspberry Pi, press key "r" to rescan.
+<div align="center">
+<p class="screenshoot">
+  <img width="30%" src="/img/installation/frame-register-ios.png">
+  <img width="30%" src="/img/installation/frame-share-ios.png">
+</p>
+</div>
 
-2. If you are using ssh to access Raspberry Pi, you can use `framectrl.sh rescan` to rescan.
+If you don't need more configuration, you can skip the below sections.
 
 ## Turn Frame ON/OFF
 
-lomo-frame will start after system boot automatically, but if you want manual control, you can use the following commands to turn it on: `framectrl.sh on`, or turn it off: `framectrl.sh off`. **It will turn on/off the monitor as well as the lomo-frame service.**
+Lomo-frame will start after system boot automatically, but if you want manual control, you can use the following commands to turn it on: `framectrl.sh on`, or turn it off: `framectrl.sh off`. **It will turn on/off the monitor as well as the Lomo-frame service.**
 
-## Stop or Start lomo-frame Service
+## Stop or Start Lomo-frame Service
 
-If you just want to quit lomo-frame service, while keep the monitor on, you can either:
+If you just want to quit Lomo-frame service, while keep the monitor on, you can either:
 
  - press "esc" on the keyboard if Raspberry Pi connected with keyboard.
 
  - `sudo service supervisor stop` if you use ssh to access Raspberry Pi.
 
-You can use `sudo service supervisor start` to start the lomo-frame serivce.
+You can use `sudo service supervisor start` to start the Lomo-frame service.
 
 ## Schedule Frame ON/OFF time
 
@@ -131,7 +144,7 @@ If you have keyboard connect with Raspberry Pi, you can press the following key 
 
   - "s": pause/resume play
 
-  - "esc": quit lomo-frame
+  - "esc": quit Lomo-frame
 
 ## Setup multiple digital frame
 
@@ -141,7 +154,7 @@ If you already have one Raspberry Pi (Primary Raspberry Pi) setup for running Lo
 
 You can use a low cost Raspberry Pi zero w to setup the digital frame and access your digital assets via WiFi, it works pretty well, the video playback is very smooth.
 
-### 1. Install lomo-frame
+### 1. Install Lomo-frame
 
 You can follow the instructions on the top of the page.
 
