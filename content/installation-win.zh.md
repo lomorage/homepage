@@ -3,13 +3,14 @@
 <span>1.</span> 点击下面的链接安装Lomorage服务程序。
 
 <p align="center">
-<a href="https://github.com/lomorage/LomoAgentWin/releases/download/2020_08_22.21_03_02.0.2f88662/lomoagent.msi" title="Install Lomorage for Windows" class="badge windows">Windows</a>
+<a href="https://github.com/lomorage/LomoAgentWin/releases/download/2020_10_05.16_45_03.0.722482f/lomoagent.msi" title="Install Lomorage for Windows" class="badge windows">Windows</a>
 </p>
 
 如果上面链接无法访问，也可以从百度网盘下载:
 
-链接: [https://pan.baidu.com/s/1EnG9ZV32-b3SIfF-TS9vgw](https://pan.baidu.com/s/1EnG9ZV32-b3SIfF-TS9vgw)
-提取码: qxsq
+**链接:** [https://pan.baidu.com/s/193H64Xw5lMGA90O1eDrD_A](https://pan.baidu.com/s/193H64Xw5lMGA90O1eDrD_A)
+
+**提取码：** wsd4
 
 <span>2.</span> 双击"lomoagent.msi"开始安装。如果有Windows Defender提示未知应用，请参考如下步骤允许安装程序运行。
 
