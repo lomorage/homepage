@@ -100,7 +100,11 @@ sudo docker pull lomorage/raspberrypi-lomorage:latest
 
 ### 3. Run
 
+Download [run.sh](https://raw.githubusercontent.com/lomorage/lomo-docker/master/run.sh).
+
 You can specify the media home directory and lomo directory, otherwise it will use the default, you MUST specify the host.
+
+There should be subdirectories in media home directory，for example if you specify `-m /mnt/hdd/`, then there should be some subdirectory in hdd, like `-m /mnt/hdd/lomorage`.
 
 ```
 run.sh [-m {media-dir} -b {lomo-dir} -d -p {lomod-port} -P {lomow-port}] -h host-ip -i image-name

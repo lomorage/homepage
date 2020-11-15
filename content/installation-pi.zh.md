@@ -100,7 +100,11 @@ sudo docker pull lomorage/raspberrypi-lomorage:latest
 
 ### 3. 运行
 
+下载[run.sh](https://raw.githubusercontent.com/lomorage/lomo-docker/master/run.sh)。
+
 您可以指定媒体存储目录和Lomorage运行目录，不指定会使用默认值，您**必须**指定host参数。
+
+媒体存储目录下必须存在子目录，比如指定`-m /mnt/hdd/`，那hdd目录下必须存在子目录比如`-m /mnt/hdd/lomorage`。
 
 ```
 run.sh [-m {media-dir} -b {lomo-dir} -d -p {lomod-port} -P {lomow-port}] -h host-ip -i image-name
