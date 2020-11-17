@@ -24,9 +24,11 @@ Just go to Docker official site to downlad the Docker Windows installer, and dou
 Please restart the Windows machine after finish the docker installing.
 
 
-# 2. PUll Lomorage Image
+# 2. Pull Lomorage Image
 
-Use one kind of terminal like: Windows Terminal or Git-bash or Windows Power Shell or CMD：
+Use one kind of terminal like: Windows Terminal or Git-bash or Windows Power Shell：
+
+(**Suggest** to use git-bash, you can download from here: [https://gitforwindows.org/)](https://gitforwindows.org/)
 
 > docker pull lomorage/raspberrypi-lomorage:latest
 
