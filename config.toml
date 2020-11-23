@@ -59,11 +59,11 @@ paginate = 10
         url = "https://join.slack.com/t/lomorage/shared_invite/enQtODc4MTE5ODQzNzkyLTRlY2U4MTQ1YjczYjBhMDcwMmExYTUxNTg2NTE5YmRkZjg2ZWQwZjg1MjEwMjQzZWVjMmEwZjk3ZGIyODY4ODM"
         pre = "<i class='fab fa-2x fa-slack'></i>"
 
-    #[[languages.en.menu.topbar]]
-    #    weight = 1
-    #    name = "GitHub"
-    #    url = "https://github.com/lomorage"
-    #    pre = "<i class='fab fa-2x fa-github'></i>"
+    [[languages.en.menu.topbar]]
+        weight = 1
+        name = "GitHub"
+        url = "https://github.com/lomorage/homepage"
+        pre = "<i class='fab fa-2x fa-github'></i>"
 
     #[[languages.en.menu.topbar]]
     #    weight = 2
@@ -122,11 +122,11 @@ paginate = 10
             url = "https://join.slack.com/t/lomorage/shared_invite/enQtODc4MTE5ODQzNzkyLTRlY2U4MTQ1YjczYjBhMDcwMmExYTUxNTg2NTE5YmRkZjg2ZWQwZjg1MjEwMjQzZWVjMmEwZjk3ZGIyODY4ODM"
             pre = "<i class='fab fa-2x fa-slack'></i>"
 
-        #[[languages.zh.menu.topbar]]
-        #    weight = 1
-        #    name = "GitHub"
-        #    url = "https://github.com/lomorage"
-        #    pre = "<i class='fab fa-2x fa-github'></i>"
+        [[languages.zh.menu.topbar]]
+            weight = 1
+            name = "GitHub"
+            url = "https://github.com/lomorage/homepage"
+            pre = "<i class='fab fa-2x fa-github'></i>"
 
         #[[languages.zh.menu.topbar]]
         #    weight = 2
