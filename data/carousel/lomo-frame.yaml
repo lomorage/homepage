@@ -1,7 +1,7 @@
-weight: 2
+weight: 4
 title: carouselBuildLomoFrameTitle
 description: carouselBuildLomoFrameDesc
-image: "/img/carousel/lomo-frame.png"
+image: carouselBuildLomoFrameImage
 vwidth: 0
 vheight: 0
 videosrc: ""
