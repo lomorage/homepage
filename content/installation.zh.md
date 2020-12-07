@@ -17,9 +17,11 @@ title = "安装说明"
 &nbsp;
 <a href="/zh/installation-osx" title="MacOS下安装Lomorage服务程序" class="badge">macOS</a>
 &nbsp;
-<a href="/zh/installation-pi" title="树莓派下安装Lomorage服务程序" class="badge raspberrypi">Raspberry Pi</a>
+<a href="/zh/installation-pi" title="树莓派下安装Lomorage服务程序" class="badge raspberrypi">Raspbian</a>
 &nbsp;
 <a href="/zh/installation-pi/#1-%E6%A0%91%E8%8E%93%E6%B4%BE%E4%B8%8A%E5%AE%89%E8%A3%85docker" title="使用Docker安装Lomorage" class="badge docker">Docker</a>
+&nbsp;
+<a href="/zh/installation-armbian" title="Armbian下安装Lomorage服务程序" class="badge armbian">Armbian</a>
 </p>
 
 ## 3. 安装Lomorage客户端

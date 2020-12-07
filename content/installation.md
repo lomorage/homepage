@@ -15,14 +15,17 @@ The first step is to set up the Lomorage service.
 **You can choose which version of Lomorage Service to download based on your preference**. Running Lomorage service on Windows or OSX gives you better performance compared with on Raspberry Pi, the uploading and accessing the backup will be faster, but running Windows or OSX is not energy efficient as using Raspberry Pi. If using Raspberry Pi, you don't need to worry about the electricity bill, it is only [about 5$ a year](https://raspberrypi.stackexchange.com/questions/5033/how-much-energy-does-the-raspberry-pi-consume-in-a-day)
 
 <p align="center">
-<a href="/installation-win" title="Install Lomorage for Windows" class="badge windows">Windows</a>
+<a href="/installation-win" title="Install Lomorage service on Windows" class="badge windows">Windows</a>
 &nbsp;
-<a href="/installation-osx" title="Install Lomorage for macOS" class="badge">macOS</a>
+<a href="/installation-osx" title="Install Lomorage service on macOS" class="badge">macOS</a>
 &nbsp;
-<a href="/installation-pi" title="Install Lomorage for Raspberry Pi" class="badge raspberrypi">Raspberry Pi</a>
+<a href="/installation-pi" title="Install Lomorage service on Raspberry Pi" class="badge raspberrypi">Raspbian</a>
 &nbsp;
-<a href="/installation-pi/#1-install-docker-on-raspberry-pi" title="Install Lomorage using Docker" class="badge docker">Docker</a>
+<a href="/installation-pi/#1-install-docker-on-raspberry-pi" title="Install Lomorage service using Docker" class="badge docker">Docker</a>
+&nbsp;
+<a href="/installation-armbian" title="Install Lomorage service on Armbian" class="badge armbian">Armbian</a>
 </p>
+
 
 ## 3. Install Lomorage Client
 
