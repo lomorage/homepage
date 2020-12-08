@@ -13,6 +13,8 @@ sudo apt install lomo-web
 
 然后您可以在电脑的浏览器上访问"[http://raspberrypi-lomorage.local:8001](http://raspberrypi-lomorage.local:8001)"，打开Lomorage网页客户端。
 
+**登陆用户名和密码是您用手机Lomorage APP生成的用户名和密码**
+
 <div align="center">
 <p class="screenshoot">
   <img width="30%" src="/img/installation/lomo-web-login.png">

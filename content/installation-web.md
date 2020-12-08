@@ -13,6 +13,8 @@ sudo apt install lomo-web
 
 Then you can open "[http://raspberrypi-lomorage.local:8001](http://raspberrypi-lomorage.local:8001)" in the browser on your desktop/laptop to use Lomorage web client.
 
+**The login username and password is the Lomorage Username/Password set using Phone APP**
+
 <div align="center">
 <p class="screenshoot">
   <img width="30%" src="/img/installation/lomo-web-login.png">
