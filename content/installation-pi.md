@@ -185,6 +185,8 @@ ExecStart=/opt/lomorage/bin/lomod -b /opt/lomorage/var --mount-dir /media/pi  --
 
 If your username is not "pi", you need to change "User=pi" in "/lib/systemd/system/lomod.service", and use your username.
 
+**Make sure the user has the r/w permission for the "mount-dir" set above**
+
 ### 4. Run
 
 Restart Lomorage service:

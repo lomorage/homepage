@@ -185,6 +185,8 @@ ExecStart=/opt/lomorage/bin/lomod -b /opt/lomorage/var --mount-dir /media/pi  --
 
 如果您的用户名不是"pi"，那么需要修改"lib/systemd/system/lomod.service"文件中的用户名pi("User=pi")改成您的用户名。
 
+**请确保您的用户有上面设置的"mount-dir"的读写权限**
+
 ### 4. 运行
 
 重启Lomorage服务程序:
