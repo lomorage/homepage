@@ -52,6 +52,16 @@ Sat Aug 31 2019 11:38:00 GMT-0700 (PDT) GET /
 
 Open Lomorage APP on the phone, and in the settings tab, fill the tunnel service host, the host is like "allice.localtunnel.me".
 
+eg：on Android Lomorgae App, go to **Setting** page. Fill the server address as https://allice.localtunnel.me, then fill the port 443 if you did not changed the default port.
+If you fill the server address as http://allice.localtunnel.me, please fill the port 80, see below picture:
+
+<div align="left">
+<p class="screenshoot">
+
+  <img width="30%" src="/img/installation/android/external_setting.jpg">
+</p>
+</div>
+
 ## ngrok
 
 ### 1. Register

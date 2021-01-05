@@ -51,6 +51,15 @@ Sat Aug 31 2019 11:38:00 GMT-0700 (PDT) GET /
 ### 4. 在Lomorage手机应用中配置隧道服务
 
 打开Lomorage手机应用，在配置选项页里找到"外网服务"，设置地址为localtunnel输出的url，比如类似"allice.localtunnel.me"。
+比如：安卓手机 可以在设置页面进行配置，并测试。如果您的localtunnel是https的，默认端口是**443**，如果是http，端口填**80**.
+如图：
+
+<div align="left">
+<p class="screenshoot">
+
+  <img width="30%" src="/img/installation/android/external_setting.jpg">
+</p>
+</div>
 
 ## ngrok
 
