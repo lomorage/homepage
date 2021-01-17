@@ -45,7 +45,7 @@
 点击下面的链接下载系统镜像。
 
 <p align="center">
-<a href="https://github.com/lomorage/pi-gen/releases/download/2020_04_24.21_33_24.0.1d48693/image_2020-04-24-lomorage-lite.zip" title="Install Lomorage for Raspberry Pi" class="badge raspberrypi">Raspberry Pi</a>
+<a href="https://github.com/lomorage/pi-gen/releases/download/2021_01_17.00_33_39.0.f0245af/image_2021-01-17-lomorage-lite.zip" title="Install Lomorage for Raspberry Pi" class="badge raspberrypi">Raspberry Pi</a>
 </p>
 
 下载了系统镜像后, 你可以使用[balenaEtcher](https://www.balena.io/etcher/)将其安装到MicroSD卡, balenaEtcher提供Windows和macOS版本。
