@@ -4,10 +4,7 @@
 Currently you can install the app on **Android** phone, the minimal version is **7.1**.
 
 
-**Currently it is dev-beta version, will publish to Google Play Store soon**
-
-
-**Click below icon to download.**
+**Click below icon to go to Goole Play Store to download.**
 
 <p align="center">
 <a href="https://play.google.com/store/apps/details?id=com.lomoware.lomorage"><img alt="Download" src="/img/installation/app-store-google.svg" width="220"></a>

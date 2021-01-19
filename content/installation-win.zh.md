@@ -3,7 +3,8 @@
 <span>1.</span> 点击下面的链接安装Lomorage服务程序。
 
 <p align="center">
-<a href="https://github.com/lomorage/LomoAgentWin/releases/download/2020_10_05.16_45_03.0.722482f/lomoagent.msi" title="Install Lomorage for Windows" class="badge windows">Windows</a>
+<a href="https://github.com/lomorage/LomoAgentWin/releases/download/2021_01_18.18_53_55.0.bf18cc5/lomoagent.msi"><b>点击下载 ==></b></a>
+<a href="https://github.com/lomorage/LomoAgentWin/releases/download/2021_01_18.18_53_55.0.bf18cc5/lomoagent.msi" title="Install Lomorage for Windows" class="badge windows">Windows</a>
 </p>
 
 如果上面链接无法访问，也可以从百度网盘下载:
