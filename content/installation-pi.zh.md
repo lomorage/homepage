@@ -70,8 +70,6 @@
 
 在已有的系统上使用Docker镜像安装非常方便。这种方式不适用于树莓派0和树莓派1。
 
-**这种情况下MDNS不工作，手机应用不能自动发现服务，您需要手动输入服务地址和端口号。**
-
 Docker镜像包括:
 
 - lomo-backend: Lomorage服务程序
@@ -102,25 +100,27 @@ sudo docker pull lomorage/raspberrypi-lomorage:latest
 
 下载[run.sh](https://raw.githubusercontent.com/lomorage/lomo-docker/master/run.sh)。
 
-您可以指定媒体存储目录和Lomorage运行目录，不指定会使用默认值，您**必须**指定host参数。
-
-媒体存储目录下必须存在子目录，比如指定`-m /mnt/hdd/`，那hdd目录下必须存在子目录比如`-m /mnt/hdd/lomorage`。
+您可以指定媒体存储目录和Lomorage运行目录，不指定会使用默认值，您**必须**指定host, subnet, gateway, network-interface, vlan-address参数。
 
 ```
-run.sh [-m {media-dir} -b {lomo-dir} -d -p {lomod-port} -P {lomow-port}] -h host-ip -i image-name
+run.sh [-m {media-dir} -b {lomo-dir} -d -p {lomod-port} -P {lomow-port} -i {image-name}] -h host -s subnet -g gateway -n network-interface -a vlan-address
 
 Command line options:
-    -m  DIR         Absolute path of media directory used for media assets, default to $HOME_MEDIA_DIR, optional
-    -b  DIR         Absolute path of lomo directory used for db and log files, default to $HOME_LOMO_DIR, optional
+    -m  DIR         Absolute path of media directory used for media assets, default to "/media", optional
+    -b  DIR         Absolute path of lomo directory used for db and log files, default to "/home/jeromy/lomo", optional
     -h  HOST        IP address or hostname of the host machine, required
-    -p  LOMOD_PORT  lomo-backend service port exposed on host machine, default to $LOMOD_HOST_PORT, optional
-    -P  LOMOW_PORT  lomo-web service port exposed on host machine, default to $LOMOW_HOST_PORT, optional
-    -i  IMAGE_NAME  docker image name, for example "lomorage/raspberrypi-lomorage:[tag]", required
-    -d              Debug mode to run in foreground, default to $DEBUG, optional
+    -s  SUBNET      Subnet of the host network(like 192.168.1.0/24), required
+    -g  GATEWAY     gateway of the host network(like 192.168.1.1), required
+    -n  NETWORK_INF network interface of the host network(like eth0), required
+    -a  VLAN_ADDR   vlan address to be used(like 192.168.1.99), required
+    -p  LOMOD_PORT  lomo-backend service port exposed on host machine, default to "8000", optional
+    -P  LOMOW_PORT  lomo-web service port exposed on host machine, default to "8001", optional
+    -i  IMAGE_NAME  docker image name, for example "lomorage/raspberrypi-lomorage:[tag]", default "lomorage/raspberrypi-lomorage:latest", optional
+    -d              Debug mode to run in foreground, default to 0, optional
 
 Examples:
-    # assuming your hard drive mounted in /media, like /media/usb0, /media/usb1.
-    ./run.sh -m /media -b /home/pi/lomorage -h 192.168.1.232
+    # assuming your hard drive mounted in /media, like /media/usb0, /media/usb0
+    ./run.sh -m /media -b /home/pi/lomo -h 192.168.1.232 -s 192.168.1.0/24 -g 192.168.1.1 -n eth0 -a 192.168.1.99
 ```
 
 您可以将运行命令添加到"/etc/rc.local"中，在"exit 0"之前，这样系统开机的时候就可以自动启动了。

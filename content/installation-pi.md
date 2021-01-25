@@ -70,8 +70,6 @@ We suggest use cable to provide better performance, but if you prefer to use WiF
 
 Docker installation is convenient way if you don't want to mess thing on existing system. It doesn't support Raspberry Pi 0 and 1 now.
 
-**MDNS won't work in this case, so the service won't be discovered automatically on Lomorage Phone APP, you have to enter the service IP address and Port manually**
-
 Docker image includes:
 
 - lomo-backend: Lomorage service backend
@@ -102,25 +100,26 @@ sudo docker pull lomorage/raspberrypi-lomorage:latest
 
 Download [run.sh](https://raw.githubusercontent.com/lomorage/lomo-docker/master/run.sh).
 
-You can specify the media home directory and lomo directory, otherwise it will use the default, you MUST specify the host.
-
-There should be subdirectories in media home directory，for example if you specify `-m /mnt/hdd/`, then there should be some subdirectory in hdd, like `-m /mnt/hdd/lomorage`.
-
+You can specify the media home directory and lomo directory, otherwise it will use the default, you MUST specify the host, subnet, gateway, network-interface, vlan-address.
 ```
-run.sh [-m {media-dir} -b {lomo-dir} -d -p {lomod-port} -P {lomow-port}] -h host-ip -i image-name
+run.sh [-m {media-dir} -b {lomo-dir} -d -p {lomod-port} -P {lomow-port} -i {image-name}] -h host -s subnet -g gateway -n network-interface -a vlan-address
 
 Command line options:
-    -m  DIR         Absolute path of media directory used for media assets, default to $HOME_MEDIA_DIR, optional
-    -b  DIR         Absolute path of lomo directory used for db and log files, default to $HOME_LOMO_DIR, optional
+    -m  DIR         Absolute path of media directory used for media assets, default to "/media", optional
+    -b  DIR         Absolute path of lomo directory used for db and log files, default to "/home/jeromy/lomo", optional
     -h  HOST        IP address or hostname of the host machine, required
-    -p  LOMOD_PORT  lomo-backend service port exposed on host machine, default to $LOMOD_HOST_PORT, optional
-    -P  LOMOW_PORT  lomo-web service port exposed on host machine, default to $LOMOW_HOST_PORT, optional
-    -i  IMAGE_NAME  docker image name, for example "lomorage/raspberrypi-lomorage:[tag]", required
-    -d              Debug mode to run in foreground, default to $DEBUG, optional
+    -s  SUBNET      Subnet of the host network(like 192.168.1.0/24), required
+    -g  GATEWAY     gateway of the host network(like 192.168.1.1), required
+    -n  NETWORK_INF network interface of the host network(like eth0), required
+    -a  VLAN_ADDR   vlan address to be used(like 192.168.1.99), required
+    -p  LOMOD_PORT  lomo-backend service port exposed on host machine, default to "8000", optional
+    -P  LOMOW_PORT  lomo-web service port exposed on host machine, default to "8001", optional
+    -i  IMAGE_NAME  docker image name, for example "lomorage/raspberrypi-lomorage:[tag]", default "lomorage/raspberrypi-lomorage:latest", optional
+    -d              Debug mode to run in foreground, default to 0, optional
 
 Examples:
-    # assuming your hard drive mounted in /media, like /media/usb0, /media/usb1.
-    ./run.sh -m /media -b /home/pi/lomorage -h 192.168.1.232
+    # assuming your hard drive mounted in /media, like /media/usb0, /media/usb0
+    ./run.sh -m /media -b /home/pi/lomo -h 192.168.1.232 -s 192.168.1.0/24 -g 192.168.1.1 -n eth0 -a 192.168.1.99
 ```
 
 You can add the command in "/etc/rc.local" before "exit 0" to make it run automatically after system boot.
