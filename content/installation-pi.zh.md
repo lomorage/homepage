@@ -173,7 +173,7 @@ sudo apt update
 sudo apt install lomo-base lomo-vips lomo-backend lomo-web lomo-frame -y
 ```
 
-### 3. 按需修改加载目录和运行用户
+### 3. 按需修改加载目录
 
 如果您不是使用步骤4的usbmount来自动加载磁盘（没有加载到"/media"路径下的子目录），您需要添加Lomorage服务程序运行参数来指定加载目录。
 
@@ -182,8 +182,6 @@ sudo apt install lomo-base lomo-vips lomo-backend lomo-web lomo-frame -y
 ```
 ExecStart=/opt/lomorage/bin/lomod -b /opt/lomorage/var --mount-dir /media/pi  --max-upload 1 --max-fetch-preview 3
 ```
-
-如果您的用户名不是"pi"，那么需要修改"lib/systemd/system/lomod.service"文件中的用户名pi("User=pi")改成您的用户名。
 
 **请确保您的用户有上面设置的"mount-dir"的读写权限**
 

@@ -182,8 +182,6 @@ For example if you are using PCManFM, then the mount directory will be "/media/p
 ExecStart=/opt/lomorage/bin/lomod -b /opt/lomorage/var --mount-dir /media/pi  --max-upload 1 --max-fetch-preview 3
 ```
 
-If your username is not "pi", you need to change "User=pi" in "/lib/systemd/system/lomod.service", and use your username.
-
 **Make sure the user has the r/w permission for the "mount-dir" set above**
 
 ### 4. Run
