@@ -40,6 +40,10 @@ You can add the command in "/etc/rc.local" before "exit 0" to make it run automa
 
 # Build your own image
 
+It should support all the SBC supported by official Armbain, but if you find it doesn't work, feel free to reach us.
+
+There is a [prebuild image](https://github.com/lomorage/build/releases/download/2021_02_01.23_18_29.0.829c7a4/Armbian_21.02.0-trunk_Orangepizero_buster_current_5.10.11_minimal.img.xz) for [Orange Pi Zero](http://www.orangepi.org/orangepizero/).
+
 ## 1. Prepare build env
 
 If you are using Ubuntu Focal 20.04.x amd64, you can skip this step.

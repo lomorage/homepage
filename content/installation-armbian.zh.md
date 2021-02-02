@@ -41,6 +41,10 @@ Examples:
 
 # 构建自己的镜像
 
+下面的步骤应该对于所有Armbain官方支持的SBC都适用，但如果您发现有问题，请联系我们。
+
+这里有已经编译好的[Orange Pi Zero](http://www.orangepi.org/orangepizero/)的[镜像](https://github.com/lomorage/build/releases/download/2021_02_01.23_18_29.0.829c7a4/Armbian_21.02.0-trunk_Orangepizero_buster_current_5.10.11_minimal.img.xz)。
+
 ## 1. 准备编译环境
 
 如果您使用Ubuntu Focal 20.04.x amd64，可以跳过这一步。
