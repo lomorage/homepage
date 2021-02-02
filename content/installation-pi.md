@@ -4,9 +4,6 @@ Table of Contents
    * [Install Lomorage Service on Raspberry Pi](#install-lomorage-service-on-raspberry-pi)
       * [Install with prebuild OS image](#install-with-prebuild-os-image)
       * [Docker installation](#docker-installation)
-         * [1. Install Docker on Raspberry Pi](#1-install-docker-on-raspberry-pi)
-         * [2. Get Docker image](#2-get-docker-image)
-         * [3. Run](#3-run)
       * [Apt installation](#apt-installation)
          * [1. Add lomoware source](#1-add-lomoware-source)
          * [2. Install Lomorage](#2-install-lomorage)
@@ -68,61 +65,7 @@ We suggest use cable to provide better performance, but if you prefer to use WiF
 
 ## Docker installation
 
-Docker installation is convenient way if you don't want to mess thing on existing system. It doesn't support Raspberry Pi 0 and 1 now.
-
-Docker image includes:
-
-- lomo-backend: Lomorage service backend
-
-- lomo-web: Lomorage web application
-
-### 1. Install Docker on Raspberry Pi
-
-*note: If you are using OMSC, you need to change "id=osmc" in “/etc/os-release” to "id=raspbain"*
-
-```
-sudo apt install -y ca-certificates
-sudo update-ca-certificates --fresh
-curl -fSLs https://get.docker.com | sudo sh
-sudo usermod -aG docker $USER
-sudo systemctl start docker
-```
-
-### 2. Get Docker image
-
-Pull from docker hub.
-
-```
-sudo docker pull lomorage/raspberrypi-lomorage:latest
-```
-
-### 3. Run
-
-Download [run.sh](https://raw.githubusercontent.com/lomorage/lomo-docker/master/run.sh).
-
-You can specify the media home directory and lomo directory, otherwise it will use the default, you MUST specify the host, subnet, gateway, network-interface, vlan-address.
-```
-run.sh [-m {media-dir} -b {lomo-dir} -d -p {lomod-port} -P {lomow-port} -i {image-name}] -h host -s subnet -g gateway -n network-interface -a vlan-address
-
-Command line options:
-    -m  DIR         Absolute path of media directory used for media assets, default to "/media", optional
-    -b  DIR         Absolute path of lomo directory used for db and log files, default to "/home/jeromy/lomo", optional
-    -h  HOST        IP address or hostname of the host machine, required
-    -s  SUBNET      Subnet of the host network(like 192.168.1.0/24), required
-    -g  GATEWAY     gateway of the host network(like 192.168.1.1), required
-    -n  NETWORK_INF network interface of the host network(like eth0), required
-    -a  VLAN_ADDR   vlan address to be used(like 192.168.1.99), required
-    -p  LOMOD_PORT  lomo-backend service port exposed on host machine, default to "8000", optional
-    -P  LOMOW_PORT  lomo-web service port exposed on host machine, default to "8001", optional
-    -i  IMAGE_NAME  docker image name, for example "lomorage/raspberrypi-lomorage:[tag]", default "lomorage/raspberrypi-lomorage:latest", optional
-    -d              Debug mode to run in foreground, default to 0, optional
-
-Examples:
-    # assuming your hard drive mounted in /media, like /media/usb0, /media/usb0
-    ./run.sh -m /media -b /home/pi/lomo -h 192.168.1.232 -s 192.168.1.0/24 -g 192.168.1.1 -n eth0 -a 192.168.1.99
-```
-
-You can add the command in "/etc/rc.local" before "exit 0" to make it run automatically after system boot.
+Please refer to [lomo-docker](https://github.com/lomorage/lomo-docker) for installation with docker image. You should use the arm image "lomorage/raspberrypi-lomorage:latest".
 
 ## Apt installation
 

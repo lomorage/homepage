@@ -19,7 +19,7 @@ title = "安装说明"
 &nbsp;
 <a href="/zh/installation-pi" title="树莓派下安装Lomorage服务程序" class="badge raspberrypi">Raspbian</a>
 &nbsp;
-<a href="/zh/installation-pi/#1-%E6%A0%91%E8%8E%93%E6%B4%BE%E4%B8%8A%E5%AE%89%E8%A3%85docker" title="使用Docker安装Lomorage" class="badge docker">Docker</a>
+<a href="/zh/installation-docker" title="使用Docker安装Lomorage" class="badge docker">Docker</a>
 &nbsp;
 <a href="/zh/installation-armbian" title="Armbian下安装Lomorage服务程序" class="badge armbian">Armbian</a>
 &nbsp;
@@ -33,7 +33,7 @@ title = "安装说明"
 您也可以使用Web版本来上传电脑中已有的照片和视频，也可以在电脑上浏览已经备份的照片和视频。
 
 <p align="center">
-<a href="/zh/installation-android"><img alt="Lomorage 安卓客户端" src="/img/installation/app-store-google-beta.svg" width="220"></a>
+<a href="/zh/installation-android"><img alt="Lomorage 安卓客户端" src="/img/installation/app-store-google.svg" width="220"></a>
 <a href="/zh/installation-ios"><img alt="Lomorage iOS客户端" src="/img/installation/app-store-ios.svg" width="220"></a>
 &nbsp;
 <a href="/zh/installation-web"><img alt="Lomorage web客户端" src="/img/installation/browser.png" width="220"></a>

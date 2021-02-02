@@ -4,9 +4,6 @@
    * [在树莓派上安装Lomorage服务程序](#在树莓派上安装lomorage服务程序)
       * [安装系统镜像](#安装系统镜像)
       * [Docker安装](#docker安装)
-         * [1. 树莓派上安装Docker](#1-树莓派上安装docker)
-         * [2. 获取Docker镜像](#2-获取docker镜像)
-         * [3. 运行](#3-运行)
       * [APT安装](#apt安装)
          * [1. 添加lomoware源](#1-添加lomoware源)
          * [2. 安装Lomorage](#2-安装lomorage)
@@ -68,62 +65,7 @@
 
 ## Docker安装
 
-在已有的系统上使用Docker镜像安装非常方便。这种方式不适用于树莓派0和树莓派1。
-
-Docker镜像包括:
-
-- lomo-backend: Lomorage服务程序
-
-- lomo-web: Lomorage网页程序
-
-### 1. 树莓派上安装Docker
-
-*注意: 如果您使用OMSC，需要修改“/etc/os-release”文件，将其中的"id=osmc"替换为"id=raspbain"*
-
-```
-sudo apt install -y ca-certificates
-sudo update-ca-certificates --fresh
-curl -fSLs https://get.docker.com | sudo sh
-sudo usermod -aG docker $USER
-sudo systemctl start docker
-```
-
-### 2. 获取Docker镜像
-
-从docker hub拉取镜像文件。
-
-```
-sudo docker pull lomorage/raspberrypi-lomorage:latest
-```
-
-### 3. 运行
-
-下载[run.sh](https://raw.githubusercontent.com/lomorage/lomo-docker/master/run.sh)。
-
-您可以指定媒体存储目录和Lomorage运行目录，不指定会使用默认值，您**必须**指定host, subnet, gateway, network-interface, vlan-address参数。
-
-```
-run.sh [-m {media-dir} -b {lomo-dir} -d -p {lomod-port} -P {lomow-port} -i {image-name}] -h host -s subnet -g gateway -n network-interface -a vlan-address
-
-Command line options:
-    -m  DIR         Absolute path of media directory used for media assets, default to "/media", optional
-    -b  DIR         Absolute path of lomo directory used for db and log files, default to "/home/jeromy/lomo", optional
-    -h  HOST        IP address or hostname of the host machine, required
-    -s  SUBNET      Subnet of the host network(like 192.168.1.0/24), required
-    -g  GATEWAY     gateway of the host network(like 192.168.1.1), required
-    -n  NETWORK_INF network interface of the host network(like eth0), required
-    -a  VLAN_ADDR   vlan address to be used(like 192.168.1.99), required
-    -p  LOMOD_PORT  lomo-backend service port exposed on host machine, default to "8000", optional
-    -P  LOMOW_PORT  lomo-web service port exposed on host machine, default to "8001", optional
-    -i  IMAGE_NAME  docker image name, for example "lomorage/raspberrypi-lomorage:[tag]", default "lomorage/raspberrypi-lomorage:latest", optional
-    -d              Debug mode to run in foreground, default to 0, optional
-
-Examples:
-    # assuming your hard drive mounted in /media, like /media/usb0, /media/usb0
-    ./run.sh -m /media -b /home/pi/lomo -h 192.168.1.232 -s 192.168.1.0/24 -g 192.168.1.1 -n eth0 -a 192.168.1.99
-```
-
-您可以将运行命令添加到"/etc/rc.local"中，在"exit 0"之前，这样系统开机的时候就可以自动启动了。
+请参考[lomo-docker](https://github.com/lomorage/lomo-docker)安装Docker镜像。请使用arm的镜像"lomorage/raspberrypi-lomorage:latest"。
 
 ## APT安装
 

@@ -21,7 +21,7 @@ The first step is to set up the Lomorage service.
 &nbsp;
 <a href="/installation-pi" title="Install Lomorage service on Raspberry Pi" class="badge raspberrypi">Raspbian</a>
 &nbsp;
-<a href="/installation-pi/#1-install-docker-on-raspberry-pi" title="Install Lomorage service using Docker" class="badge docker">Docker</a>
+<a href="/installation-docker" title="Install Lomorage service using Docker" class="badge docker">Docker</a>
 &nbsp;
 <a href="/installation-armbian" title="Install Lomorage service on Armbian" class="badge armbian">Armbian</a>
 &nbsp;

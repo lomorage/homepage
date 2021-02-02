@@ -1,43 +1,12 @@
-可以有两种安装方式。
+可以有两种安装方式:
+
+  - Docker安装
+
+  - 构建自己的镜像
 
 # Docker安装
 
-- 按[这里](https://docs.docker.com/engine/install/debian/)的步骤安装docker[instruction]
-
-- 从docker hub拉Lomorage的image
-
-```
-sudo docker pull lomorage/raspberrypi-lomorage:latest
-```
-
-- 运行
-
-下载[run.sh](https://raw.githubusercontent.com/lomorage/lomo-docker/master/run.sh)。
-
-您可以指定媒体存储目录和Lomorage运行目录，不指定会使用默认值，您**必须**指定host, subnet, gateway, network-interface, vlan-address参数。
-
-```
-run.sh [-m {media-dir} -b {lomo-dir} -d -p {lomod-port} -P {lomow-port} -i {image-name}] -h host -s subnet -g gateway -n network-interface -a vlan-address
-
-Command line options:
-    -m  DIR         Absolute path of media directory used for media assets, default to "/media", optional
-    -b  DIR         Absolute path of lomo directory used for db and log files, default to "/home/jeromy/lomo", optional
-    -h  HOST        IP address or hostname of the host machine, required
-    -s  SUBNET      Subnet of the host network(like 192.168.1.0/24), required
-    -g  GATEWAY     gateway of the host network(like 192.168.1.1), required
-    -n  NETWORK_INF network interface of the host network(like eth0), required
-    -a  VLAN_ADDR   vlan address to be used(like 192.168.1.99), required
-    -p  LOMOD_PORT  lomo-backend service port exposed on host machine, default to "8000", optional
-    -P  LOMOW_PORT  lomo-web service port exposed on host machine, default to "8001", optional
-    -i  IMAGE_NAME  docker image name, for example "lomorage/raspberrypi-lomorage:[tag]", default "lomorage/raspberrypi-lomorage:latest", optional
-    -d              Debug mode to run in foreground, default to 0, optional
-
-Examples:
-    # assuming your hard drive mounted in /media, like /media/usb0, /media/usb0
-    ./run.sh -m /media -b /home/pi/lomo -h 192.168.1.232 -s 192.168.1.0/24 -g 192.168.1.1 -n eth0 -a 192.168.1.99
-```
-
-您可以将运行命令添加到"/etc/rc.local"中，在"exit 0"之前，这样系统开机的时候就可以自动启动了。
+请参考[lomo-docker](https://github.com/lomorage/lomo-docker)安装Docker镜像。请使用arm的镜像"lomorage/raspberrypi-lomorage:latest"。
 
 # 构建自己的镜像
 
