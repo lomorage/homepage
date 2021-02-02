@@ -60,7 +60,7 @@
 
 安装完后，将MicroSD卡插入到树莓派，接上USB移动硬盘，插入网线，接通电源，等待几分钟系统启动。
 
-如果您连接了HDMI，系统启动完成后，会提示没有找到资源，您可以使用Lomorage手机应用程序上传照片，然后按"r"键重新扫描。如果您想退出到控制台做一些系统配置，可以按"ESC"退出，然后按"Ctrl+Alt+F2"切换到控制台，配置完成后，可以使用命令`sudo service supervisor restart`来启动Lomorage相框程序。
+如果您连接了HDMI，系统启动完成后，会提示没有找到资源，也会显示一个二维码用来绑定Lomorage相框，**请先在iOS/Android手机应用上创建用户，然后再扫码绑定Lomorage相框**，您可以使用Lomorage手机应用程序上传照片，然后按"r"键重新扫描。如果您想退出到控制台做一些系统配置，可以按"ESC"退出，然后按"Ctrl+Alt+F2"切换到控制台，配置完成后，可以使用命令`sudo service supervisor restart`来启动Lomorage相框程序。
 
 *默认的用户名是"pi"，密码是"raspberry"*
 

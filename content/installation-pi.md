@@ -60,7 +60,7 @@ After you insert the MicroSD to your desktop or laptop, just select the image yo
 
 After flushing the image, insert the microSD into Raspberry Pi board, connect USB hard drive with Raspberry Pi, plug in a network cable, plug in the power supply, turn on the power and wait a few minutes for system boot.
 
-If you have HDMI connected, after system boot successfully, it will show up a screen that no able to find any assets. You can upload photos using Lomorage Phone app, and then press "r" to rescan. If you want to quit to terminal to do some configuration, just press "ESC" and then "Ctrl+Alt+F2", after you made any changes and want to start lomo-frame, use command `sudo service supervisor restart`.
+If you have HDMI connected, after system boot successfully, it will show up a screen that no able to find any assets, and will also show a QRCode for register the lomo frame, **please create user on iOS/Android APP first before scanning the QRCode to bind the lomo frame**. You can upload photos using Lomorage Phone app, and then press "r" to rescan. If you want to quit to terminal to do some configuration, just press "ESC" and then "Ctrl+Alt+F2", after you made any changes and want to start lomo-frame, use command `sudo service supervisor restart`.
 
 *The default login username is "pi" and password is "raspberry"*
 
