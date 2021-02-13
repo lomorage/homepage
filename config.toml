@@ -31,13 +31,13 @@ paginate = 10
         weight = 6
 
     [[languages.en.menu.main]]
-        name = "Features"
-        url  = "/features/"
+        name = "Roadmap"
+        url  = "/lomorage.pdf"
         weight = 2
 
     [[languages.en.menu.main]]
-        name = "Installation"
-        url  = "/installation/"
+        name = "Documentation"
+        url  = "https://docs.lomorage.com"
         weight = 3
 
     [[languages.en.menu.main]]
@@ -94,13 +94,13 @@ paginate = 10
             weight = 6
 
         [[languages.zh.menu.main]]
-            name = "特性"
-            url  = "/zh/features/"
+            name = "产品路线图"
+            url  = "/lomorage.zh.pdf"
             weight = 2
 
         [[languages.zh.menu.main]]
-            name = "安装"
-            url  = "/zh/installation/"
+            name = "文档"
+            url  = "https://docs.lomorage.com/zh"
             weight = 3
 
         [[languages.zh.menu.main]]

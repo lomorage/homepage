@@ -1,46 +1,28 @@
 #!/bin/bash
 
 usage="
-$(basename $0) -p [osx|win|pi] [options...]
+$(basename $0) -p [osx|win|lomod] [options...]
 
     -h show this help text
-    -p platform, osx, win, pi or lomod
+    -p platform, osx, win or lomod
     -v lomoagent version string
     -u lomoagent zip download url
-    -i lomoagent installation package download url
     -s lomoagent zip sha256 hash
     -V lomoUpg version string
     -U lomoUpg zip download url
-    -I Raspberry pi image url
     -C lomod commit hash in version
 "
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 RELEASE_JSON_PATH="$DIR/static/release.json"
 
-INSTALLATION_WIN_EN_PATH="$DIR/content/installation-win.md"
-INSTALLATION_WIN_ZH_PATH="$DIR/content/installation-win.zh.md"
-
-INSTALLATION_OSX_EN_PATH="$DIR/content/installation-osx.md"
-INSTALLATION_OSX_ZH_PATH="$DIR/content/installation-osx.zh.md"
-
-INSTALLATION_PI_EN_PATH="$DIR/content/installation-pi.md"
-INSTALLATION_PI_ZH_PATH="$DIR/content/installation-pi.zh.md"
-
 PLATFORM=
 AGENT_VERSION=
 AGENT_ZIP_URL=
-AGENT_PKG_URL=
 AGENT_ZIP_HASH=
 UPG_VERSION=
 UPG_ZIP_URL=
-PI_IMAGE_URL=
 
-SED_INPLACE_OPTION=()
-if [[ "$OSTYPE" == "darwin"* ]]; then
-    SED_INPLACE_OPTION=("")
-fi
-
-OPTIONS=hp:v:u:i:s:V:U:I:C:
+OPTIONS=hp:v:u:s:V:U:C:
 PARSED=$(getopt $OPTIONS $*)
 if [ $? -ne 0 ]; then
     echo "$usage"
@@ -56,8 +38,8 @@ while true; do
             ;;
         -p)
             PLATFORM=$2
-            if [ "$PLATFORM" != "osx" ] && [ "$PLATFORM" != "win" ] && [ "$PLATFORM" != "pi" ] && [ "$PLATFORM" != "lomod" ]; then
-                echo "platform should be either \"osx\" or \"win\" or \"pi\" or \"lomod\""
+            if [ "$PLATFORM" != "osx" ] && [ "$PLATFORM" != "win" ] && [ "$PLATFORM" != "lomod" ]; then
+                echo "platform should be either \"osx\" or \"win\" or \"lomod\""
                 exit
             else
                 echo "replace for platform: $PLATFORM"
@@ -74,11 +56,6 @@ while true; do
             echo "lomoagent zip url: $AGENT_ZIP_URL"
             shift 2
             ;;
-        -i)
-            AGENT_PKG_URL=$2
-            echo "lomoagent installation package url: $AGENT_PKG_URL"
-            shift 2
-            ;;
         -s)
             AGENT_ZIP_HASH=$2
             echo "lomoagent zip sha256 hash: $AGENT_ZIP_HASH"
@@ -92,11 +69,6 @@ while true; do
         -U)
             UPG_ZIP_URL=$2
             echo "lomoUpg zip url: $UPG_ZIP_URL"
-            shift 2
-            ;;
-        -I)
-            PI_IMAGE_URL=$2
-            echo "Raspberry Pi image url: $PI_IMAGE_URL"
             shift 2
             ;;
         -C)
@@ -167,47 +139,10 @@ update_release() {
     echo -e "=====> Done!"
 }
 
-update_page_win() {
-    if [ ! -z "$AGENT_PKG_URL" ]; then
-        echo -e "\n=====> update windows msi package on installation page"
-        sed -i $SED_INPLACE_OPTION -E "s#https://github.com/lomorage/LomoAgentWin/releases/download/[[:digit:]]{4}_[[:digit:]]{2}_[[:digit:]]{2}\.[[:digit:]]{2}_[[:digit:]]{2}_[[:digit:]]{2}\.0\.[a-zA-Z0-9]{7}\/lomoagent\.msi#$AGENT_PKG_URL#g" $INSTALLATION_WIN_EN_PATH
-        sed -i $SED_INPLACE_OPTION -E "s#https://github.com/lomorage/LomoAgentWin/releases/download/[[:digit:]]{4}_[[:digit:]]{2}_[[:digit:]]{2}\.[[:digit:]]{2}_[[:digit:]]{2}_[[:digit:]]{2}\.0\.[a-zA-Z0-9]{7}\/lomoagent\.msi#$AGENT_PKG_URL#g" $INSTALLATION_WIN_ZH_PATH
-        grep -H "https://github.com/lomorage/LomoAgentWin/releases/download/" $INSTALLATION_WIN_EN_PATH
-        grep -H "https://github.com/lomorage/LomoAgentWin/releases/download/" $INSTALLATION_WIN_ZH_PATH
-        echo -e "=====> Done!"
-    fi
-}
-
-update_page_osx() {
-    if [ ! -z "$AGENT_PKG_URL" ]; then
-        echo -e "\n=====> updated osx dmg package on installation page"
-        sed -i "${SED_INPLACE_OPTION[@]}" -E "s#https://github.com/lomorage/LomoAgentOSX/releases/download/[[:digit:]]{4}_[[:digit:]]{2}_[[:digit:]]{2}\.[[:digit:]]{2}_[[:digit:]]{2}_[[:digit:]]{2}\.0\.[a-zA-Z0-9]{7}\/LomoAgent\.dmg#$AGENT_PKG_URL#g" $INSTALLATION_OSX_EN_PATH
-        sed -i "${SED_INPLACE_OPTION[@]}" -E "s#https://github.com/lomorage/LomoAgentOSX/releases/download/[[:digit:]]{4}_[[:digit:]]{2}_[[:digit:]]{2}\.[[:digit:]]{2}_[[:digit:]]{2}_[[:digit:]]{2}\.0\.[a-zA-Z0-9]{7}\/LomoAgent\.dmg#$AGENT_PKG_URL#g" $INSTALLATION_OSX_ZH_PATH
-        grep -H "https://github.com/lomorage/LomoAgentOSX/releases/download/" $INSTALLATION_OSX_EN_PATH
-        grep -H "https://github.com/lomorage/LomoAgentOSX/releases/download/" $INSTALLATION_OSX_ZH_PATH
-        echo -e "=====> Done!"
-    fi
-}
-
-update_page_pi() {
-    if [ ! -z "$PI_IMAGE_URL" ]; then
-        echo -e "\n=====> updated Raspberry Pi image on installation page"
-        sed -i "${SED_INPLACE_OPTION[@]}" -E "s#https://github.com/lomorage/pi-gen/releases/download/[[:digit:]]{4}_[[:digit:]]{2}_[[:digit:]]{2}\.[[:digit:]]{2}_[[:digit:]]{2}_[[:digit:]]{2}\.0\.[a-zA-Z0-9]{7}\/image_[[:digit:]]{4}-[[:digit:]]{2}-[[:digit:]]{2}-lomorage-lite\.zip#$PI_IMAGE_URL#g" $INSTALLATION_PI_EN_PATH
-        sed -i "${SED_INPLACE_OPTION[@]}" -E "s#https://github.com/lomorage/pi-gen/releases/download/[[:digit:]]{4}_[[:digit:]]{2}_[[:digit:]]{2}\.[[:digit:]]{2}_[[:digit:]]{2}_[[:digit:]]{2}\.0\.[a-zA-Z0-9]{7}\/image_[[:digit:]]{4}-[[:digit:]]{2}-[[:digit:]]{2}-lomorage-lite\.zip#$PI_IMAGE_URL#g" $INSTALLATION_PI_ZH_PATH
-        grep -H "https://github.com/lomorage/pi-gen/releases/download/" $INSTALLATION_PI_EN_PATH
-        grep -H "https://github.com/lomorage/pi-gen/releases/download/" $INSTALLATION_PI_ZH_PATH
-        echo -e "=====> Done!"
-    fi
-}
-
 if [ "$PLATFORM" == "osx" ]; then
     update_release "darwin"
-    update_page_osx
 elif [ "$PLATFORM" == "win" ]; then
     update_release "windows"
-    update_page_win
-elif [ "$PLATFORM" == "pi" ]; then
-    update_page_pi
 elif [ "$PLATFORM" == "lomod" ]; then
     update_release "lomod"
 else
