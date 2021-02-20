@@ -72,6 +72,12 @@ paginate = 10
     #    pre = "<i class='fab fa-2x fa-mastodon'></i>"
 
     [[languages.en.menu.topbar]]
+        weight = 2
+        name = "Google Group"
+        url = "https://groups.google.com/u/0/g/lomorage"
+        pre = "<i class='far fa-2x fa-comments'></i>"
+
+    [[languages.en.menu.topbar]]
         weight = 3
         name = "Email"
         url = "mailto:support@lomorage.com"
@@ -133,6 +139,12 @@ paginate = 10
         #    name = "Mastodon"
         #    url = "https://mastodon.social/@lomorage"
         #    pre = "<i class='fab fa-2x fa-mastodon'></i>"
+
+        [[languages.zh.menu.topbar]]
+            weight = 2
+            name = "Google Group"
+            url = "https://groups.google.com/u/0/g/lomorage"
+            pre = "<i class='far fa-2x fa-comments'></i>"
 
         [[languages.zh.menu.topbar]]
             weight = 3
