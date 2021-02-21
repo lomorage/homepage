@@ -73,6 +73,8 @@ If you have any issues, questions, concerns:
 
 - join slack [channel](https://app.slack.com/client/THK8CPS4X/CHK8CQ4H5)
 
+- [Google Group](https://groups.google.com/u/0/g/lomorage)
+
 - [contact form](https://lomorage.com/contact/)
 
 - [email us](mailto:support@lomorage.com)
@@ -142,6 +144,12 @@ Lomorage Web Application.
 https://github.com/lomorage/pi-gen/tree/lomorage
 
 Tool used to create customized Lomorage Raspbian image, which provides easy way to setup.
+
+### Armbian image builder
+
+https://github.com/lomorage/build
+
+Tool used to create customized Lomorage Armbian image.
 
 ### pi_video_looper
 
