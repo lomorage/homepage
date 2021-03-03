@@ -11,6 +11,7 @@ keywords = ["FAQ","How do I","questions","what if"]
 * [6. How to set a secondary backup?](#6-how-to-set-a-secondary-backup)
 * [7. Does Lomorage support backup edited file?](#7-does-lomorage-support-backup-edited-file)
 * [8. What is background backup?](#8-what-is-background-backup)
+* [9. How to recover from Raspbian boot failure?](#9-how-to-recover-from-raspbian-boot-failure)
 
 ## 1. How comes the name "Lomorage"?
 
@@ -62,7 +63,18 @@ Background backup on iOS is not expected to work the same way as iCloud, Apple r
 
 Moving Lomorage app into background, the existing upload is still running in the background but the next upload has to wait either it's back to foreground or the above two hack condition triggers the upload.
 
+## 9. How to recover from Raspbian boot failure?
+
+Don't worry, your Photo are stored on hard drive, and the database is backup to hard drive as well. You just need to recovery the backup database.
+
+1. plugin in your hard drive to PC, and you can find that assets.db in each user's Lomorage home directory, they are exactly the same.
+2. reinstall Lomorage Raspbian image.
+3. attach hard drive to Raspberry Pi.
+4. copy assets.db from one user's Lomorage home directory on hard drive to `/opt/lomorage/var/` on Raspberry Pi.
+5. restart Lomorage service on Raspberry Pi: `sudo service lomod restart`.
+
+This applies to Armbian as well.
+
 ---
 
 > In case you haven't found the answer to your question please feel free to [contact us](/contact), we will be happy to help you.
-
