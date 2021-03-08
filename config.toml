@@ -36,8 +36,8 @@ paginate = 10
         weight = 2
 
     [[languages.en.menu.main]]
-        name = "Documentation"
-        url  = "https://docs.lomorage.com"
+        name = "Installation"
+        url  = "https://docs.lomorage.com/docs/Installation/"
         weight = 3
 
     [[languages.en.menu.main]]
@@ -105,8 +105,8 @@ paginate = 10
             weight = 2
 
         [[languages.zh.menu.main]]
-            name = "文档"
-            url  = "https://docs.lomorage.com/zh"
+            name = "安装"
+            url  = "https://docs.lomorage.com/zh/docs/Installation/"
             weight = 3
 
         [[languages.zh.menu.main]]
@@ -163,6 +163,10 @@ paginate = 10
         [languages.zh.params.carousel]
             enable = true
 
+[languages.zh.params.testimonials]
+    enable = true
+    title = "用户评价"
+    subtitle = ""
 
 [params]
     viewMorePostLink = "/blog/"
@@ -247,12 +251,12 @@ paginate = 10
     # For more informtion take a look at the README.
 
 [params.testimonials]
-    enable = false
+    enable = true
     # All testimonials are defined in their own files. You can find example items
     # at 'exampleSite/data/testimonials'.
     # For more informtion take a look at the README.
     title = "Testimonials"
-    subtitle = "We have worked with many clients and we always like to hear they come out from the cooperation happy and satisfied. Have a look what our clients said about us."
+    subtitle = ""
 
 [params.see_more]
     enable = false
