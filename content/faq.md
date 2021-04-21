@@ -14,6 +14,7 @@ keywords = ["FAQ","How do I","questions","what if"]
 * [8. Does Lomorage support backup edited file?](#8-does-lomorage-support-backup-edited-file)
 * [9. What is background backup?](#9-what-is-background-backup)
 * [10. How to recover from Raspbian boot failure?](#10-how-to-recover-from-raspbian-boot-failure)
+* [11. I forget password, how to reset?](#11-i-forget-password-how-to-reset)
 
 ## 1. How comes the name "Lomorage"?
 
@@ -80,6 +81,10 @@ Don't worry, your Photo are stored on hard drive, and the database is backup to 
 5. restart Lomorage service on Raspberry Pi: `sudo service lomod restart`.
 
 This applies to Armbian as well.
+
+## 11. I forget password, how to reset?
+
+Don't worry, you can alway reset password by running `/opt/lomorage/bin/lomoc user reset [user name] [password]` at Lomorage box. `username` is username reset for, and `password` is new password you like to use
 
 ---
 

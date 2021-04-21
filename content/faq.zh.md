@@ -14,6 +14,7 @@ keywords = ["FAQ","疑问","反馈","用户"]
 * [8. 编辑后的照片视频支持吗?](#8-编辑后的照片视频支持吗)
 * [9. 什么是后台备份?](#9-什么是后台备份)
 * [10. Raspbian不能启动如何恢复?](#10-raspbian不能启动如何恢复)
+* [11. 密码重置](#11-密码重置)
 
 ## 1. 怎么想到"Lomorage"这个名字?
 
@@ -83,6 +84,9 @@ Peter Thiel说过: "要创建一家成功的初创公司，你的产品需要比
 
 Armbian下的恢复类似。
 
+## 11. 密码重置
+
+如果您忘记了密码，您可以登陆Lomorage盒子，运行`/opt/lomorage/bin/lomoc user reset [user name] [password]`. `username`是用户名，`password`是新的密码
 ---
 
 > 如果您有更多的问题没有在这里找到答案，请[联系我们](/zh/contact)
