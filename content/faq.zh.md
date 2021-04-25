@@ -86,7 +86,9 @@ Armbian下的恢复类似。
 
 ## 11. 密码重置
 
-如果您忘记了密码，您可以登陆Lomorage盒子，运行`/opt/lomorage/bin/lomoc user reset [user name] [password]`. `username`是用户名，`password`是新的密码
+如果您忘记了密码，服务端使用的是Linux系统，运行`/opt/lomorage/bin/lomoc user reset [user name] [password]`. `username`是用户名，`password`是新的密码。
+
+如果是用的Mac LomoAgent，您可以点击用户菜单，进到用户列表修改密码。
 ---
 
 > 如果您有更多的问题没有在这里找到答案，请[联系我们](/zh/contact)

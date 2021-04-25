@@ -84,7 +84,9 @@ This applies to Armbian as well.
 
 ## 11. I forget password, how to reset?
 
-Don't worry, you can alway reset password by running `/opt/lomorage/bin/lomoc user reset [user name] [password]` at Lomorage box. `username` is username reset for, and `password` is new password you like to use
+Don't worry, you can alway reset password by running `/opt/lomorage/bin/lomoc user reset [user name] [password]` at Linux. `username` is username reset for, and `password` is new password you like to use.
+
+And if you are using Mac LomoAgent, you can reset user's password in user list by clicking "Users" menu.
 
 ---
 
