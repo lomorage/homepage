@@ -56,8 +56,8 @@ title = "购买"
 
 <div  align="center">
 <p class="screenshoot">
-<img src="/img/buy/lomorage-mini.png" alt="lomorage-mini" style="zoom:10%;" />
-<img src="/img/buy/lomorage-setup.png" alt="lomorage-setup" style="zoom:10%;" />
+<img src="/img/buy/lomorage-mini.png" alt="lomorage-mini" style="zoom:10%;max-width:100%;height:auto;max-height:100%;"  />
+<img src="/img/buy/lomorage-setup.png" alt="lomorage-setup" style="zoom:10%;max-width:100%;height:auto;max-height:100%;"  />
 </p>
 </div>
 
@@ -77,10 +77,8 @@ title = "购买"
 ### Lomorage网页版：相机照片，硬盘照片，拖入即可方便导入。
 
 <div  align="center">
-<p class="screenshoot">
-<img src="/img/buy/web-upload.png" alt="web-upload" style="zoom:40%;" />
-<img src="/img/buy/web-gallery.png" alt="web-gallery" style="zoom:46%;" />
-</p>
+<img src="/img/buy/web-upload.png" alt="web-upload" style="zoom:40%;max-width:100%;height:auto;max-height:100%;" />
+<img src="/img/buy/web-gallery.png" alt="web-gallery" style="zoom:46%;max-width:100%;height:auto;max-height:100%;" />
 </div>
 
 ## 4. 常见问题
