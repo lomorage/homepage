@@ -71,11 +71,11 @@ paginate = 10
     #    url = "https://mastodon.social/@lomorage"
     #    pre = "<i class='fab fa-2x fa-mastodon'></i>"
 
-    [[languages.en.menu.topbar]]
-        weight = 2
-        name = "Google Group"
-        url = "https://groups.google.com/u/0/g/lomorage"
-        pre = "<i class='far fa-2x fa-comments'></i>"
+    #[[languages.en.menu.topbar]]
+    #    weight = 2
+    #    name = "Google Group"
+    #    url = "https://groups.google.com/u/0/g/lomorage"
+    #    pre = "<i class='far fa-2x fa-comments'></i>"
 
     [[languages.en.menu.topbar]]
         weight = 3
@@ -95,30 +95,35 @@ paginate = 10
             weight = 1
 
         [[languages.zh.menu.main]]
-            name = "博客"
-            url  = "/zh/blog/"
-            weight = 6
-
-        [[languages.zh.menu.main]]
-            name = "调查问卷"
-            url  = "/zh/survey/"
-            weight = 3
+            name = "购买"
+            url  = "/zh/buy/"
+            weight = 2
 
         [[languages.zh.menu.main]]
             name = "安装"
             url  = "https://docs.lomorage.com/zh/docs/Installation/"
-            weight = 2
+            weight = 3
+
+        [[languages.zh.menu.main]]
+            name = "调查问卷"
+            url  = "/zh/survey/"
+            weight = 4
 
         [[languages.zh.menu.main]]
             name = "常见问题"
             identifier = "faq"
             url  = "/zh/faq/"
-            weight = 4
+            weight = 5
 
         [[languages.zh.menu.main]]
             name = "联系"
             url  = "/zh/contact/"
-            weight = 5
+            weight = 6
+
+        [[languages.zh.menu.main]]
+            name = "博客"
+            url  = "/zh/blog/"
+            weight = 7
 
         # Top bar social links menu
 
