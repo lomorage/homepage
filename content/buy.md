@@ -62,10 +62,10 @@ For more information, **[check here](https://lomorage.com/)**
 
 <div  align="center">
 <p class="screenshoot">
-<img src="/img/buy/local.png" alt="local" style="zoom:20%;" />
-<img src="/img/buy/search.png" alt="search" style="zoom:20%;" />
-<img src="/img/buy/backup.png" alt="backup" style="zoom:20%;" />
-<img src="/img/buy/settings.png" alt="settings" style="zoom:20%;" />
+<img src="/img/buy/local-en.png" alt="local" style="zoom:20%;" />
+<img src="/img/buy/search-en.png" alt="search" style="zoom:20%;" />
+<img src="/img/buy/backup-en.png" alt="backup" style="zoom:20%;" />
+<img src="/img/buy/settings-en.png" alt="settings" style="zoom:20%;" />
 </p>
 </div>
 
@@ -73,8 +73,8 @@ For more information, **[check here](https://lomorage.com/)**
 ### Lomorage Web APP：Drag and drop to import photos on SD card, hard drive
 
 <div  align="center">
-<img src="/img/buy/web-upload.png" alt="web-upload" style="zoom:40%;max-width:100%;height:auto;max-height:100%;" />
-<img src="/img/buy/web-gallery.png" alt="web-gallery" style="zoom:46%;max-width:100%;height:auto;max-height:100%;" />
+<img src="/img/buy/web-upload-en.png" alt="web-upload" style="zoom:40%;max-width:100%;height:auto;max-height:100%;" />
+<img src="/img/buy/web-gallery-en.png" alt="web-gallery" style="zoom:46%;max-width:100%;height:auto;max-height:100%;" />
 </div>
 
 ## 4. FAQ
