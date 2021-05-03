@@ -19,7 +19,7 @@ We are group of engineers from Silicon Valley, after tried with existing photo b
 7. Worry about photo/video quality degradation on cloud?
 8. Worry about cloud service shutdown?
 
-## 2. 特色功能
+## 2. Features
 
 - Backup photo on smart phone.
 - Incremental backup, fast and reliable.
