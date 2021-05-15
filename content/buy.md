@@ -92,7 +92,6 @@ For more information, **[check here](https://lomorage.com/)**
    Yes, you don't need reformat the disk to use Lomorage, and it supports all major file systems(FAT32, NTFS, EXT etc).
 
 5. Does it support hard drive sleep?
-
    Yes, once no activity on hard drive, it goes to sleep mode automatically, and will wake up once you access the hard drive。
 
 6. Does it support redundancy backup?
