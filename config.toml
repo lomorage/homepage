@@ -26,6 +26,11 @@ paginate = 10
         weight = 1
 
     [[languages.en.menu.main]]
+        name = "Buy"
+        url  = "/buy/"
+        weight = 2
+
+    [[languages.en.menu.main]]
         name = "Blog"
         url  = "/blog/"
         weight = 6
@@ -33,23 +38,23 @@ paginate = 10
     [[languages.en.menu.main]]
         name = "Survey"
         url  = "/survey/"
-        weight = 3
+        weight = 4
 
     [[languages.en.menu.main]]
         name = "Installation"
         url  = "https://docs.lomorage.com/docs/Installation/"
-        weight = 2
+        weight = 3
 
     [[languages.en.menu.main]]
         name = "FAQ"
         identifier = "faq"
         url  = "/faq/"
-        weight = 4
+        weight = 5
 
     [[languages.en.menu.main]]
         name = "Contact"
         url  = "/contact/"
-        weight = 5
+        weight = 7
 
     # Top bar social links menu
 

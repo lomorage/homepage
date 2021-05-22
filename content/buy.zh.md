@@ -8,9 +8,7 @@ title = "购买"
 
 
 
-## 淘宝即将上线，敬请期待
-
-
+## [淘宝购买链接: https://item.taobao.com/item.htm?spm=a230r.1.14.3.780169a6MMIJyO&id=642763751535&ns=1&abbucket=15#detail](https://item.taobao.com/item.htm?spm=a230r.1.14.3.780169a6MMIJyO&id=642763751535&ns=1&abbucket=15#detail)
 
 ## 1. 问题痛点
 
