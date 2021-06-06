@@ -4,7 +4,7 @@ title = "Buy"
 
 # Lomorage - Save the moments, enjoy the memories
 
-We are group of engineers from Silicon Valley, after tried with existing photo backup and management solutions, we think people need **more easier to use, more stable affordable solution, which includes the photo backup, management, share and show**. We build Lomorage with love of the family, and we care about privacy, we are the users of Lomorage, and we constantly improve it with user's feedback.
+We build Lomorage with love of the family, and we care about privacy, we are the users of Lomorage, and we constantly improve it with user's feedback.
 
 ## Online store coming soon
 
