@@ -1,17 +1,22 @@
-baseurl = "https://lomorage.com/"
-title = "Lomorage"
-theme = "hugo-universal-theme"
-#themesDir = "../.."
+baseURL = "http://lomorage.com/"
 languageCode = "en-us"
+
 # Site language. Available translations in the theme's `/i18n` directory.
 defaultContentLanguage = "en"
+
 # Enable comments by entering your Disqus shortname
 disqusShortname = "lomorage"
+
 # Enable Google Analytics by entering your tracking code
 googleAnalytics = "UA-138235951-1"
 
-# Define the number of posts per page
-paginate = 10
+title = "Lomorage"
+theme = "evie-hugo"
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
 
 [languages]
     [languages.en]
@@ -31,19 +36,14 @@ paginate = 10
         weight = 2
 
     [[languages.en.menu.main]]
-        name = "Blog"
-        url  = "/blog/"
-        weight = 6
+        name = "Installation"
+        url  = "https://docs.lomorage.com/docs/Installation/"
+        weight = 3
 
     [[languages.en.menu.main]]
         name = "Survey"
         url  = "/survey/"
         weight = 4
-
-    [[languages.en.menu.main]]
-        name = "Installation"
-        url  = "https://docs.lomorage.com/docs/Installation/"
-        weight = 3
 
     [[languages.en.menu.main]]
         name = "FAQ"
@@ -52,43 +52,15 @@ paginate = 10
         weight = 5
 
     [[languages.en.menu.main]]
+        name = "Blog"
+        url  = "/blog/"
+        weight = 6
+
+    [[languages.en.menu.main]]
         name = "Contact"
         url  = "/contact/"
         weight = 7
 
-    # Top bar social links menu
-
-    [[languages.en.menu.topbar]]
-        weight = 1
-        name = "Slack"
-        url = "https://join.slack.com/t/lomorage/shared_invite/enQtODc4MTE5ODQzNzkyLTRlY2U4MTQ1YjczYjBhMDcwMmExYTUxNTg2NTE5YmRkZjg2ZWQwZjg1MjEwMjQzZWVjMmEwZjk3ZGIyODY4ODM"
-        pre = "<i class='fab fa-2x fa-slack'></i>"
-
-    [[languages.en.menu.topbar]]
-        weight = 1
-        name = "GitHub"
-        url = "https://github.com/lomorage/homepage"
-        pre = "<i class='fab fa-2x fa-github'></i>"
-
-    #[[languages.en.menu.topbar]]
-    #    weight = 2
-    #    name = "Mastodon"
-    #    url = "https://mastodon.social/@lomorage"
-    #    pre = "<i class='fab fa-2x fa-mastodon'></i>"
-
-    #[[languages.en.menu.topbar]]
-    #    weight = 2
-    #    name = "Google Group"
-    #    url = "https://groups.google.com/u/0/g/lomorage"
-    #    pre = "<i class='far fa-2x fa-comments'></i>"
-
-    [[languages.en.menu.topbar]]
-        weight = 3
-        name = "Email"
-        url = "mailto:support@lomorage.com"
-        pre = "<i class='fa fa-2x fa-envelope'></i>"
-
-    [languages.es]
     [languages.zh]
         [languages.zh.menu]
 
@@ -121,75 +93,16 @@ paginate = 10
             weight = 5
 
         [[languages.zh.menu.main]]
-            name = "联系"
-            url  = "/zh/contact/"
+            name = "博客"
+            url  = "/zh/blog/"
             weight = 6
 
         [[languages.zh.menu.main]]
-            name = "博客"
-            url  = "/zh/blog/"
+            name = "联系"
+            url  = "/zh/contact/"
             weight = 7
 
-        # Top bar social links menu
-
-        [[languages.zh.menu.topbar]]
-            weight = 1
-            name = "Slack"
-            url = "https://join.slack.com/t/lomorage/shared_invite/enQtODc4MTE5ODQzNzkyLTRlY2U4MTQ1YjczYjBhMDcwMmExYTUxNTg2NTE5YmRkZjg2ZWQwZjg1MjEwMjQzZWVjMmEwZjk3ZGIyODY4ODM"
-            pre = "<i class='fab fa-2x fa-slack'></i>"
-
-        [[languages.zh.menu.topbar]]
-            weight = 1
-            name = "GitHub"
-            url = "https://github.com/lomorage/homepage"
-            pre = "<i class='fab fa-2x fa-github'></i>"
-
-        #[[languages.zh.menu.topbar]]
-        #    weight = 2
-        #    name = "Mastodon"
-        #    url = "https://mastodon.social/@lomorage"
-        #    pre = "<i class='fab fa-2x fa-mastodon'></i>"
-
-        [[languages.zh.menu.topbar]]
-            weight = 2
-            name = "Google Group"
-            url = "https://groups.google.com/u/0/g/lomorage"
-            pre = "<i class='far fa-2x fa-comments'></i>"
-
-        [[languages.zh.menu.topbar]]
-            weight = 3
-            name = "电子邮件"
-            url = "mailto:support@lomorage.com"
-            pre = "<i class='fa fa-2x fa-envelope'></i>"
-
-        [languages.zh.params]
-            about_us = """<p>我们相信分布式互联网是未来的发展方向，专注构建基于DWeb技术的照片私有云。
-                    </p>"""
-
-        [languages.zh.params.topbar]
-            enable = true
-            text = """<p class="hidden-sm hidden-xs">联系我们: support@lomorage.com.</p>"""
-
-        [languages.zh.params.carousel]
-            enable = true
-
-[languages.zh.params.testimonials]
-    enable = true
-    title = "用户评价"
-    subtitle = ""
-
 [params]
-    viewMorePostLink = "/blog/"
-    author = "lomoware"
-    defaultKeywords = ["lomorage", "lomoware", "photo", "video", "iPhone", "iCloud"]
-    defaultDescription = "Lomorage Site"
-
-    # Google Maps API key (if not set will default to not passing a key.)
-    #googleMapsApiKey = "AIzaSyCFhtWLJcE30xOAjcbSFi-0fnoVmQZPb1Y"
-
-    # Style options: default (light-blue), blue, green, marsala, pink, red, turquoise, violet
-    style = "default"
-
     # Since this template is static, the contact form uses www.formspree.io as a
     # proxy. The form makes a POST request to their servers to send the actual
     # email. Visitors can send up to a 1000 emails each month for free.
@@ -205,89 +118,14 @@ paginate = 10
     # Enable the contact form by entering your Formspree.io email
     email = "lomorage@gmail.com"
 
-    about_us = """<p>We are a small team believe that distributed web is the future,
-        and we focus on building the private photo cloud based on DWeb technologies in the first place.
-        <!--
-        <li>Easy to setup, use and maintain as existing cloud service</li>
-        <li>Store your data securely on your own devices</li>
-        <li>Backup and duplicate storage by adding more devices</li>
-        <li>No one can access your assets without permission</li>-->
-        </p>"""
-
-    copyright = "Copyright (c) 2018 - 2019, Lomoware; all rights reserved."
-
     # Format dates with Go's time formatting
     date_format = "January 2, 2006"
 
-    logo = "img/logo-lomo-flip.png"
-    logo_small = "img/logo-lomo-flip.png"
-    #address = """<p><strong>Lomoware, Inc</strong>
-    #    <br>3606 Cobbrert Drive
-    #    <br>San Jose
-    #    <br>95148
-    #    <br>California
-    #    <br>
-    #    <strong>USA</strong>
-    #  </p>
-    #  """
-    #latitude = "-12.043333"
-    #longitude = "-77.028333"
+[params.footer]
+    firstcolumn = ["<a href=\"https://github.com/lomorage/homepage\" target=\"_blank\" style=\"opacity: 1;\"><i class='fab fa-2x fa-github'></i></a>"]
+    secondcolumn = ["<a href=\"https://join.slack.com/t/lomorage/shared_invite/enQtODc4MTE5ODQzNzkyLTRlY2U4MTQ1YjczYjBhMDcwMmExYTUxNTg2NTE5YmRkZjg2ZWQwZjg1MjEwMjQzZWVjMmEwZjk3ZGIyODY4ODM\" target=\"_blank\" style=\"opacity: 1;\"><i class='fab fa-2x fa-slack'></i></a>"]
+    thirdcolumn = ["<a href=\"mailto:support@lomorage.com\" target=\"_blank\" style=\"opacity: 1;\"><i class='fa fa-2x fa-envelope'></i></a>"]
+
 
 [Permalinks]
     blog = "/blog/:year/:month/:day/:filename/"
-
-# Enable or disable top bar with social icons
-[params.topbar]
-    enable = true
-    text = """<p class="hidden-sm hidden-xs">Contact us on support@lomorage.com.</p>
-           """
-
-# Enable and disable widgets for the right sidebar
-[params.widgets]
-    categories = true
-    tags = true
-    search = true
-
-[params.carousel]
-    enable = true
-    # All carousel items are defined in their own files. You can find example items
-    # at 'exampleSite/data/carousel'.
-    # For more informtion take a look at the README.
-
-[params.features]
-    enable = true
-    # All features are defined in their own files. You can find example items
-    # at 'exampleSite/data/features'.
-    # For more informtion take a look at the README.
-
-[params.testimonials]
-    enable = true
-    # All testimonials are defined in their own files. You can find example items
-    # at 'exampleSite/data/testimonials'.
-    # For more informtion take a look at the README.
-    title = "Testimonials"
-    subtitle = ""
-
-[params.see_more]
-    enable = false
-    icon = "fa fa-file-code-o"
-    title = "Do you want to see more?"
-    subtitle = "We have prepared for you more than 40 different HTML pages, including 5 variations of homepage."
-    link_url = "#"
-    link_text = "Check other homepages"
-
-[params.clients]
-    enable = false
-    # All clients are defined in their own files. You can find example items
-    # at 'exampleSite/data/clients'.
-    # For more informtion take a look at the README.
-    title = "Our Clients"
-    subtitle = ""
-
-[params.recent_posts]
-    enable = false
-    title = "From our blog"
-    subtitle = "Learn latest updates on our product"
-
-[markup.goldmark.renderer]
-unsafe= true

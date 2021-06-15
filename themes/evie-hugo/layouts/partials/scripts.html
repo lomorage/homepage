@@ -1,0 +1,15 @@
+<script
+	src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+	integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+	crossorigin="anonymous"
+></script>
+<!-- for social icons -->
+<script src="https://unpkg.com/ionicons@4.4.7/dist/ionicons.js"></script>
+<!-- prettier-ignore -->
+<div class="scripts">
+	{{ $js1 := resources.Get "js/app.js" }}
+	{{ $js2 := resources.Get "js/libraries/flexibility.js" }}
+	{{ $js3 := resources.Get "js/libraries/responsive-nav.js" }}
+	{{ $js := slice $js1 $js2 $js3  | resources.Concat "js/scripts.js" | minify | fingerprint }}
+	<script type="text/javascript" src="{{ $js.RelPermalink }}"></script>
+</div>

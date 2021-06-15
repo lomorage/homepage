@@ -3,7 +3,7 @@ title = "Setup Lomorage secondary backup with Raspberry Pi"
 tags = ["Raspberry Pi", "secondary backup", "Hard Disk", "Flash Drive", "USB Hub", "Restore"]
 categories = ["FAQ"]
 date = "2019-12-24T13:43:40"
-banner = "img/banners/power-hub-adafruit.jpg"
+banner = "img/blog/raspberrypi-hd/power-hub-adafruit.jpg"
 +++
 
 Photos and video are valuable assets, having a single backup is not enough, we at least should have secondary backup besides the primary backup, and ideally one more remote backup. Lomorage currently provide the option to setup a secondary backup. There are several options to do this.

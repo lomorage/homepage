@@ -1,0 +1,25 @@
+<div class="footer footer--dark">
+	<div class="container">
+		<div class="footer__inner">
+			<a href="/" class="footer__textLogo">{{ .Site.Title }}</a>
+
+			<div class="footer__data">
+				<div class="footer__data__item">
+					{{ range.Site.Params.footer.firstcolumn }}
+					<div class="footer__row">{{.|markdownify}}</div>
+					{{ end }}
+				</div>
+				<div class="footer__data__item">
+					{{ range.Site.Params.footer.secondcolumn }}
+					<div class="footer__row">{{.|markdownify}}</div>
+					{{ end }}
+				</div>
+				<div class="footer__data__item">
+					{{ range.Site.Params.footer.thirdcolumn }}
+					<div class="footer__row">{{.|markdownify}}</div>
+					{{ end }}
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

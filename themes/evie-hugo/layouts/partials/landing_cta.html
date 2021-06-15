@@ -1,0 +1,11 @@
+{{ if .Params.cta }}
+<div class="cta cta--reverse">
+	<div class="container">
+		<div class="cta__inner">
+			<h2 class="cta__title">{{.Params.cta.title}}</h2>
+			<p class="cta__sub cta__sub--center">{{.Params.cta.text | markdownify}}</p>
+			<a href="{{.Params.cta.button.url| safeURL}}" class="button button__accent">{{.Params.cta.button.title| markdownify}}</a>
+		</div>
+	</div>
+</div>
+{{ end }}

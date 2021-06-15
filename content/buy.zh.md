@@ -1,14 +1,14 @@
 +++
-title = "购买"
+title = "Lomorage照片云存储"
 +++
 
-# Lomorage - 珍藏美好回忆，享受精彩瞬间
+# Lomorage照片云存储 - 珍藏美好回忆，享受精彩瞬间
 
 我们是一群硅谷的工程师，在使用过一些现有的照片存储备份管理产品后，我们觉得需要有**更加简单易用，更加稳定，经济实用，涵盖照片视频的备份，管理，分享和展示的一套完整方案**。出于对家庭的热爱，对隐私的关注，我们开发了Lomorage，我们是深度用户，我们倾听用户的声音，我们希望Lomorage能成为一个**物美价廉品质优**的大众产品。
 
+您可以自行下载安装到您已有到设备，或者您也可以直接购买**即插即用**的Lomorage照片云存储，迷你版和标准版硬件分别基于Orange Pi Zero和Raspberry Pi 4，预装了定制的Lomorage系统。
 
-
-## [淘宝购买链接: https://item.taobao.com/item.htm?spm=a230r.1.14.3.780169a6MMIJyO&id=642763751535&ns=1&abbucket=15#detail](https://item.taobao.com/item.htm?spm=a230r.1.14.3.780169a6MMIJyO&id=642763751535&ns=1&abbucket=15#detail)
+## [淘宝购买链接](https://item.taobao.com/item.htm?spm=a230r.1.14.3.780169a6MMIJyO&id=642763751535&ns=1&abbucket=15#detail)
 
 ## 1. 问题痛点
 

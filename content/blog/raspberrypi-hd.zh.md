@@ -3,7 +3,7 @@ title = "树莓派设置冗余备份"
 tags = ["树莓派", "冗余备份", "硬盘", "U盘", "USB分线器", "恢复"]
 categories = ["FAQ"]
 date = "2019-12-24T13:43:40"
-banner = "img/banners/power-hub-adafruit.jpg"
+banner = "img/blog/raspberrypi-hd/power-hub-adafruit.jpg"
 +++
 
 珍贵的照片和视频仅仅保存一份是不够的，我们至少需要保存两份，最好还能有一个远程的备份。Lomorage当前提供了冗余备份的功能。可以有下面的几种方式来设置冗余备份。

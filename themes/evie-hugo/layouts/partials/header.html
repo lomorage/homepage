@@ -1,0 +1,55 @@
+<head>
+	<script type="text/javascript">
+		var userLang = navigator.language || navigator.userLanguage;
+		console.log(window.location.pathname);
+		if (userLang.startsWith("zh") && window.location.pathname == "/") {
+				window.location.href = '/zh/';
+		}
+	</script>
+    <script type="text/javascript" src="//downloads.mailchimp.com/js/signup-forms/popup/unique-methods/embed.js" data-dojo-config="usePlainJson: true, isDebug: false"></script><script type="text/javascript">window.dojoRequire(["mojo/signup-forms/Loader"], function(L) { L.start({"baseUrl":"mc.us4.list-manage.com","uuid":"6ace4137554cb923d96ec92c7","lid":"36ce78d7a8","uniqueMethods":true}) })</script>
+    <script async src="https://cdn.splitbee.io/sb.js"></script>
+
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+	<title>{{ .Title }} | {{ .Site.Title }}</title>
+	<link href="https://fonts.googleapis.com/css?family=Lato:400" rel="stylesheet" />
+	<script defer src="https://use.fontawesome.com/releases/v5.15.3/js/all.js"></script>
+
+	{{ template "_internal/google_analytics.html" . }}
+    <!-- Bootstrap and Font Awesome css -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <!--<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">-->
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+	<!-- Favicon and apple touch icons-->
+    <link rel="shortcut icon" href="{{ "img/favicon.ico" | relURL }}" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="{{ "img/apple-touch-icon.png" | relURL }}" />
+
+	{{ $e1 := resources.Get "sass/utils/_normalize.scss" }}
+	{{ $e2 := resources.Get "sass/base/_variables.scss" }}
+	{{ $e3 := resources.Get "sass/utils/_mixins.scss" }}
+	{{ $e4 := resources.Get "sass/base/_globals.scss" }}
+	{{ $e5 := resources.Get "sass/base/_containers.scss" }}
+	{{ $e6 := resources.Get "sass/utils/_helpers.scss" }}
+	<!-- Elements -->
+	{{ $e7 := resources.Get "sass/elements/_typography.scss" }}
+	{{ $e8 := resources.Get "sass/elements/_buttons.scss" }}
+	{{ $e10 := resources.Get "sass/elements/_forms.scss" }}
+	<!-- Components -->
+	{{ $e11 := resources.Get "sass/components/_landing.scss" }}
+	{{ $e12 := resources.Get "sass/components/_navbar.scss" }}
+	{{ $e13 := resources.Get "sass/components/_hero.scss" }}
+	{{ $e14 := resources.Get "sass/components/_steps.scss" }}
+	{{ $e15 := resources.Get "sass/components/_expanded.scss" }}
+	{{ $e16 := resources.Get "sass/components/_cta.scss" }}
+	{{ $e17 := resources.Get "sass/components/_footer.scss" }}
+	{{ $e18 := resources.Get "sass/components/_auth.scss" }}
+	{{ $e19 := resources.Get "sass/components/_page.scss" }}
+	{{ $e20 := resources.Get "sass/components/_app.scss" }}
+	{{ $e21 := resources.Get "sass/components/_verticalMenu.scss" }}
+	{{ $c := resources.Get "sass/custom.style.scss" }}
+
+	{{ $style := slice $e1 $e2 $e3 $e4 $e5 $e6 $e7 $e8 $e10 $e11 $e12 $e13 $e14 $e15 $e16 $e17 $e18 $e19 $e20 $e21 $c | resources.Concat "css/style.css" | resources.ToCSS | fingerprint | minify }}
+
+	<link rel="stylesheet" type="text/css" href="{{ $style.RelPermalink }}" />
+</head>

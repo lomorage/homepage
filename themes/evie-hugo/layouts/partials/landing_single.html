@@ -1,0 +1,14 @@
+<!-- Expanded sections -->
+{{ range.Params.single }}
+<div class="expanded landing__section">
+	<div class="container">
+		<div class="expanded__inner">
+			<div class="expanded__media"><img src="{{.src}}" alt="{{.alt}}" class="expanded__image" /></div>
+			<div class="expanded__content">
+				<h2 class="expanded__title">{{ .title | markdownify }}</h2>
+				<p class="expanded__text">{{ .text | markdownify }}</p>
+			</div>
+		</div>
+	</div>
+</div>
+{{ end }}

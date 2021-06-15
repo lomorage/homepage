@@ -1,0 +1,47 @@
+{{ define "main" }}
+<!-- Hero unit -->
+<div class="page__header">
+	<div class="hero__overlay hero__overlay--gradient"></div>
+	<div class="hero__mask"></div>
+	<div class="page__header__inner">
+		<div class="container">
+			<div class="page__header__content">
+				<div class="page__header__content__inner" id="navConverter">
+					<h1 class="page__header__title">{{.Title}}</h1>
+					<!-- <p class="page__header__text">{{.Title}}</p> -->
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- Page content -->
+<div class="page">
+	<div class="container">
+		<div class="page__inner">
+			<!-- <div class="page__menu">
+				<ul class="vMenu">
+					{{ .TableOfContents }}
+				</ul>
+			</div> -->
+			{{ if isset .Params "id" }}
+
+			{{ partial .Params.id . }}
+
+		    {{ else }}
+			<div class="page__main">
+				<div class="text-container">{{ .Content }}</div>
+
+				{{ if .Site.DisqusShortname }}
+				<div id="comments">
+					{{ template "_internal/disqus.html" . }}
+				</div>
+			{{ end }}
+			</div>
+			{{ end }}
+
+			
+		</div>
+	</div>
+</div>
+
+{{ end }}

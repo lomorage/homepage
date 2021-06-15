@@ -1,0 +1,17 @@
+name = "evie-hugo"
+license = "MIT"
+description = "Theme based on the Evie theme by Katerina Limpitsouni and Aggelos Gesoulis"
+homepage = "https://github.com/desimone/evie-hugo"
+licenselink = "https://github.com/desimone/evie-hugo/blob/master/LICENSE.md"
+tags = ["minimal","landing","evie","company"]
+features = ["blog","docs","landing"]
+min_version = 0.19
+
+[author]
+  name = "Bobby DeSimone"
+  homepage = "https://www.bdd.io"
+
+[original]
+  name = "Evie"
+  homepage = "https://evie.undraw.co/"
+  repo = "https://github.com/anges244/evie"
