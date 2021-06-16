@@ -8,7 +8,11 @@
 				<!-- prettier-ignore -->
 				<ul>
 					{{range.Site.Menus.main}}
+					{{ if eq .Identifier "installation" }}
+					<li><a href="{{ .URL | relURL }}" class="button button__accent">{{ .Name }}</a></li>
+					{{ else }}
 					<li><a href="{{ .URL | relURL }}">{{ .Name }}</a></li>
+					{{ end }}
 					{{ end }}
 				</ul>
 			</nav>

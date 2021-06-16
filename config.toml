@@ -26,37 +26,43 @@ theme = "evie-hugo"
     # Main menu
 
     [[languages.en.menu.main]]
+        identifier = "home"
         name = "Home"
         url  = "/"
         weight = 1
 
     [[languages.en.menu.main]]
+        identifier = "buy"
         name = "Buy"
         url  = "/buy/"
         weight = 2
 
     [[languages.en.menu.main]]
-        name = "Installation"
+        identifier = "installation"
+        name = "Download Now"
         url  = "https://docs.lomorage.com/docs/Installation/"
         weight = 3
 
     [[languages.en.menu.main]]
+        identifier = "survey"
         name = "Survey"
         url  = "/survey/"
         weight = 4
 
     [[languages.en.menu.main]]
-        name = "FAQ"
         identifier = "faq"
+        name = "FAQ"
         url  = "/faq/"
         weight = 5
 
     [[languages.en.menu.main]]
+        identifier = "blog"
         name = "Blog"
         url  = "/blog/"
         weight = 6
 
     [[languages.en.menu.main]]
+        identifier = "contact"
         name = "Contact"
         url  = "/contact/"
         weight = 7
@@ -67,37 +73,43 @@ theme = "evie-hugo"
         # Main menu
 
         [[languages.zh.menu.main]]
+            identifier = "home"
             name = "主页"
             url  = "/zh"
             weight = 1
 
         [[languages.zh.menu.main]]
+            identifier = "buy"
             name = "购买"
             url  = "/zh/buy/"
             weight = 2
 
         [[languages.zh.menu.main]]
-            name = "安装"
+            identifier = "installation"
+            name = "立即下载"
             url  = "https://docs.lomorage.com/zh/docs/Installation/"
             weight = 3
 
         [[languages.zh.menu.main]]
+            identifier = "survey"
             name = "调查问卷"
             url  = "/zh/survey/"
             weight = 4
 
         [[languages.zh.menu.main]]
-            name = "常见问题"
             identifier = "faq"
+            name = "常见问题"
             url  = "/zh/faq/"
             weight = 5
 
         [[languages.zh.menu.main]]
+            identifier = "blog"
             name = "博客"
             url  = "/zh/blog/"
             weight = 6
 
         [[languages.zh.menu.main]]
+            identifier = "contact"
             name = "联系"
             url  = "/zh/contact/"
             weight = 7
