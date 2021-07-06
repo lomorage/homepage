@@ -52,7 +52,7 @@
 	a {
 		color: #fff;
 		@include desktop {
-			opacity: 0.75;
+			//opacity: 0.75;
 
 			&:hover {
 				opacity: 1;
