@@ -11,6 +11,8 @@ $(basename $0) -p [osx|win|lomod] [options...]
     -V lomoUpg version string
     -U lomoUpg zip download url
     -C lomod commit hash in version
+    -D android versionCode
+    -T android release time
 "
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 RELEASE_JSON_PATH="$DIR/static/release.json"
@@ -21,8 +23,10 @@ AGENT_ZIP_URL=
 AGENT_ZIP_HASH=
 UPG_VERSION=
 UPG_ZIP_URL=
+ANDROID_VERSION_CODE=
+ANDROID_RELEASET_TIME=
 
-OPTIONS=hp:v:u:s:V:U:C:
+OPTIONS=hp:v:u:s:V:U:C:D:T:
 PARSED=$(getopt $OPTIONS $*)
 if [ $? -ne 0 ]; then
     echo "$usage"
@@ -38,7 +42,7 @@ while true; do
             ;;
         -p)
             PLATFORM=$2
-            if [ "$PLATFORM" != "osx" ] && [ "$PLATFORM" != "win" ] && [ "$PLATFORM" != "lomod" ]; then
+            if [ "$PLATFORM" != "android" ] && [ "$PLATFORM" != "osx" ] && [ "$PLATFORM" != "win" ] && [ "$PLATFORM" != "lomod" ]; then
                 echo "platform should be either \"osx\" or \"win\" or \"lomod\""
                 exit
             else
@@ -76,6 +80,16 @@ while true; do
             echo "Lomod Commit Hash: $LOMOD_COMMIT"
             shift 2
             ;;
+        -D)
+            ANDROID_VERSION_CODE=$2
+            echo "Android version code: $ANDROID_VERSION_CODE"
+            shift 2
+            ;;
+        -T)
+            ANDROID_RELEASET_TIME=$2
+            echo "Android release time: $ANDROID_RELEASET_TIME"
+            shift 2
+            ;;    
         --)
             if [ -z "${PLATFORM}" ]; then
                 echo "platform required!"
@@ -131,6 +145,18 @@ update_release() {
         changed=1
     fi
 
+    if [ ! -z "$ANDROID_VERSION_CODE" ]; then
+        echo "update android version code: $ANDROID_VERSION_CODE"
+        cat $RELEASE_JSON_PATH | jq ".\"$1\".VersionCode = \"$ANDROID_VERSION_CODE\""  > tmp.$$.json && mv tmp.$$.json $RELEASE_JSON_PATH
+        changed=1
+    fi
+
+    if [ ! -z "$ANDROID_RELEASET_TIME" ]; then
+        echo "update android release time: $ANDROID_RELEASET_TIME"
+        cat $RELEASE_JSON_PATH | jq ".\"$1\".ReleaseTime = \"$ANDROID_RELEASET_TIME\""  > tmp.$$.json && mv tmp.$$.json $RELEASE_JSON_PATH
+        changed=1
+    fi
+
     if [ $changed == 1 ]; then
         cat $RELEASE_JSON_PATH
     else
@@ -145,6 +171,8 @@ elif [ "$PLATFORM" == "win" ]; then
     update_release "windows"
 elif [ "$PLATFORM" == "lomod" ]; then
     update_release "lomod"
+elif [ "$PLATFORM" == "android" ]; then
+    update_release "android"
 else
     echo "platform $PLATFORM not support!"
 fi
