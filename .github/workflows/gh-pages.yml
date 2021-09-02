@@ -26,11 +26,11 @@ jobs:
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
-        env:
-          ACTIONS_DEPLOY_KEY: ${{ secrets.ACTIONS_DEPLOY_KEY }}
-          EXTERNAL_REPOSITORY: lomorage/lomorage.github.io
-          PUBLISH_BRANCH: master
-          PUBLISH_DIR: ./public
+        if: github.ref == 'refs/heads/master'
         with:
+          deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
+          external_repository: lomorage/lomorage.github.io
+          publish_branch: master
+          publish_dir: ./public
           emptyCommits: false
           commitMessage: ${{ github.event.head_commit.message }}
