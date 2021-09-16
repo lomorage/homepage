@@ -8,10 +8,10 @@
     "LomoUpdateURL": "https://github.com/lomorage/lomoUpdate/releases/download/2019_12_09.23_41_36.0.b28a902/LomoUpdateOSX.zip"
   },
   "windows": {
-    "Version": "2021_08_31.21_14_36.0.14e7541",
+    "Version": "2021_09_15.22_06_05.0.696faf6",
     "OS": "windows",
-    "SHA256": "FFBC7610F34D4501371386C3E57801156691BB2EB73F12BB3D76A5C249CE0733",
-    "URL": "https://github.com/lomorage/LomoAgentWin/releases/download/2021_08_31.21_14_36.0.14e7541/lomoagent-2021_08_31.21_14_36.0.14e7541.zip",
+    "SHA256": "C4C9FC5B35198250AED5A67B23CFC811FAF57D8D88743330B0FF59C4D9DF4FF1",
+    "URL": "https://github.com/lomorage/LomoAgentWin/releases/download/2021_09_15.22_06_05.0.696faf6/lomoagent-2021_09_15.22_06_05.0.696faf6.zip",
     "LomoUpgVer": "2020_08_22.21_03_02.0.2f88662",
     "LomoUpdateURL": "https://github.com/lomorage/LomoAgentWin/releases/download/2020_08_22.21_03_02.0.2f88662/lomoupdate-2020_08_22.21_03_02.0.2f88662.zip"
   },
