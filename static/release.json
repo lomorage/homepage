@@ -1,9 +1,9 @@
 {
   "darwin": {
-    "Version": "2021_09_07.12_43_54.0.787c24f",
+    "Version": "2021_09_22.23_44_18.0.d2da71c",
     "OS": "mac",
-    "SHA256": "6c8eebe20bf0c7d39cde253e9637c2ae3e800e75fc32d6f7ec4e8ada93a37a7e",
-    "URL": "https://github.com/lomorage/LomoAgentOSX/releases/download/2021_09_07.12_43_54.0.787c24f/LomoAgent.zip",
+    "SHA256": "ac1045bbcf05f5412dceb83724fe46962af6efbd273080ca0eccd26088e4a6c1",
+    "URL": "https://github.com/lomorage/LomoAgentOSX/releases/download/2021_09_22.23_44_18.0.d2da71c/LomoAgent.zip",
     "LomoUpgVer": "2019_12_09.23_41_36.0.b28a902",
     "LomoUpdateURL": "https://github.com/lomorage/lomoUpdate/releases/download/2019_12_09.23_41_36.0.b28a902/LomoUpdateOSX.zip"
   },
@@ -16,7 +16,7 @@
     "LomoUpdateURL": "https://github.com/lomorage/LomoAgentWin/releases/download/2020_08_22.21_03_02.0.2f88662/lomoupdate-2020_08_22.21_03_02.0.2f88662.zip"
   },
   "lomod": {
-    "Commit": "696faf6"
+    "Commit": "7672c0d"
   },
   "android": {
     "VersionCode": "31",
