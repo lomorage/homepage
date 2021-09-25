@@ -31,11 +31,11 @@ theme = "evie-hugo"
         url  = "/"
         weight = 1
 
-    [[languages.en.menu.main]]
-        identifier = "buy"
-        name = "Buy"
-        url  = "/buy/"
-        weight = 2
+#    [[languages.en.menu.main]]
+#        identifier = "buy"
+#        name = "Buy"
+#        url  = "/buy/"
+#        weight = 2
 
     [[languages.en.menu.main]]
         identifier = "installation"
@@ -78,11 +78,11 @@ theme = "evie-hugo"
             url  = "/zh"
             weight = 1
 
-        [[languages.zh.menu.main]]
-            identifier = "buy"
-            name = "购买"
-            url  = "/zh/buy/"
-            weight = 2
+#        [[languages.zh.menu.main]]
+#            identifier = "buy"
+#            name = "购买"
+#            url  = "/zh/buy/"
+#            weight = 2
 
         [[languages.zh.menu.main]]
             identifier = "installation"
