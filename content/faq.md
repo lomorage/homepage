@@ -23,6 +23,7 @@ keywords = ["FAQ","How do I","questions","what if"]
 * [How to view the backup photos?](#how-to-view-the-backup-photos)
 * [Does it support remote access?](#does-it-support-remote-access)
 * [Does it support export from backup to Phone?](#does-it-support-export-from-backup-to-phone)
+* [Can't upgrade server in Linux?](#cant-upgrade-server-in-linux)
 
 ## How comes the name "Lomorage"?
 
@@ -120,6 +121,9 @@ Yes, you can use 3rd party reverse proxy tunnel service(like ngrok), or you can 
 
 ## Does it support export from backup to Phone?
 Yes, currently works on iOS, you can "Save" those backups locally, and local will keep a copy, if you save it locally on multiple devices, you will have multiple copies and delete the copy won't delete the original backup.
+
+## Can't upgrade server in Linux?
+We have change the repository link from "lomorage.github.io" to "lomoware.lomorage.com", please change "/etc/apt/sources.list.d/lomoware.list" accordingly.
 
 ---
 
