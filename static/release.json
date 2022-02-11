@@ -3,7 +3,7 @@
     "Version": "2022_01_30.22_04_38.0.35f1fbc",
     "OS": "mac",
     "SHA256": "e547f56d8b819eb314c171bf1e3a757d98b43a0adf57c10cde66093423407503",
-    "URL": "https://lomosw.lomorage.com/mac/LomoAgent.zip",
+    "URL": "https://github.com/lomorage/LomoAgentOSX/releases/download/2022_01_30.22_04_38.0.35f1fbc/LomoAgent.zip",
     "LomoUpgVer": "2019_12_09.23_41_36.0.b28a902",
     "LomoUpdateURL": "https://lomosw.lomorage.com/mac/LomoUpdate.zip"
   },
