@@ -87,7 +87,7 @@ theme = "evie-hugo"
         [[languages.zh.menu.main]]
             identifier = "installation"
             name = "立即下载"
-            url  = "https://docs.lomorage.com/zh/docs/Installation/"
+            url  = "https://lomosw.lomorage.com/zh/index.html"
             weight = 3
 
         [[languages.zh.menu.main]]
