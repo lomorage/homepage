@@ -7,7 +7,7 @@ hero:
     - title: 查看视频
       url: /video/Lomorage-tutorial.zh.mp4
     - title: 立即下载
-      url: https://docs.lomorage.com/docs/Installation/
+      url: https://lomosw.lomorage.com/zh/index.html
       accent: yes
     - title: 了解更多
       url: #

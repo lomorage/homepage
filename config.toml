@@ -40,7 +40,7 @@ theme = "evie-hugo"
     [[languages.en.menu.main]]
         identifier = "installation"
         name = "Download Now"
-        url  = "https://docs.lomorage.com/docs/Installation/"
+        url  = "https://lomosw.lomorage.com/en/index.html"
         weight = 3
 
     [[languages.en.menu.main]]

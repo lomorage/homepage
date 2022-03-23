@@ -7,7 +7,7 @@ hero:
     - title: See it in Action
       url: /video/Lomorage-tutorial.mp4
     - title: Download Now
-      url: https://docs.lomorage.com/docs/Installation/
+      url: https://lomosw.lomorage.com/en/index.html
       accent: yes
     - title: Learn More
       url: #
