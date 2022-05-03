@@ -1,8 +1,8 @@
 ---
 title: 主页
 hero:
-  title: 您的免费私有照片云
-  text: Lomorage是一套免费的私有照片云解决方案，您可以搭建自己的私有云服务，管理照片视频，并能方便的从多台设备进行备份和访问。
+  title: 您的私有照片云
+  text: Lomorage是一套私有照片云解决方案，您可以搭建自己的私有云服务，管理照片视频，并能方便的从多台设备进行备份和访问。
   button:
     - title: 查看视频
       url: /video/Lomorage-tutorial.zh.mp4
