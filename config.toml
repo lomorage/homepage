@@ -133,6 +133,8 @@ theme = "evie-hugo"
     # Format dates with Go's time formatting
     date_format = "January 2, 2006"
 
+    favicon = "/img/favicon.ico"
+
 [params.footer]
     firstcolumn = ["<a href=\"https://github.com/lomorage/homepage\" target=\"_blank\" style=\"opacity: 1;\"><i class='fab fa-2x fa-github'></i></a>"]
     secondcolumn = ["<a href=\"https://join.slack.com/t/lomorage/shared_invite/enQtODc4MTE5ODQzNzkyLTRlY2U4MTQ1YjczYjBhMDcwMmExYTUxNTg2NTE5YmRkZjg2ZWQwZjg1MjEwMjQzZWVjMmEwZjk3ZGIyODY4ODM\" target=\"_blank\" style=\"opacity: 1;\"><i class='fab fa-2x fa-slack'></i></a>"]
