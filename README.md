@@ -2,13 +2,10 @@ Table of Contents
 =================
 
    * [Lomorage - Save the moments, enjoy the memories](#lomorage---save-the-moments-enjoy-the-memories)
-      * [Problem to solve](#problem-to-solve)
-      * [Solution](#solution)
-      * [Features](#features)
+      * [Features Highlights](#feature-highlights)
       * [Installation](#installation)
       * [FAQ](#faq)
       * [Repositories](#repositories)
-         * [Homepage](#homepage)
          * [Lomod](#lomod)
          * [LomoAgentWin](#lomoagentwin)
          * [LomoAgentOSX](#lomoagentosx)
@@ -16,7 +13,6 @@ Table of Contents
          * [lomo-docker](#lomo-docker)
          * [lomo-android-apk-release](#lomo-android-apk-release)
          * [lomo-android-frame-apk-release](#lomo-android-frame-apk-release)
-         * [lomo-web](#lomo-web)
          * [pi-gen](#pi-gen)
          * [pi_video_looper](#pi_video_looper)
 
@@ -26,39 +22,21 @@ Table of Contents
 
 *Lomorage is still on going project, however the basic features are pretty solid and ready to use*
 
-## Problem to solve
+**The simplest, easiest to use private photo cloud for the family.**
 
-- Worry about privacy leaking on cloud.
+- Automatic Back Up: Automatically backs up all your photos from smartphones and computers to your own hard drive; Redundancy backup lowers the risk of losing data. No rate limits.
 
-- Family photos and videos hard to organize locally.
+- Original Quality: Whether it’s a 50 megapixel raw photo or hour long 4K HD video, back up your high resolution content as it is without any modification. What you take is what is saved.
 
-- Large volume of HD videos uploading to cloud, slow and expensive.
+- Intelligent Organization: Use AI to sort your photos by date, location, person, scene; search by texts in photos; detect similar photos; remove duplicated assets; history of today reminder.
 
-- Network Attached Storage is complex for non-technical users and costly for consumer.
+- Unlimited Accounts: One server for all family members while each member has its own account, no account number limits. Share becomes easy.
 
-- Memories are fading out and buried in hard drives.
+- Your Photos, Wherever You Are: Browse ALL your photos and videos from apps on your Android, iOS, Chromecast, Fire TV device, or a web browser; No need to worry about the phone space.
 
-- No easy ways to move photos to digital photo frames with limited storage.
+- It’s Your Data: No tracking. We believe in privacy is super important for everyone, and anything we might collect (crash logs, discovery, etc.) is opt-in only. no vendor lock in.
 
-- No in-home digital signage to display family photos, calendar, events and more.
-
-## Solution
-
-Lomorage Box hosted at home to “save the moments”, Lomorage Frame and Signage placed in different places to “enjoy the memories”.
-
-- No Privacy Concerns, avoid Leaking.
-
-- Same Cloud Experience, a Private Cloud.
-
-- More Storage, at Lower Cost.
-
-- Faster Access, data Closer To User.
-
-- No buried Memories, AI digital frames.
-
-Check the product vision [here](https://lomorage.com/lomorage.pdf)
-
-## Features
+## Feature highlights
 
 - Backup photo on smart phone.
 - Incremental backup, fast and reliable.
@@ -69,15 +47,13 @@ Check the product vision [here](https://lomorage.com/lomorage.pdf)
 - Similarity check, you can choose to save the best one with multiple shoots。
 - Access photos seamlessly on multiple device with one account.
 - Isolated accounts for family members, keep your privacy.
-- Save secrets with encryption. (coming soon)
 - Sharing tons of photos without worry about phone storage.
-- No need to save photo locally to share in social network.
 - Easy access when you switching phone with different OS.
 - Export backup to Phone。
 - Offline mode so you can browser photos even without connectivity.
 - Search by location, date time, text in photo.
 - History of today, never buries the memories in hard drive.
-- Tagging and create album. (coming soon)
+- Support user album and smart album.
 - Redundancy backup, lower the risk of losing data.
 - Import photo from hard drive, SD card etc.
 - No rate limit, no account number limitation, no vendor lock in.
@@ -85,9 +61,7 @@ Check the product vision [here](https://lomorage.com/lomorage.pdf)
 
 ## Installation
 
-Check the [installation](https://lomorage.com/installation/) guide.
-
-[![Watch the video](https://img.youtube.com/vi/VcSPcR6MB-4/hqdefault.jpg)](https://youtu.be/VcSPcR6MB-4)
+Check the [installation](https://lomosw.lomorage.com/en/index.html) guide.
 
 ## FAQ
 
@@ -99,23 +73,13 @@ If you have any issues, questions, concerns:
 
 - join slack [channel](https://app.slack.com/client/THK8CPS4X/CHK8CQ4H5)
 
-- [Google Group](https://groups.google.com/u/0/g/lomorage)
-
 - [contact form](https://lomorage.com/contact/)
 
 - [email us](mailto:support@lomorage.com)
 
 ## Repositories
 
-### Homepage
-
-The text content is in https://github.com/lomorage/homepage/tree/master/content
-
-To run homepage locally
-~~~ 
-cd /homepage
-hugo server
-~~~
+**The code of mobile client and backend service is closed source.** 
 
 ### Lomod
 
@@ -158,12 +122,6 @@ You can download the [apk release](https://github.com/lomorage/lomo-android-apk-
 https://github.com/lomorage/lomo-android-frame-apk-release
 
 Lomorage frame app for FireTV, android Tablet.
-
-### lomo-web
-
-https://github.com/lomorage/lomo-web
-
-Lomorage Web Application.
 
 ### pi-gen
 
