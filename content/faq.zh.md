@@ -81,16 +81,9 @@ Armbian下的恢复类似。
 
 ## 密码重置
 
-如果您忘记了密码，服务端使用的是Linux系统，运行`/opt/lomorage/bin/lomoc user reset [user name] [password]`. `username`是用户名，`password`是新的密码。
+如果您忘记了密码，服务端使用的是Linux系统，运行`/opt/lomorage/bin/lomoc reset passsword --db /opt/lomorage/var/assets.db [user name] [password]`. `username`是用户名，`password`是新的密码。
 
-如果是用的Mac LomoAgent，您可以点击用户菜单，进到用户列表修改密码。
-
-如果是用Windows, 您可以[下载]命令行工具(https://aisnote.com/wp-content/uploads/2021/05/lomoc.zip)， 打开命令行后执行如下命令，替换"用户名"和"修改后的密码"： 
-
-```
-cd c:\Users\%username%\AppData\Local\lomoware\Lomoagent\lomod\
-lomoc user reset –db “c:\Users\%username%\AppData\Local\lomoware\var\assets.db” 用户名 修改后的密码
-```
+如果是用的Windows或者MacOS，您可以点击用户菜单，进到用户列表修改密码。
 
 ## 除了能做照片备份管理之外还能做什么？
 
