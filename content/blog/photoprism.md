@@ -1,5 +1,5 @@
 +++
-title = "PhotoPrism: Open Source AI Photo Management tool"
+title = "PhotoPrism meets Lomorage: The best Google Photos alternative"
 tags = ["Lomorage", "PhotoPrism", "AI"]
 categories = ["AI"]
 date = "2022-02-11 10:38:00"

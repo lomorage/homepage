@@ -1,5 +1,5 @@
 +++
-title = "PhotoPrism:开源的智能AI照片视频管理工具"
+title = "PhotoPrism配合Lomorage，完美替换Google Photo的完美方案"
 tags = ["Lomorage", "PhotoPrism", "AI相册"]
 categories = ["AI相册"]
 date = "2022-02-11 10:38:00"
