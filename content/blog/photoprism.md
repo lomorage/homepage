@@ -74,10 +74,10 @@ If you want to enable authentication, you can change the password for user "admi
 PHOTOPRISM_ADMIN_PASSWORD: "insecure"          # !!! PLEASE CHANGE YOUR INITIAL "admin" PASSWORD !!!
 ```
 
-If you don't need authentication，just change `PHOTOPRISM_PUBLIC` to "true".
+If you don't need authentication，just change `PHOTOPRISM_AUTH_MODE` to "public".
 
 ```
-PHOTOPRISM_PUBLIC: "true"                     # no authentication required, disables password protection
+PHOTOPRISM_AUTH_MODE: "public"               # authentication mode (public, password)
 ```
 
 Change "localhost" in `PHOTOPRISM_SITE_URL` to IP address of Raspberry Pi.
@@ -147,7 +147,7 @@ cd /home/pi/photoprism && docker-compose exec -T photoprism photoprism index
 add executable permission:
 
 ```
-$ sudo chomd +x /etc/cron.daily/photoprism-index
+$ sudo chmod +x /etc/cron.daily/photoprism-index
 ```
 
 Now, we've finished PhotoPrism installation and configuration, and you can use browser to use PhotoPrism on PC or smart phone.

@@ -74,10 +74,10 @@ $ wget https://dl.photoprism.app/docker/armv7/docker-compose.yml -O ~/photoprism
 PHOTOPRISM_ADMIN_PASSWORD: "insecure"          # !!! PLEASE CHANGE YOUR INITIAL "admin" PASSWORD !!!
 ```
 
-如果不需要验证，`PHOTOPRISM_PUBLIC`直接改成"true"禁用即可。
+如果不需要验证，`PHOTOPRISM_AUTH_MODE`直接改成"public"禁用即可。
 
 ```
-PHOTOPRISM_PUBLIC: "true"                     # no authentication required, disables password protection
+PHOTOPRISM_AUTH_MODE: "public"               # authentication mode (public, password)
 ```
 
 修改访问地址，将`PHOTOPRISM_SITE_URL`中的"localhost"替换为树莓派的ip地址，端口2342不用改。
@@ -147,7 +147,7 @@ cd /home/pi/photoprism && docker-compose exec -T photoprism photoprism index
 添加可执行权限:
 
 ```
-$ sudo chomd +x /etc/cron.daily/photoprism-index
+$ sudo chmod +x /etc/cron.daily/photoprism-index
 ```
 
 到此为止，PhotoPrism的安装配置就完成了，可以通过电脑或手机浏览器使用PhotoPrism。
