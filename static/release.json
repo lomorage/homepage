@@ -8,10 +8,10 @@
     "LomoUpdateURL": "https://lomosw.lomorage.com/mac/LomoUpdate.zip"
   },
   "darwin-m1": {
-    "Version": "2022_10_09.10_51_09.0.0117cc0",
+    "Version": "2022_11_06.11_49_42.0.1e206ec",
     "OS": "mac",
-    "SHA256": "5bf5eb902a5e449f87a5ab225b71c2fe54e8336220b4ef2cea9e94da2c34d98a",
-    "URL": "https://github.com/lomorage/LomoAgentOSX/releases/download/2022_10_16.10_40_11.0.1e206ec/LomoAgent.zip",
+    "SHA256": "dd2441bd8a4ca822a7d85f0344dc0b03975dc59b278dc787cba1124e8181a86c",
+    "URL": "https://github.com/lomorage/LomoAgentOSX/releases/download/2022_11_06.11_49_42.0.1e206ec/LomoAgent.zip",
     "LomoUpgVer": "2019_12_09.23_41_36.0.b28a902",
     "LomoUpdateURL": "https://lomosw.lomorage.com/mac/LomoUpdate.zip"
   },
