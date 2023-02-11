@@ -24,7 +24,7 @@
     "LomoUpdateURL": "https://lomosw.lomorage.com/windows/LomoUpdate.zip"
   },
   "lomod": {
-    "Commit": "22d864d"
+    "Commit": "9dae9d6"
   },
   "android": {
     "VersionCode": "48",
