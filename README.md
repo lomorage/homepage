@@ -24,6 +24,14 @@ Table of Contents
 
 **The simplest, easiest to use private photo cloud for the family.**
 
+If you find Lomorage useful, please support us below:
+
+<a href="https://www.buymeacoffee.com/lomorage" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" ></a>
+
+<a href="https://opencollective.com/lomoware/donate" target="_blank">
+  <img src="https://opencollective.com/webpack/donate/button@2x.png?color=blue" width=300 />
+</a>
+
 - Automatic Back Up: Automatically backs up all your photos from smartphones and computers to your own hard drive; Redundancy backup lowers the risk of losing data. No rate limits.
 
 - Original Quality: Whether it’s a 50 megapixel raw photo or hour long 4K HD video, back up your high resolution content as it is without any modification. What you take is what is saved.
