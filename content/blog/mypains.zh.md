@@ -36,7 +36,7 @@ banner = "/img/blog/mypains/banner.png"
 
 **Lomorage的解决方法**：
 
-- 安装Lomorage服务器程序或者购买Lomorage智存盒子: 
+- 安装Lomorage服务器程序: 
   
     >  Lomorage 服务器可以装在您的**树莓派或者Windows或者MacOS系统**上
 

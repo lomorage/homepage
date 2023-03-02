@@ -38,6 +38,8 @@ Below picture is my case:
 
  Open Lomorage Photo Assistant in your Windows, and set as blow:
 
+ > **Make sure thers is no content under the folder **W:\wd-test****
+
  <div align="center">
 <p class="screenshoot">
   <img width="100%" src="/img/blog/set_wd_as_backup/set_redundancy_agent.png">
