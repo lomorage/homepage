@@ -1,16 +1,22 @@
 +++
-title = "2分钟迁移并扩展存储数据"
+title = "简单快速地迁移数据和扩展存储空间"
 tags = ["WD", "MyCloud", "Redundancy"]
 categories = ["BLOG"]
 date = "2023-03-02T13:43:40"
 banner = "/img/blog/migrate_from_pi_win/migrate_pi_win.jpg"
 +++
 
-  **2分钟迁移并扩展存储数据**
+  **简单快速地迁移数据和扩展存储空间**
 
-  最近有个用户因为原先的存储盘已经满了，想把数据直接从原先的PI服务器迁移到Windows服务器上，并且扩大存储盘，让我们来看看最快的数据迁移扩展方法，本文也可以用来指导数据恢复。
+  最近有个用户因为原先的存储盘已经满了，想把数据直接从原先的PI服务器迁移到Windows服务器上，并且扩大存储盘，让我们来看看最快的数据迁移扩展方法，本文也可以用来指导数据恢复。本文以Windows为例，其它平台操作也类似。
+  
 <!--more--> 
 
+ <div align="center">
+<p class="screenshoot">
+  <img width="50%" src="/img/blog/migrate_from_pi_win/migrate_pi_win.jpg">
+</p>
+</div> 
 
 本文目录
 =================
