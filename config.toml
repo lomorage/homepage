@@ -8,7 +8,7 @@ defaultContentLanguage = "en"
 disqusShortname = "lomorage"
 
 # Enable Google Analytics by entering your tracking code
-googleAnalytics = "UA-138235951-1"
+googleAnalytics = "G-HZV662YYMW"
 
 title = "Lomorage"
 theme = "evie-hugo"
