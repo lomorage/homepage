@@ -81,4 +81,4 @@ sudo umount -a
 
 # 从备份恢复
 
-如果您的主备硬盘不幸坏掉来，您可以使用从备份来恢复。所有的文件包括照片视频和数据库都会备份，您可以从用户目录下拷贝"assets.db"到"/opt/lomorage/var/assets.db"目录下，并修改"assets.db"中"user"表，将"home_dir"设置为您新的磁盘加载路径。我们后续会让恢复功能更容易使用，但现在您只能手工操作，如果您碰到问题不能解决，可以加入我们的[slack channel](https://join.slack.com/t/lomorage/shared_invite/enQtODc4MTE5ODQzNzkyLTRlY2U4MTQ1YjczYjBhMDcwMmExYTUxNTg2NTE5YmRkZjg2ZWQwZjg1MjEwMjQzZWVjMmEwZjk3ZGIyODY4ODM)或者[邮件](mailto: support@lomorage.com)联系我们帮您解决。
+如果您的主备硬盘不幸坏掉来，您可以使用从备份来恢复。所有的文件包括照片视频和数据库都会备份，您可以从用户目录下拷贝"assets.db"到"/opt/lomorage/var/assets.db"目录下，并修改"assets.db"中"user"表，将"home_dir"设置为您新的磁盘加载路径。我们后续会让恢复功能更容易使用，但现在您只能手工操作，如果您碰到问题不能解决，[邮件](mailto: support@lomorage.com)联系我们帮您解决。

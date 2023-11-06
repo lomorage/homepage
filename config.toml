@@ -137,7 +137,6 @@ theme = "evie-hugo"
 
 [params.footer]
     firstcolumn = ["<a href=\"https://github.com/lomorage/homepage\" target=\"_blank\" style=\"opacity: 1;\"><i class='fab fa-2x fa-github'></i></a>"]
-    secondcolumn = ["<a href=\"https://join.slack.com/t/lomorage/shared_invite/enQtODc4MTE5ODQzNzkyLTRlY2U4MTQ1YjczYjBhMDcwMmExYTUxNTg2NTE5YmRkZjg2ZWQwZjg1MjEwMjQzZWVjMmEwZjk3ZGIyODY4ODM\" target=\"_blank\" style=\"opacity: 1;\"><i class='fab fa-2x fa-slack'></i></a>"]
     thirdcolumn = ["<a href=\"mailto:support@lomorage.com\" target=\"_blank\" style=\"opacity: 1;\"><i class='fa fa-2x fa-envelope'></i></a>"]
 
 
