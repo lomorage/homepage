@@ -24,7 +24,7 @@ PhotoPrism is an Open Source AI Photo Management tool, and it works very well al
 
 PhotoPrism has a demo site you can try it out [https://demo-zh.photoprism.app/browse](https://demo-zh.photoprism.app/browse).
 
-PhotoPrism has mature Web App, however the [mobile APP](https://github.com/thielepaul/photoprism-mobile) is developed by 3rd party, and it's not ready yet, still in beta testing, and the [API changes]((https://github.com/photoprism/photoprism/pull/995)) on server is not merged yet, the official developer doesn't have resource to review the code yet.
+PhotoPrism has mature Web App, however the [mobile APP](https://github.com/thielepaul/photoprism-mobile) is developed by 3rd party, and it's not ready yet, still in beta testing, and the [API changes](https://github.com/photoprism/photoprism/pull/995) on server is not merged yet, the official developer doesn't have resource to review the code yet.
 
 For those who would like to upload their photo to PhotoPrism, the official suggestion is to use [PhotoSync](https://www.photosync-app.com/home.html), however PhotoSync will charge you on [backup the original size](https://www.photosync-app.com/support/ios/answers/what-is-the-difference-between-photosync-pro-and-premium.html). [Lomorage](https://lomorage.com) can be a very good alternative for this without charing anything. The following steps will show you how to install and configure Photoprism to work with Lomorage, it's installed on **Raspberry Pi 4**, but you can install PhotoPrism on other platforms because it's deployed via Docker, and you can refer to [official documentation](https://docs.photoprism.app/getting-started/docker-compose/), and Lomorage is cross platform as well.
 
