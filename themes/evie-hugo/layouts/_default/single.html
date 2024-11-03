@@ -31,7 +31,7 @@
 			<div class="page__main">
 				<div class="text-container">{{ .Content }}</div>
 
-				{{ if .Site.DisqusShortname }}
+				{{ if .Site.Config.Services.Disqus.Shortname }}
 				<div id="comments">
 					{{ template "_internal/disqus.html" . }}
 				</div>
