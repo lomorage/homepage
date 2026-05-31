@@ -2,29 +2,25 @@
 <div class="hero">
 	<div class="hero__overlay hero__overlay--gradient"></div>
 	<div class="hero__mask"></div>
+	<div class="hero__glow-blob"></div>
+	<div class="hero__glow-blob hero__glow-blob--2"></div>
 	<div class="hero__inner">
 		<div class="container">
 			<div class="hero__content">
 				<div class="hero__content__inner" id="navConverter">
 					<h1 class="hero__title">{{ .Params.hero.title | markdownify}}</h1>
 					<p class="hero__text">{{ .Params.hero.text| markdownify }}</p>
-					{{ range.Params.hero.button }}
-
-					{{if .accent}}
-
-					<a href="{{ .url| safeURL }}" class="button button__accent">{{ .title | markdownify}}</a>
-
-					{{ else if .scroll}}
-
-					<a href="{{ .url | safeURL }}" class="button hero__button scroll">{{ .title | markdownify }}</a>
-
-					{{else}}
-
-					<a href="{{ .url| safeURL }}" class="button hero__button">{{ .title | markdownify}}</a>
-
-					{{ end }}
-
-					{{ end }}
+					<div class="hero__actions">
+						{{ range .Params.hero.button }}
+						{{ if .accent }}
+						<a href="{{ .url | safeURL }}" class="button button__accent hero-button-primary">{{ .title | markdownify}}</a>
+						{{ else if .scroll }}
+						<a href="{{ .url | safeURL }}" class="button hero__button scroll hero-button-outline">{{ .title | markdownify }}</a>
+						{{ else }}
+						<a href="{{ .url | safeURL }}" class="button hero__button hero-button-secondary">{{ .title | markdownify}}</a>
+						{{ end }}
+						{{ end }}
+					</div>
 				</div>
 			</div>
 		</div>

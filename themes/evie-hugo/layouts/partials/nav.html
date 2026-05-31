@@ -1,18 +1,24 @@
 <!-- navbar -->
-<div class="navbar navbar--extended">
+<div class="navbar navbar--extended glass-navbar">
 	<nav class="nav__mobile"></nav>
 	<div class="container">
 		<div class="navbar__inner">
-			<a href="/" class="navbar__logo">{{ .Site.Title }} </a>
+			<a href="{{ if eq .Lang "zh" }}/zh/{{ else }}/{{ end }}" class="navbar__logo">{{ .Site.Title }}<span class="logo-dot">.</span></a>
 			<nav class="navbar__menu">
 				<!-- prettier-ignore -->
 				<ul>
-					{{range.Site.Menus.main}}
+					{{ $currentPage := . }}
+					{{ range .Site.Menus.main }}
 					{{ if eq .Identifier "installation" }}
-					<li><a href="{{ .URL | relURL }}" class="button button__accent">{{ .Name }}</a></li>
+					<li><a href="{{ .URL | safeURL }}" class="button button__accent nav-button">{{ .Name }}</a></li>
 					{{ else }}
-					<li><a href="{{ .URL | relURL }}">{{ .Name }}</a></li>
+					<li><a href="{{ .URL | safeURL }}">{{ .Name }}</a></li>
 					{{ end }}
+					{{ end }}
+					{{ if eq $currentPage.Lang "zh" }}
+					<li><a href="/" class="nav-lang-switch" onclick="sessionStorage.setItem('prevent_lang_redirect', 'true');"><i class="fas fa-globe"></i> EN</a></li>
+					{{ else }}
+					<li><a href="/zh/" class="nav-lang-switch" onclick="sessionStorage.removeItem('prevent_lang_redirect');"><i class="fas fa-globe"></i> 中文</a></li>
 					{{ end }}
 				</ul>
 			</nav>

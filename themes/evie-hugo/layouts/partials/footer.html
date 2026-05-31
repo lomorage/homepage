@@ -1,7 +1,7 @@
-<div class="footer footer--dark">
+<div class="footer footer--dark modern-footer">
 	<div class="container">
 		<div class="footer__inner">
-			<a href="/" class="footer__textLogo">{{ .Site.Title }}</a>
+			<a href="{{ if eq .Lang "zh" }}/zh/{{ else }}/{{ end }}" class="footer__textLogo">{{ .Site.Title }}<span class="logo-dot">.</span></a>
 
 			<div class="footer__data">
 				<div class="footer__data__item">
@@ -22,26 +22,8 @@
 			</div>
 		</div>
 
-		<div class="footer__inner">
-			<!-- <a href="https://www.iplaysoft.com/lomorage.html">
-				<img src="/img/links/iplaysoft.png"/ height="80">
-			</a>
-
-			<a href="https://www.canalapps.com/apps/alternativas-google-fotos-almacenamiento-gratuito-3983/">
-				<img src="/img/links/canalapps.png"/ height="80">
-			</a>
-			
-			<a href="https://futurezone.at/produkte/google-fotos-wird-kostenpflichtig-die-besten-alternativen/401099544">
-				<img src="/img/links/futurezone.png"/ height="80">
-			</a>
-			
-			<a href="https://nxtrung87.medium.com/use-raspberry-to-back-up-photos-instead-of-google-photo-5101165d3b83">
-				<img src="/img/links/medium.png"/ height="80">
-			</a>
-			
-			<a href="https://www.appinn.com/lomorage-backup-photos/">
-				<img src="/img/links/appinn.png"/ height="80">
-			</a> -->
+		<div class="footer__inner footer__bottom">
+			<p class="footer__copy">&copy; {{ now.Format "2006" }} {{ .Site.Title }}. All rights reserved.</p>
 		</div>
 		
 	</div>

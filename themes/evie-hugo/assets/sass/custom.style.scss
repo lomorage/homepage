@@ -89,3 +89,499 @@
 		color: $text;
 	}
 }
+
+/* ==========================================================================
+   Lomorage Modern Redesign Styles
+   ========================================================================== */
+
+// Typography Globals
+h1, h2, h3, h4, h5, h6 {
+	font-family: $font-heading;
+	font-weight: 600;
+	color: $text-dark;
+	letter-spacing: -0.02em;
+}
+
+p {
+	font-family: $font;
+	color: $text;
+}
+
+// Glassmorphism Navigation Bar
+.glass-navbar {
+	position: fixed !important;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 1000;
+	background: rgba(255, 255, 255, 0.75) !important;
+	backdrop-filter: blur(16px);
+	-webkit-backdrop-filter: blur(16px);
+	border-bottom: 1px solid rgba(226, 232, 240, 0.8) !important;
+	transition: all 0.3s ease;
+	box-shadow: 0 4px 30px rgba(0, 0, 0, 0.02);
+
+	.navbar__logo {
+		font-family: $font-heading;
+		font-weight: 700;
+		font-size: 1.5rem;
+		color: $text-dark;
+		letter-spacing: -0.03em;
+		display: flex;
+		align-items: center;
+
+		.logo-dot {
+			color: $primary;
+			font-weight: 900;
+		}
+	}
+
+	.navbar__menu ul li a {
+		font-family: $font;
+		font-weight: 500;
+		color: $text;
+		font-size: 0.95rem;
+		transition: all 0.3s ease;
+
+		&:hover {
+			color: $primary;
+		}
+	}
+
+	.nav-button {
+		font-weight: 600 !important;
+		padding: 5pt 15pt !important;
+		box-shadow: 0 4px 12px rgba(79, 70, 229, 0.2);
+		
+		&:hover {
+			box-shadow: 0 6px 18px rgba(79, 70, 229, 0.3);
+			transform: translateY(-1px);
+		}
+	}
+
+	.nav-lang-switch {
+		padding: 4pt 10pt;
+		border: 1px solid rgba(226, 232, 240, 0.8);
+		border-radius: 8px;
+		font-size: 0.85rem !important;
+		margin-left: 10px;
+		display: inline-flex;
+		align-items: center;
+		gap: 6px;
+		background: rgba(255, 255, 255, 0.6);
+
+		&:hover {
+			border-color: $primary;
+			background: rgba(79, 70, 229, 0.05);
+			color: $primary !important;
+		}
+	}
+}
+
+// Sleek Hero Section
+.hero {
+	background: radial-gradient(120% 120% at 50% 100%, #ffffff 0%, #f8fafc 100%) !important;
+	box-shadow: none !important;
+	border-bottom: 1px solid rgba(226, 232, 240, 0.4);
+	position: relative;
+	overflow: hidden;
+
+	&__overlay {
+		display: none; // Disable old overlay
+	}
+
+	&__mask {
+		display: none; // Disable old svg mask
+	}
+
+	&__content {
+		padding-top: 140px !important;
+		padding-bottom: 80px !important;
+		min-height: calc(88vh) !important;
+	}
+
+	&__content__inner {
+		max-width: 800px !important;
+	}
+
+	&__title {
+		font-family: $font-heading !important;
+		font-size: clamp(2.5rem, 5vw, 4rem) !important;
+		font-weight: 750 !important;
+		line-height: 1.15 !important;
+		color: $text-dark !important;
+		letter-spacing: -0.04em !important;
+		margin-bottom: 24px !important;
+		background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 30%, #4f46e5 100%);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+	}
+
+	&__text {
+		font-size: 1.2rem !important;
+		color: $text !important;
+		max-width: 60ch;
+		margin: 0 auto 40px auto !important;
+		line-height: 1.65 !important;
+	}
+
+	&__actions {
+		display: flex;
+		gap: 16px;
+		justify-content: center;
+		align-items: center;
+		flex-wrap: wrap;
+
+		.button {
+			margin: 0 !important;
+		}
+	}
+
+	// Ambient Glow Blobs
+	&__glow-blob {
+		position: absolute;
+		width: 400px;
+		height: 400px;
+		background: radial-gradient(circle, rgba(79, 70, 229, 0.12) 0%, rgba(14, 165, 233, 0.04) 50%, rgba(255, 255, 255, 0) 100%);
+		border-radius: 50%;
+		filter: blur(60px);
+		top: -10%;
+		left: 10%;
+		z-index: 1;
+		pointer-events: none;
+
+		&--2 {
+			top: 30%;
+			right: 5%;
+			left: auto;
+			width: 500px;
+			height: 500px;
+			background: radial-gradient(circle, rgba(14, 165, 233, 0.1) 0%, rgba(16, 185, 129, 0.02) 60%, rgba(255, 255, 255, 0) 100%);
+		}
+	}
+}
+
+// Bouncing Down Arrow
+.hero__sub__down {
+	animation: bounce 2s infinite;
+	color: $text !important;
+	transition: all 0.3s ease;
+}
+
+@keyframes bounce {
+	0%, 20%, 50%, 80%, 100% {
+		transform: translateY(0);
+	}
+	40% {
+		transform: translateY(-8px);
+	}
+	60% {
+		transform: translateY(-4px);
+	}
+}
+
+// Premium Buttons Styling
+.button {
+	font-family: $font;
+	font-weight: 600;
+	border-radius: 10px !important;
+	padding: 10px 24px !important;
+	font-size: 0.95rem !important;
+	transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1) !important;
+	border: 1.5px solid transparent !important;
+	margin-bottom: 0 !important;
+
+	&__accent, &.hero-button-primary {
+		background: $primary !important;
+		color: #ffffff !important;
+		box-shadow: 0 4px 14px rgba(79, 70, 229, 0.25) !important;
+
+		&:hover {
+			background: darken($primary, 4%) !important;
+			box-shadow: 0 6px 18px rgba(79, 70, 229, 0.35) !important;
+			transform: translateY(-2px);
+		}
+	}
+
+	&.hero-button-outline {
+		border: 1.5px solid rgba(79, 70, 229, 0.25) !important;
+		color: $primary !important;
+		background: rgba(79, 70, 229, 0.02) !important;
+
+		&:hover {
+			border-color: $primary !important;
+			background: rgba(79, 70, 229, 0.06) !important;
+			transform: translateY(-2px);
+		}
+	}
+
+	&.hero-button-secondary {
+		background: rgba(226, 232, 240, 0.4) !important;
+		color: $text-dark !important;
+
+		&:hover {
+			background: rgba(226, 232, 240, 0.7) !important;
+			transform: translateY(-2px);
+		}
+	}
+}
+
+// Features Section Grid & Cards
+.features-section {
+	padding: 100px 0 !important;
+	background: $background;
+
+	&__header {
+		text-align: center;
+		max-width: 750px;
+		margin: 0 auto 64px auto;
+
+		.features-section__title {
+			font-family: $font-heading;
+			font-size: clamp(2rem, 3.5vw, 2.6rem);
+			font-weight: 750;
+			letter-spacing: -0.03em;
+			color: $text-dark;
+			margin-bottom: 16px;
+			margin-top: 0;
+		}
+
+		.features-section__subtitle {
+			font-size: 1.15rem;
+			color: $text;
+			line-height: 1.6;
+			margin-bottom: 0;
+		}
+	}
+}
+
+.features-grid {
+	display: grid;
+	grid-template-columns: 1fr;
+	gap: 24px;
+
+	@include tablet {
+		grid-template-columns: repeat(2, 1fr);
+	}
+
+	@include desktop {
+		grid-template-columns: repeat(3, 1fr);
+	}
+}
+
+.feature-card {
+	background: $background-alt;
+	border: 1px solid rgba(226, 232, 240, 0.7);
+	border-radius: 16px;
+	padding: 32px;
+	transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	position: relative;
+	overflow: hidden;
+
+	&::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background: linear-gradient(135deg, rgba(79, 70, 229, 0.02) 0%, rgba(14, 165, 233, 0.02) 100%);
+		opacity: 0;
+		transition: opacity 0.3s ease;
+	}
+
+	&:hover {
+		transform: translateY(-6px);
+		border-color: rgba(79, 70, 229, 0.25);
+		box-shadow: 0 12px 30px rgba(79, 70, 229, 0.05);
+
+		&::before {
+			opacity: 1;
+		}
+
+		.feature-card__icon-bg {
+			transform: scale(1.05) rotate(2deg);
+			background: rgba(79, 70, 229, 0.08);
+		}
+	}
+
+	&__media {
+		margin-bottom: 20px;
+		z-index: 2;
+	}
+
+	&__icon-bg {
+		width: 56px;
+		height: 56px;
+		background: rgba(226, 232, 240, 0.4);
+		border-radius: 12px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		transition: all 0.3s ease;
+		color: $text-dark;
+	}
+
+	&__image {
+		width: 28px;
+		height: 28px;
+		object-fit: contain;
+	}
+
+	&__title {
+		font-family: $font-heading;
+		font-size: 1.2rem;
+		font-weight: 650;
+		color: $text-dark;
+		margin-bottom: 10px;
+		margin-top: 0;
+		z-index: 2;
+	}
+
+	&__text {
+		font-size: 0.95rem;
+		color: $text;
+		line-height: 1.6;
+		margin-bottom: 0;
+		z-index: 2;
+	}
+}
+
+// Modern CTA Section & Card
+.cta-section {
+	padding: 80px 0 !important;
+	background: $background;
+}
+
+.cta-card {
+	position: relative;
+	background: linear-gradient(135deg, #090d16 0%, #1e1b4b 100%);
+	border-radius: 24px;
+	padding: 60px 40px;
+	text-align: center;
+	overflow: hidden;
+	box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+
+	&__glow {
+		position: absolute;
+		width: 500px;
+		height: 500px;
+		background: radial-gradient(circle, rgba(79, 70, 229, 0.25) 0%, rgba(14, 165, 233, 0) 70%);
+		border-radius: 50%;
+		filter: blur(80px);
+		top: -150px;
+		left: -150px;
+		pointer-events: none;
+	}
+
+	&__inner {
+		position: relative;
+		z-index: 2;
+		max-width: 600px;
+		margin: 0 auto;
+	}
+
+	&__title {
+		font-family: $font-heading !important;
+		font-size: clamp(2rem, 3.5vw, 2.5rem) !important;
+		font-weight: 750 !important;
+		color: #ffffff !important;
+		letter-spacing: -0.03em !important;
+		margin-top: 0 !important;
+		margin-bottom: 16px !important;
+		line-height: 1.25 !important;
+	}
+
+	&__text {
+		font-size: 1.1rem !important;
+		color: rgba(255, 255, 255, 0.7) !important;
+		line-height: 1.6 !important;
+		margin-bottom: 32px !important;
+	}
+
+	&__button {
+		background: $accent !important;
+		color: #ffffff !important;
+		padding: 12px 36px !important;
+		box-shadow: 0 4px 14px rgba(16, 185, 129, 0.35) !important;
+		border-radius: 10px !important;
+		font-weight: 600 !important;
+
+		&:hover {
+			background: lighten($accent, 4%) !important;
+			box-shadow: 0 6px 18px rgba(16, 185, 129, 0.5) !important;
+			transform: translateY(-2px) !important;
+		}
+	}
+}
+
+// Sleek Footer Redesign
+.modern-footer {
+	background-color: $background-dark !important;
+	padding: 60px 0 40px 0 !important;
+	border-top: 1px solid rgba(255, 255, 255, 0.05);
+
+	.footer__textLogo {
+		font-family: $font-heading;
+		font-weight: 750;
+		font-size: 1.5rem;
+		color: #ffffff;
+		letter-spacing: -0.03em;
+		margin-bottom: 24px;
+		display: inline-flex;
+		align-items: center;
+
+		.logo-dot {
+			color: $primary;
+			font-weight: 900;
+		}
+	}
+
+	.footer__inner {
+		align-items: flex-start;
+	}
+
+	.footer__data {
+		display: flex;
+		gap: 32px;
+		justify-content: flex-end;
+		flex-direction: row;
+	}
+
+	.footer__data__item {
+		margin-bottom: 0;
+		padding-bottom: 0;
+	}
+
+	.footer__row a {
+		color: rgba(255, 255, 255, 0.6) !important;
+		border-bottom: none !important;
+		font-size: 1.15rem;
+		transition: all 0.25s ease;
+
+		&:hover {
+			color: #ffffff !important;
+			transform: scale(1.1);
+		}
+	}
+
+	.footer__bottom {
+		border-top: 1px solid rgba(255, 255, 255, 0.05);
+		margin-top: 40px;
+		padding-top: 24px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 100%;
+	}
+
+	.footer__copy {
+		color: rgba(255, 255, 255, 0.4) !important;
+		font-size: 0.85rem;
+		margin: 0;
+		font-family: $font;
+	}
+}

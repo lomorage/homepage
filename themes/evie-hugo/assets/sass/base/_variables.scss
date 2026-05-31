@@ -1,19 +1,20 @@
 // Colors
-$primary: #63aeff;
-$secondary: #41c6ff;
-$accent: #06d19c;
+$primary: #4f46e5;      // Modern Vibrant Indigo
+$secondary: #0ea5e9;    // Modern Vibrant Sky Blue
+$accent: #10b981;       // Modern Emerald Mint
 $primary-dark: darken($primary, 8%);
-$text: #666;
-$text-dark: #111;
+$text: #475569;         // Slate-600 (clean body text)
+$text-dark: #0f172a;    // Slate-900 (bold headings)
 $background: #ffffff;
-$background-alt: #f7f7f7;
-$background-dark: #333c44;
-$line: #eee;
+$background-alt: #f8fafc; // Slate-50 (clean soft grey-blue)
+$background-dark: #090d16; // Deep space black
+$line: #e2e8f0;         // Slate-200 (modern thin borders)
 $success: $accent;
-$error: tomato;
+$error: #ef4444;        // Modern Red-500
 
 // Typography
-$font: "Lato", sans-serif;
+$font: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+$font-heading: "Outfit", sans-serif;
 $font-size: 15px;
 $line-height: 1.7;
 $light: 300;
@@ -21,7 +22,7 @@ $normal: 400;
 $bold: 700;
 
 // Other variables
-$radius: 30px;
+$radius: 12px;          // Modern elegant rounded corners
 
 // Containers
 $containerWidth: 88%; // Percentage of screen width

@@ -1,8 +1,7 @@
 <head>
 	<script type="text/javascript">
 		var userLang = navigator.language || navigator.userLanguage;
-		console.log(window.location.pathname);
-		if (userLang.startsWith("zh") && window.location.pathname == "/") {
+		if (userLang.startsWith("zh") && window.location.pathname == "/" && !sessionStorage.getItem("prevent_lang_redirect")) {
 				window.location.href = '/zh/';
 		}
 	</script>
@@ -12,7 +11,7 @@
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 	<title>{{ .Title }} | {{ .Site.Title }}</title>
-	<link href="https://fonts.googleapis.com/css?family=Lato:400" rel="stylesheet" />
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet" />
 	<script defer src="https://use.fontawesome.com/releases/v5.15.3/js/all.js"></script>
 
 	{{ template "_internal/google_analytics.html" . }}
@@ -49,7 +48,7 @@
 	{{ $e21 := resources.Get "sass/components/_verticalMenu.scss" }}
 	{{ $c := resources.Get "sass/custom.style.scss" }}
 
-	{{ $style := slice $e1 $e2 $e3 $e4 $e5 $e6 $e7 $e8 $e10 $e11 $e12 $e13 $e14 $e15 $e16 $e17 $e18 $e19 $e20 $e21 $c | resources.Concat "css/style.css" | resources.ToCSS | fingerprint | minify }}
+	{{ $style := slice $e1 $e2 $e3 $e4 $e5 $e6 $e7 $e8 $e10 $e11 $e12 $e13 $e14 $e15 $e16 $e17 $e18 $e19 $e20 $e21 $c | resources.Concat "css/style.css" | toCSS | fingerprint | minify }}
 
 	<link rel="stylesheet" type="text/css" href="{{ $style.RelPermalink }}" />
 </head>

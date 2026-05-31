@@ -1,24 +1,19 @@
-<div class="steps landing__section">
+<div class="features-section landing__section">
 	<div class="container">
-		<h2>{{ .Params.triple.title | markdownify }}</h2>
-		<p>{{ .Params.triple.text| markdownify }}</p>
-	</div>
-	<div class="container">
-		<div class="steps__inner">
-			{{ range $i, $box :=  .Params.triple.box }}
-
-			{{if eq (mod $i 3) 0}}
+		<div class="features-section__header">
+			<h2 class="features-section__title">{{ .Params.triple.title | markdownify }}</h2>
+			<p class="features-section__subtitle">{{ .Params.triple.text| markdownify }}</p>
 		</div>
-		<div class="steps__inner">
-			{{ end }}
-			<div class="step">
-				<div class="steps__inner">
-					<div class="step">
-						<div class="step__media"><img src="{{$box.src}}" alt="{{$box.alt}}" class="step__image" /></div>
-						<h4>{{ $box.title | markdownify }}</h4>
-						<p class="step__text">{{ $box.text | markdownify }}</p>
+		<div class="features-grid">
+			{{ range .Params.triple.box }}
+			<div class="feature-card">
+				<div class="feature-card__media">
+					<div class="feature-card__icon-bg">
+						<img src="{{ .src }}" alt="{{ .alt }}" class="feature-card__image" />
 					</div>
 				</div>
+				<h4 class="feature-card__title">{{ .title | markdownify }}</h4>
+				<p class="feature-card__text">{{ .text | markdownify }}</p>
 			</div>
 			{{ end }}
 		</div>

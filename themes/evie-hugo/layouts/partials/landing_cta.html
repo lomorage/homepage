@@ -1,10 +1,19 @@
 {{ if .Params.cta }}
-<div class="cta cta--reverse">
+<div class="cta-section landing__section">
 	<div class="container">
-		<div class="cta__inner">
-			<h2 class="cta__title">{{.Params.cta.title}}</h2>
-			<p class="cta__sub cta__sub--center">{{.Params.cta.text | markdownify}}</p>
-			<a href="{{.Params.cta.button.url| safeURL}}" class="button button__accent">{{.Params.cta.button.title| markdownify}}</a>
+		<div class="cta-card">
+			<div class="cta-card__glow"></div>
+			<div class="cta-card__inner">
+				{{ if .Params.cta.title }}
+				<h2 class="cta-card__title">{{.Params.cta.title}}</h2>
+				{{ end }}
+				{{ if .Params.cta.text }}
+				<p class="cta-card__text">{{.Params.cta.text | markdownify}}</p>
+				{{ end }}
+				{{ if .Params.cta.button }}
+				<a href="{{.Params.cta.button.url| safeURL}}" class="button button__accent cta-card__button">{{.Params.cta.button.title| markdownify}}</a>
+				{{ end }}
+			</div>
 		</div>
 	</div>
 </div>

@@ -141,4 +141,4 @@ theme = "evie-hugo"
 
 
 [Permalinks]
-    blog = "/blog/:year/:month/:day/:filename/"
+    blog = "/blog/:year/:month/:day/:contentbasename/"
