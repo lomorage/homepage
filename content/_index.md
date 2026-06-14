@@ -1,8 +1,9 @@
 ---
 title: Home
 hero:
-  title: Your Free Private Photo Cloud
-  text: Lomorage is free private photo cloud solution that puts you in control of your photos and videos. Enjoy the moments from any device with your own server, with no strings attached. Your photos, your videos, your disks, your way.
+  title: Keep Memories at Home, Give Privacy Back to Yourself
+  text: >-
+    Lomorage is an open-source private photo vault designed for families. Instead of chasing feature bloat and complex updates, we focus on two core needs: saving your phone's storage and serving as a rock-solid, original-quality data safe. No monthly cloud fees, 100% private.
   button:
     - title: See it in Action
       url: /video/Lomorage-tutorial.mp4
@@ -13,59 +14,36 @@ hero:
       url: #
       scroll: yes
 triple:
-  title: What is Lomorage?
-  text: Lomorage enables you to backup photos / videos from any devices to your self-hosted server, and intelligently manages these personal assets via AI. Run the Lomorage server at your home, download mobile client to save the memories, and enjoy the moments.
+  title: Why Lomorage? Focus on Extreme Stability, Simplicity, and Security
+  text: Most open-source photo apps (like Immich) pursue feature bloat, leading to complex deployment barriers and frequent updates that break systems. Lomorage takes the opposite path, delivering a set-and-forget appliance-like stability to safeguard your digital assets.
   box:
-    - title: Automatic Back Up
-      text: Automatically backs up all your photos from smartphones and computers to your own hard drive; Redundancy backup lowers the risk of losing data. No rate limits.
+    - title: "Need 1: Save Phone Storage"
+      text: >-
+        Phone storage full, forced to delete photos daily? Lomorage creates a secure local "bottomless pit". Once photos are backed up to your local server, safely clear originals on your phone to instantly reclaim tens of GB, saving you money on buying a bigger phone or subscribing to iCloud.
       src: /img/data-storage-svgrepo-com.svg
-      alt: Automatic Back Up
-
-    - title: Original Quality
-      text: Whether it's a 50 megapixel raw photo or hour long 4K HD video, back up your high resolution content as it is without any modification. What you take is what is saved.
-      src: /img/raw-svgrepo-com.svg
-      alt: Quality
-
-    - title: Intelligent Organization
-      text: Use AI to sort your photos by date, location, person, scene; search by texts in photos; detect similar photos; remove duplicated assets; history of today reminder.
-      src: /img/file-storage-svgrepo-com.svg
-      alt: Intelligent Organization
-
-    - title: Unlimited Accounts
-      text: One server for all family members while each member has its own account, no account number limits. Share becomes easy.
-      src: /img/family-svgrepo-com.svg
-      alt: Unlimited Accounts
-
-    - title: Your Photos, Wherever You Are
-      text:
-        Browse ALL your photos and videos from apps on your Android, iOS, Chromecast, Fire TV device, or a web browser; No need to worry about the phone space.
-      src: /img/undraw-devices.svg
-      alt: Your Photos, Wherever You Are
-
-    - title: It's Your Data
-      text:
-        No tracking. We believe in privacy is super important for everyone, and anything we might collect (crash logs, discovery, etc.) is opt-in only. no vendor lock in.
+      alt: Save Phone Storage
+    - title: "Need 2: Original Data Safe"
+      text: >-
+        Phones get lost, broken, or water-damaged. Memories shouldn't vanish. Lomorage provides peace of mind with a local backup safe. You don't need to check old photos daily, but you can rest assured: the moment you connect to your home Wi-Fi, original photos and 4K videos are secured on your hard drive.
       src: /img/security-svgrepo-com.svg
-      alt: It's Your Data
-
-    - title: Flexible Storage
-      text:
-        All major file systems(FAT32, NTFS, EXT etc) are supported; Choose your own hard drive, no re-format needed; Up to 16T hard drive is supported.
+      alt: Original Data Safe
+    - title: "Innovation: AI Photo Slimming"
+      text: >-
+        Afraid of clearing your phone? Our PC-side AI analyzes photos overnight (zero mobile battery drain): low-value screenshots are suggested for deletion; daily scenery photos are replaced with 50KB HD thumbnails; high-value family photos stay on the phone for offline immediate viewing.
+      src: /img/file-storage-svgrepo-com.svg
+      alt: AI Photo Slimming
+    - title: Extreme Stability & Simplicity
+      text: We refuse bloated features like maps, complex UI, and frequent updates that break systems. Lomorage focuses on appliance-like stability. Run it on an old laptop, spare PC, or single-board computer, and enjoy a low-maintenance, set-and-forget backup environment.
       src: /img/hard-disk-svgrepo-com.svg
-      alt: Flexible Storage
-
-    - title: Cross Platform
-      text: Native iOS, Android client and Web client. Multiple platform server software (MAC/Linux/Windows) can let you choose any devices as self-host server.
+      alt: Extreme Stability & Simplicity
+    - title: Plug & Play, No Lock-In
+      text: Supports FAT32, NTFS, EXT, and other major file systems. Plug in your existing external hard drive and start backing up right away with no reformatting needed. Even if you stop using Lomorage, your photos remain organized and readable on any computer.
       src: /img/platform-svgrepo-com.svg
-      alt: Cross Platform
-
-    - title: Yes, it really costs nothing
-      text: No costs, no hidden fees. Setup on any old laptops, servers, or Single Board Computers, reuse your hard drives, install free Lomorage server software and client APP, then you are ready to go.
-      src: /img/delivery-truck-free-svgrepo-com.svg
-      alt: Yes, it really costs nothing
-
-#single:
-
+      alt: Plug & Play, No Lock-In
+    - title: Independent Accounts, 100% Private
+      text: One server supports unlimited family accounts, each completely isolated. Your photos are private, transferred at high speeds only over your local network, with zero cloud tracking or analytics. Your memories belong only to you.
+      src: /img/family-svgrepo-com.svg
+      alt: Independent Accounts, 100% Private
 cta:
   button:
     title: Download Now
