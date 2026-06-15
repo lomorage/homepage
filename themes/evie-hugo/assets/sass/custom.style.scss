@@ -585,3 +585,112 @@ p {
 		font-family: $font;
 	}
 }
+
+// Product Comparison Matrix Styles
+.compare-section {
+	padding: 100px 0 !important;
+	background: $background-alt;
+	border-top: 1px solid rgba(226, 232, 240, 0.5);
+	border-bottom: 1px solid rgba(226, 232, 240, 0.5);
+
+	&__header {
+		text-align: center;
+		max-width: 800px;
+		margin: 0 auto 60px auto;
+
+		.compare-section__title {
+			font-family: $font-heading;
+			font-size: clamp(2rem, 3.5vw, 2.5rem);
+			font-weight: 750;
+			letter-spacing: -0.03em;
+			color: $text-dark;
+			margin-bottom: 16px;
+			margin-top: 0;
+		}
+
+		.compare-section__subtitle {
+			font-size: 1.15rem;
+			color: $text;
+			line-height: 1.6;
+			margin-bottom: 0;
+		}
+	}
+}
+
+.compare-table-wrapper {
+	width: 100%;
+	overflow-x: auto;
+	border-radius: 16px;
+	border: 1px solid rgba(226, 232, 240, 0.8);
+	box-shadow: 0 10px 30px rgba(0, 0, 0, 0.02);
+	background: #ffffff;
+}
+
+.compare-table {
+	width: 100%;
+	border-collapse: collapse;
+	text-align: left;
+	font-family: $font;
+	font-size: 0.95rem;
+
+	th, td {
+		padding: 20px 24px;
+		border-bottom: 1px solid rgba(226, 232, 240, 0.6);
+		vertical-align: middle;
+	}
+
+	thead th {
+		font-family: $font-heading;
+		font-weight: 600;
+		color: $text-dark;
+		background: #ffffff;
+		border-bottom: 2px solid rgba(226, 232, 240, 0.8);
+		font-size: 1.05rem;
+
+		small {
+			font-weight: 400;
+			color: $text;
+			font-size: 0.8rem;
+		}
+	}
+
+	tbody tr {
+		transition: background 0.2s ease;
+
+		&:hover {
+			background: rgba(248, 250, 252, 0.5);
+		}
+
+		&:last-child td {
+			border-bottom: none;
+		}
+	}
+
+	// Highlight Column styling (Lomorage column)
+	.highlight-col {
+		background: rgba(79, 70, 229, 0.02) !important;
+		color: $primary !important;
+		border-left: 1px solid rgba(79, 70, 229, 0.15) !important;
+		border-right: 1px solid rgba(79, 70, 229, 0.15) !important;
+	}
+
+	.highlight-cell {
+		background: rgba(79, 70, 229, 0.02) !important;
+		border-left: 1px solid rgba(79, 70, 229, 0.1) !important;
+		border-right: 1px solid rgba(79, 70, 229, 0.1) !important;
+		font-weight: 500;
+		color: $text-dark;
+	}
+
+	.danger-cell {
+		color: #ef4444;
+	}
+
+	small {
+		font-size: 0.8rem;
+		color: $text;
+		display: inline-block;
+		margin-top: 4px;
+	}
+}
+

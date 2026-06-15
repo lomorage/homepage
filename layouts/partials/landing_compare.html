@@ -1,0 +1,155 @@
+<div class="compare-section landing__section">
+	<div class="container">
+		<div class="compare-section__header">
+			{{ if eq .Lang "zh" }}
+			<h2 class="compare-section__title">产品对比：找到最适合您的“家庭相册解决方案”</h2>
+			<p class="compare-section__subtitle">为什么 Lomorage 是更适合大多数人的选择？</p>
+			{{ else }}
+			<h2 class="compare-section__title">Product Comparison: Find Your Perfect Photo Solution</h2>
+			<p class="compare-section__subtitle">Why Lomorage is the smarter choice for most families.</p>
+			{{ end }}
+		</div>
+
+		<div class="compare-table-wrapper">
+			<table class="compare-table">
+				<thead>
+					<tr>
+						{{ if eq .Lang "zh" }}
+						<th>对比维度</th>
+						<th>公有云 <br><small>(iCloud / Google Photos)</small></th>
+						<th>传统 NAS <br><small>(群晖 / Immich)</small></th>
+						<th class="highlight-col">Lomorage <br><small>(Windows版)</small></th>
+						{{ else }}
+						<th>Dimension</th>
+						<th>Public Cloud <br><small>(iCloud / Google Photos)</small></th>
+						<th>Traditional NAS <br><small>(Synology / Immich)</small></th>
+						<th class="highlight-col">Lomorage <br><small>(Windows PC)</small></th>
+						{{ end }}
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>
+							{{ if eq .Lang "zh" }}
+							<strong>硬件购买成本</strong>
+							{{ else }}
+							<strong>Hardware Cost</strong>
+							{{ end }}
+						</td>
+						<td>
+							{{ if eq .Lang "zh" }}
+							￥0 <br><small>(直接用已有手机)</small>
+							{{ else }}
+							$0 <br><small>(Use your existing phone)</small>
+							{{ end }}
+						</td>
+						<td class="danger-cell">
+							{{ if eq .Lang "zh" }}
+							❌ ￥2000+ <br><small>(需额外购买专业双盘位设备)</small>
+							{{ else }}
+							❌ $300+ <br><small>(Requires buying dedicated NAS/drives)</small>
+							{{ end }}
+						</td>
+						<td class="highlight-cell">
+							{{ if eq .Lang "zh" }}
+							✨ ￥0 <br><small>(利用家里现有的 Windows 电脑)</small>
+							{{ else }}
+							✨ $0 <br><small>(Runs on your existing Windows PC)</small>
+							{{ end }}
+						</td>
+					</tr>
+					<tr>
+						<td>
+							{{ if eq .Lang "zh" }}
+							<strong>持续使用成本</strong>
+							{{ else }}
+							<strong>Ongoing Subscription</strong>
+							{{ end }}
+						</td>
+						<td class="danger-cell">
+							{{ if eq .Lang "zh" }}
+							❌ ￥240-800+/年 <br><small>(终身订阅“数字地租”)</small>
+							{{ else }}
+							❌ $30-$120+/year <br><small>(Lifetime digital rent fee)</small>
+							{{ end }}
+						</td>
+						<td>
+							{{ if eq .Lang "zh" }}
+							￥0 <br><small>(仅微量硬盘与系统电费)</small>
+							{{ else }}
+							$0 <br><small>(Only minor electricity/disk cost)</small>
+							{{ end }}
+						</td>
+						<td class="highlight-cell">
+							{{ if eq .Lang "zh" }}
+							✨ ￥0 <br><small>(利用开机闲置时间，无额外电费)</small>
+							{{ else }}
+							✨ $0 <br><small>(Leverages computer idle time, zero extra cost)</small>
+							{{ end }}
+						</td>
+					</tr>
+					<tr>
+						<td>
+							{{ if eq .Lang "zh" }}
+							<strong>隐私与安全级别</strong>
+							{{ else }}
+							<strong>Privacy & Security</strong>
+							{{ end }}
+						</td>
+						<td class="danger-cell">
+							{{ if eq .Lang "zh" }}
+							❌ 极低 <br><small>(AI 扫描、云端审查与账号误封风险)</small>
+							{{ else }}
+							❌ Low <br><small>(Risk of AI scanning, cloud bans, & hacks)</small>
+							{{ end }}
+						</td>
+						<td>
+							{{ if eq .Lang "zh" }}
+							高 <br><small>(但公网内网穿透与防火墙配置极复杂)</small>
+							{{ else }}
+							High <br><small>(But complex port forwarding & network setup)</small>
+							{{ end }}
+						</td>
+						<td class="highlight-cell">
+							{{ if eq .Lang "zh" }}
+							✨ 极高 <br><small>(全家局域网物理闭环，傻瓜化备份)</small>
+							{{ else }}
+							✨ High <br><small>(100% local home network loop, zero setup hassle)</small>
+							{{ end }}
+						</td>
+					</tr>
+					<tr>
+						<td>
+							{{ if eq .Lang "zh" }}
+							<strong>手机内存释放</strong>
+							{{ else }}
+							<strong>Phone Storage Relief</strong>
+							{{ end }}
+						</td>
+						<td>
+							{{ if eq .Lang "zh" }}
+							中 <br><small>(清理后需消耗流量在云端重新下载查看)</small>
+							{{ else }}
+							Medium <br><small>(Must download files over data to view them)</small>
+							{{ end }}
+						</td>
+						<td>
+							{{ if eq .Lang "zh" }}
+							高 <br><small>(彻底腾出手机空间)</small>
+							{{ else }}
+							High <br><small>(Completely frees up phone storage)</small>
+							{{ end }}
+						</td>
+						<td class="highlight-cell">
+							{{ if eq .Lang "zh" }}
+							✨ 高 <br><small>(高效腾空间 + 最近 30 天重要照片本地缓存)</small>
+							{{ else }}
+							✨ High <br><small>(Frees storage + offline caching for recent photos)</small>
+							{{ end }}
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+</div>
