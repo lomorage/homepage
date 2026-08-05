@@ -1,10 +1,11 @@
 #!/bin/bash
 
 usage="
-$(basename $0) -p [osx|win|lomod] [options...]
+$(basename $0) -p [osx|win|wincli|lomod] [options...]
 
     -h show this help text
-    -p platform, osx, win or lomod
+    -p platform, osx, win, wincli (windows-cli, the lomo-backend headless installer -- separate
+       from win/LomoAgent, never overwrites its release.json entry) or lomod
     -v lomoagent version string
     -u lomoagent zip download url
     -s lomoagent zip sha256 hash
@@ -42,8 +43,8 @@ while true; do
             ;;
         -p)
             PLATFORM=$2
-            if [ "$PLATFORM" != "android" ] && [ "$PLATFORM" != "osx" ] && [ "$PLATFORM" != "win" ] && [ "$PLATFORM" != "lomod" ]; then
-                echo "platform should be either \"osx\" or \"win\" or \"lomod\""
+            if [ "$PLATFORM" != "android" ] && [ "$PLATFORM" != "osx" ] && [ "$PLATFORM" != "win" ] && [ "$PLATFORM" != "wincli" ] && [ "$PLATFORM" != "lomod" ]; then
+                echo "platform should be either \"osx\" or \"win\" or \"wincli\" or \"lomod\""
                 exit
             else
                 echo "replace for platform: $PLATFORM"
@@ -169,6 +170,8 @@ if [ "$PLATFORM" == "osx" ]; then
     update_release "darwin"
 elif [ "$PLATFORM" == "win" ]; then
     update_release "windows"
+elif [ "$PLATFORM" == "wincli" ]; then
+    update_release "windows-cli"
 elif [ "$PLATFORM" == "lomod" ]; then
     update_release "lomod"
 elif [ "$PLATFORM" == "android" ]; then
