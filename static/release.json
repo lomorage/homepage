@@ -23,9 +23,9 @@
     "ReleaseTime": "2024-11-17_19-05-27"
   },
   "windows-cli": {
-    "Version": "2026-09-16.00-49-07.0.ef1284f",
-    "URL": "https://github.com/lomosw/lomosw.github.io/releases/download/lomod-windows-cli-2026-09-16.00-49-07.0.ef1284f/lomorage-windows-amd64-2026-09-16.00-49-07.0.ef1284f.zip",
-    "SHA256": "898a5d23997988979c9ac564dd7cc7d8aaeaaf86be7944b78615e83007e492c4"
+    "Version": "2026-09-16.09-42-06.0.efc17f6",
+    "URL": "https://github.com/lomosw/lomosw.github.io/releases/download/lomod-windows-cli-2026-09-16.09-42-06.0.efc17f6/lomorage-windows-amd64-2026-09-16.09-42-06.0.efc17f6.zip",
+    "SHA256": "d6d4a0eda45a94077cc1b04a700a1d08907e702b1d0a9ca4970af63488d28a1f"
   },
   "macos-cli-arm64": {
     "Version": "2026-08-08.17-55-42.0.00c8575",
