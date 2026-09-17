@@ -28,13 +28,13 @@
     "SHA256": "d6d4a0eda45a94077cc1b04a700a1d08907e702b1d0a9ca4970af63488d28a1f"
   },
   "macos-cli-arm64": {
-    "Version": "2026-08-08.17-55-42.0.00c8575",
-    "URL": "https://github.com/lomosw/lomosw.github.io/releases/download/lomod-macos-cli-00c8575/lomorage-macos-arm64-2026-08-08.17-55-42.0.00c8575.tar.gz",
-    "SHA256": "b6793ae618dc08fd895ee38becf0c520c4650b74551a7e46eaa8d038579f3210"
+    "Version": "2026-09-16.23-20-13.0.efc17f6",
+    "URL": "https://github.com/lomosw/lomosw.github.io/releases/download/lomod-macos-cli-efc17f6/lomorage-macos-arm64-2026-09-16.23-20-13.0.efc17f6.tar.gz",
+    "SHA256": "474683abfe9fd6483ab55b280c99bdd20969372e2e78ece0378be575bff5a678"
   },
   "macos-cli-amd64": {
-    "Version": "2026-08-08.17-54-13.0.00c8575",
-    "URL": "https://github.com/lomosw/lomosw.github.io/releases/download/lomod-macos-cli-00c8575/lomorage-macos-amd64-2026-08-08.17-54-13.0.00c8575.tar.gz",
-    "SHA256": "1208f28fc7c5d747375a1ef5d25dfe275944f0cea803c56a030fa7bce8fc0737"
+    "Version": "2026-09-16.23-21-43.0.efc17f6",
+    "URL": "https://github.com/lomosw/lomosw.github.io/releases/download/lomod-macos-cli-efc17f6/lomorage-macos-amd64-2026-09-16.23-21-43.0.efc17f6.tar.gz",
+    "SHA256": "3ba1ede3d75956b43aa2e6ef67ec9d69d65fe4f22ddcdff87352ce6f4773057c"
   }
 }
