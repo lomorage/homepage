@@ -20,7 +20,7 @@
     "seeHow": "See how to start",
     "free": "Free to use",
     "noSubscription": "No cloud subscription",
-    "madeFor": "You’ll need a computer, a phone, and the same home network.",
+    "madeFor": "Your phone. Your computer, NAS or Raspberry Pi. Your memories at home.",
     "sceneLabel": "An illustrative collection of memories saved at home",
     "littleMoments": "the good little things",
     "coastAlt": "Family members together on the beach at sunset",
@@ -124,7 +124,7 @@
     "contactUrl": "/contact/",
     "readyTitle": "Three things to have ready",
     "readyItems": [
-      "A computer with free disk space",
+      "A computer, supported NAS or Raspberry Pi with storage",
       "An iPhone or Android phone",
       "Both connected to the same home network"
     ],
@@ -132,9 +132,9 @@
     "productEyebrow": "A look inside the app",
     "productTitle": "See your photos.\nKnow what you’ve kept.",
     "productText": "Browse your backup collection on your phone, with photos and videos arranged by date. Find your way back to those little moments as they grow.",
-    "screenshot": "/img/buy/backup-en.png",
-    "screenshotAlt": "Lomorage mobile backup album showing dated photos and videos with green check marks",
-    "screenshotCaption": "Existing mobile app screenshot from the project. The interface may vary by version.",
+    "screenshot": "/img/app/lomomobile-family-illustration-en.png",
+    "screenshotAlt": "LomoMobile gallery illustration with family moments, children and pets",
+    "screenshotCaption": "Gallery preview · illustrative photos",
     "productPoints": [
       {
         "title": "A backup you can browse",
@@ -179,7 +179,7 @@
     "seeHow": "先看看怎么用",
     "free": "免费使用",
     "noSubscription": "无需云存储月费",
-    "madeFor": "需要一台电脑、一部手机，以及同一个家庭网络。",
+    "madeFor": "手机搭配电脑、NAS 或树莓派，回忆留在自己家。",
     "sceneLabel": "保存在家中的回忆照片示意",
     "littleMoments": "那些小小的美好",
     "coastAlt": "家人在日落时分相聚在海边",
@@ -283,7 +283,7 @@
     "contactUrl": "/zh/contact/",
     "readyTitle": "开始前，准备好这三样就行",
     "readyItems": [
-      "有空余硬盘空间的电脑",
+      "有存储空间的电脑，或支持的 NAS、树莓派",
       "iPhone 或 Android 手机",
       "手机和电脑连接同一家庭网络"
     ],
@@ -291,9 +291,9 @@
     "productEyebrow": "先看看，它用起来是什么样",
     "productTitle": "照片有没有存好，\n看过，才放心。",
     "productText": "在手机应用里查看备份相册，按日期翻看照片和视频。孩子小时候的片段，也能一张张找回来。",
-    "screenshot": "/img/buy/backup.png",
-    "screenshotAlt": "Lomorage 手机应用备份相册，按日期排列照片与视频，缩略图带有绿色勾选标记",
-    "screenshotCaption": "项目已有的手机应用截图，具体界面可能随版本变化。",
+    "screenshot": "/img/app/lomomobile-family-illustration.png",
+    "screenshotAlt": "LomoMobile 相册展示示意，照片为亲子、宠物与家庭日常",
+    "screenshotCaption": "相册效果展示 · 照片为示意内容",
     "productPoints": [
       {
         "title": "看得见的备份相册",

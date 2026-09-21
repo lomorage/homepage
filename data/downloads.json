@@ -61,14 +61,23 @@
     "qrAlt": "下载链接二维码",
     "connectTitle": "先试着备份几张，看看它们的新家。",
     "connectSteps": [
-      {"title": "让手机和电脑连到同一个家庭网络", "text": "确认电脑上的 Lomorage 已打开，并完成首次设置。"},
-      {"title": "在手机应用里连接家里的电脑", "text": "按提示添加或选择电脑，创建账号或登录。每位家人可以使用自己的账号。"},
-      {"title": "开始备份，再打开照片看一看", "text": "先用少量照片熟悉流程。确认备份完成、照片能打开，再逐步备份整个相册。"}
+      {
+        "title": "让手机和电脑连到同一个家庭网络",
+        "text": "确认电脑上的 Lomorage 已打开，并完成首次设置。"
+      },
+      {
+        "title": "在手机应用里连接家里的电脑",
+        "text": "按提示添加或选择电脑，创建账号或登录。每位家人可以使用自己的账号。"
+      },
+      {
+        "title": "开始备份，再打开照片看一看",
+        "text": "先用少量照片熟悉流程。确认备份完成、照片能打开，再逐步备份整个相册。"
+      }
     ],
     "connectionQuestion": "手机里没有找到电脑，怎么办？",
     "connectionAnswer": "当前快捷安装默认关闭自动发现。可在手机应用中手动填写电脑的局域网 IP 地址与端口（默认 8000）。确认两台设备在同一网络，且电脑防火墙允许家庭网络访问。手机中不要填写 localhost，它代表手机本身。",
     "connectionHelp": "需要帮忙连接？联系我们",
-    "optionalTitle": "已经有很多老照片，或使用其他设备？",
+    "optionalTitle": "已经有很多老照片？",
     "optionalNote": "第一次备份手机照片，可以先跳过这里。",
     "importTitle": "把旧硬盘里的照片也整理进来",
     "importText": "电脑端和手机账号准备好后，下载导入工具。解压打开，使用已有账号登录，选择照片文件夹，再开始导入。",
@@ -76,13 +85,40 @@
     "macImport": "Mac 导入工具",
     "importHelp": "查看文件夹与 USB 导入说明",
     "importHelpUrl": "https://docs.lomorage.com/zh/docs/Installation/lomorage-importer/",
-    "otherTitle": "使用 NAS、树莓派或 Linux？",
-    "otherText": "这些设备也有对应的安装方式，可以按自己的设备查阅文档。",
+    "otherTitle": "更多设备安装指南",
+    "otherText": "所有支持平台的入口都在上方，包括 NAS、树莓派与 Linux。",
     "otherLink": "查看其他设备安装说明",
     "otherUrl": "https://docs.lomorage.com/zh/docs/Installation/lomorage-service/",
     "supportNote": "不确定下一步？",
     "supportLink": "告诉我们你使用的电脑和手机",
-    "supportUrl": "/zh/contact/"
+    "supportUrl": "/zh/contact/",
+    "devicesEyebrow": "更多设备，同一份安心",
+    "devicesTitle": "家里已有的设备，也能成为照片的家。",
+    "devicesText": "除了 Windows 和 Mac，也可以把照片保存在群晖 NAS、树莓派或家用服务器上。选择熟悉的设备，按对应指南设置。",
+    "devicesNav": "其他平台安装指南",
+    "devicesAll": "查看所有平台与安装要求",
+    "devices": [
+      {
+        "name": "群晖 NAS",
+        "url": "https://docs.lomorage.com/zh/docs/Installation/lomorage-service/installation-synology/"
+      },
+      {
+        "name": "树莓派",
+        "url": "https://docs.lomorage.com/zh/docs/Installation/lomorage-service/installation-raspbian/"
+      },
+      {
+        "name": "Ubuntu",
+        "url": "https://docs.lomorage.com/zh/docs/Installation/lomorage-service/installation-ubuntu/"
+      },
+      {
+        "name": "Docker",
+        "url": "https://docs.lomorage.com/zh/docs/Installation/lomorage-service/installation-docker/"
+      },
+      {
+        "name": "Unraid",
+        "url": "https://docs.lomorage.com/zh/docs/Installation/lomorage-service/installation-unraid/"
+      }
+    ]
   },
   "en": {
     "eyebrow": "Install & download",
@@ -146,14 +182,23 @@
     "qrAlt": "Download link QR code",
     "connectTitle": "Try a few photos. See their new home.",
     "connectSteps": [
-      {"title": "Connect both devices to your home network", "text": "Make sure Lomorage is running on your computer and its first-time setup is complete."},
-      {"title": "Connect to your computer in the phone app", "text": "Add or select your computer, then create an account or sign in. Each family member can use a separate account."},
-      {"title": "Back up, then open your photos", "text": "Start with a small batch. Check that backup is complete and the photos open before moving on to your whole collection."}
+      {
+        "title": "Connect both devices to your home network",
+        "text": "Make sure Lomorage is running on your computer and its first-time setup is complete."
+      },
+      {
+        "title": "Connect to your computer in the phone app",
+        "text": "Add or select your computer, then create an account or sign in. Each family member can use a separate account."
+      },
+      {
+        "title": "Back up, then open your photos",
+        "text": "Start with a small batch. Check that backup is complete and the photos open before moving on to your whole collection."
+      }
     ],
     "connectionQuestion": "My phone can’t find my computer. What next?",
     "connectionAnswer": "The current quick installer disables automatic discovery by default. Enter your computer’s local network IP address and port (8000 by default) in the phone app. Both devices must be on the same network, and the computer’s firewall must allow access from your home network. Do not enter localhost on your phone; that refers to the phone itself.",
     "connectionHelp": "Need help connecting? Contact us",
-    "optionalTitle": "Have older photos, or a different device?",
+    "optionalTitle": "Have photos on an older drive?",
     "optionalNote": "You can skip this for your first phone backup.",
     "importTitle": "Bring photos from an existing hard drive",
     "importText": "Once your computer and phone account are set up, download the importer. Extract and open it, sign in with your existing account, select a photo folder, and start importing.",
@@ -161,12 +206,39 @@
     "macImport": "Mac import tool",
     "importHelp": "Read the folder & USB import guide",
     "importHelpUrl": "https://docs.lomorage.com/docs/Installation/lomorage-importer/",
-    "otherTitle": "Using a NAS, Raspberry Pi, or Linux?",
-    "otherText": "There are installation options for these devices too. Follow the guide for the device you already have.",
+    "otherTitle": "More device setup guides",
+    "otherText": "Find the NAS, Raspberry Pi and Linux options just above the installation steps.",
     "otherLink": "Explore other device guides",
     "otherUrl": "https://docs.lomorage.com/docs/Installation/lomorage-service/",
     "supportNote": "Not sure what to do next?",
     "supportLink": "Tell us which computer and phone you use",
-    "supportUrl": "/contact/"
+    "supportUrl": "/contact/",
+    "devicesEyebrow": "More ways to make it yours",
+    "devicesTitle": "A home for photos, on your own hardware.",
+    "devicesText": "Alongside Windows and Mac, you can store your photos on a Synology NAS, Raspberry Pi or home server. Choose the setup that fits your home.",
+    "devicesNav": "Other platform installation guides",
+    "devicesAll": "All platforms & setup requirements",
+    "devices": [
+      {
+        "name": "Synology NAS",
+        "url": "https://docs.lomorage.com/docs/Installation/lomorage-service/installation-synology/"
+      },
+      {
+        "name": "Raspberry Pi",
+        "url": "https://docs.lomorage.com/docs/Installation/lomorage-service/installation-raspbian/"
+      },
+      {
+        "name": "Ubuntu",
+        "url": "https://docs.lomorage.com/docs/Installation/lomorage-service/installation-ubuntu/"
+      },
+      {
+        "name": "Docker",
+        "url": "https://docs.lomorage.com/docs/Installation/lomorage-service/installation-docker/"
+      },
+      {
+        "name": "Unraid",
+        "url": "https://docs.lomorage.com/docs/Installation/lomorage-service/installation-unraid/"
+      }
+    ]
   }
 }

@@ -1,3 +1,7 @@
+<section id="platforms" class="platforms-section wrap" aria-labelledby="platforms-title">
+  <div><p class="eyebrow">{{ d.devicesEyebrow }}</p><h2 id="platforms-title">{{ d.devicesTitle }}</h2><p>{{ d.devicesText }}</p></div>
+  <div class="platforms-options"><nav aria-label="{{ d.devicesNav }}">{% for device in d.devices %}<a href="{{ device.url }}">{{ device.name }} <span aria-hidden="true">↗</span></a>{% endfor %}</nav><a class="text-link" href="{{ d.otherUrl }}">{{ d.devicesAll }} <span aria-hidden="true">→</span></a></div>
+</section>
 <section id="download" class="setup-section" aria-labelledby="setup-title">
   <div class="wrap">
     <header class="setup-heading">
