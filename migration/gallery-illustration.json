@@ -1,12 +1,12 @@
 {
-  "asset": "/img/app/lomomobile-family-illustration.png",
+  "asset": "/img/app/lomomobile-family-illustration.webp",
   "reference": "/img/app/lomomobile-gallery.jpg",
   "method": "Built-in image_gen edit",
   "date": "2026-09-20",
   "note": "App Store screenshot edited to replace gallery thumbnails with generated family photographs. Labeled illustrative in both locales.",
   "prompt": "gallery-illustration-prompt.txt",
   "englishVariant": {
-    "asset": "/img/app/lomomobile-family-illustration-en.png",
+    "asset": "/img/app/lomomobile-family-illustration-en.webp",
     "method": "Built-in image_gen edit",
     "prompt": "gallery-illustration-en-prompt.txt",
     "note": "International family photo gallery illustration for English pages."
