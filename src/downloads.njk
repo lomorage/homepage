@@ -1,0 +1,47 @@
+<section id="download" class="setup-section" aria-labelledby="setup-title">
+  <div class="wrap">
+    <header class="setup-heading">
+      <p class="eyebrow">{{ d.eyebrow }}</p>
+      <h2 id="setup-title">{{ d.title }}</h2>
+      <p>{{ d.intro }}</p>
+    </header>
+    <div class="setup-step" id="download-computer">
+      <div class="setup-step-heading"><span class="setup-number" aria-hidden="true">01</span><div><h3>{{ d.desktopTitle }}</h3><p>{{ d.desktopText }}</p></div></div>
+      <fieldset class="computer-selector">
+        <legend class="visually-hidden">{{ d.platformLabel }}</legend>
+        <input class="platform-radio" type="radio" name="computer" id="computer-windows" value="windows" checked>
+        <label class="platform-label" for="computer-windows"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M2 4 11 2.7V11H2zm10-1.5L22 1v10H12zM2 12h9v8.3L2 19zm10 0h10v11l-10-1.5z"/></svg>{{ d.windowsLabel }}</label>
+        <input class="platform-radio" type="radio" name="computer" id="computer-mac" value="mac">
+        <label class="platform-label" for="computer-mac"><svg viewBox="0 0 24 24" width="23" height="23" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="3" y="3" width="18" height="13" rx="2"/><path d="M12 16v4m-5 1h10"/></svg>{{ d.macLabel }}</label>
+        {% for platform in d.platforms %}
+        <div class="install-panel panel-{{ platform.id }}" aria-label="{{ platform.name }} {{ d.currentMethod }}">
+          <ol class="install-instructions">
+            <li><h4>{{ platform.openTitle }}</h4><p>{{ platform.openText }}</p></li>
+            <li><h4>{{ platform.pasteTitle }}</h4>
+              <div class="command-box"><pre><code id="command-{{ platform.id }}" aria-label="{{ platform.commandLabel }}" tabindex="0">{{ platform.command }}</code></pre><button type="button" class="copy-command" data-copy="command-{{ platform.id }}" data-success="{{ d.copied }}" data-failure="{{ d.copyFailed }}" hidden>{{ d.copy }} <span aria-hidden="true">⧉</span></button></div>
+              <p class="copy-status" id="status-{{ platform.id }}" role="status" aria-live="polite"></p>
+            </li>
+            <li><h4>{{ platform.finishTitle }}</h4><p>{{ platform.finishText }}</p></li>
+          </ol>
+          <div class="install-help"><p>{{ platform.detailNote }}</p><div><a href="{{ platform.helpUrl }}">{{ d.help }} ↗</a><a href="{{ platform.script }}">{{ d.scriptLink }}</a></div></div>
+        </div>
+        {% endfor %}
+      </fieldset>
+    </div>
+    <div class="setup-step" id="download-phone">
+      <div class="setup-step-heading"><span class="setup-number" aria-hidden="true">02</span><div><h3>{{ d.phoneTitle }}</h3><p>{{ d.phoneText }}</p></div></div>
+      <a class="phone-back" href="#download-computer">{{ d.phoneBack }} ↑</a>
+      <div class="phone-downloads">
+        <article class="phone-download-card"><div class="phone-download-copy"><span class="device-kicker">iOS</span><h4>{{ d.iosLabel }}</h4><p>{{ d.iosNote }}</p><a class="button" href="{{ d.iosUrl }}">{{ d.iosButton }} <span aria-hidden="true">↗</span></a></div><figure class="download-qr"><img src="/img/download/ios-{{ lang }}.svg" alt="{{ d.iosLabel }} · {{ d.qrAlt }}" width="112" height="112" loading="lazy"><figcaption>{{ d.scan }}</figcaption></figure></article>
+        <article class="phone-download-card"><div class="phone-download-copy"><span class="device-kicker">ANDROID</span><h4>{{ d.androidLabel }}</h4><p>{{ d.androidNote }}</p><a class="button" href="{{ d.androidUrl }}">{{ d.androidButton }} <span aria-hidden="true">↗</span></a><a class="alternate-app" href="{{ d.androidAlternateUrl }}">{{ d.androidAlternateLabel }}</a></div><figure class="download-qr"><img src="/img/download/android-{{ lang }}.svg" alt="{{ d.androidLabel }} · {{ d.qrAlt }}" width="112" height="112" loading="lazy"><figcaption>{{ d.scan }}</figcaption></figure></article>
+      </div>
+    </div>
+    <div class="setup-step connect-step" id="first-backup">
+      <div class="setup-step-heading"><span class="setup-number" aria-hidden="true">03</span><div><h3>{{ d.connectTitle }}</h3></div></div>
+      <div class="connection-checklist">{% for item in d.connectSteps %}<div><span aria-hidden="true">✓</span><h4>{{ item.title }}</h4><p>{{ item.text }}</p></div>{% endfor %}</div>
+      <details class="connection-trouble"><summary>{{ d.connectionQuestion }}<span aria-hidden="true">+</span></summary><p>{{ d.connectionAnswer }}</p><a class="text-link" href="{{ d.supportUrl }}">{{ d.connectionHelp }} →</a></details>
+    </div>
+    <details class="optional-downloads"><summary><div><strong>{{ d.optionalTitle }}</strong><small>{{ d.optionalNote }}</small></div><span aria-hidden="true">+</span></summary><div class="optional-grid"><div><h4>{{ d.importTitle }}</h4><p>{{ d.importText }}</p><div class="import-links"><a href="/windows/LomoImporter.zip">{{ d.windowsImport }} ↓</a><a href="/mac/LomoImporter.zip">{{ d.macImport }} ↓</a></div><a class="text-link" href="{{ d.importHelpUrl }}">{{ d.importHelp }} ↗</a></div><div><h4>{{ d.otherTitle }}</h4><p>{{ d.otherText }}</p><a class="text-link" href="{{ d.otherUrl }}">{{ d.otherLink }} ↗</a></div></div></details>
+    <p class="setup-support">{{ d.supportNote }} <a href="{{ d.supportUrl }}">{{ d.supportLink }} →</a></p>
+  </div>
+</section>

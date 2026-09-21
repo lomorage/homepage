@@ -69,7 +69,7 @@ If you find Lomorage useful, please support us below:
 
 ## Installation
 
-Check the [installation](https://lomosw.lomorage.com/en/index.html) guide.
+Check the [installation](https://lomorage.com/#download) guide.
 
 ## FAQ
 

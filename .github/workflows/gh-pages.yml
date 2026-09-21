@@ -10,19 +10,15 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
         with:
-          submodules: true  # Fetch Hugo themes (true OR recursive)
-          fetch-depth: 0    # Fetch all history for .GitInfo and .Lastmod
-
-      - name: Setup Hugo
-        uses: peaceiris/actions-hugo@v2
-        with:
-          hugo-version: 'latest'
-          extended: true
-
-      - name: Build
-        run: hugo --minify
+          node-version: '22'
+          cache: 'npm'
+      - run: npm ci
+      - run: npm test
+      - name: Build static website
+        run: npm run build
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
@@ -31,6 +27,6 @@ jobs:
           deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
           external_repository: lomorage/lomorage.github.io
           publish_branch: master
-          publish_dir: ./public
+          publish_dir: ./dist
           emptyCommits: false
           commitMessage: ${{ github.event.head_commit.message }}

@@ -6,7 +6,7 @@ hero:
     拒绝昂贵的公有云“数字地租”与隐私审查。无需购买昂贵的 NAS，只需在电脑上装个软件，即可让手机内存瞬间暴增 100G，原图 100% 物理隔离，绝对安全。
   button:
     - title: 免费下载 Windows 客户端
-      url: https://lomosw.lomorage.com/zh/index.html
+      url: https://lomorage.com/zh/#download
       accent: yes
     - title: 了解更多
       url: #
@@ -55,5 +55,5 @@ single:
 cta:
   button:
     title: 立即下载客户端
-    url: https://lomosw.lomorage.com/zh/index.html
+    url: https://lomorage.com/zh/#download
 ---

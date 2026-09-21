@@ -1,0 +1,42 @@
+{
+  "source": "https://github.com/lomosw/lomosw.github.io",
+  "sourceTree": "b4efa65ca6172c1f26ef051dde39ba9d3d5f7783",
+  "files": [
+    {
+      "path": "windows/install.ps1",
+      "sourceBlob": "77a5178c75a226f2771690628c3cde07d2aa8671",
+      "sourceSha256": "472ccf686a17a9518a5036651aa94370c1bf8256079fbd205e2672838261d2be",
+      "sha256": "9fedcf2761f807238167568ee77792a87d6267f8c7f93f4fc46ce263db45222e"
+    },
+    {
+      "path": "mac/install.sh",
+      "sourceBlob": "8f38afb9b88c345c3d7e7f6656d6dad733a0142a",
+      "sourceSha256": "eb465b9ede0019fca8738bffcfe708332377638dff48a7970249c9871fe87b35",
+      "sha256": "8ae55d7219d72758706058a1e6bff288c3c55785dd628e43c8ba5c07f52534d0"
+    },
+    {
+      "path": "windows/LomoImporter.zip",
+      "sourceBlob": "b8ff9e5cf0bbc7e4ae33ac7aff70c47484e29fd4",
+      "sourceSha256": "fd98b0ecf4da79ac2906f501d5a591ff90a52a7bb9fa870c8044b2ed2a2d4c97",
+      "sha256": "fd98b0ecf4da79ac2906f501d5a591ff90a52a7bb9fa870c8044b2ed2a2d4c97"
+    },
+    {
+      "path": "mac/LomoImporter.zip",
+      "sourceBlob": "53f54ad27297d91fcac08e5705aeb8f5329b04c0",
+      "sourceSha256": "39ed2d382a42f1f7d9d866825711ece8293b344ee450d83342414e4d098dea2c",
+      "sha256": "39ed2d382a42f1f7d9d866825711ece8293b344ee450d83342414e4d098dea2c"
+    },
+    {
+      "path": "windows/LomoUpdate.zip",
+      "sourceBlob": "ab9468399ee30d1fe2a1161c9b01a0cfccf12cdf",
+      "sourceSha256": "34201e38c913591c93b3d29d3c6c53bc9d2fcd55c8d7f2b272a997b7feb3ae10",
+      "sha256": "34201e38c913591c93b3d29d3c6c53bc9d2fcd55c8d7f2b272a997b7feb3ae10"
+    },
+    {
+      "path": "mac/LomoUpdate.zip",
+      "sourceBlob": "f5a577651da88fe8343fd159bcf2a2af56f2618c",
+      "sourceSha256": "7acd94d688b300f267455ec30130b97bd28b4ebf70d5131cb890e4d56f5d9174",
+      "sha256": "7acd94d688b300f267455ec30130b97bd28b4ebf70d5131cb890e4d56f5d9174"
+    }
+  ]
+}

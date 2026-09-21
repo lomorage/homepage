@@ -1,0 +1,320 @@
+{
+  "en": {
+    "title": "A home for your family’s memories",
+    "description": "Lomorage backs up photos and videos from your phone to your own computer. Keep the originals of first steps, family days, and everything in between — ready to revisit.",
+    "skip": "Skip to content",
+    "home": "home",
+    "navigation": "Main navigation",
+    "navWhy": "Why Lomorage",
+    "navHow": "How it works",
+    "navFaq": "FAQs",
+    "language": "中文",
+    "languageUrl": "/zh/",
+    "otherLang": "zh",
+    "getStarted": "Get started",
+    "downloadUrl": "/#download",
+    "eyebrow": "Phone photo backup · Stored on your computer",
+    "headline": "Life moves fast.",
+    "headlineAccent": "Keep the memories.",
+    "download": "Get the desktop & mobile apps",
+    "seeHow": "See how to start",
+    "free": "Free to use",
+    "noSubscription": "No cloud subscription",
+    "madeFor": "You’ll need a computer, a phone, and the same home network.",
+    "sceneLabel": "An illustrative collection of memories saved at home",
+    "littleMoments": "the good little things",
+    "coastAlt": "Family members together on the beach at sunset",
+    "familyAlt": "A wooden boat on a mountain lake",
+    "photoCaption": "Growing together, every day",
+    "smallCaption": "Our little family adventure",
+    "safeTitle": "A home for every memory",
+    "safeText": "Your photos. Your own hard drive.",
+    "trustLead": "A little less worry. A lot more life.",
+    "trustLocal": "Stored at home",
+    "trustOriginal": "Original quality",
+    "trustFamily": "For the whole family",
+    "trustFree": "No monthly fees",
+    "whyEyebrow": "More memories. Less managing.",
+    "whyTitle": "Made for what matters.",
+    "whyDescription": "You take the photos. Lomorage helps you keep them — simply, privately, and in their original quality.",
+    "benefits": [
+      {
+        "symbol": "⌂",
+        "title": "Your memories stay yours.",
+        "text": "Back up to your own computer over your home network. You choose where your family’s photo collection lives.",
+        "tag": "Local by design"
+      },
+      {
+        "symbol": "◉",
+        "title": "Every detail, kept intact.",
+        "text": "From everyday snapshots to Live Photos and big videos, keep the originals, with their quality and metadata preserved.",
+        "tag": "Originals, always"
+      },
+      {
+        "symbol": "♡",
+        "title": "One home. Everyone’s story.",
+        "text": "Give each family member their own account. Keep personal collections separate and share the moments you love.",
+        "tag": "Made for the family"
+      }
+    ],
+    "yourHome": "Your own little photo cloud",
+    "phone": "Your phone",
+    "computer": "Your computer",
+    "connectionNote": "Original photos, backed up over your home network",
+    "homeNote": "No place like home.",
+    "howEyebrow": "Your first backup, step by step",
+    "howTitle": "One app on each device.",
+    "steps": [
+      {
+        "title": "Set up the photo assistant on your computer",
+        "text": "Choose Windows or macOS and follow the instructions below. Open Lomorage on your computer to set up photo storage."
+      },
+      {
+        "title": "Open Lomorage on your phone",
+        "text": "Install the iOS or Android app and connect both devices to the same home network."
+      },
+      {
+        "title": "Back up, then check your photos",
+        "text": "Start the backup in the app and keep the computer on. A large first backup takes longer; check the collection when it finishes."
+      }
+    ],
+    "setupGuide": "Install & download on this page",
+    "mountainAlt": "Forested slopes and distant snow-capped mountains",
+    "memoryLabel": "The kind of day you want to keep",
+    "memoryEyebrow": "More than a backup",
+    "memoryTitle": "Old photos.\nAll the same feelings.",
+    "memoryText": "That summer away. A familiar smile. Browse your collection and find your way back to moments that still mean everything — without keeping every original on your phone.",
+    "memoryLink": "Make room for more memories",
+    "faqEyebrow": "Good questions",
+    "faqTitle": "A little clarity, before you start.",
+    "moreQuestions": "Explore all FAQs",
+    "faqUrl": "/faq/",
+    "faqs": [
+      {
+        "question": "Do I install it on my phone or my computer?",
+        "answer": "Both. Your computer stores the originals; the phone app transfers and browses your photos. Start with the desktop instructions in the installation section on this page, then get the phone app."
+      },
+      {
+        "question": "Do I have to do something every day?",
+        "answer": "Your computer needs to be on and reachable to receive backups. Phone operating systems limit background activity. For your first or a large backup, keep the app open and check completion; installing the app alone does not mean your photos are backed up."
+      },
+      {
+        "question": "Can I delete photos from my phone afterward?",
+        "answer": "Check backup status, open the files on your computer, and keep another independent copy of important photos before removing phone originals. Start with a small batch while you learn the process."
+      },
+      {
+        "question": "What if my computer breaks?",
+        "answer": "Local storage is not a guarantee against loss. Drives can fail and files can be accidentally deleted. Regularly copy important photos to a separate drive and check that those files open correctly."
+      },
+      {
+        "question": "Does my computer need to be on to view photos?",
+        "answer": "To access originals stored on your computer, it must be on and reachable. Offline browsing on your phone depends on what the app has cached; do not assume every original is available offline."
+      }
+    ],
+    "closingEyebrow": "Make room for the next chapter",
+    "closingTitle": "Start with a few favorite photos.",
+    "closingText": "Try one complete backup, check your photos, and get comfortable with the process.",
+    "closingNote": "Desktop + mobile apps · Free to use · No cloud storage subscription",
+    "footerTagline": "Save the moments. Enjoy the memories.",
+    "footerNav": "More links",
+    "blog": "Journal",
+    "blogUrl": "/blog/",
+    "privacy": "Privacy",
+    "contact": "Contact",
+    "contactUrl": "/contact/",
+    "readyTitle": "Three things to have ready",
+    "readyItems": [
+      "A computer with free disk space",
+      "An iPhone or Android phone",
+      "Both connected to the same home network"
+    ],
+    "readyNote": "Keep your computer on and connected during backup. It does not need to run all day.",
+    "productEyebrow": "A look inside the app",
+    "productTitle": "See your photos.\nKnow what you’ve kept.",
+    "productText": "Browse your backup collection on your phone, with photos and videos arranged by date. Find your way back to those little moments as they grow.",
+    "screenshot": "/img/buy/backup-en.png",
+    "screenshotAlt": "Lomorage mobile backup album showing dated photos and videos with green check marks",
+    "screenshotCaption": "Existing mobile app screenshot from the project. The interface may vary by version.",
+    "productPoints": [
+      {
+        "title": "A backup you can browse",
+        "text": "Look through the backed-up collection in the app, rather than relying on a memory of a transfer."
+      },
+      {
+        "title": "Check before you clear space",
+        "text": "Check backup status and open the files on your computer before removing originals from your phone."
+      },
+      {
+        "title": "Keep one more copy",
+        "text": "Computer drives can fail. Copy irreplaceable family photos to a separate drive as well."
+      }
+    ],
+    "productLink": "Read the existing help guide",
+    "productLinkUrl": "/faq/",
+    "mobileDownload": "Start on your phone",
+    "mobileDownloadNote": "You’ll also need to install the photo assistant on your computer.",
+    "desktopDownload": "Set up your computer",
+    "phoneDownload": "Get the iOS / Android app",
+    "downloadSectionTitle": "Find the next step for your device.",
+    "downloadSectionText": "The setup guide includes both desktop and phone apps. Prepare your computer, then connect your phone."
+  },
+  "zh": {
+    "title": "给全家人的回忆一个家",
+    "description": "Lomorage 帮你把手机里的照片和视频，备份到家里的电脑。孩子的第一次、全家人的日常，都能保留原文件，再慢慢翻看。",
+    "skip": "跳转到正文",
+    "home": "首页",
+    "navigation": "主导航",
+    "navWhy": "为什么选 Lomorage",
+    "navHow": "如何使用",
+    "navFaq": "常见问题",
+    "language": "EN",
+    "languageUrl": "/",
+    "otherLang": "en",
+    "getStarted": "开始使用",
+    "downloadUrl": "/zh/#download",
+    "eyebrow": "手机照片备份 · 存在自己的电脑里",
+    "headline": "日子向前，",
+    "headlineAccent": "回忆留在身边。",
+    "download": "获取电脑端与手机应用",
+    "seeHow": "先看看怎么用",
+    "free": "免费使用",
+    "noSubscription": "无需云存储月费",
+    "madeFor": "需要一台电脑、一部手机，以及同一个家庭网络。",
+    "sceneLabel": "保存在家中的回忆照片示意",
+    "littleMoments": "那些小小的美好",
+    "coastAlt": "家人在日落时分相聚在海边",
+    "familyAlt": "群山环绕的湖面与木船",
+    "photoCaption": "一起长大的，不只有孩子",
+    "smallCaption": "那次全家的小旅行",
+    "safeTitle": "每一份回忆，都有归处",
+    "safeText": "你的照片，留在自己的硬盘里。",
+    "trustLead": "少一点操心，多一点生活。",
+    "trustLocal": "照片存在家里",
+    "trustOriginal": "保留原始画质",
+    "trustFamily": "全家一起使用",
+    "trustFree": "没有每月订阅",
+    "whyEyebrow": "多记录生活，少操心存储",
+    "whyTitle": "重要的回忆，简单地留住。",
+    "whyDescription": "你负责记录，Lomorage 帮你珍藏。让备份回归简单，让照片保持原来的样子。",
+    "benefits": [
+      {
+        "symbol": "⌂",
+        "title": "自己的回忆，自己保管。",
+        "text": "通过家里的网络，把照片备份到自己的电脑。全家人的照片存在哪里，由你决定。",
+        "tag": "本地存储，更安心"
+      },
+      {
+        "symbol": "◉",
+        "title": "每一处细节，都舍不得丢。",
+        "text": "日常照片、实况照片，还有大段视频。保留原文件的画质和拍摄信息，重温时依然鲜活。",
+        "tag": "原图原片，完整保留"
+      },
+      {
+        "symbol": "♡",
+        "title": "一个家，装下每个人的故事。",
+        "text": "家人各有自己的账号，分别保管各自的照片，也能分享想一起回味的瞬间。",
+        "tag": "为全家人的日常而做"
+      }
+    ],
+    "yourHome": "家里的小小照片云",
+    "phone": "你的手机",
+    "computer": "你的电脑",
+    "connectionNote": "通过家庭网络，把原始照片备份到电脑",
+    "homeNote": "回忆，也喜欢待在家里。",
+    "howEyebrow": "第一次设置，跟着做",
+    "howTitle": "手机和电脑，各装一个应用。",
+    "steps": [
+      {
+        "title": "先在电脑上安好“照片助手”",
+        "text": "选择 Windows 或 macOS，按照下方的步骤安装。完成后，打开电脑上的 Lomorage 设置照片保存位置。"
+      },
+      {
+        "title": "再打开手机里的 Lomorage",
+        "text": "下载 iPhone 或 Android 应用，让手机与电脑连接到同一个家庭网络。"
+      },
+      {
+        "title": "开始备份，完成后检查一下",
+        "text": "在手机应用中开始备份，保持电脑开机。首次照片多时会更久，完成后查看备份内容。"
+      }
+    ],
+    "setupGuide": "在本页安装与下载",
+    "mountainAlt": "森林覆盖的山坡与远处的雪山",
+    "memoryLabel": "有些日子，值得一看再看",
+    "memoryEyebrow": "不止备份，更是重逢",
+    "memoryTitle": "照片有了年纪，\n心动还是当时的。",
+    "memoryText": "那年夏天的旅行，熟悉的笑脸，还有差点忘记的小瞬间。翻翻相册，就能回到那些珍贵的日子，不必把所有原图都装在手机里。",
+    "memoryLink": "给新的回忆，留点空间",
+    "faqEyebrow": "你可能还想知道",
+    "faqTitle": "开始之前，聊清楚几件事。",
+    "moreQuestions": "查看全部常见问题",
+    "faqUrl": "/zh/faq/",
+    "faqs": [
+      {
+        "question": "是装在手机上，还是电脑上？",
+        "answer": "两个都需要。电脑端负责保存原文件，手机应用负责传输和浏览照片。在本页的“安装与下载”区域，先安装电脑端，再获取手机应用。"
+      },
+      {
+        "question": "需要我每天手动操作吗？",
+        "answer": "备份需要电脑开机，且手机能够连接到它。手机系统会限制应用在后台的运行；第一次备份或照片较多时，建议打开应用进行备份，并查看是否完成，不把“已经安装”当作“已经备份”。"
+      },
+      {
+        "question": "备份以后，手机里的照片就能删了吗？",
+        "answer": "先检查备份状态，打开电脑中的照片和视频确认完整可用，并为重要内容保留另一份独立副本，再考虑清理手机原文件。首次使用时，建议先用少量照片熟悉流程。"
+      },
+      {
+        "question": "如果电脑坏了，照片会不会也丢？",
+        "answer": "存在电脑上不等于永远不会丢。硬盘故障或误删除仍可能导致照片丢失。建议定期把重要照片再复制到另一块独立硬盘，并检查这份副本能正常打开。"
+      },
+      {
+        "question": "以后找照片，需要电脑一直开着吗？",
+        "answer": "读取保存在电脑里的原文件时，电脑需要开机且网络可达。手机能离线查看哪些内容，取决于应用已缓存的内容；不要假设所有原图都可以离线打开。"
+      }
+    ],
+    "closingEyebrow": "下一段美好，也值得留下",
+    "closingTitle": "先备份几张，安心再多一点。",
+    "closingText": "从今天拍下的小瞬间开始，熟悉一次完整的备份流程。",
+    "closingNote": "电脑端 + 手机应用 · 免费使用 · 无需云存储订阅",
+    "footerTagline": "留住此刻，回味时光。",
+    "footerNav": "更多链接",
+    "blog": "博客",
+    "blogUrl": "/zh/blog/",
+    "privacy": "隐私政策",
+    "contact": "联系我们",
+    "contactUrl": "/zh/contact/",
+    "readyTitle": "开始前，准备好这三样就行",
+    "readyItems": [
+      "有空余硬盘空间的电脑",
+      "iPhone 或 Android 手机",
+      "手机和电脑连接同一家庭网络"
+    ],
+    "readyNote": "备份时需要电脑开机、网络畅通。不必为了备份，全天开着电脑。",
+    "productEyebrow": "先看看，它用起来是什么样",
+    "productTitle": "照片有没有存好，\n看过，才放心。",
+    "productText": "在手机应用里查看备份相册，按日期翻看照片和视频。孩子小时候的片段，也能一张张找回来。",
+    "screenshot": "/img/buy/backup.png",
+    "screenshotAlt": "Lomorage 手机应用备份相册，按日期排列照片与视频，缩略图带有绿色勾选标记",
+    "screenshotCaption": "项目已有的手机应用截图，具体界面可能随版本变化。",
+    "productPoints": [
+      {
+        "title": "看得见的备份相册",
+        "text": "在应用内查看已备份的内容，不只记得“好像传过了”。"
+      },
+      {
+        "title": "先确认，再腾空间",
+        "text": "检查备份状态，并打开电脑里的照片和视频确认可用，再考虑清理手机原文件。"
+      },
+      {
+        "title": "珍贵照片，再留一份",
+        "text": "电脑硬盘也可能损坏。孩子的成长记录，建议另外复制到一块独立硬盘。"
+      }
+    ],
+    "productLink": "查看原有使用说明",
+    "productLinkUrl": "/zh/faq/",
+    "mobileDownload": "在手机上开始",
+    "mobileDownloadNote": "你也需要在家里的电脑上安装照片助手。",
+    "desktopDownload": "安装电脑端",
+    "phoneDownload": "获取 iOS / Android 应用",
+    "downloadSectionTitle": "按你的设备，找到下一步。",
+    "downloadSectionText": "安装指南包含电脑端和手机端下载入口。先准备好电脑，再连接手机。"
+  }
+}

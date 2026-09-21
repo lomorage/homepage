@@ -5,7 +5,7 @@
     "SHA256": "08fe4da3e74ca6415f0f22468d824b7f5c7d6d300cc44d55ebed16bc6d78ba8a",
     "URL": "https://github.com/lomorage/LomoAgentOSX/releases/download/2023_04_08.08_09_46.0.e09e855/LomoAgent.zip",
     "LomoUpgVer": "2019_12_09.23_41_36.0.b28a902",
-    "LomoUpdateURL": "https://lomosw.lomorage.com/mac/LomoUpdate.zip"
+    "LomoUpdateURL": "https://lomorage.com/mac/LomoUpdate.zip"
   },
   "windows": {
     "Version": "2024_04_15.21_37_58.0.192d1df",
@@ -13,7 +13,7 @@
     "SHA256": "D400F956A7F3657DBAB0A3271BBEAFCF014E0E49CDC836B0879AEE81E153E915",
     "URL": "https://github.com/lomorage/LomoAgentWin/releases/download/en/lomoagent-2024_04_15.21_37_58.0.192d1df.zip",
     "LomoUpgVer": "2020_08_22.21_03_02.0.2f88662",
-    "LomoUpdateURL": "https://lomosw.lomorage.com/windows/LomoUpdate.zip"
+    "LomoUpdateURL": "https://lomorage.com/windows/LomoUpdate.zip"
   },
   "lomod": {
     "Commit": "fbe07d7"

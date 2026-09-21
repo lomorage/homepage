@@ -6,7 +6,7 @@ hero:
     Say goodbye to expensive cloud subscription "digital rent" and privacy scanning. No need for costly NAS devices. Just install Lomorage on your PC, instantly boost your phone storage by 100G, and keep your files 100% physically isolated and secure.
   button:
     - title: Free Download for Windows
-      url: https://lomosw.lomorage.com/en/index.html
+      url: https://lomorage.com/#download
       accent: yes
     - title: Learn More
       url: #
@@ -55,5 +55,5 @@ single:
 cta:
   button:
     title: Download Now
-    url: https://lomosw.lomorage.com/en/index.html
+    url: https://lomorage.com/#download
 ---

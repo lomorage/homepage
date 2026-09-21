@@ -1,13 +1,25 @@
-{{ define "main" }}
-
-{{ partial "landing_hero.html" . }}
-
-{{ partial "landing_triple.html" . }}
-
-{{ partial "landing_single.html" . }}
-
-{{ partial "landing_compare.html" . }}
-
-{{ partial "landing_cta.html" . }}
-
-{{ end }}
+{{ $lang := .Site.Language.Lang }}
+{{ $t := index .Site.Data.home $lang }}
+<!DOCTYPE html>
+<html lang="{{ $lang }}">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{ $t.title }} · Lomorage</title><meta name="description" content="{{ $t.description }}"><meta name="theme-color" content="#f8f7f2">
+<meta property="og:title" content="{{ $t.title }} · Lomorage"><meta property="og:description" content="{{ $t.description }}"><meta property="og:type" content="website"><meta property="og:url" content="{{ .Permalink }}"><meta property="og:image" content="{{ "img/home/coast.jpg" | absURL }}">
+<link rel="canonical" href="{{ .Permalink }}">{{ range .AllTranslations }}<link rel="alternate" hreflang="{{ .Language.Lang }}" href="{{ .Permalink }}">{{ end }}
+<link rel="icon" href="{{ "img/favicon.ico" | relURL }}"><link rel="stylesheet" href="{{ "css/home.css" | relURL }}">
+</head>
+<body>
+<a class="skip-link" href="#main">{{ $t.skip }}</a>
+<header class="site-header wrap"><a class="brand" href="{{ .RelPermalink }}" aria-label="Lomorage {{ $t.home }}"><img src="{{ "img/logo.png" | relURL }}" width="34" height="34" alt="">lomorage<span class="brand-dot">.</span></a><nav class="desktop-nav" aria-label="{{ $t.navigation }}"><a href="#why">{{ $t.navWhy }}</a><a href="#how">{{ $t.navHow }}</a><a href="#questions">{{ $t.navFaq }}</a></nav><div class="header-actions"><a class="language" href="{{ $t.languageUrl | relURL }}" lang="{{ $t.otherLang }}">{{ $t.language }}</a><a class="button button-small" href="{{ $t.downloadUrl }}">{{ $t.getStarted }} <span aria-hidden="true">↗</span></a></div></header>
+<main id="main">
+<section class="hero wrap" aria-labelledby="hero-title"><div class="hero-copy"><div class="eyebrow"><span class="status-dot"></span>{{ $t.eyebrow }}</div><h1 id="hero-title">{{ $t.headline }}<br><span>{{ $t.headlineAccent }}</span></h1><p class="hero-description">{{ $t.description }}</p><div class="hero-actions"><a class="button" href="{{ $t.downloadUrl }}"><svg width="17" height="17" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M1 3.5 9 2.4V9H1zm9-1.2 9-1.3v8h-9zM1 10h8v6.6l-8-1.1zm9 0h9v8l-9-1.3z"/></svg>{{ $t.download }}<span aria-hidden="true">↗</span></a><a class="text-link" href="#how">{{ $t.seeHow }} <span aria-hidden="true">→</span></a></div><p class="hero-note"><span aria-hidden="true">✓</span> {{ $t.free }} <span class="note-divider">/</span> {{ $t.noSubscription }}</p><div class="hero-footnote"><span class="tiny-heart" aria-hidden="true">♡</span><span>{{ $t.madeFor }}</span></div></div>
+<div class="memory-scene" aria-label="{{ $t.sceneLabel }}"><div class="scene-circle" aria-hidden="true"></div><span class="scene-caption">{{ $t.littleMoments }} <span aria-hidden="true">↘</span></span><figure class="photo photo-main"><img src="{{ "img/home/coast.jpg" | relURL }}" alt="{{ $t.coastAlt }}" width="760" height="920" fetchpriority="high"><figcaption><span>{{ $t.photoCaption }}</span><span class="photo-heart" aria-hidden="true">♡</span></figcaption></figure><figure class="photo photo-small"><img src="{{ "img/home/family.jpg" | relURL }}" alt="{{ $t.familyAlt }}" width="520" height="600"><figcaption>{{ $t.smallCaption }} <span aria-hidden="true">☀</span></figcaption></figure><div class="backup-badge"><span class="backup-check" aria-hidden="true">✓</span><div><strong>{{ $t.safeTitle }}</strong><span>{{ $t.safeText }}</span></div><span class="badge-spark" aria-hidden="true">✧</span></div><span class="scene-scribble" aria-hidden="true">✳</span></div></section>
+<div class="trust-strip"><div class="wrap trust-inner"><span>{{ $t.trustLead }}</span><span><b aria-hidden="true">⌂</b>{{ $t.trustLocal }}</span><span><b aria-hidden="true">◉</b>{{ $t.trustOriginal }}</span><span><b aria-hidden="true">♡</b>{{ $t.trustFamily }}</span><span><b aria-hidden="true">∞</b>{{ $t.trustFree }}</span></div></div>
+<section id="why" class="section wrap"><div class="section-heading"><div><p class="eyebrow">{{ $t.whyEyebrow }}</p><h2>{{ $t.whyTitle }}</h2></div><p>{{ $t.whyDescription }}</p></div><div class="benefit-grid">{{ range $i, $item := $t.benefits }}<article class="benefit"><span class="feature-symbol symbol-{{ $i }}" aria-hidden="true">{{ $item.symbol }}</span><h3>{{ $item.title }}</h3><p>{{ $item.text }}</p><span class="feature-tag">{{ $item.tag }}</span></article>{{ end }}</div></section>
+<section id="how" class="how-section"><div class="wrap how-grid"><div class="how-visual"><div class="connection-card"><span class="eyebrow">{{ $t.yourHome }}</span><div class="device-row"><div><svg viewBox="0 0 60 80" aria-hidden="true"><rect x="11" y="3" width="38" height="71" rx="8"/><path d="M24 9h12M27 67h6"/></svg><span>{{ $t.phone }}</span></div><div class="connection-line"><span>· · · · ·</span><b>✓</b><small>Wi-Fi</small></div><div><svg viewBox="0 0 90 80" aria-hidden="true"><rect x="10" y="7" width="70" height="48" rx="5"/><path d="M45 55v14M29 70h32"/><path class="device-heart" d="M45 27c-12-12-22 5 0 17 22-12 12-29 0-17Z"/></svg><span>{{ $t.computer }}</span></div></div><div class="connection-bottom"><span class="status-dot"></span>{{ $t.connectionNote }}</div></div><p class="handwritten">{{ $t.homeNote }} <span aria-hidden="true">♡</span></p></div><div class="how-copy"><p class="eyebrow">{{ $t.howEyebrow }}</p><h2>{{ $t.howTitle }}</h2><ol class="steps">{{ range $i, $item := $t.steps }}<li><span class="step-number">0{{ add $i 1 }}</span><div><h3>{{ $item.title }}</h3><p>{{ $item.text }}</p></div></li>{{ end }}</ol><a class="text-link" href="{{ $t.downloadUrl }}">{{ $t.setupGuide }} <span aria-hidden="true">→</span></a></div></div></section>
+<section class="memories-section wrap"><div class="memory-detail"><img src="{{ "img/home/mountains.jpg" | relURL }}" alt="{{ $t.mountainAlt }}" width="900" height="680" loading="lazy"><span class="memory-label">{{ $t.memoryLabel }} <span aria-hidden="true">↗</span></span></div><div class="memory-copy"><p class="eyebrow">{{ $t.memoryEyebrow }}</p><h2>{{ $t.memoryTitle }}</h2><p>{{ $t.memoryText }}</p><a class="text-link" href="{{ $t.downloadUrl }}">{{ $t.memoryLink }} <span aria-hidden="true">→</span></a></div></section>
+<section id="questions" class="section wrap faq-section"><div><p class="eyebrow">{{ $t.faqEyebrow }}</p><h2>{{ $t.faqTitle }}</h2><a class="text-link" href="{{ $t.faqUrl | relURL }}">{{ $t.moreQuestions }} <span aria-hidden="true">↗</span></a></div><div class="faq-list">{{ range $t.faqs }}<details><summary>{{ .question }}<span aria-hidden="true">+</span></summary><p>{{ .answer }}</p></details>{{ end }}</div></section>
+<section class="closing wrap"><span class="closing-flower" aria-hidden="true">✳</span><p class="eyebrow">{{ $t.closingEyebrow }}</p><h2>{{ $t.closingTitle }}</h2><p>{{ $t.closingText }}</p><a class="button" href="{{ $t.downloadUrl }}">{{ $t.download }} <span aria-hidden="true">↗</span></a><small>{{ $t.closingNote }}</small></section>
+</main><footer class="wrap footer"><div><a class="brand" href="{{ .RelPermalink }}">lomorage<span class="brand-dot">.</span></a><p>{{ $t.footerTagline }}</p></div><nav aria-label="{{ $t.footerNav }}"><a href="{{ $t.blogUrl | relURL }}">{{ $t.blog }}</a><a href="https://github.com/lomorage">GitHub ↗</a><a href="{{ "privacy.html" | relURL }}">{{ $t.privacy }}</a><a href="{{ $t.contactUrl | relURL }}">{{ $t.contact }}</a></nav><small>© {{ now.Year }} Lomorage</small></footer>
+</body></html>

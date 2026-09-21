@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="{{ lang }}">
+{% include "head.njk" %}
+<body>
+{% include "header.njk" %}
+<main id="main" class="wrap document-page">
+<a class="text-link" href="{{ homeUrl }}">← {{ t.home }}</a>
+<h1>{{ pageTitle }}</h1>
+<div class="prose">{{ content | safe }}</div>
+</main>
+{% include "footer.njk" %}
+</body>
+</html>

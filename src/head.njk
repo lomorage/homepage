@@ -1,0 +1,8 @@
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{ pageTitle }} · Lomorage</title><meta name="description" content="{{ pageDescription }}"><meta name="theme-color" content="#f8f7f2">
+<meta property="og:title" content="{{ pageTitle }} · Lomorage"><meta property="og:description" content="{{ pageDescription }}"><meta property="og:type" content="website"><meta property="og:url" content="{{ canonical }}"><meta property="og:image" content="{{ siteUrl }}/img/home/coast.jpg">
+<link rel="canonical" href="{{ canonical }}">{% for translation in translations %}<link rel="alternate" hreflang="{{ translation.lang }}" href="{{ translation.url }}">{% endfor %}
+<link rel="icon" href="/img/favicon.ico"><link rel="stylesheet" href="/css/home.css">
+<link rel="stylesheet" href="/css/downloads.css">
+</head>
