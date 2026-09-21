@@ -13,7 +13,7 @@
     "test": "node --test tests/*.test.mjs"
   },
   "dependencies": {
-    "markdown-it": "14.1.0",
+    "markdown-it": "14.2.0",
     "nunjucks": "3.2.4",
     "qrcode": "^1.5.4",
     "smol-toml": "1.4.2"
