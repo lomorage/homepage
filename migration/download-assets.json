@@ -12,7 +12,7 @@
       "path": "mac/install.sh",
       "sourceBlob": "8f38afb9b88c345c3d7e7f6656d6dad733a0142a",
       "sourceSha256": "eb465b9ede0019fca8738bffcfe708332377638dff48a7970249c9871fe87b35",
-      "sha256": "8ae55d7219d72758706058a1e6bff288c3c55785dd628e43c8ba5c07f52534d0"
+      "sha256": "ede1aa3e7631124daac29cade149018dd71196f86b14a22dbaa53e789e204733"
     },
     {
       "path": "windows/LomoImporter.zip",

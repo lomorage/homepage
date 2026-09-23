@@ -99,26 +99,24 @@ if [[ -z "${MANIFEST_KEY}" ]]; then
     MANIFEST_KEY="macos-cli-${ARCH}"
 fi
 
-if ! command -v python3 >/dev/null 2>&1; then
-    fail "python3 is required to parse the release manifest but wasn't found (install Xcode Command Line Tools: xcode-select --install)"
-fi
-
 sha256_hex() {
     shasum -a 256 "$1" | awk '{print $1}'
 }
 
 manifest_field() {
-    printf '%s' "${MANIFEST_JSON}" | python3 -c '
-import json, sys
-data = json.load(sys.stdin)
-platform = data.get(sys.argv[1])
-if not platform:
-    sys.exit(1)
-val = platform.get(sys.argv[2])
-if val is None:
-    sys.exit(1)
-print(val)
-' "${MANIFEST_KEY}" "$1"
+    # JavaScript for Automation ships with macOS; no developer tools are needed.
+    # Pass JSON as data, never interpolate downloaded content into script source.
+    /usr/bin/osascript -l JavaScript -e '
+function run(argv) {
+    var data = JSON.parse(argv[0]);
+    var platform = data && Object.prototype.hasOwnProperty.call(data, argv[1]) ? data[argv[1]] : null;
+    var value = platform && Object.prototype.hasOwnProperty.call(platform, argv[2]) ? platform[argv[2]] : null;
+    if (typeof value !== "string" || value.trim().length === 0) {
+        throw new Error("Missing or invalid release field: " + argv[1] + "." + argv[2]);
+    }
+    return value;
+}
+' "${MANIFEST_JSON}" "${MANIFEST_KEY}" "$1"
 }
 
 stop_existing_lomod() {
