@@ -53,11 +53,9 @@
     "iosNote": "在商店中找到 LomoMobile",
     "iosUrl": "https://apps.apple.com/cn/app/lomomobile/id6771038226",
     "androidLabel": "Android 手机",
-    "androidButton": "下载 Android 应用",
-    "androidNote": "APK 安装包 · v1.0.3",
-    "androidUrl": "https://gfw.lomorage.com/https://github.com/lomorage/lomo-mobile/releases/download/v1.0.3/app-release.apk",
-    "androidAlternateUrl": "https://play.google.com/store/apps/details?id=com.wtao.lomo",
-    "androidAlternateLabel": "也可前往 Google Play",
+    "androidButton": "前往 Google Play",
+    "androidNote": "在商店中找到 LomoMobile",
+    "androidUrl": "https://play.google.com/store/apps/details?id=com.wtao.lomo",
     "qrAlt": "下载链接二维码",
     "connectTitle": "扫一扫，让照片找到自己的家。",
     "connectSteps": [
@@ -182,8 +180,6 @@
     "androidButton": "Get it on Google Play",
     "androidNote": "Install the Android app",
     "androidUrl": "https://play.google.com/store/apps/details?id=com.wtao.lomo",
-    "androidAlternateUrl": "https://github.com/lomorage/lomo-mobile/releases/download/v1.0.3/app-release.apk",
-    "androidAlternateLabel": "Or download the APK · v1.0.3",
     "qrAlt": "Download link QR code",
     "connectTitle": "Scan a code. Give your photos a home.",
     "connectSteps": [
