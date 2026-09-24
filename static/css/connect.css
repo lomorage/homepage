@@ -1,0 +1,28 @@
+/* /s/ — landing page for the server setup QR code, opened on a phone. */
+html[data-lang=zh] [data-connect-lang=en],html[data-lang=en] [data-connect-lang=zh]{display:none}
+.connect-header{padding:22px 0;border-bottom:1px solid var(--line)}
+.connect-header .brand{font-size:24px}
+.connect-main{max-width:560px;padding:36px 0 60px}
+html:not([data-lang]) .connect-page+.connect-page{border-top:1px solid var(--line);margin-top:40px;padding-top:40px}
+.connect-page .eyebrow{margin-bottom:16px;justify-content:flex-start;text-align:left}
+.connect-page h1{font-size:40px;line-height:1.25;letter-spacing:-1px;margin-bottom:14px}
+.connect-page[lang=zh] h1{font-size:34px;letter-spacing:0;line-height:1.4}
+.connect-intro{color:var(--muted);font-size:14px;margin-bottom:20px}
+.connect-server{display:flex;flex-direction:column;gap:2px;background:var(--sage);border:1px solid #dce3cf;border-radius:10px;padding:12px 16px;font-size:12px;color:var(--muted)}
+.connect-server strong{color:var(--ink);font-size:14px;overflow-wrap:anywhere}
+.connect-wechat{background:#fdeee7;border:1px solid #f2c8b6;border-radius:10px;padding:12px 16px;font-size:13px;color:#7a3f27}
+.connect-steps{list-style:none;counter-reset:step;padding:0;margin:26px 0}
+.connect-steps>li{counter-increment:step;position:relative;padding:0 0 26px 46px}
+.connect-steps>li::before{content:counter(step);position:absolute;left:0;top:0;display:grid;place-items:center;width:31px;height:31px;border:1px solid #cbd5bc;border-radius:50%;font:italic 14px Georgia,serif;color:var(--green)}
+.connect-steps h2{font:600 16px/1.6 Arial,"PingFang SC","Microsoft YaHei",sans-serif;letter-spacing:0;margin:3px 0 4px;white-space:normal}
+.connect-steps p{font-size:13px;color:var(--muted);margin:0}
+.connect-stores{display:flex;flex-wrap:wrap;gap:10px;margin:14px 0 10px}
+.connect-stores .button{font-size:13px;padding:12px 18px}
+.connect-stores [hidden]{display:none}
+.connect-note{font-size:12px!important}
+.connect-address{display:flex;align-items:center;gap:10px;margin-top:10px;border:1px solid #cdd7c0;background:#e9eedf;border-radius:9px;padding:10px 12px}
+.connect-address code{flex:1;min-width:0;overflow-wrap:anywhere;font:14px/1.6 Consolas,"Liberation Mono",monospace;color:#344b34}
+.connect-address button{border:1px solid #b7c6a7;border-radius:6px;padding:7px 12px;background:var(--paper);font:600 12px/1.5 Arial,"Microsoft YaHei",sans-serif;color:var(--green);cursor:pointer}
+.connect-help{font-size:12px}
+[hidden]{display:none!important}
+@media(max-width:540px){.connect-main{padding-top:26px}.connect-page h1{font-size:32px}.connect-page[lang=zh] h1{font-size:28px}.connect-stores .button{flex:1}}

@@ -1,0 +1,16 @@
+{
+  "applinks": {
+    "apps": [],
+    "details": [
+      {
+        "appID": "3GRDMJ5JMM.com.wtao.lomo",
+        "appIDs": ["3GRDMJ5JMM.com.wtao.lomo"],
+        "paths": ["/s/*", "/s"],
+        "components": [
+          { "/": "/s/*", "comment": "Lomorage server setup QR code" },
+          { "/": "/s" }
+        ]
+      }
+    ]
+  }
+}

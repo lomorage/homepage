@@ -11,6 +11,7 @@ export const output = path.join(root, 'dist');
 const siteUrl = 'https://lomorage.com';
 const copy = JSON.parse(fs.readFileSync(path.join(root, 'data/home.json'), 'utf8'));
 const downloads = JSON.parse(fs.readFileSync(path.join(root, 'data/downloads.json'), 'utf8'));
+const connect = JSON.parse(fs.readFileSync(path.join(root, 'data/connect.json'), 'utf8'));
 const env = nunjucks.configure(path.join(root, 'src'), { autoescape: true, throwOnUndefined: true });
 const escape = value => String(value).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const slug = value => String(value).toLowerCase().replace(/[^\p{L}\p{N}\s_.-]/gu, '').trim().replace(/\s+/g, '-');
@@ -108,6 +109,10 @@ export function build() {
   write('/en/',redirect('/'));
   write('/download/',redirect('/#download'));
   write('/zh/download/',redirect('/zh/#download'));
+  // Target of the setup QR code a fresh Lomorage server shows (lomo-backend
+  // handler/setup.go). Phones with LomoMobile open it in the app through
+  // /.well-known/; others land here to install the app. Not in the sitemap.
+  write('/s/',env.render('connect.njk',{c:connect,downloads}));
   write('/.nojekyll','');
   write('/404.html',env.render('page.njk',{...context('en','/404.html','Page not found','This page could not be found.'),content:'<p>The page may have moved. <a href="/">Return home</a> or <a href="/blog/">browse the journal</a>.</p>'}));
   write('/robots.txt',`User-agent: *\nAllow: /\nSitemap: ${siteUrl}/sitemap.xml\n`);

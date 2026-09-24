@@ -1,0 +1,40 @@
+{
+  "zh": {
+    "title": "连接你家里的 Lomorage",
+    "description": "在手机上安装 LomoMobile，然后连接你电脑上的 Lomorage。",
+    "eyebrow": "手机连接电脑",
+    "heading": "先在手机上装好 LomoMobile",
+    "intro": "你刚刚扫描的是电脑上的 Lomorage 设置码。要连接它，需要先安装 LomoMobile 应用。",
+    "serverLabel": "要连接的电脑",
+    "wechat": "微信里无法下载应用。请点右上角「···」，选择「在浏览器中打开」。",
+    "installTitle": "安装应用",
+    "installText": "免费下载，安装完成后回到这里继续。",
+    "scanTitle": "回到电脑，用应用再扫一次",
+    "scanText": "打开 LomoMobile，点「扫码」，对准电脑屏幕上的同一个二维码。",
+    "manualTitle": "扫不上？手动输入地址",
+    "manualText": "在应用的连接页面输入下面这个地址：",
+    "copy": "复制",
+    "copied": "已复制",
+    "installedNote": "已经装好应用？直接打开 LomoMobile 扫码即可。",
+    "help": "连不上？查看常见问题"
+  },
+  "en": {
+    "title": "Connect to your Lomorage",
+    "description": "Install LomoMobile on your phone, then connect it to Lomorage on your computer.",
+    "eyebrow": "Phone to computer",
+    "heading": "First, get LomoMobile on this phone",
+    "intro": "You just scanned the Lomorage setup code on your computer. To connect, install the LomoMobile app first.",
+    "serverLabel": "Computer to connect",
+    "wechat": "Apps can’t be downloaded inside WeChat. Tap “···” in the top-right corner and choose “Open in browser”.",
+    "installTitle": "Install the app",
+    "installText": "It’s free. Come back here when it’s installed.",
+    "scanTitle": "Scan the code again from the app",
+    "scanText": "Open LomoMobile, tap “Scan”, and point it at the same QR code on your computer screen.",
+    "manualTitle": "Scanning not working? Type the address",
+    "manualText": "Enter this address on the app’s connect screen:",
+    "copy": "Copy",
+    "copied": "Copied",
+    "installedNote": "Already have the app? Just open LomoMobile and scan.",
+    "help": "Can’t connect? Read the FAQ"
+  }
+}

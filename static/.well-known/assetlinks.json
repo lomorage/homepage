@@ -1,0 +1,13 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.wtao.lomo",
+      "sha256_cert_fingerprints": [
+        "F5:98:87:F3:27:B1:31:81:A0:00:B2:1A:B4:55:86:F7:85:54:8D:EA:84:03:7C:9E:11:B6:91:1B:73:EA:65:3E",
+        "EF:3F:6C:04:C7:A7:77:BD:ED:A4:2B:29:45:5B:11:C4:B6:85:EA:06:5C:22:62:F0:9A:28:11:F4:4E:39:BE:5A"
+      ]
+    }
+  }
+]

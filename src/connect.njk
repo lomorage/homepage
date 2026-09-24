@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>{{ c.zh.title }} · Lomorage</title><meta name="description" content="{{ c.zh.description }}"><meta name="theme-color" content="#fbf8f3">
+<link rel="icon" type="image/png" href="/img/brand/memory-embrace-256.png"><link rel="apple-touch-icon" href="/img/brand/memory-embrace-256.png">
+<link rel="stylesheet" href="/css/home.css"><link rel="stylesheet" href="/css/brand.css"><link rel="stylesheet" href="/css/connect.css">
+<script>/* Pick the page language before first paint; without JS both languages show. */try{var l=(navigator.languages&&navigator.languages[0])||navigator.language||'';document.documentElement.lang=/^zh/i.test(l)?'zh':'en';document.documentElement.dataset.lang=document.documentElement.lang;}catch(e){}</script>
+<script src="/js/connect.js" defer></script>
+</head>
+<body>
+<header class="connect-header wrap"><a class="brand" href="/"><img src="/img/brand/memory-embrace-256.png" width="46" height="46" alt="">lomorage</a></header>
+<main id="main" class="wrap connect-main">
+{% for lang in ['zh', 'en'] %}{% set t = c[lang] %}{% set d = downloads[lang] %}
+<section class="connect-page" lang="{{ lang }}" data-connect-lang="{{ lang }}" data-title="{{ t.title }} · Lomorage">
+<p class="eyebrow"><span class="status-dot"></span>{{ t.eyebrow }}</p>
+<h1>{{ t.heading }}</h1>
+<p class="connect-intro">{{ t.intro }}</p>
+<p class="connect-server" data-server-box hidden><span>{{ t.serverLabel }}</span><strong data-server-name></strong></p>
+<p class="connect-wechat" data-wechat hidden>{{ t.wechat }}</p>
+<ol class="connect-steps">
+<li><h2>{{ t.installTitle }}</h2><p>{{ t.installText }}</p>
+<div class="connect-stores"><a class="button" data-store="ios" href="{{ d.iosUrl }}">{{ d.iosButton }} <span aria-hidden="true">→</span></a><a class="button" data-store="android" href="{{ d.androidUrl }}">{{ d.androidButton }} <span aria-hidden="true">→</span></a></div>
+<p class="connect-note">{{ t.installedNote }}</p></li>
+<li><h2>{{ t.scanTitle }}</h2><p>{{ t.scanText }}</p></li>
+<li data-manual hidden><h2>{{ t.manualTitle }}</h2><p>{{ t.manualText }}</p>
+<div class="connect-address"><code data-server-address></code><button type="button" data-copy data-copied-text="{{ t.copied }}">{{ t.copy }}</button></div></li>
+</ol>
+<a class="text-link connect-help" href="{{ '/zh/#questions' if lang == 'zh' else '/#questions' }}">{{ t.help }} <span aria-hidden="true">→</span></a>
+</section>
+{% endfor %}
+</main>
+</body>
+</html>

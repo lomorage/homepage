@@ -83,3 +83,21 @@ test('language pairs, custom domain, discovery and error pages are generated',()
   assert.equal(fs.readFileSync(path.join(output,'CNAME'),'utf8').trim(),'lomorage.com');
   for(const file of ['sitemap.xml','robots.txt','index.xml','zh/index.xml','404.html'])assert.ok(fs.existsSync(path.join(output,file)));
 });
+test('setup QR landing page and app link association files are published',()=>{
+  const page=html('/s/');
+  assert.ok(page.includes('<meta name="robots" content="noindex">'));
+  assert.ok(page.includes('<script src="/js/connect.js" defer></script>'));
+  assert.ok(!/{{|{%/.test(page));
+  const source=JSON.parse(fs.readFileSync(new URL('../data/downloads.json',import.meta.url),'utf8'));
+  for(const lang of ['en','zh']){
+    assert.ok(page.includes(`data-connect-lang="${lang}"`));
+    for(const app of ['ios','android'])assert.ok(page.includes(source[lang][app+'Url']));
+  }
+  assert.ok(!fs.readFileSync(path.join(output,'sitemap.xml'),'utf8').includes('/s/'));
+  const aasa=JSON.parse(fs.readFileSync(path.join(output,'.well-known/apple-app-site-association'),'utf8'));
+  assert.ok(aasa.applinks.details[0].appIDs.includes('3GRDMJ5JMM.com.wtao.lomo'));
+  assert.ok(aasa.applinks.details[0].components.some(c=>c['/']==='/s/*'));
+  const links=JSON.parse(fs.readFileSync(path.join(output,'.well-known/assetlinks.json'),'utf8'));
+  assert.equal(links[0].target.package_name,'com.wtao.lomo');
+  for(const fp of links[0].target.sha256_cert_fingerprints)assert.match(fp,/^([0-9A-F]{2}:){31}[0-9A-F]{2}$/);
+});
