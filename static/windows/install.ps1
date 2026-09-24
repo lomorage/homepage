@@ -47,10 +47,9 @@
 
 .NOTES
   Set $env:LOMOD_CHINA=1 before running to fetch the release zip through
-  https://gfw.lomorage.com/<url> instead of directly from GitHub Releases -- same accelerator
-  proxy already used for the zh download links on lomosw.github.io (LomoAgentWin/LomoAgentOSX/
-  Android/pi-gen etc), since GitHub Releases asset downloads are often slow or unreachable from
-  mainland China otherwise. Only the zip download is affected -- the release manifest fetch
+  https://gfw.lomorage.com/<url> (lomorage's GitHub download accelerator proxy) instead of
+  directly from GitHub Releases, since GitHub Releases asset downloads are often slow or
+  unreachable from mainland China otherwise. Only the zip download is affected -- the release manifest fetch
   (-ReleaseUrl) already goes to lomorage.com's own domain, not GitHub. An env var rather than a
   -China switch because this script is normally invoked as `irm ... | iex`, which has no way to
   pass switch/positional arguments through the pipe; an env var set beforehand is visible to the
@@ -185,15 +184,20 @@ function Register-Autoupdate {
 }
 
 function Wait-ForLomod {
+    # Polls /status, not /mount: /mount needs a token once a user has been created (401 "Invalid
+    # Token"), so re-running this script over an existing setup -- the documented
+    # reinstall/repair/update path -- waited out the full timeout and then warned that lomod never
+    # came up. /status needs no token in any state and answers 200 with a bare numeric system
+    # status. Requiring that numeric body, not just any response, keeps some other web server
+    # already listening on $Port from passing as lomod.
     param([int]$TimeoutSeconds = 30)
     $deadline = (Get-Date).AddSeconds($TimeoutSeconds)
     while ((Get-Date) -lt $deadline) {
         try {
-            $resp = Invoke-WebRequest -Uri "http://127.0.0.1:$Port/mount" -UseBasicParsing -TimeoutSec 2
-            if ($resp.StatusCode -eq 200) { return $true }
-        } catch {
-            Start-Sleep -Milliseconds 500
-        }
+            $resp = Invoke-WebRequest -Uri "http://127.0.0.1:$Port/status" -UseBasicParsing -TimeoutSec 2
+            if ($resp.StatusCode -eq 200 -and "$($resp.Content)".Trim() -match '^\d+$') { return $true }
+        } catch {}
+        Start-Sleep -Milliseconds 500
     }
     return $false
 }

@@ -33,6 +33,8 @@ Installation is now part of `/#download` and `/zh/#download`; `/download/` and `
 
 Windows and Mac installation scripts, photo importers, and legacy updater ZIPs were copied from the supplied download repository. `migration/download-assets.json` records the source tree, Git blob IDs, and SHA-256 values; tests verify the migrated files. Installer behavior is unchanged; comments and documented command URLs now use the main domain. No installer was executed during website validation. `static/release.json` now points its updater ZIPs at the same files on the main domain. Release binaries continue to be distributed by GitHub Releases.
 
+`static/windows/install.ps1` and `static/mac/install.sh` are copies of lomo-backend's `installers/windows/install.ps1` and `installers/macos/install.sh`. Edit them there, not here. lomo-backend's `scripts/sync-installers-to-homepage.sh` overwrites these copies, updates their hashes in `migration/download-assets.json`, and runs `npm test`. Its `--check` flag reports drift without changing anything. lomo-backend's `scripts/release-all.sh` runs the sync on every release.
+
 Before retiring the old download host, publish this main site and verify its `/windows/install.ps1`, `/mac/install.sh`, importer and updater endpoints. Then switch the old download site's human-facing pages to redirects to the corresponding main-homepage sections. Keep compatibility for old installer commands and installed clients that may still reference the old hostname; an HTML redirect cannot replace an installer script or ZIP response. No DNS settings, GitHub Pages settings, or live sites have been changed by this local migration.
 
 ## Photography

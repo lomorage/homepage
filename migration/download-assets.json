@@ -4,15 +4,17 @@
   "files": [
     {
       "path": "windows/install.ps1",
-      "sourceBlob": "77a5178c75a226f2771690628c3cde07d2aa8671",
-      "sourceSha256": "472ccf686a17a9518a5036651aa94370c1bf8256079fbd205e2672838261d2be",
-      "sha256": "9fedcf2761f807238167568ee77792a87d6267f8c7f93f4fc46ce263db45222e"
+      "sourceBlob": "4f0c1b816a511c701ee184bfdb39d864dfdd5550",
+      "sourceSha256": "b598647025f52698e87b68c8d22627570ed81b6edfe84a993763fae054afd0d0",
+      "sha256": "b598647025f52698e87b68c8d22627570ed81b6edfe84a993763fae054afd0d0",
+      "source": "lomorage/lomo-backend@f1e91cc:installers/windows/install.ps1"
     },
     {
       "path": "mac/install.sh",
-      "sourceBlob": "8f38afb9b88c345c3d7e7f6656d6dad733a0142a",
-      "sourceSha256": "eb465b9ede0019fca8738bffcfe708332377638dff48a7970249c9871fe87b35",
-      "sha256": "ede1aa3e7631124daac29cade149018dd71196f86b14a22dbaa53e789e204733"
+      "sourceBlob": "785c94c9bd09836b3023dbc338e0259f74ba3022",
+      "sourceSha256": "42193cc1cb294ef50ed05c40f8b8fa25dcca23c39e24ffa6be16889eb187ffd7",
+      "sha256": "42193cc1cb294ef50ed05c40f8b8fa25dcca23c39e24ffa6be16889eb187ffd7",
+      "source": "lomorage/lomo-backend@f1e91cc:installers/macos/install.sh"
     },
     {
       "path": "windows/LomoImporter.zip",

@@ -8,8 +8,8 @@
 #
 # This installs the current lomod backend with a browser setup flow.
 # Installation instructions are at https://lomorage.com/#download.
-# It comes with Lomorage.app, a menu bar
-# icon (see its Contents/MacOS/lomorage-tray.swift header comment) mirroring the Windows
+# It comes with Lomorage.app, a menu bar icon (see its Contents/MacOS/lomorage-tray.swift
+# header comment) mirroring the Windows
 # installer's system tray icon, for open/start/stop/restart/reset without a terminal --
 # installed to ~/Applications so a non-technical user who quits the tray can find and reopen it
 # via Spotlight/Launchpad like any normal Mac app, rather than needing Terminal or a reboot.
@@ -44,10 +44,9 @@
 #   --no-browser           Skip auto-opening the default browser to the local setup UI after install.
 #
 # LOMOD_CHINA=1  Route the release tarball download through https://gfw.lomorage.com/<url>
-#                instead of directly from GitHub Releases -- same accelerator proxy already used
-#                for the zh download links on lomosw.github.io (LomoAgentWin/LomoAgentOSX/
-#                Android/pi-gen etc), since GitHub Releases asset downloads are often slow or
-#                unreachable from mainland China otherwise. Mirrors installers/windows/
+#                (lomorage's GitHub download accelerator proxy) instead of directly from GitHub
+#                Releases, since GitHub Releases asset downloads are often slow or unreachable
+#                from mainland China otherwise. Mirrors installers/windows/
 #                install.ps1's $env:LOMOD_CHINA. Only the tarball download is affected -- the
 #                release manifest fetch (--release-url) already goes to lomorage.com's own
 #                domain, not GitHub. No --china flag (env var only): this script is normally
@@ -199,15 +198,18 @@ PLIST
 }
 
 wait_for_lomod() {
-    # No -f: a fresh, not-yet-onboarded lomod legitimately answers /mount with a 500
-    # ("Device is not mounted yet") until the user finishes the /welcome setup flow in the
-    # browser -- -f would treat that as a failed health check even though the server is up and
-    # responding correctly. Without -f, curl still exits non-zero for an actual connection
-    # failure (nothing listening yet, timeout), which is the only thing this loop needs to poll.
-    local timeout=30 start_ts now_ts
+    # Polls /status, not /mount: /mount answers 500 ("Device is not mounted yet") on a fresh,
+    # not-yet-onboarded lomod until the /welcome setup flow is finished, and 401 ("Invalid
+    # Token") once a user exists, so a /mount-based check had to accept any HTTP response at
+    # all -- which also let some other web server already listening on ${PORT} pass as lomod.
+    # /status needs no token in any state and answers 200 with a bare numeric system status;
+    # requiring that body keeps the check specific to lomod. Same check as
+    # installers/windows/install.ps1's Wait-ForLomod.
+    local timeout=30 start_ts now_ts body
     start_ts="$(date +%s)"
     while true; do
-        if curl -sS -o /dev/null --max-time 2 "http://127.0.0.1:${PORT}/mount" 2>/dev/null; then
+        body="$(curl -fsS --max-time 2 "http://127.0.0.1:${PORT}/status" 2>/dev/null)" || body=""
+        if [[ "${body}" =~ ^[0-9]+$ ]]; then
             return 0
         fi
         now_ts="$(date +%s)"
