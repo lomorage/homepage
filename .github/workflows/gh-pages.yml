@@ -7,7 +7,19 @@ on:
   pull_request:
 
 jobs:
+  # The Mac installer's release.json parser runs under osascript (JavaScript for Automation), which
+  # only exists on macOS; `npm test` on Linux covers the same parser through Node and skips this one.
+  mac-installer:
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: node --test tests/mac-installer.test.mjs
+
   deploy:
+    needs: mac-installer
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
