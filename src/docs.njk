@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="{{ lang }}">
+{% include "head.njk" %}
+<body class="docs-page">
+{% include "header.njk" %}
+<main id="main" class="docs-layout wrap">
+  <aside class="docs-sidebar" aria-label="{{ docsNav.title }}">
+    <a class="docs-home-link" href="{{ homeUrl }}docs/">{{ docsNav.title }}</a>
+    <label class="docs-search"><span class="visually-hidden">{{ docsNav.search }}</span><input type="search" data-doc-filter placeholder="{{ docsNav.searchPlaceholder }}"></label>
+    <nav>{% for group in docsNav.groups %}<section data-doc-group><h2>{{ group.title }}</h2>{% for item in group.items %}<a href="{{ item.url }}"{% if canonical == siteUrl + item.url %} aria-current="page"{% endif %}>{{ item.title }}</a>{% endfor %}</section>{% endfor %}</nav>
+  </aside>
+  <article class="docs-article">
+    <a class="docs-back" href="{{ homeUrl }}docs/">← {{ docsNav.home }}</a>
+    <h1>{{ pageTitle }}</h1>
+    <div class="prose docs-prose">{{ content | safe }}</div>
+  </article>
+  {% if headings.length %}<aside class="docs-toc"><strong>{{ docsNav.onPage }}</strong>{% for heading in headings %}<a class="toc-level-{{ heading.level }}" href="#{{ heading.id }}">{{ heading.text }}</a>{% endfor %}</aside>{% endif %}
+</main>
+{% include "footer.njk" %}
+<script src="/js/docs.js" defer></script>
+</body>
+</html>

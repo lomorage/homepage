@@ -12,7 +12,7 @@ banner = "img/blog/android-frame/android-frame-banner.png"
 
 ## 当您看到这篇文章的时候，相信您已经知道了什么是Lomorage。
 
-## <u>**[点击这里查看一张图看懂Lomorage](https://docs.lomorage.com/zh/docs/Installation/)**</u> 来温故知新什么是Lomorage。
+## <u>**[点击这里查看一张图看懂Lomorage](/zh/docs/Installation/)**</u> 来温故知新什么是Lomorage。
 
 
 # 按下面步骤把您的平板变成电子相框

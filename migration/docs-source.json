@@ -1,0 +1,31 @@
+{
+  "source": "https://github.com/lomodoc/homepage",
+  "sourceCommit": "302ba2e",
+  "importedOn": "2026-09-26",
+  "content": {
+    "english": "content/docs",
+    "chinese": "content.zh/docs",
+    "assets": "static/img/installation"
+  },
+  "migration": {
+    "destination": "docs-content/{en,zh}/docs",
+    "publicRoutes": ["/docs/", "/zh/docs/"],
+    "preserveLegacyPaths": true,
+    "generatedBy": "scripts/build.mjs",
+    "hugoRequired": false
+  },
+  "editorialChanges": [
+    "Reorganized navigation around setup, storage choices, apps, family use and advanced topics.",
+    "Rewrote section landing pages for non-technical families.",
+    "Removed dated promises and unfinished features from primary guidance.",
+    "Pruned unreferenced legacy installer screenshots and platform badges.",
+    "Changed docs.lomorage.com links to same-site paths."
+  ],
+  "recentSourceHistoryReviewed": [
+    "302ba2e Point install and importer links at lomorage.com",
+    "4343df7 Retire the LomoAgent GUI macOS install docs for the new CLI installer",
+    "8681ccc Retire the LomoAgent GUI Windows install docs for the new CLI installer",
+    "76758a0 Add Rocky Linux 9 and openSUSE Leap installation docs",
+    "c61a0f5 Document QR sign-in pairing and web Inbox"
+  ]
+}

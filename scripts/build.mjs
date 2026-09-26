@@ -11,6 +11,7 @@ export const output = path.join(root, 'dist');
 const siteUrl = 'https://lomorage.com';
 const copy = JSON.parse(fs.readFileSync(path.join(root, 'data/home.json'), 'utf8'));
 const downloads = JSON.parse(fs.readFileSync(path.join(root, 'data/downloads.json'), 'utf8'));
+const docsNavigation = JSON.parse(fs.readFileSync(path.join(root, 'data/docs.json'), 'utf8'));
 const connect = JSON.parse(fs.readFileSync(path.join(root, 'data/connect.json'), 'utf8'));
 const env = nunjucks.configure(path.join(root, 'src'), { autoescape: true, throwOnUndefined: true });
 const escape = value => String(value).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
@@ -46,6 +47,33 @@ function readPage(file) {
   if (/{{[<%]/.test(body)) throw new Error(`Unconverted shortcode in ${file}`);
   return {...data, date, lang, name, isBlog, url, html:md.render(body), summary:body.split('<!--more-->')[0].replace(/<[^>]*>/g,'').replace(/!\[[^\]]*\]\([^)]*\)/g,'').replace(/[#*`\[\]]/g,'').trim().slice(0,180)};
 }
+function readDocPage(file, lang) {
+  const raw = fs.readFileSync(file, 'utf8').trimStart();
+  const front = raw.match(/^---\r?\n([\s\S]*?)\r?\n---\r?\n/);
+  if (!front) throw new Error(`Missing YAML front matter: ${file}`);
+  const title = front[1].match(/^title:\s*["']?(.+?)["']?\s*$/m)?.[1] || path.basename(file, '.md');
+  const weight = Number(front[1].match(/^weight:\s*(\d+)/m)?.[1] || 100);
+  const langRoot = path.join(root, 'docs-content', lang);
+  const relative = path.relative(langRoot, file).replaceAll('\\', '/');
+  const clean = relative.endsWith('/_index.md') ? relative.slice(0, -9) : relative.replace(/\.md$/, '/');
+  const prefix = lang === 'zh' ? '/zh' : '';
+  const url = `${prefix}/${clean}`.replace(/\/+/g, '/');
+  let body = raw.slice(front[0].length)
+    .replace(/^#\s+[^\r\n]+\r?\n+/, '')
+    .replace(/https:\/\/docs\.lomorage\.com(?=\/)/g, '')
+    .replace(/mailto:\s+/g, 'mailto:');
+  const notes = [];
+  body = body.replace(/{{<\s*hint\s+(warning|info)\s*>}}([\s\S]*?){{<\s*\/hint\s*>}}/g, (_, kind, content) => {
+    const token = `LOMORAGE_DOC_NOTE_${notes.length}`;
+    notes.push(`<aside class="doc-note${kind === 'warning' ? ' doc-warning' : ''}">${md.render(content.trim())}</aside>`);
+    return token;
+  });
+  if (/{{[<%]/.test(body)) throw new Error(`Unconverted docs shortcode in ${file}`);
+  let html = md.render(body);
+  notes.forEach((note, index) => { html = html.replace(`<p>LOMORAGE_DOC_NOTE_${index}</p>`, note); });
+  const summary = body.replace(/<[^>]*>/g, '').replace(/!\[[^\]]*\]\([^)]*\)/g, '').replace(/[#*`\[\]]/g, '').trim().slice(0, 180);
+  return {lang, title, weight, relative, url, html, summary};
+}
 function write(url, content) {
   const relative = url.endsWith('/') ? `${url}index.html` : url;
   const target = path.resolve(output, '.' + relative);
@@ -74,10 +102,17 @@ export function build() {
   fs.mkdirSync(output, {recursive:true});
   fs.cpSync(path.join(root, 'static'), output, {recursive:true});
   const pages = files(path.join(root,'content')).filter(file => file.endsWith('.md') && !path.basename(file).startsWith('_index')).map(readPage).filter(page => !page.draft);
+  const docs = ['en','zh'].flatMap(lang => files(path.join(root,'docs-content',lang,'docs')).filter(file => file.endsWith('.md')).map(file => readDocPage(file,lang)));
   const urls = new Set();
   function renderPage(url, lang, title, html, translations=[], description='') {
     urls.add(url);
     write(url, env.render('page.njk', {...context(lang,url,title,description || copy[lang].description,translations), content:html}));
+  }
+  function renderDoc(page) {
+    const translations = docs.filter(other => other.relative === page.relative).map(other => ({lang:other.lang,url:siteUrl+other.url}));
+    const headings = [...page.html.matchAll(/<h([23]) id="([^"]+)">([\s\S]*?)<\/h\1>/g)].map(match => ({level:Number(match[1]),id:match[2],text:match[3].replace(/<[^>]+>/g,'')}));
+    urls.add(page.url);
+    write(page.url, env.render('docs.njk', {...context(page.lang,page.url,page.title,page.summary || copy[page.lang].description,translations), content:page.html, docsNav:docsNavigation[page.lang], headings, isDocs:true}));
   }
   const homeTranslations = [{lang:'en',url:siteUrl+'/'},{lang:'zh',url:siteUrl+'/zh/'}];
   for (const lang of ['en','zh']) {
@@ -102,6 +137,7 @@ export function build() {
     const translations = pages.filter(other=>other.name===p.name && other.isBlog===p.isBlog).map(other=>({lang:other.lang,url:siteUrl+other.url}));
     renderPage(p.url,p.lang,p.title,p.html,translations,p.description || p.summary);
   }
+  for (const page of docs) renderDoc(page);
   const redirect = url => `<!DOCTYPE html><html lang="en"><meta charset="utf-8"><meta http-equiv="refresh" content="0;url=${url}"><link rel="canonical" href="${siteUrl}${url}"><title>Lomorage</title><a href="${url}">Continue to Lomorage</a></html>`;
   for (const url of urls) {
     if (/^\/(zh\/)?(blog\/|(?:tags|categories)\/[^/]+\/)$/.test(url)) write(url+'page/1/',redirect(encodeURI(url)));
@@ -117,7 +153,7 @@ export function build() {
   write('/404.html',env.render('page.njk',{...context('en','/404.html','Page not found','This page could not be found.'),content:'<p>The page may have moved. <a href="/">Return home</a> or <a href="/blog/">browse the journal</a>.</p>'}));
   write('/robots.txt',`User-agent: *\nAllow: /\nSitemap: ${siteUrl}/sitemap.xml\n`);
   write('/sitemap.xml',`<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">${[...urls].map(url=>`<url><loc>${siteUrl}${escape(encodeURI(url))}</loc></url>`).join('')}</urlset>`);
-  console.log(`Built ${urls.size} pages, ${pages.filter(p=>p.isBlog).length} articles and both languages. No Hugo required.`);
-  return {urls:[...urls],pages};
+  console.log(`Built ${urls.size} pages, ${pages.filter(p=>p.isBlog).length} articles, ${docs.length} docs and both languages. No Hugo required.`);
+  return {urls:[...urls],pages,docs};
 }
 if (process.argv[1] && path.resolve(process.argv[1]) === fileURLToPath(import.meta.url)) build();

@@ -101,3 +101,59 @@ test('setup QR landing page and app link association files are published',()=>{
   assert.equal(links[0].target.package_name,'com.wtao.lomo');
   for(const fp of links[0].target.sha256_cert_fingerprints)assert.match(fp,/^([0-9A-F]{2}:){31}[0-9A-F]{2}$/);
 });
+test('documentation is hosted with the homepage in both languages',()=>{
+  assert.equal(result.docs.length,56);
+  for(const [url,lang,title] of [['/docs/','en','Help your memories feel at home'],['/zh/docs/','zh','让全家人的回忆，安心住在家里']]){
+    const page=html(url);
+    assert.ok(page.includes(`<html lang="${lang}">`));
+    assert.ok(page.includes(title));
+    assert.ok(page.includes('class="docs-layout wrap"'));
+    assert.ok(page.includes('/css/docs.css'));
+    assert.ok(page.includes('/js/docs.js'));
+    assert.ok(!page.includes('docs.lomorage.com'));
+    assert.ok(!/{{<|{{%/.test(page));
+  }
+  for(const page of result.docs){
+    const rendered=html(page.url);
+    for(const match of rendered.matchAll(/(?:href|src)="([^"]+)"/g)){
+      const href=match[1];
+      if(href.startsWith('#')){assert.ok(rendered.includes(`id="${href.slice(1)}"`),`${page.url} ${href}`);continue;}
+      if(href.startsWith('//') || /^(?:mailto|tel|data):/.test(href))continue;
+      const resolved=new URL(href,'https://lomorage.com'+page.url);
+      if(resolved.origin!=='https://lomorage.com')continue;
+      const route=decodeURIComponent(resolved.pathname);
+      const target=path.join(output,route,route.endsWith('/')?'index.html':'');
+      assert.ok(fs.existsSync(target),`${page.url} -> ${href}`);
+    }
+  }
+});
+
+test('documentation notes render Markdown and use the current support channel',()=>{
+  const windows=html('/zh/docs/Installation/lomorage-service/installation-win/');
+  assert.ok(windows.includes('<aside class="doc-note">'));
+  assert.ok(windows.includes('href="https://apps.microsoft.com/detail/9pmmsr1cgpwg"'));
+  assert.ok(windows.includes('href="mailto:support@lomorage.com"'));
+  assert.ok(!windows.includes('[HEIF'));
+  assert.ok(!windows.includes('扫码加微信'));
+
+  const update=html('/zh/docs/Usage/Update/');
+  assert.ok(update.includes('href="mailto:support@lomorage.com"'));
+  assert.ok(!update.includes('lomorage@gmail.com'));
+  assert.ok(!update.includes('lomorage_wechat_qr'));
+});
+
+test('documentation uses current mobile apps and clear platform labels',()=>{
+  const ios=html('/zh/docs/Installation/lomorage-client/installation-ios/');
+  const android=html('/zh/docs/Installation/lomorage-client/installation-android/');
+  const platforms=html('/zh/docs/Installation/lomorage-service/');
+  assert.ok(ios.includes('apps.apple.com/cn/app/lomomobile/id6771038226'));
+  assert.ok(android.includes('play.google.com/store/apps/details?id=com.wtao.lomo'));
+  assert.ok(platforms.includes('amd64'));
+  assert.ok(platforms.includes('arm64'));
+  assert.ok(platforms.includes('armhf'));
+  assert.ok(platforms.includes('更多 Linux 系统'));
+  for(const page of [ios,android,platforms]){
+    assert.ok(!page.includes('View source and history'));
+    assert.ok(!page.includes('查看源码与修改记录'));
+  }
+});

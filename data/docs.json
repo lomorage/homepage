@@ -1,0 +1,74 @@
+{
+  "en": {
+    "title": "Help & guides",
+    "search": "Filter guides",
+    "searchPlaceholder": "Windows, NAS, family sharing…",
+    "home": "Documentation home",
+    "onPage": "On this page",
+    "groups": [
+      {"title":"Start here","items":[
+        {"title":"Choose your setup","url":"/docs/"},
+        {"title":"Install Lomorage","url":"/docs/Installation/"},
+        {"title":"Computer or home server","url":"/docs/Installation/lomorage-service/"}
+      ]},
+      {"title":"Computer & server","items":[
+        {"title":"Windows","url":"/docs/Installation/lomorage-service/installation-win/"},
+        {"title":"macOS","url":"/docs/Installation/lomorage-service/installation-osx/"},
+        {"title":"Synology NAS","url":"/docs/Installation/lomorage-service/installation-synology/"},
+        {"title":"Raspberry Pi","url":"/docs/Installation/lomorage-service/installation-raspbian/"},
+        {"title":"Docker","url":"/docs/Installation/lomorage-service/installation-docker/"},
+        {"title":"More Linux systems","url":"/docs/Installation/lomorage-service/"}
+      ]},
+      {"title":"Apps & your photos","items":[
+        {"title":"Phone and web apps","url":"/docs/Installation/lomorage-client/"},
+        {"title":"iPhone & iPad","url":"/docs/Installation/lomorage-client/installation-ios/"},
+        {"title":"Android","url":"/docs/Installation/lomorage-client/installation-android/"},
+        {"title":"Web browser","url":"/docs/Installation/lomorage-client/installation-web/"},
+        {"title":"Import an existing library","url":"/docs/Installation/lomorage-importer/"}
+      ]},
+      {"title":"More ways to use it","items":[
+        {"title":"Family, sharing & everyday use","url":"/docs/Usage/"},
+        {"title":"Custom views","url":"/docs/Usage/customized-view/"},
+        {"title":"Access away from home","url":"/docs/Usage/external-access/"},
+        {"title":"Updates & maintenance","url":"/docs/Usage/Update/"},
+        {"title":"Photo frame","url":"/docs/Installation/lomo-frame/"}
+      ]}
+    ]
+  },
+  "zh": {
+    "title": "帮助与指南",
+    "search": "筛选指南",
+    "searchPlaceholder": "Windows、NAS、家庭共享……",
+    "home": "文档首页",
+    "onPage": "本页内容",
+    "groups": [
+      {"title":"从这里开始","items":[
+        {"title":"选择适合你的方案","url":"/zh/docs/"},
+        {"title":"安装 Lomorage","url":"/zh/docs/Installation/"},
+        {"title":"电脑或家庭服务器","url":"/zh/docs/Installation/lomorage-service/"}
+      ]},
+      {"title":"电脑与服务器","items":[
+        {"title":"Windows","url":"/zh/docs/Installation/lomorage-service/installation-win/"},
+        {"title":"macOS","url":"/zh/docs/Installation/lomorage-service/installation-osx/"},
+        {"title":"群晖 NAS","url":"/zh/docs/Installation/lomorage-service/installation-synology/"},
+        {"title":"树莓派","url":"/zh/docs/Installation/lomorage-service/installation-raspbian/"},
+        {"title":"Docker","url":"/zh/docs/Installation/lomorage-service/installation-docker/"},
+        {"title":"更多 Linux 系统","url":"/zh/docs/Installation/lomorage-service/"}
+      ]},
+      {"title":"应用与照片","items":[
+        {"title":"手机与网页应用","url":"/zh/docs/Installation/lomorage-client/"},
+        {"title":"iPhone 与 iPad","url":"/zh/docs/Installation/lomorage-client/installation-ios/"},
+        {"title":"Android","url":"/zh/docs/Installation/lomorage-client/installation-android/"},
+        {"title":"网页浏览","url":"/zh/docs/Installation/lomorage-client/installation-web/"},
+        {"title":"导入已有照片","url":"/zh/docs/Installation/lomorage-importer/"}
+      ]},
+      {"title":"更多使用方式","items":[
+        {"title":"家人、分享与日常使用","url":"/zh/docs/Usage/"},
+        {"title":"自定义视图","url":"/zh/docs/Usage/customized-view/"},
+        {"title":"在外访问","url":"/zh/docs/Usage/external-access/"},
+        {"title":"更新与维护","url":"/zh/docs/Usage/Update/"},
+        {"title":"电子相框","url":"/zh/docs/Installation/lomo-frame/"}
+      ]}
+    ]
+  }
+}

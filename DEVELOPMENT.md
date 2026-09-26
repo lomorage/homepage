@@ -25,6 +25,19 @@ The deployable website is in `dist/`. The existing GitHub Actions workflow publi
 - `content/`: existing Markdown articles and information pages. TOML metadata is preserved.
 - `scripts/build.mjs`: static generation, existing dated article URLs, tags, categories, RSS, sitemap and language links.
 
+## Integrated documentation
+
+The documentation is built by the same command from `docs-content/en/docs` and
+`docs-content/zh/docs`; Hugo is not required. Its shared layout lives in
+`src/docs.njk` and `static/css/docs.css`. The original import and editorial
+decisions are recorded in `migration/docs-source.json`. Run `npm run audit:docs`
+after adding or removing documentation images.
+
+Documentation now lives at `/docs/` and `/zh/docs/` on `lomorage.com`. Before
+retiring `docs.lomorage.com`, configure a permanent host-level redirect to the
+matching path on `https://lomorage.com`; removing the old host without a redirect
+would break bookmarks and search results.
+
 The homepage uses a small local script only for the installation-command copy buttons. Platform selection, downloads, QR codes, and FAQ disclosure work without JavaScript. It has no external fonts, trackers or third-party image requests. The legacy privacy page and historical article content are preserved.
 
 ## Integrated downloads

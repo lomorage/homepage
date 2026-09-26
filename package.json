@@ -8,6 +8,8 @@
   },
   "scripts": {
     "build": "node scripts/build.mjs",
+    "audit:docs": "node scripts/audit-doc-assets.mjs",
+    "prune:docs": "node scripts/audit-doc-assets.mjs --prune",
     "dev": "node scripts/serve.mjs",
     "preview": "node scripts/serve.mjs",
     "test": "node --test tests/*.test.mjs"

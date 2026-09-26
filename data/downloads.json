@@ -27,7 +27,7 @@
         "finishTitle": "等待电脑自动打开设置网页",
         "finishText": "安装完成会启动 Lomorage，并打开设置网页。第一次使用时，保留网页上的设置二维码，下一步用手机应用扫描。以后可搜索 Lomorage 再次打开。",
         "detailNote": "适用于 Windows x64 电脑。安装期间需要联网；不必反复粘贴命令。",
-        "helpUrl": "https://docs.lomorage.com/zh/docs/Installation/lomorage-service/installation-win/"
+        "helpUrl": "/zh/docs/Installation/lomorage-service/installation-win/"
       },
       {
         "id": "mac",
@@ -41,7 +41,7 @@
         "finishTitle": "等待电脑自动打开设置网页",
         "finishText": "安装完成会启动 Lomorage，并打开设置网页。第一次使用时，保留网页上的设置二维码，下一步用手机应用扫描。以后可搜索 Lomorage 再次打开。",
         "detailNote": "支持 Apple 芯片和 Intel Mac，无需另外安装 Python 或开发工具。安装期间请保持联网。",
-        "helpUrl": "https://docs.lomorage.com/zh/docs/Installation/lomorage-service/installation-osx/"
+        "helpUrl": "/zh/docs/Installation/lomorage-service/installation-osx/"
       }
     ],
     "phoneTitle": "接着，在手机上装好应用。",
@@ -82,11 +82,11 @@
     "windowsImport": "Windows 导入工具",
     "macImport": "Mac 导入工具",
     "importHelp": "查看文件夹与 USB 导入说明",
-    "importHelpUrl": "https://docs.lomorage.com/zh/docs/Installation/lomorage-importer/",
+    "importHelpUrl": "/zh/docs/Installation/lomorage-importer/",
     "otherTitle": "更多设备安装指南",
     "otherText": "NAS、树莓派和 Linux 的安装入口在下方“其他设备”区域。",
     "otherLink": "查看其他设备安装说明",
-    "otherUrl": "https://docs.lomorage.com/zh/docs/Installation/lomorage-service/",
+    "otherUrl": "/zh/docs/Installation/lomorage-service/",
     "supportNote": "不确定下一步？",
     "supportLink": "告诉我们你使用的电脑和手机",
     "supportUrl": "/zh/contact/",
@@ -98,23 +98,23 @@
     "devices": [
       {
         "name": "群晖 NAS",
-        "url": "https://docs.lomorage.com/zh/docs/Installation/lomorage-service/installation-synology/"
+        "url": "/zh/docs/Installation/lomorage-service/installation-synology/"
       },
       {
         "name": "树莓派",
-        "url": "https://docs.lomorage.com/zh/docs/Installation/lomorage-service/installation-raspbian/"
+        "url": "/zh/docs/Installation/lomorage-service/installation-raspbian/"
       },
       {
         "name": "Ubuntu",
-        "url": "https://docs.lomorage.com/zh/docs/Installation/lomorage-service/installation-ubuntu/"
+        "url": "/zh/docs/Installation/lomorage-service/installation-ubuntu/"
       },
       {
         "name": "Docker",
-        "url": "https://docs.lomorage.com/zh/docs/Installation/lomorage-service/installation-docker/"
+        "url": "/zh/docs/Installation/lomorage-service/installation-docker/"
       },
       {
         "name": "Unraid",
-        "url": "https://docs.lomorage.com/zh/docs/Installation/lomorage-service/installation-unraid/"
+        "url": "/zh/docs/Installation/lomorage-service/installation-unraid/"
       }
     ],
     "setupChoiceLabel": "选择适合你的安装步骤",
@@ -151,7 +151,7 @@
         "finishTitle": "Wait for the setup page to open",
         "finishText": "Installation starts Lomorage and opens its setup page. For a first setup, keep the QR code on screen to scan with the phone app next. Later, search for Lomorage to reopen it.",
         "detailNote": "For Windows x64 computers. Stay connected to the internet during installation; there is no need to paste the command again.",
-        "helpUrl": "https://docs.lomorage.com/docs/Installation/lomorage-service/installation-win/"
+        "helpUrl": "/docs/Installation/lomorage-service/installation-win/"
       },
       {
         "id": "mac",
@@ -165,7 +165,7 @@
         "finishTitle": "Wait for the setup page to open",
         "finishText": "Installation starts Lomorage and opens its setup page. For a first setup, keep the QR code on screen to scan with the phone app next. Later, search for Lomorage to reopen it.",
         "detailNote": "Supports Apple silicon and Intel Macs. No separate Python or developer tools installation is needed. Stay connected to the internet during installation.",
-        "helpUrl": "https://docs.lomorage.com/docs/Installation/lomorage-service/installation-osx/"
+        "helpUrl": "/docs/Installation/lomorage-service/installation-osx/"
       }
     ],
     "phoneTitle": "Next, get the app on your phone.",
@@ -206,11 +206,11 @@
     "windowsImport": "Windows import tool",
     "macImport": "Mac import tool",
     "importHelp": "Read the folder & USB import guide",
-    "importHelpUrl": "https://docs.lomorage.com/docs/Installation/lomorage-importer/",
+    "importHelpUrl": "/docs/Installation/lomorage-importer/",
     "otherTitle": "More device setup guides",
     "otherText": "Find NAS, Raspberry Pi and Linux guides in “Other devices” below.",
     "otherLink": "Explore other device guides",
-    "otherUrl": "https://docs.lomorage.com/docs/Installation/lomorage-service/",
+    "otherUrl": "/docs/Installation/lomorage-service/",
     "supportNote": "Not sure what to do next?",
     "supportLink": "Tell us which computer and phone you use",
     "supportUrl": "/contact/",
@@ -222,23 +222,23 @@
     "devices": [
       {
         "name": "Synology NAS",
-        "url": "https://docs.lomorage.com/docs/Installation/lomorage-service/installation-synology/"
+        "url": "/docs/Installation/lomorage-service/installation-synology/"
       },
       {
         "name": "Raspberry Pi",
-        "url": "https://docs.lomorage.com/docs/Installation/lomorage-service/installation-raspbian/"
+        "url": "/docs/Installation/lomorage-service/installation-raspbian/"
       },
       {
         "name": "Ubuntu",
-        "url": "https://docs.lomorage.com/docs/Installation/lomorage-service/installation-ubuntu/"
+        "url": "/docs/Installation/lomorage-service/installation-ubuntu/"
       },
       {
         "name": "Docker",
-        "url": "https://docs.lomorage.com/docs/Installation/lomorage-service/installation-docker/"
+        "url": "/docs/Installation/lomorage-service/installation-docker/"
       },
       {
         "name": "Unraid",
-        "url": "https://docs.lomorage.com/docs/Installation/lomorage-service/installation-unraid/"
+        "url": "/docs/Installation/lomorage-service/installation-unraid/"
       }
     ],
     "setupChoiceLabel": "Choose your setup steps",

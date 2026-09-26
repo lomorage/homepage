@@ -11,7 +11,7 @@ I have and old android tablet at home, how to turn it to as photo frame to displ
 
 ## When you are here, believe you are know what is lomorage?
 
-## <u>**[click here to check what is Lomorage](https://docs.lomorage.com/docs/Installation/)**</u> 
+## <u>**[click here to check what is Lomorage](/docs/Installation/)**</u>
 
 
 # Step by step to turn old android tablet as lomorage frame
