@@ -18,6 +18,6 @@
     "markdown-it": "14.2.0",
     "nunjucks": "3.2.4",
     "qrcode": "^1.5.4",
-    "smol-toml": "1.4.2"
+    "smol-toml": "1.7.1"
   }
 }
