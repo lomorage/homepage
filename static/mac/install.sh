@@ -23,8 +23,9 @@
 # prompt.
 #
 # Safe to re-run: it stops any already-running lomod, replaces the install directory, and
-# restarts it, so this script also serves as a manual repair/reinstall/update path pending a
-# scheduled self-update wired on top of cmd/lomoupg.
+# restarts it, so this script also serves as a manual repair/reinstall/update path. A daily
+# per-user LaunchAgent (see register_autoupdate / lomorage-update.sh) additionally checks for
+# and installs new releases on its own.
 #
 # Flags (all optional; env vars of the same name in SCREAMING_SNAKE_CASE also work):
 #   --install-dir <dir>    Where lomod and its bundled dependencies (vips/ffmpeg dylibs,
@@ -77,6 +78,9 @@ done
 
 LABEL="com.lomorage.lomod"
 PLIST_PATH="${HOME}/Library/LaunchAgents/${LABEL}.plist"
+UPDATE_LABEL="com.lomorage.lomod-update"
+UPDATE_PLIST_PATH="${HOME}/Library/LaunchAgents/${UPDATE_LABEL}.plist"
+UPDATE_LOG="${HOME}/Library/Logs/Lomorage/update.log"
 APP_PATH="${HOME}/Applications/Lomorage.app"
 
 step() { printf '\033[36m==>\033[0m %s\n' "$1"; }
@@ -197,6 +201,69 @@ PLIST
     launchctl bootstrap "gui/$(id -u)" "${PLIST_PATH}"
 }
 
+# Daily per-user LaunchAgent running lomorage-update.sh -- the counterpart of the Windows
+# installer's LomorageUpdate Scheduled Task. Returns non-zero if the release tarball didn't
+# ship the updater, e.g. an older release.
+register_autoupdate() {
+    local update_script="${INSTALL_DIR}/lomorage-update.sh"
+    if [[ ! -f "${update_script}" || ! -x "${INSTALL_DIR}/lomoupg" ]]; then
+        return 1
+    fi
+    chmod +x "${update_script}"
+    mkdir -p "$(dirname "${UPDATE_PLIST_PATH}")" "$(dirname "${UPDATE_LOG}")"
+    # StartCalendarInterval, not StartInterval: a Mac that's asleep at 3:15am runs the missed
+    # check when it next wakes, instead of counting a fixed interval from whenever it logged in.
+    # RunAtLoad covers a Mac that was shut down rather than asleep -- launchd doesn't make up a
+    # calendar run missed while powered off, so one that's switched off every night would
+    # otherwise never update. (It also fires once right here at install time: a no-op.)
+    # StartInterval on top of both: the login-time check gives up if the network takes more
+    # than a few minutes to come up (lomorage-update.sh's --wait-for-network), and without a
+    # periodic retry such a Mac would then wait for its next login.
+    # AbandonProcessGroup: if the updater has to fall back to starting lomod itself, that lomod
+    # must outlive this job -- by default launchd kills a finished job's leftover processes.
+    cat > "${UPDATE_PLIST_PATH}" <<PLIST
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Label</key>
+    <string>${UPDATE_LABEL}</string>
+    <key>ProgramArguments</key>
+    <array>
+        <string>/bin/bash</string>
+        <string>${update_script}</string>
+        <string>--release-url</string>
+        <string>${RELEASE_URL}</string>
+        <string>--manifest-key</string>
+        <string>${MANIFEST_KEY}</string>
+        <string>--wait-for-network</string>
+    </array>
+    <key>RunAtLoad</key>
+    <true/>
+    <key>StartInterval</key>
+    <integer>21600</integer>
+    <key>StartCalendarInterval</key>
+    <dict>
+        <key>Hour</key>
+        <integer>3</integer>
+        <key>Minute</key>
+        <integer>15</integer>
+    </dict>
+    <key>StandardOutPath</key>
+    <string>${UPDATE_LOG}</string>
+    <key>StandardErrorPath</key>
+    <string>${UPDATE_LOG}</string>
+    <key>AbandonProcessGroup</key>
+    <true/>
+    <key>ProcessType</key>
+    <string>Background</string>
+</dict>
+</plist>
+PLIST
+    launchctl bootout "gui/$(id -u)/${UPDATE_LABEL}" >/dev/null 2>&1 || true
+    launchctl bootstrap "gui/$(id -u)" "${UPDATE_PLIST_PATH}"
+}
+
 wait_for_lomod() {
     # Polls /status, not /mount: /mount answers 500 ("Device is not mounted yet") on a fresh,
     # not-yet-onboarded lomod until the /welcome setup flow is finished, and 401 ("Invalid
@@ -282,6 +349,9 @@ install_app_bundle || true
 
 step "Registering autostart (per-user, no admin required)"
 register_autostart
+
+step "Registering daily auto-update check (per-user, no admin required)"
+register_autoupdate || warn "could not register the auto-update check. lomod will still run fine -- re-run this installer manually to update."
 
 step "Starting lomod"
 if wait_for_lomod; then
