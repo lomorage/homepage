@@ -111,6 +111,20 @@ function Stop-ExistingLomod {
     }
 }
 
+function Stop-ExistingTray {
+    # Without this a re-install keeps the previous tray process: the freshly installed
+    # lomorage-tray.ps1 started below just exits on its singleton guard. That matters beyond
+    # running stale code -- trays installed before the self-update fix sit with InstallDir as
+    # their working directory, which blocks lomoupg's rename-swap until the next logon.
+    $trays = @(Get-CimInstance Win32_Process -Filter "Name = 'powershell.exe'" |
+        Where-Object { $_.CommandLine -like "*lomorage-tray.ps1*" })
+    if ($trays.Count -gt 0) {
+        Write-Step "Stopping the running tray icon"
+        $trays | ForEach-Object { Stop-Process -Id $_.ProcessId -Force -ErrorAction SilentlyContinue }
+        Start-Sleep -Seconds 1
+    }
+}
+
 function New-LomorageShortcut {
     # Shared by Register-Autostart and Register-StartMenuShortcut: both point at
     # lomorage-tray.ps1, not lomorage-start.bat directly, since the tray script starts
@@ -125,7 +139,9 @@ function New-LomorageShortcut {
     $shortcut = $shell.CreateShortcut($Path)
     $shortcut.TargetPath = (Get-Command powershell.exe).Source
     $shortcut.Arguments = "-WindowStyle Hidden -ExecutionPolicy Bypass -File `"$(Join-Path $InstallDir 'lomorage-tray.ps1')`""
-    $shortcut.WorkingDirectory = $InstallDir
+    # Not $InstallDir: a process whose working directory is InstallDir blocks the self-update's
+    # rename of it (lomorage-tray.ps1 also moves itself out, for shortcuts made before this).
+    $shortcut.WorkingDirectory = [Environment]::GetFolderPath("UserProfile")
     $shortcut.WindowStyle = 7  # minimized (only matters for the brief instant before -WindowStyle Hidden takes over)
     $shortcut.Description = $Description
     $iconPath = Join-Path $InstallDir "lomorage.ico"
@@ -216,6 +232,7 @@ try {
     }
 
     Stop-ExistingLomod
+    Stop-ExistingTray
 
     $downloadUrl = if ($China) { "https://gfw.lomorage.com/$($platform.URL)" } else { $platform.URL }
     Write-Step "Downloading lomod $($platform.Version)$(if ($China) { ' via gfw.lomorage.com proxy' })"
