@@ -72,10 +72,12 @@ If you have any issues, questions, concerns:
 
 ## Source code
 
-- **Mobile app: open source.** The LomoMobile app for iOS and Android is developed in the open at [lomorage/lomo-mobile](https://github.com/lomorage/lomo-mobile).
-- **Backend service: open source release coming in October 2026.** We are preparing the backend (lomod, the service that stores your photos on your own computer or NAS) for public release. This README will link to the repository as soon as it is published.
+Both the mobile app and the server are open source under the MIT License:
 
-Lomorage runs on your own hardware: your photos stay on your disks, there is no tracking, and anything we might collect (crash logs, discovery, etc.) is opt-in only. Opening the source means you can verify this yourself.
+- **Mobile app:** [lomorage/lomo-mobile](https://github.com/lomorage/lomo-mobile), the LomoMobile app for iOS and Android.
+- **Server:** [lomorage/lomod](https://github.com/lomorage/lomod), the service that stores your photos on your own computer, NAS or Raspberry Pi.
+
+Lomorage runs on your own hardware: your photos stay on your disks, there is no tracking, and anything we might collect (crash logs, discovery, etc.) is opt-in only. With the source open, you can verify this yourself.
 
 ## Repositories
 
@@ -89,7 +91,7 @@ Source code of LomoMobile, the Lomorage mobile app for iOS and Android (React Na
 
 https://github.com/lomorage/lomod
 
-Lomod is the Lomorage backend service. This repo hosts the Linux binary releases (armhf, arm64 and amd64) of lomod.
+Source code of lomod, the Lomorage server: a self-hosted photo and video backup service for Linux, Raspberry Pi, Windows and macOS.
 
 ### lomo-docker
 
