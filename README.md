@@ -2,35 +2,17 @@ Table of Contents
 =================
 
    * [Lomorage - Save the moments, enjoy the memories](#lomorage---save-the-moments-enjoy-the-memories)
-      * [Features Highlights](#feature-highlights)
+      * [Feature highlights](#feature-highlights)
       * [Installation](#installation)
       * [FAQ](#faq)
+      * [Source code](#source-code)
       * [Repositories](#repositories)
-         * [Lomod](#lomod)
-         * [LomoAgentWin](#lomoagentwin)
-         * [LomoAgentOSX](#lomoagentosx)
-         * [lomoUpdate](#lomoupdate)
-         * [lomo-docker](#lomo-docker)
-         * [lomo-android-apk-release](#lomo-android-apk-release)
-         * [lomo-android-frame-apk-release](#lomo-android-frame-apk-release)
-         * [pi-gen](#pi-gen)
-         * [pi_video_looper](#pi_video_looper)
 
 # Lomorage - Save the moments, enjoy the memories
 
-*This is the homepage source of [Lomorage](https://lomorage.com), check bottom for reference to other repos*
-
-*Lomorage is still on going project, however the basic features are pretty solid and ready to use*
+*This is the source of the [Lomorage](https://lomorage.com) homepage and documentation. See [Repositories](#repositories) for the other Lomorage projects.*
 
 **The simplest, easiest to use private photo cloud for the family.**
-
-If you find Lomorage useful, please support us below:
-
-<a href="https://www.buymeacoffee.com/lomorage" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" ></a>
-
-<a href="https://opencollective.com/lomoware/donate" target="_blank">
-  <img src="https://opencollective.com/webpack/donate/button@2x.png?color=blue" width=300 />
-</a>
 
 - Automatic Back Up: Automatically backs up all your photos from smartphones and computers to your own hard drive; Redundancy backup lowers the risk of losing data. No rate limits.
 
@@ -69,7 +51,12 @@ If you find Lomorage useful, please support us below:
 
 ## Installation
 
-Check the [installation](https://lomorage.com/#download) guide.
+Follow the [installation guide](https://lomorage.com/#download):
+
+1. On the Windows or Mac computer that will store your photos, run the one-line install command shown on the page. NAS, Raspberry Pi, Linux and Docker guides are in the [documentation](https://lomorage.com/docs/Installation/lomorage-service/).
+2. Install **LomoMobile** from the [App Store](https://apps.apple.com/app/lomomobile/id6771038226) or [Google Play](https://play.google.com/store/apps/details?id=com.wtao.lomo), then scan the setup QR code shown on your computer.
+
+Full documentation: https://lomorage.com/docs/
 
 ## FAQ
 
@@ -79,51 +66,36 @@ If you have any issues, questions, concerns:
 
 - submit Github [issue](https://github.com/lomorage/homepage/issues/new)
 
-- join slack [channel](https://app.slack.com/client/THK8CPS4X/CHK8CQ4H5)
-
 - [contact form](https://lomorage.com/contact/)
 
 - [email us](mailto:support@lomorage.com)
 
+## Source code
+
+- **Mobile app: open source.** The LomoMobile app for iOS and Android is developed in the open at [lomorage/lomo-mobile](https://github.com/lomorage/lomo-mobile).
+- **Backend service: open source release coming in October 2026.** We are preparing the backend (lomod, the service that stores your photos on your own computer or NAS) for public release. This README will link to the repository as soon as it is published.
+
+Lomorage runs on your own hardware: your photos stay on your disks, there is no tracking, and anything we might collect (crash logs, discovery, etc.) is opt-in only. Opening the source means you can verify this yourself.
+
 ## Repositories
 
-**The code of mobile client and backend service is closed source.** 
+### lomo-mobile
+
+https://github.com/lomorage/lomo-mobile
+
+Source code of LomoMobile, the Lomorage mobile app for iOS and Android (React Native / Expo).
 
 ### Lomod
 
 https://github.com/lomorage/lomod
 
-Lomod is the Lomorage backend service. This repo includes armhf and amd64 binaries release of lomod(lomo-backend) in Linux.
-
-### LomoAgentWin
-
-https://github.com/lomorage/LomoAgentWin
-
-LomoAgentWin is the Lomorage backend application running on Windows. This repo contains the [binaries](https://github.com/lomorage/LomoAgentWin/releases) of the release.
-
-### LomoAgentOSX
-
-https://github.com/lomorage/LomoAgentOSX
-
-LomoAgentOSX is the Lomorage backend application running on OSX. This repo contains the [binaries](https://github.com/lomorage/LomoAgentOSX/releases) of the release as well as the source code.
-
-### lomoUpdate
-
-https://github.com/lomorage/lomoUpdate
-
-This is used for autoupdate of LomoAgentWin and LomoAgentOSX so once we release new version, it will update automatically.
+Lomod is the Lomorage backend service. This repo hosts the Linux binary releases (armhf, arm64 and amd64) of lomod.
 
 ### lomo-docker
 
 https://github.com/lomorage/lomo-docker
 
 You can use the docker image to install Lomorage on your existing Raspberry Pi setup, or you can run it on Windows/Mac.
-
-### lomo-android-apk-release
-
-https://github.com/lomorage/lomo-android-apk-release
-
-You can download the [apk release](https://github.com/lomorage/lomo-android-apk-release) of Lomorage Android Application.
 
 ### lomo-android-frame-apk-release
 
