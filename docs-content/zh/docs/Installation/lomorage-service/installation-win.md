@@ -10,7 +10,7 @@ weight: 4
 打开 **PowerShell**（不需要以管理员身份运行），粘贴执行：
 
 ```powershell
-irm https://lomorage.com/windows/install.ps1 | iex
+powershell -NoProfile -ExecutionPolicy Bypass -Command "irm 'https://lomorage.com/windows/install.ps1' -OutFile "$env:TEMP\lomorage-install.ps1"; & "$env:TEMP\lomorage-install.ps1""
 ```
 
 这会自动下载 `lomod.exe` 以及它需要的所有组件（vips、exiftool、ffmpeg），安装到你自己的用户目录下并启动——没有安装向导窗口，不需要管理员权限，也不需要重启电脑。
@@ -19,7 +19,7 @@ irm https://lomorage.com/windows/install.ps1 | iex
 如果你在国内，GitHub 下载比较慢或者失败，可以先设置这个环境变量，让下载走加速代理：
 
 ```powershell
-$env:LOMOD_CHINA=1; irm https://lomorage.com/windows/install.ps1 | iex
+powershell -NoProfile -ExecutionPolicy Bypass -Command "$env:LOMOD_CHINA=1; irm 'https://lomorage.com/windows/install.ps1' -OutFile "$env:TEMP\lomorage-install.ps1"; & "$env:TEMP\lomorage-install.ps1""
 ```
 {{< /hint >}}
 
