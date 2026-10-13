@@ -11,10 +11,10 @@
     },
     {
       "path": "mac/install.sh",
-      "sourceBlob": "6551bdef713ced9e545f0e7283723f4c13cd4f95",
-      "sourceSha256": "158d03585bd4d679aa77f14adc43cae41f40f4ae6849b1718d4e9e64a0c474b3",
-      "sha256": "158d03585bd4d679aa77f14adc43cae41f40f4ae6849b1718d4e9e64a0c474b3",
-      "source": "lomorage/lomo-backend@29cd6fd:installers/macos/install.sh"
+      "sourceBlob": "7d840d6dc6169f16291d5ed4ff9e87da0044939e",
+      "sourceSha256": "d5623e7a66945c504debbdd11b4c56d7d82381c1ccf9d655f386c77235bc743b",
+      "sha256": "d5623e7a66945c504debbdd11b4c56d7d82381c1ccf9d655f386c77235bc743b",
+      "source": "lomorage/lomod@b6379e1:installers/macos/install.sh"
     },
     {
       "path": "windows/LomoImporter.zip",

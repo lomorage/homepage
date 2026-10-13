@@ -342,7 +342,7 @@ printf '%s' "${PLATFORM_VERSION}" > "${INSTALL_DIR}/version.txt"
 
 mkdir -p "${DATA_DIR}"
 cat > "${INSTALL_DIR}/lomod.args" <<ARGS
-LOMOD_ARGS=(--base "${DATA_DIR}" --exe-dir "${INSTALL_DIR}" --no-mdns --port ${PORT})
+LOMOD_ARGS=(--base "${DATA_DIR}" --mount-dir "${DATA_DIR}" --exe-dir "${INSTALL_DIR}" --no-mdns --port ${PORT})
 ARGS
 
 install_app_bundle || true
