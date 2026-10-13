@@ -7,7 +7,7 @@
       "sourceBlob": "2c51213772adc0d31eecbf39099c54cce6c2419f",
       "sourceSha256": "848b0c6397e3477eaabdd28efd9fdfd1202ff6715f191bea661bdb3e34984d1e",
       "sha256": "848b0c6397e3477eaabdd28efd9fdfd1202ff6715f191bea661bdb3e34984d1e",
-      "source": "lomorage/lomo-backend@29cd6fd:installers/windows/install.ps1"
+      "source": "lomorage/lomod@ebacd0b:installers/windows/install.ps1"
     },
     {
       "path": "mac/install.sh",
