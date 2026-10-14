@@ -18,7 +18,7 @@ Lomorage is more cost efficient and more flexible compared with existing solutio
 
 The following are **yearly fees**,  those cells leave blank are not available, for example, Apple iCloud only provides 5 GB, 50 GB, 200 GB and 2 TB options, for Lomorage, it would be hard to get new hard drive smaller than 500 GB nowadays.
 
-Lomorage software is 100% free for the the essential functions, thus here will only take device and energy cost into account, and yearly cost is calculated as [depreciation expense](https://www.profitbooks.net/what-is-depreciation/). See below for more details.
+The Lomorage desktop app is free and the phone app is a one-time purchase with no subscription, so here we only take device and energy cost into account, and yearly cost is calculated as [depreciation expense](https://www.profitbooks.net/what-is-depreciation/). See below for more details.
 
 {{<table "table table-striped table-bordered">}}
 |        | Lomorage (2-Bays) yearly fee<br />assuming upgrade every 4 years | Apple iCloud |   Google Photo   | Amazon Photo | OneDrive |
