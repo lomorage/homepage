@@ -4,17 +4,17 @@
   "files": [
     {
       "path": "windows/install.ps1",
-      "sourceBlob": "2c51213772adc0d31eecbf39099c54cce6c2419f",
-      "sourceSha256": "848b0c6397e3477eaabdd28efd9fdfd1202ff6715f191bea661bdb3e34984d1e",
-      "sha256": "848b0c6397e3477eaabdd28efd9fdfd1202ff6715f191bea661bdb3e34984d1e",
-      "source": "lomorage/lomod@ebacd0b:installers/windows/install.ps1"
+      "sourceBlob": "97388adc143ac53089679369122457a7cee20d27",
+      "sourceSha256": "9caccecf64f54d81294b0d296e60e7870068a28fa1e1ef5e110aaf944195c42b",
+      "sha256": "9caccecf64f54d81294b0d296e60e7870068a28fa1e1ef5e110aaf944195c42b",
+      "source": "lomorage/lomod@7665ff6:installers/windows/install.ps1"
     },
     {
       "path": "mac/install.sh",
-      "sourceBlob": "7d840d6dc6169f16291d5ed4ff9e87da0044939e",
-      "sourceSha256": "d5623e7a66945c504debbdd11b4c56d7d82381c1ccf9d655f386c77235bc743b",
-      "sha256": "d5623e7a66945c504debbdd11b4c56d7d82381c1ccf9d655f386c77235bc743b",
-      "source": "lomorage/lomod@b6379e1:installers/macos/install.sh"
+      "sourceBlob": "d62ca44e88368f3b84432c1505b733fbf3d6a25e",
+      "sourceSha256": "cc52dd8dc3360d22c39a353c42ef4f07eba719ada14d26848cae0f342f18d04f",
+      "sha256": "cc52dd8dc3360d22c39a353c42ef4f07eba719ada14d26848cae0f342f18d04f",
+      "source": "lomorage/lomod@7665ff6:installers/macos/install.sh"
     },
     {
       "path": "windows/LomoImporter.zip",

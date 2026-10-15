@@ -249,6 +249,10 @@ try {
     New-Item -ItemType Directory -Force -Path $DataDir | Out-Null
     $lomodArgs = "--base `"$DataDir`" --exe-dir `"$InstallDir`" --no-mdns --port $Port"
     Set-Content -Path (Join-Path $InstallDir "lomod.args") -Value $lomodArgs -NoNewline
+    # Remembered so lomorage-update.ps1 keeps downloading through the proxy on auto-update.
+    $chinaMarker = Join-Path $InstallDir "lomod.china"
+    if ($China) { Set-Content -Path $chinaMarker -Value "1" -NoNewline }
+    elseif (Test-Path $chinaMarker) { Remove-Item -Force $chinaMarker }
 
     Write-Step "Registering autostart (per-user, no admin required)"
     Register-Autostart

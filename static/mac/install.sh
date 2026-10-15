@@ -50,7 +50,10 @@
 #                from mainland China otherwise. Mirrors installers/windows/
 #                install.ps1's $env:LOMOD_CHINA. Only the tarball download is affected -- the
 #                release manifest fetch (--release-url) already goes to lomorage.com's own
-#                domain, not GitHub. No --china flag (env var only): this script is normally
+#                domain, not GitHub. The choice is remembered for auto-update: a lomod.china
+#                marker is written next to lomod.args and the update LaunchAgent is passed
+#                --china, so lomorage-update.sh / lomoupg download later releases through the
+#                same proxy. Re-running without LOMOD_CHINA=1 turns it back off. No --china flag (env var only): this script is normally
 #                invoked as `curl | bash`, which has no clean way to pass flags through the pipe,
 #                but a var set on the right-hand command of a pipeline is visible to it:
 #                    curl -fsSL https://lomorage.com/mac/install.sh | LOMOD_CHINA=1 bash
@@ -210,6 +213,10 @@ register_autoupdate() {
         return 1
     fi
     chmod +x "${update_script}"
+    local UPDATE_CHINA_ARG=""
+    if [[ -n "${CHINA}" ]]; then
+        UPDATE_CHINA_ARG=$'\n        <string>--china</string>'
+    fi
     mkdir -p "$(dirname "${UPDATE_PLIST_PATH}")" "$(dirname "${UPDATE_LOG}")"
     # StartCalendarInterval, not StartInterval: a Mac that's asleep at 3:15am runs the missed
     # check when it next wakes, instead of counting a fixed interval from whenever it logged in.
@@ -235,7 +242,7 @@ register_autoupdate() {
         <string>--release-url</string>
         <string>${RELEASE_URL}</string>
         <string>--manifest-key</string>
-        <string>${MANIFEST_KEY}</string>
+        <string>${MANIFEST_KEY}</string>${UPDATE_CHINA_ARG}
         <string>--wait-for-network</string>
     </array>
     <key>RunAtLoad</key>
@@ -344,6 +351,11 @@ mkdir -p "${DATA_DIR}"
 cat > "${INSTALL_DIR}/lomod.args" <<ARGS
 LOMOD_ARGS=(--base "${DATA_DIR}" --mount-dir "${DATA_DIR}" --exe-dir "${INSTALL_DIR}" --no-mdns --port ${PORT})
 ARGS
+# Remembered for auto-update (see lomorage-update.sh's --china). INSTALL_DIR was just wiped,
+# so a non-China reinstall leaves no marker behind.
+if [[ -n "${CHINA}" ]]; then
+    printf '1\n' > "${INSTALL_DIR}/lomod.china"
+fi
 
 install_app_bundle || true
 
