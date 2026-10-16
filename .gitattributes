@@ -4,3 +4,6 @@
 *.json text eol=lf
 *.css text eol=lf
 *.js text eol=lf
+
+# Model files are served byte-for-byte; the mobile app checks their SHA-1.
+static/models/** -text
