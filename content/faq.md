@@ -31,7 +31,7 @@ If you know what Lomography is, then "Lomorage" is just a combination of "Lomogr
 
 ## What is the cost of Lomorage?
 
-The desktop app is free, and the phone app is a one-time purchase: no subscription. For hardware, buy what you need, you can use Orange Pi Zero which will cost you less than $20. Check [here](/compare) for more details on cost for different configurations. **No hidden fees**.
+The desktop app is free. The phone app is a $1.99 one-time purchase — no subscription. For hardware, buy what you need, you can use Orange Pi Zero which will cost you less than $20. Check [here](/compare) for more details on cost for different configurations. **No hidden fees**.
 
 ## How to setup redundancy backup?
 

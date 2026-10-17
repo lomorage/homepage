@@ -111,3 +111,18 @@ body { background: var(--paper); }
   .platforms-section .eyebrow { justify-content: flex-start; }
   .platforms-section h2 { font-size: 25px; }
 }
+
+/* Pricing clarity + readable small text (landing review 2026-10, items 2 & 5) */
+.hero-note { font-size: 14px; color: var(--ink); }
+.closing small { font-size: 13px; }
+.phone-download-card .price-note { margin-top: -12px; font-size: 13px; font-weight: 600; color: var(--green); }
+@media (max-width: 540px) {
+  .hero-description { font-size: 16px; }
+  .hero-note, .hero-footnote { font-size: 14px; color: var(--ink); }
+  .hero-note .note-divider { display: block; height: 0; padding: 0; overflow: hidden; font-size: 0; }
+  .trust-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 12px 16px; font-size: 13px; }
+  .trust-inner > span:first-child { grid-column: 1 / -1; font-size: 13px; }
+  .button, .button-small, .hero-actions .button, .phone-download-card .button, .closing .button { font-size: 14px; min-height: 44px; }
+  .hero-actions .text-link { display: flex; width: 100%; justify-content: center; min-height: 44px; font-size: 14px; color: var(--green); border: 1px solid var(--green); border-radius: 7px; padding: 10px 16px; }
+  .faq-list summary { font-size: 15px; padding-block: 16px; }
+}
