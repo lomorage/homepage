@@ -23,7 +23,7 @@ triple:
       alt: Zero Subscription
     - title: 🔒 100% Physical Isolation, Anti AI Surveillance
       text: >-
-        Your private life shouldn't be the training set for tech giants' AI, nor should your family photos face cloud account ban risks. Lomorage runs locally with encryption. Photos go straight from your phone to your PC's hard drive—never passing through third-party servers.
+        Your private life shouldn't be the training set for tech giants' AI, nor should your family photos face cloud account ban risks. Photos go straight from your phone to your own computer, never through our servers.
       src: /img/security-svgrepo-com.svg
       alt: 100% Physical Isolation
     - title: ⚡ Gigabit LAN Sync, Blazing Local Speeds
