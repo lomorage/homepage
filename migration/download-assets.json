@@ -7,14 +7,14 @@
       "sourceBlob": "97388adc143ac53089679369122457a7cee20d27",
       "sourceSha256": "9caccecf64f54d81294b0d296e60e7870068a28fa1e1ef5e110aaf944195c42b",
       "sha256": "9caccecf64f54d81294b0d296e60e7870068a28fa1e1ef5e110aaf944195c42b",
-      "source": "lomorage/lomod@5ec905f:installers/windows/install.ps1"
+      "source": "lomorage/lomod@29fcfee:installers/windows/install.ps1"
     },
     {
       "path": "mac/install.sh",
       "sourceBlob": "d62ca44e88368f3b84432c1505b733fbf3d6a25e",
       "sourceSha256": "cc52dd8dc3360d22c39a353c42ef4f07eba719ada14d26848cae0f342f18d04f",
       "sha256": "cc52dd8dc3360d22c39a353c42ef4f07eba719ada14d26848cae0f342f18d04f",
-      "source": "lomorage/lomod@5ec905f:installers/macos/install.sh"
+      "source": "lomorage/lomod@29fcfee:installers/macos/install.sh"
     },
     {
       "path": "windows/LomoImporter.zip",
