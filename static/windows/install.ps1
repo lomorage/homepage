@@ -192,9 +192,12 @@ function Register-Autoupdate {
     $settings = New-ScheduledTaskSettingsSet -StartWhenAvailable -RunOnlyIfNetworkAvailable `
         -AllowStartIfOnBatteries -DontStopIfGoingOnBatteries
 
-    Unregister-ScheduledTask -TaskName $taskName -Confirm:$false -ErrorAction SilentlyContinue
+    # Re-run safe: drop any task left by a previous install, then -Force so Register never
+    # fails with ResourceExists (0x800700b7) even if the unregister was skipped or failed.
+    # try/catch because $ErrorActionPreference = "Stop" can still surface CIM errors here.
+    try { Unregister-ScheduledTask -TaskName $taskName -Confirm:$false -ErrorAction SilentlyContinue } catch {}
     Register-ScheduledTask -TaskName $taskName -Action $action -Trigger $dailyTrigger `
-        -Principal $principal -Settings $settings `
+        -Principal $principal -Settings $settings -Force `
         -Description "Checks for and installs lomod CLI updates (lomorage-update.ps1). Per-user, no admin rights." `
         | Out-Null
 }
@@ -242,7 +245,7 @@ try {
     Write-Step "Installing to $InstallDir"
     New-Item -ItemType Directory -Force -Path $InstallDir | Out-Null
     Expand-Archive -Path $tmpZip -DestinationPath $InstallDir -Force
-    Remove-Item $tmpZip -Force
+    Remove-Item $tmpZip -Force -ErrorAction SilentlyContinue
 
     Set-Content -Path (Join-Path $InstallDir "version.txt") -Value $platform.Version -NoNewline
 
