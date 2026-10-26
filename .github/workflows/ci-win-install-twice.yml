@@ -22,3 +22,46 @@ jobs:
           $lnk = Join-Path ([Environment]::GetFolderPath("Startup")) "Lomorage.lnk"
           if (-not (Test-Path $lnk)) { throw "autostart shortcut missing" }
           Write-Host "PASS: LomorageUpdate task + Startup shortcut present"
+  nonadmin-over-admin-task:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Simulate old admin task, install as standard user
+        shell: powershell
+        run: |
+          $ErrorActionPreference = "Stop"
+          # 1) old admin-created task, RunLevel Highest
+          $a = New-ScheduledTaskAction -Execute "cmd.exe" -Argument "/c exit 0"
+          $t = New-ScheduledTaskTrigger -Daily -At "3:15AM"
+          $p = New-ScheduledTaskPrincipal -UserId "$env:USERDOMAIN\$env:USERNAME" -LogonType Interactive -RunLevel Highest
+          Register-ScheduledTask -TaskName LomorageUpdate -Action $a -Trigger $t -Principal $p | Out-Null
+          (Get-ScheduledTask LomorageUpdate).Principal | Format-List UserId,RunLevel
+          # 2) standard user with a throwaway random password (generated at runtime)
+          $pw = "Aa1!" + [guid]::NewGuid().ToString("N")
+          $sec = ConvertTo-SecureString $pw -AsPlainText -Force
+          New-LocalUser -Name lomotest -Password $sec -PasswordNeverExpires | Out-Null
+          Add-LocalGroupMember -Group Users -Member lomotest
+          New-Item -ItemType Directory -Force C:\lomotest | Out-Null
+          Copy-Item static/windows/install.ps1 C:\lomotest\install.ps1
+          icacls C:\lomotest /grant "lomotest:(OI)(CI)F" | Out-Null
+          $runner = 'powershell.exe -NoProfile -ExecutionPolicy Bypass -File C:\lomotest\install.ps1 -NoBrowser *> C:\lomotest\out.txt; Set-Content C:\lomotest\exit.txt $LASTEXITCODE'
+          Set-Content C:\lomotest\run.ps1 $runner
+          # 3) run as that user via a Limited scheduled task (password logon, loads profile)
+          $ra = New-ScheduledTaskAction -Execute "powershell.exe" -Argument "-NoProfile -ExecutionPolicy Bypass -File C:\lomotest\run.ps1"
+          Register-ScheduledTask -TaskName LomoTestRun -Action $ra -User "$env:COMPUTERNAME\lomotest" -Password $pw -RunLevel Limited | Out-Null
+          Start-ScheduledTask -TaskName LomoTestRun
+          $deadline = (Get-Date).AddMinutes(8)
+          while (-not (Test-Path C:\lomotest\exit.txt) -and (Get-Date) -lt $deadline) { Start-Sleep 5 }
+          $out = Get-Content C:\lomotest\out.txt -Raw -ErrorAction SilentlyContinue
+          Write-Host "----- installer output as lomotest -----"; Write-Host $out
+          $code = (Get-Content C:\lomotest\exit.txt -ErrorAction SilentlyContinue)
+          Write-Host "exit code: $code"
+          $task = Get-ScheduledTask LomorageUpdate
+          Write-Host "LomorageUpdate after: UserId=$($task.Principal.UserId) RunLevel=$($task.Principal.RunLevel) Action=$($task.Actions[0].Execute) $($task.Actions[0].Arguments)"
+          $replaced = $task.Actions[0].Arguments -like "*lomorage-update.ps1*"
+          Write-Host "RESULT: -Force replacement by standard user = $(if ($replaced) {'SUCCEEDED'} else {'NOT replaced'})"
+          if ("$code".Trim() -ne "0") { throw "non-admin install exit $code" }
+          if ($out -match 'Install failed|ResourceExists|0x800700b7') { throw "red error in output" }
+          if (-not $replaced -and $out -notmatch 'Auto-update check could not be registered') { throw "task not replaced and no warning" }
+          if (-not (Test-Path C:\Users\lomotest\AppData\Local\Lomorage\lomod\lomod.exe)) { throw "lomod not installed" }
+          Write-Host "PASS nonadmin"
