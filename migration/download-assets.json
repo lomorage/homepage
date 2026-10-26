@@ -6,7 +6,7 @@
       "path": "windows/install.ps1",
       "sourceBlob": "97388adc143ac53089679369122457a7cee20d27",
       "sourceSha256": "9caccecf64f54d81294b0d296e60e7870068a28fa1e1ef5e110aaf944195c42b",
-      "sha256": "9caccecf64f54d81294b0d296e60e7870068a28fa1e1ef5e110aaf944195c42b",
+      "sha256": "3ac17f07ac2a0ebe435d861d5eeba04b37e7e2e4401ae7300aa27fcbee1ffa20",
       "source": "lomorage/lomod@29fcfee:installers/windows/install.ps1"
     },
     {
