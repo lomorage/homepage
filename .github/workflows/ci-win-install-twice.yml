@@ -1,0 +1,24 @@
+name: ci-win-install-twice
+on:
+  push:
+    branches: ['ci/**']
+jobs:
+  twice:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Run installer twice
+        shell: powershell
+        run: |
+          $s = "static/windows/install.ps1"
+          foreach ($i in 1,2) {
+            Write-Host "===== RUN $i ====="
+            $out = & powershell.exe -NoProfile -ExecutionPolicy Bypass -File $s -NoBrowser *>&1 | Out-String
+            Write-Host $out
+            if ($LASTEXITCODE -ne 0) { throw "run $i exit $LASTEXITCODE" }
+            if ($out -match 'Install failed|Could not register|0x800700b7|ResourceExists') { throw "run $i reported an error" }
+          }
+          Get-ScheduledTask -TaskName LomorageUpdate | Format-List TaskName,State
+          $lnk = Join-Path ([Environment]::GetFolderPath("Startup")) "Lomorage.lnk"
+          if (-not (Test-Path $lnk)) { throw "autostart shortcut missing" }
+          Write-Host "PASS: LomorageUpdate task + Startup shortcut present"
