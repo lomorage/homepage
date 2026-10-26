@@ -50,8 +50,14 @@ jobs:
           $ra = New-ScheduledTaskAction -Execute "powershell.exe" -Argument "-NoProfile -ExecutionPolicy Bypass -File C:\lomotest\run.ps1"
           Register-ScheduledTask -TaskName LomoTestRun -Action $ra -User "$env:COMPUTERNAME\lomotest" -Password $pw -RunLevel Limited | Out-Null
           Start-ScheduledTask -TaskName LomoTestRun
-          $deadline = (Get-Date).AddMinutes(8)
+          $deadline = (Get-Date).AddMinutes(5)
           while (-not (Test-Path C:\lomotest\exit.txt) -and (Get-Date) -lt $deadline) { Start-Sleep 5 }
+          Get-ScheduledTaskInfo LomoTestRun | Format-List LastRunTime,LastTaskResult,NumberOfMissedRuns
+          if (-not (Test-Path C:\lomotest\exit.txt)) {
+            Write-Host "scheduled-task route produced nothing; trying Start-Process -Credential"
+            $cred = New-Object System.Management.Automation.PSCredential("$env:COMPUTERNAME\lomotest", $sec)
+            Start-Process powershell.exe -Credential $cred -LoadUserProfile -WorkingDirectory C:\lomotest -Wait -ArgumentList "-NoProfile","-ExecutionPolicy","Bypass","-File","C:\lomotest\run.ps1"
+          }
           $out = Get-Content C:\lomotest\out.txt -Raw -ErrorAction SilentlyContinue
           Write-Host "----- installer output as lomotest -----"; Write-Host $out
           $code = (Get-Content C:\lomotest\exit.txt -ErrorAction SilentlyContinue)
