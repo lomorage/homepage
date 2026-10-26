@@ -151,6 +151,9 @@ function New-LomorageShortcut {
 
 function Register-Autostart {
     $startupDir = [Environment]::GetFolderPath("Startup")
+    # Empty for a profile whose shell folders were never initialised (e.g. first-ever session).
+    if (-not $startupDir) { $startupDir = Join-Path $env:APPDATA "Microsoft\Windows\Start Menu\Programs\Startup" }
+    New-Item -ItemType Directory -Force -Path $startupDir | Out-Null
     New-LomorageShortcut -Path (Join-Path $startupDir "Lomorage.lnk") `
         -Description "Lomorage tray icon (starts lomod, lets you open/stop/restart it)"
 }
@@ -163,6 +166,8 @@ function Register-StartMenuShortcut {
     # Windows user already knows, same as any other installed app -- no PowerShell, no
     # digging through %LOCALAPPDATA%, no remembering a .bat filename.
     $startMenuDir = [Environment]::GetFolderPath("Programs")
+    if (-not $startMenuDir) { $startMenuDir = Join-Path $env:APPDATA "Microsoft\Windows\Start Menu\Programs" }
+    New-Item -ItemType Directory -Force -Path $startMenuDir | Out-Null
     New-LomorageShortcut -Path (Join-Path $startMenuDir "Lomorage.lnk") `
         -Description "Open Lomorage (starts it if it isn't already running)"
 }
