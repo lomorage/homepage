@@ -150,7 +150,12 @@ function New-LomorageShortcut {
 }
 
 function Register-Autostart {
-    $startupDir = [Environment]::GetFolderPath("Startup")
+    # SpecialFolderOption::Create, plus a fallback for the empty string GetFolderPath returns
+    # on a profile whose shell folders were never initialised: WScript.Shell's Save() below
+    # fails with a bare COM error, not anything a user could act on, if the folder is missing.
+    $startupDir = [Environment]::GetFolderPath([Environment+SpecialFolder]::Startup, [Environment+SpecialFolderOption]::Create)
+    if (-not $startupDir) { $startupDir = Join-Path $env:APPDATA "Microsoft\Windows\Start Menu\Programs\Startup" }
+    New-Item -ItemType Directory -Force -Path $startupDir | Out-Null
     New-LomorageShortcut -Path (Join-Path $startupDir "Lomorage.lnk") `
         -Description "Lomorage tray icon (starts lomod, lets you open/stop/restart it)"
 }
@@ -162,7 +167,10 @@ function Register-StartMenuShortcut {
     # autostart entry). Windows key -> type "Lomorage" -> Enter is the one launch path every
     # Windows user already knows, same as any other installed app -- no PowerShell, no
     # digging through %LOCALAPPDATA%, no remembering a .bat filename.
-    $startMenuDir = [Environment]::GetFolderPath("Programs")
+    # Created if absent, same as the Startup folder above.
+    $startMenuDir = [Environment]::GetFolderPath([Environment+SpecialFolder]::Programs, [Environment+SpecialFolderOption]::Create)
+    if (-not $startMenuDir) { $startMenuDir = Join-Path $env:APPDATA "Microsoft\Windows\Start Menu\Programs" }
+    New-Item -ItemType Directory -Force -Path $startMenuDir | Out-Null
     New-LomorageShortcut -Path (Join-Path $startMenuDir "Lomorage.lnk") `
         -Description "Open Lomorage (starts it if it isn't already running)"
 }
@@ -192,9 +200,13 @@ function Register-Autoupdate {
     $settings = New-ScheduledTaskSettingsSet -StartWhenAvailable -RunOnlyIfNetworkAvailable `
         -AllowStartIfOnBatteries -DontStopIfGoingOnBatteries
 
-    Unregister-ScheduledTask -TaskName $taskName -Confirm:$false -ErrorAction SilentlyContinue
+    # -Force replaces a task left by an earlier install. Without it a re-run died with
+    # ResourceExists (0x800700b7), since the Unregister-ScheduledTask that used to stand here
+    # is a CIM call that can fail or be skipped on its own -- and when it does fail (an
+    # elevated task a standard user may not touch) Register would have been denied anyway, so
+    # -Force alone covers every case the pair of calls did.
     Register-ScheduledTask -TaskName $taskName -Action $action -Trigger $dailyTrigger `
-        -Principal $principal -Settings $settings `
+        -Principal $principal -Settings $settings -Force `
         -Description "Checks for and installs lomod CLI updates (lomorage-update.ps1). Per-user, no admin rights." `
         | Out-Null
 }
@@ -242,7 +254,8 @@ try {
     Write-Step "Installing to $InstallDir"
     New-Item -ItemType Directory -Force -Path $InstallDir | Out-Null
     Expand-Archive -Path $tmpZip -DestinationPath $InstallDir -Force
-    Remove-Item $tmpZip -Force
+    # Cosmetic cleanup of %TEMP%: an AV scanner still holding the zip must not fail the install.
+    Remove-Item $tmpZip -Force -ErrorAction SilentlyContinue
 
     Set-Content -Path (Join-Path $InstallDir "version.txt") -Value $platform.Version -NoNewline
 
@@ -259,10 +272,23 @@ try {
     Register-StartMenuShortcut
 
     Write-Step "Registering daily auto-update check (per-user, no admin required)"
+    # Non-fatal, and deliberately not guessed at: a LomorageUpdate task left behind by an
+    # elevated install needs admin to replace, while some machines refuse task creation by
+    # policy outright (see the trigger comment in Register-Autoupdate) with no task present at
+    # all. Only the first case has an admin fix worth printing, so look before saying so.
+    $autoUpdateOk = $true
     try {
         Register-Autoupdate
     } catch {
-        Write-Warn2 "Could not register the auto-update Scheduled Task: $($_.Exception.Message). lomod will still run fine -- re-run this installer manually to update."
+        $autoUpdateOk = $false
+        $existingTask = $null
+        try { $existingTask = Get-ScheduledTask -TaskName "LomorageUpdate" -ErrorAction SilentlyContinue } catch {}
+        $fix = if ($existingTask) {
+            'An older LomorageUpdate task is already registered and replacing it needs admin: from an elevated PowerShell run  Unregister-ScheduledTask -TaskName LomorageUpdate -Confirm:$false  and then re-run this installer.'
+        } else {
+            'Re-running this installer later will retry it; until then re-run the installer by hand to update lomod.'
+        }
+        Write-Warn2 "Could not register the auto-update Scheduled Task: $($_.Exception.Message.Trim()) lomod itself is installed and runs fine. $fix"
     }
 
     Write-Step "Starting lomod and the tray icon"
@@ -277,12 +303,15 @@ try {
         Write-Host "  install dir: $InstallDir"
         Write-Host "  data dir:    $DataDir"
         Write-Host "  it will start automatically next time you log in"
+        if ($autoUpdateOk) { Write-Host "  daily auto-update check: enabled" }
+        else { Write-Host "  daily auto-update check: NOT enabled (see the warning above)" -ForegroundColor Yellow }
         Write-Host "  to reopen it by hand: search for 'Lomorage' in the Start menu"
         Write-Host "  to stop it: right-click the Lomorage tray icon and choose Stop (or Quit)"
         if (-not $NoBrowser) {
             Start-Process "http://localhost:$Port"
         }
     } else {
+        if (-not $autoUpdateOk) { Write-Warn2 "The daily auto-update check is NOT enabled (see the warning above)." }
         Write-Warn2 "lomod was installed and launched, but didn't respond on http://localhost:$Port within 30s. Check that nothing else is using that port, or run $InstallDir\lomod.exe directly from a terminal to see its output."
     }
 } catch {
