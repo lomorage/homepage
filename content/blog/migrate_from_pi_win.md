@@ -1,6 +1,7 @@
 
 +++
 title = "Simple and Fast Data Migration and Storage Expansion"
+description = "Migrate a Lomorage photo library from a Raspberry Pi to a Windows server and expand storage to a bigger drive. The same steps work for data recovery."
 tags = ["WD", "MyCloud", "Redundancy"]
 categories = ["BLOG"]
 date = "2023-03-02T13:43:40"

@@ -1,5 +1,6 @@
 +++
 title = "Setup Lomorage secondary backup with Raspberry Pi"
+description = "Set up a secondary (redundant) photo backup for Lomorage on a Raspberry Pi with a second hard drive or flash drive, a powered USB hub, and how to restore."
 tags = ["Raspberry Pi", "secondary backup", "Hard Disk", "Flash Drive", "USB Hub", "Restore"]
 categories = ["FAQ"]
 date = "2019-12-24T13:43:40"

@@ -1,5 +1,6 @@
 +++
-title = "Turn your old android tablet to lomorage photo frame"
+title = "Turn Your Old Android Tablet into a Lomorage Photo Frame"
+description = "Turn an old Android tablet into a digital photo frame that shows your family photos from your Lomorage server, at zero extra cost."
 tags = ["Lomorage", "photo frame", "android tablet"]
 categories = ["lomoframe"]
 date = "2021-08-26 10:38:00"

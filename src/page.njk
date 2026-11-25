@@ -4,9 +4,29 @@
 <body>
 {% include "header.njk" %}
 <main id="main" class="wrap document-page">
+{% if article %}
+<nav class="breadcrumbs" aria-label="Breadcrumb"><a class="text-link" href="{{ homeUrl }}">{{ t.home }}</a> / <a class="text-link" href="{{ article.blogUrl }}">{{ t.blog }}</a></nav>
+<article>
+<h1>{{ pageTitle }}</h1>
+<p class="article-meta"><time datetime="{{ article.date }}">{{ article.date }}</time>{% if article.updated %} · {{ '更新于' if lang == 'zh' else 'Updated' }} <time datetime="{{ article.updated }}">{{ article.updated }}</time>{% endif %}{% for tag in article.tags %} <a class="article-tag" href="{{ tag.url }}">#{{ tag.name }}</a>{% endfor %}</p>
+<div class="prose">{{ content | safe }}</div>
+</article>
+<aside class="article-cta">
+<h2>{{ '把家人的照片留在自己家里' if lang == 'zh' else 'Keep your family photos at home' }}</h2>
+<p>{{ t.closingNote }}</p>
+<a class="button" href="{{ t.downloadUrl }}">{{ t.getStarted }} <span aria-hidden="true">→</span></a>
+</aside>
+{% if article.related.length %}
+<section class="related-posts">
+<h2>{{ '相关文章' if lang == 'zh' else 'Related reading' }}</h2>
+<ul>{% for post in article.related %}<li><a href="{{ post.url }}">{{ post.title }}</a> <time datetime="{{ post.date }}">{{ post.date }}</time></li>{% endfor %}</ul>
+</section>
+{% endif %}
+{% else %}
 <a class="text-link" href="{{ homeUrl }}">← {{ t.home }}</a>
 <h1>{{ pageTitle }}</h1>
 <div class="prose">{{ content | safe }}</div>
+{% endif %}
 </main>
 {% include "footer.njk" %}
 </body>

@@ -1,5 +1,6 @@
 +++
 title = "Deploy NPS tunnel service on fly.io for Lomorage remote access"
+description = "Set up an NPS tunnel on fly.io to reach your self-hosted Lomorage photo server from outside your home network, an ngrok alternative you control."
 tags = ["fly.io", "Lomorage", "nps", "ngrok"]
 categories = ["remote access"]
 date = "2022-10-14T08:17:40"
