@@ -1,5 +1,6 @@
 +++
-title = "Run Lomoage Docker in Windows 10"
+title = "Run Lomorage Docker on Windows 10"
+description = "Run the Lomorage photo backup server in Docker on Windows 10 or Windows Server: download Docker, pull the Lomorage image, run it and check that it works."
 tags = ["Docker", "Container", "Lomorage"]
 categories = ["Docker"]
 date = "2020-11-16T22:43:40"

@@ -1,6 +1,7 @@
 
 +++
 title = "Small image compression size comparison between Jpeg and Webp"
+description = "JPEG vs WebP vs MozJPEG for small thumbnails: average and total size comparison at 320 and 640 pixel widths, measured on real personal photo datasets."
 tags = ["Jpeg", "Webp", "Image Processing"]
 categories = ["BLOG"]
 date = "2021-09-01T21:43:40"

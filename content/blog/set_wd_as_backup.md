@@ -1,5 +1,6 @@
 +++
 title = "Set WD MyCloud as Lomorage redundancy backup disk on Windows"
+description = "Use a WD My Cloud network drive as the redundancy backup disk for Lomorage on Windows, so your family photos are stored on two separate devices."
 tags = ["WD", "MyCloud", "Redundancy"]
 categories = ["BLOG"]
 date = "2023-02-22T13:43:40"

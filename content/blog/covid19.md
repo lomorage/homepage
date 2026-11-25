@@ -1,5 +1,6 @@
 +++
 title = "Setup Covid-19 dashboard using Raspberry Pi"
+description = "Build a Raspberry Pi dashboard with MagicMirror and the MMM-COVID19 module: install, configure data sources, auto-start and schedule the display."
 tags = ["Raspberry Pi", "dashboard", "Covid-19"]
 categories = ["Dashboard"]
 date = "2020-03-29T22:43:40"

@@ -1,5 +1,6 @@
 +++
 title = "PhotoPrism meets Lomorage: The best Google Photos alternative"
+description = "Use PhotoPrism with Lomorage for a self-hosted Google Photos alternative: Lomorage backs up phones automatically, PhotoPrism adds AI browsing on the same files."
 tags = ["Lomorage", "PhotoPrism", "AI"]
 categories = ["AI"]
 date = "2022-02-11 10:38:00"

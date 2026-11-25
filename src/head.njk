@@ -1,10 +1,15 @@
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{{ pageTitle }} · Lomorage</title><meta name="description" content="{{ pageDescription }}"><meta name="theme-color" content="#fbf8f3">
-<meta property="og:title" content="{{ pageTitle }} · Lomorage"><meta property="og:description" content="{{ pageDescription }}"><meta property="og:type" content="website"><meta property="og:url" content="{{ canonical }}"><meta property="og:image" content="{{ siteUrl }}/img/home/coast.jpg">
-<link rel="canonical" href="{{ canonical }}">{% for translation in translations %}<link rel="alternate" hreflang="{{ translation.lang }}" href="{{ translation.url }}">{% endfor %}
+<meta property="og:site_name" content="Lomorage"><meta property="og:locale" content="{{ 'zh_CN' if lang == 'zh' else 'en_US' }}">
+<meta property="og:title" content="{{ pageTitle }} · Lomorage"><meta property="og:description" content="{{ pageDescription }}"><meta property="og:type" content="{{ ogType }}"><meta property="og:url" content="{{ canonical }}"><meta property="og:image" content="{{ ogImage }}">
+{% if published %}<meta property="article:published_time" content="{{ published }}">{% endif %}{% if modified %}<meta property="article:modified_time" content="{{ modified }}">{% endif %}
+<meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="{{ pageTitle }} · Lomorage"><meta name="twitter:description" content="{{ pageDescription }}"><meta name="twitter:image" content="{{ ogImage }}">
+<link rel="canonical" href="{{ canonical }}">{% for translation in translations %}<link rel="alternate" hreflang="{{ translation.lang }}" href="{{ translation.url }}">{% endfor %}{% if xDefault %}<link rel="alternate" hreflang="x-default" href="{{ xDefault }}">{% endif %}
+<link rel="alternate" type="application/rss+xml" title="Lomorage" href="{{ feedUrl }}">
 <link rel="icon" type="image/png" href="/img/brand/memory-embrace-256.png"><link rel="apple-touch-icon" href="/img/brand/memory-embrace-256.png"><link rel="stylesheet" href="/css/home.css">
 <link rel="stylesheet" href="/css/downloads.css">
 <link rel="stylesheet" href="/css/brand.css">
 {% if isDocs %}<link rel="stylesheet" href="/css/docs.css">{% endif %}
+{% if structuredData %}<script type="application/ld+json">{{ structuredData | safe }}</script>{% endif %}
 </head>

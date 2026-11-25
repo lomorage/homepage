@@ -1,5 +1,6 @@
 +++
 title = "Move MyCloud to Lomorage"
+description = "Move photos and videos from a WD My Cloud drive into Lomorage so they are organized by date and available on your phone, with automatic backup from now on."
 tags = ["迁移", "MyCloud"]
 categories = ["BLOG"]
 date = "2020-05-17T13:43:40"

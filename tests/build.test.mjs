@@ -157,3 +157,39 @@ test('documentation uses current mobile apps and clear platform labels',()=>{
     assert.ok(!page.includes('查看源码与修改记录'));
   }
 });
+
+test('articles carry SEO metadata, structured data, related posts and resolvable links',()=>{
+  const posts=result.pages.filter(p=>p.isBlog);
+  for(const p of posts){
+    const page=html(p.url);
+    assert.ok(page.includes('<meta property="og:type" content="article">'),p.url);
+    assert.ok(page.includes(`<link rel="canonical" href="https://lomorage.com${p.url}">`),p.url);
+    const description=page.match(/<meta name="description" content="([^"]*)">/)[1];
+    assert.ok(description.length>20 && description.length<=161,`${p.url} description length ${description.length}`);
+    const blocks=[...page.matchAll(/<script type="application\/ld\+json">(.*?)<\/script>/gs)].map(m=>JSON.parse(m[1]));
+    const graph=blocks.flatMap(b=>b['@graph']||[b]);
+    const posting=graph.find(n=>n['@type']==='BlogPosting');
+    assert.equal(posting.datePublished,p.date);
+    assert.ok(graph.some(n=>n['@type']==='BreadcrumbList'));
+    if(p.faq)assert.equal(graph.find(n=>n['@type']==='FAQPage').mainEntity.length,p.faq.length);
+    assert.ok(page.includes('class="related-posts"'),p.url);
+    for(const match of page.matchAll(/href="(\/[^"#]*)(?:#([^"]+))?"/g)){
+      const route=decodeURIComponent(match[1]);
+      const target=path.join(output,route,route.endsWith('/')?'index.html':'');
+      assert.ok(fs.existsSync(target),`${p.url} -> ${match[1]}`);
+      if(match[2])assert.ok(fs.readFileSync(target,'utf8').includes(`id="${match[2]}"`),`${p.url} -> #${match[2]}`);
+    }
+  }
+});
+test('homepage structured data and sitemap alternates support search engines',()=>{
+  for(const url of ['/','/zh/']){
+    const page=html(url);
+    const data=JSON.parse(page.match(/<script type="application\/ld\+json">(.*?)<\/script>/s)[1]);
+    const app=data['@graph'].find(n=>n['@type']==='SoftwareApplication');
+    assert.deepEqual(app.offers.map(o=>o.price),['0','1.99']);
+    assert.ok(page.includes('hreflang="x-default" href="https://lomorage.com/"'));
+  }
+  const sitemap=fs.readFileSync(path.join(output,'sitemap.xml'),'utf8');
+  assert.ok(sitemap.includes('xmlns:xhtml="http://www.w3.org/1999/xhtml"'));
+  assert.ok(sitemap.includes('<loc>https://lomorage.com/blog/2026/11/24/google-photos-alternative/</loc><lastmod>2026-11-24</lastmod><xhtml:link rel="alternate" hreflang="en"'));
+});
